@@ -1,0 +1,60 @@
+\hypertarget{group___a_p_r___e_r_r_o_r__map}{}\section{A\+PR Error Space}
+\label{group___a_p_r___e_r_r_o_r__map}\index{A\+P\+R Error Space@{A\+P\+R Error Space}}
+
+\begin{DoxyPre}
+The following attempts to show the relation of the various constants
+used for mapping APR Status codes.
+\begin{DoxyVerb}  0
+\end{DoxyVerb}
+\end{DoxyPre}
+
+
+
+\begin{DoxyPre} 20,000     APR\_OS\_START\_ERROR
+\begin{DoxyVerb}   + APR_OS_ERRSPACE_SIZE (50,000)
+\end{DoxyVerb}
+\end{DoxyPre}
+
+
+
+\begin{DoxyPre} 70,000      APR\_OS\_START\_STATUS
+\begin{DoxyVerb}   + APR_OS_ERRSPACE_SIZE - APR_UTIL_ERRSPACE_SIZE (30,000)
+\end{DoxyVerb}
+\end{DoxyPre}
+
+
+
+\begin{DoxyPre}100,000      APR\_UTIL\_START\_STATUS
+\begin{DoxyVerb}    + APR_UTIL_ERRSPACE_SIZE (20,000)
+\end{DoxyVerb}
+\end{DoxyPre}
+
+
+
+\begin{DoxyPre}120,000      APR\_OS\_START\_USERERR
+\begin{DoxyVerb}    + 10 x APR_OS_ERRSPACE_SIZE (50,000 * 10)
+\end{DoxyVerb}
+\end{DoxyPre}
+
+
+
+\begin{DoxyPre}620,000      APR\_OS\_START\_CANONERR
+\begin{DoxyVerb}    + APR_OS_ERRSPACE_SIZE (50,000)
+\end{DoxyVerb}
+\end{DoxyPre}
+
+
+
+\begin{DoxyPre}670,000      APR\_OS\_START\_EAIERR
+\begin{DoxyVerb}    + APR_OS_ERRSPACE_SIZE (50,000)
+\end{DoxyVerb}
+\end{DoxyPre}
+
+
+
+\begin{DoxyPre}720,000      APR\_OS\_START\_SYSERR\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\end{DoxyPre}
+ 

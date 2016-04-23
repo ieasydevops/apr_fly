@@ -1,0 +1,174 @@
+\hypertarget{group__apr__file__stat}{}\section{Stat Functions}
+\label{group__apr__file__stat}\index{Stat Functions@{Stat Functions}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__finfo__t}{apr\+\_\+finfo\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__file__stat_ga9b0c1d02401b845f928f836fdd3c6712}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+L\+I\+NK}~0x00000001
+\item 
+\#define \hyperlink{group__apr__file__stat_ga992ce1f4f75d519fd2a9d241c5a12515}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+T\+I\+ME}~0x00000010
+\item 
+\#define \hyperlink{group__apr__file__stat_ga98bef78baf71fa63b06352704f128bca}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+T\+I\+ME}~0x00000020
+\item 
+\#define \hyperlink{group__apr__file__stat_ga17d7656d02a35ffc05afe22032a8da15}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+A\+T\+I\+ME}~0x00000040
+\item 
+\#define \hyperlink{group__apr__file__stat_gadf72493da450c0b1e3d279e98a973120}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+S\+I\+ZE}~0x00000100
+\item 
+\#define \hyperlink{group__apr__file__stat_gaf87a09b89935d730cb1ade80d5b6ada0}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+S\+I\+ZE}~0x00000200
+\item 
+\#define \hyperlink{group__apr__file__stat_ga0890d31145211f62d38dd8e444b5660a}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+EV}~0x00001000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga4fee7341395912db501b40de81dbba26}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+N\+O\+DE}~0x00002000
+\item 
+\#define \hyperlink{group__apr__file__stat_gabb2ba05b8ed45e59b1f06e1b7b4c91c2}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+L\+I\+NK}~0x00004000
+\item 
+\#define \hyperlink{group__apr__file__stat_gad5d25f25527ee77c08bb20aae141306c}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+T\+Y\+PE}~0x00008000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga599d92111a5cca379a06980025044e12}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+S\+ER}~0x00010000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga8420798139d34a88678498aa848803ff}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+R\+O\+UP}~0x00020000
+\item 
+\#define \hyperlink{group__apr__file__stat_gac85e4335fcf91881b11b3e8a4b224aca}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+P\+R\+OT}~0x00100000
+\item 
+\#define \hyperlink{group__apr__file__stat_gadfa294303e34528b1fcae1bc009140c1}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+P\+R\+OT}~0x00200000
+\item 
+\#define \hyperlink{group__apr__file__stat_gab970792384fe9a805cf66983350eefdc}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+W\+P\+R\+OT}~0x00400000
+\item 
+\#define \hyperlink{group__apr__file__stat_gac46eeba0ae0e771c6ed3cb27fd5492d8}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+C\+A\+SE}~0x01000000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga7fa4caf84808c11a1ec33c5c8d613e4b}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+A\+ME}~0x02000000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga341104571b05550aa923cb14898a82ef}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+IN}~0x00008170
+\item 
+\#define \hyperlink{group__apr__file__stat_ga3ac8c8d0492291417be3d32556464108}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+D\+E\+NT}~0x00003000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga27dee9407b38a459c57618098c3920b0}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+O\+W\+N\+ER}~0x00030000
+\item 
+\#define \hyperlink{group__apr__file__stat_gad902be0636860cb3f8ad76a59abbcd7c}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+P\+R\+OT}~0x00700000
+\item 
+\#define \hyperlink{group__apr__file__stat_gad3f64010d25d2fe926191804d7c99379}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+O\+RM}~0x0073b170
+\item 
+\#define \hyperlink{group__apr__file__stat_gaac6679307cc735f2f0373960db96b931}{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+I\+R\+E\+NT}~0x02000000
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__finfo__t}{apr\+\_\+finfo\+\_\+t} \hyperlink{group__apr__file__stat_ga3d390fdda1d16ae462c11b2d3b18efd1}{apr\+\_\+finfo\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__stat_gafb0f4a4fa4545c155e20ddd8f2001c1a}{apr\+\_\+stat} (\hyperlink{structapr__finfo__t}{apr\+\_\+finfo\+\_\+t} $\ast$finfo, const char $\ast$fname, apr\+\_\+int32\+\_\+t wanted, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+A\+T\+I\+ME@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+A\+T\+I\+ME}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+A\+T\+I\+ME@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+A\+T\+I\+ME}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+A\+T\+I\+ME}{APR_FINFO_ATIME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+A\+T\+I\+ME~0x00000040}\hypertarget{group__apr__file__stat_ga17d7656d02a35ffc05afe22032a8da15}{}\label{group__apr__file__stat_ga17d7656d02a35ffc05afe22032a8da15}
+Access Time \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+S\+I\+ZE@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+S\+I\+ZE}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+S\+I\+ZE@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+S\+I\+ZE}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+S\+I\+ZE}{APR_FINFO_CSIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+S\+I\+ZE~0x00000200}\hypertarget{group__apr__file__stat_gaf87a09b89935d730cb1ade80d5b6ada0}{}\label{group__apr__file__stat_gaf87a09b89935d730cb1ade80d5b6ada0}
+Storage size consumed by the file \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+T\+I\+ME@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+T\+I\+ME}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+T\+I\+ME@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+T\+I\+ME}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+T\+I\+ME}{APR_FINFO_CTIME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+C\+T\+I\+ME~0x00000020}\hypertarget{group__apr__file__stat_ga98bef78baf71fa63b06352704f128bca}{}\label{group__apr__file__stat_ga98bef78baf71fa63b06352704f128bca}
+Creation or inode-\/changed time \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+EV@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+EV}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+EV@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+EV}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+EV}{APR_FINFO_DEV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+EV~0x00001000}\hypertarget{group__apr__file__stat_ga0890d31145211f62d38dd8e444b5660a}{}\label{group__apr__file__stat_ga0890d31145211f62d38dd8e444b5660a}
+Device \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+I\+R\+E\+NT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+I\+R\+E\+NT}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+I\+R\+E\+NT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+I\+R\+E\+NT}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+I\+R\+E\+NT}{APR_FINFO_DIRENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+D\+I\+R\+E\+NT~0x02000000}\hypertarget{group__apr__file__stat_gaac6679307cc735f2f0373960db96b931}{}\label{group__apr__file__stat_gaac6679307cc735f2f0373960db96b931}
+an atomic unix \hyperlink{group__apr__dir_ga3e4ee253e0c712160bee10bfb9c8e4a8}{apr\+\_\+dir\+\_\+read()} \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+P\+R\+OT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+P\+R\+OT}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+P\+R\+OT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+P\+R\+OT}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+P\+R\+OT}{APR_FINFO_GPROT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+P\+R\+OT~0x00200000}\hypertarget{group__apr__file__stat_gadfa294303e34528b1fcae1bc009140c1}{}\label{group__apr__file__stat_gadfa294303e34528b1fcae1bc009140c1}
+Group protection bits \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+R\+O\+UP@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+R\+O\+UP}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+R\+O\+UP@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+R\+O\+UP}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+R\+O\+UP}{APR_FINFO_GROUP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+G\+R\+O\+UP~0x00020000}\hypertarget{group__apr__file__stat_ga8420798139d34a88678498aa848803ff}{}\label{group__apr__file__stat_ga8420798139d34a88678498aa848803ff}
+Group \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+C\+A\+SE@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+C\+A\+SE}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+C\+A\+SE@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+C\+A\+SE}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+C\+A\+SE}{APR_FINFO_ICASE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+C\+A\+SE~0x01000000}\hypertarget{group__apr__file__stat_gac46eeba0ae0e771c6ed3cb27fd5492d8}{}\label{group__apr__file__stat_gac46eeba0ae0e771c6ed3cb27fd5492d8}
+if dev is case insensitive \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+D\+E\+NT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+D\+E\+NT}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+D\+E\+NT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+D\+E\+NT}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+D\+E\+NT}{APR_FINFO_IDENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+D\+E\+NT~0x00003000}\hypertarget{group__apr__file__stat_ga3ac8c8d0492291417be3d32556464108}{}\label{group__apr__file__stat_ga3ac8c8d0492291417be3d32556464108}
+dev and inode \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+N\+O\+DE@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+N\+O\+DE}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+N\+O\+DE@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+N\+O\+DE}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+N\+O\+DE}{APR_FINFO_INODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+I\+N\+O\+DE~0x00002000}\hypertarget{group__apr__file__stat_ga4fee7341395912db501b40de81dbba26}{}\label{group__apr__file__stat_ga4fee7341395912db501b40de81dbba26}
+Inode \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+L\+I\+NK@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+L\+I\+NK}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+L\+I\+NK@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+L\+I\+NK}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+L\+I\+NK}{APR_FINFO_LINK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+L\+I\+NK~0x00000001}\hypertarget{group__apr__file__stat_ga9b0c1d02401b845f928f836fdd3c6712}{}\label{group__apr__file__stat_ga9b0c1d02401b845f928f836fdd3c6712}
+Stat the link not the file itself if it is a link \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+IN@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+IN}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+IN@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+IN}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+IN}{APR_FINFO_MIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+IN~0x00008170}\hypertarget{group__apr__file__stat_ga341104571b05550aa923cb14898a82ef}{}\label{group__apr__file__stat_ga341104571b05550aa923cb14898a82ef}
+type, mtime, ctime, atime, size \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+T\+I\+ME@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+T\+I\+ME}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+T\+I\+ME@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+T\+I\+ME}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+T\+I\+ME}{APR_FINFO_MTIME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+M\+T\+I\+ME~0x00000010}\hypertarget{group__apr__file__stat_ga992ce1f4f75d519fd2a9d241c5a12515}{}\label{group__apr__file__stat_ga992ce1f4f75d519fd2a9d241c5a12515}
+Modification Time \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+A\+ME@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+A\+ME}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+A\+ME@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+A\+ME}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+A\+ME}{APR_FINFO_NAME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+A\+ME~0x02000000}\hypertarget{group__apr__file__stat_ga7fa4caf84808c11a1ec33c5c8d613e4b}{}\label{group__apr__file__stat_ga7fa4caf84808c11a1ec33c5c8d613e4b}
+-\/$>$name in proper case \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+L\+I\+NK@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+L\+I\+NK}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+L\+I\+NK@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+L\+I\+NK}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+L\+I\+NK}{APR_FINFO_NLINK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+L\+I\+NK~0x00004000}\hypertarget{group__apr__file__stat_gabb2ba05b8ed45e59b1f06e1b7b4c91c2}{}\label{group__apr__file__stat_gabb2ba05b8ed45e59b1f06e1b7b4c91c2}
+Number of links \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+O\+RM@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+O\+RM}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+O\+RM@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+O\+RM}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+O\+RM}{APR_FINFO_NORM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+N\+O\+RM~0x0073b170}\hypertarget{group__apr__file__stat_gad3f64010d25d2fe926191804d7c99379}{}\label{group__apr__file__stat_gad3f64010d25d2fe926191804d7c99379}
+an atomic unix \hyperlink{group__apr__file__stat_gafb0f4a4fa4545c155e20ddd8f2001c1a}{apr\+\_\+stat()} \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+O\+W\+N\+ER@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+O\+W\+N\+ER}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+O\+W\+N\+ER@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+O\+W\+N\+ER}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+O\+W\+N\+ER}{APR_FINFO_OWNER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+O\+W\+N\+ER~0x00030000}\hypertarget{group__apr__file__stat_ga27dee9407b38a459c57618098c3920b0}{}\label{group__apr__file__stat_ga27dee9407b38a459c57618098c3920b0}
+user and group \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+P\+R\+OT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+P\+R\+OT}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+P\+R\+OT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+P\+R\+OT}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+P\+R\+OT}{APR_FINFO_PROT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+P\+R\+OT~0x00700000}\hypertarget{group__apr__file__stat_gad902be0636860cb3f8ad76a59abbcd7c}{}\label{group__apr__file__stat_gad902be0636860cb3f8ad76a59abbcd7c}
+all protections \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+S\+I\+ZE@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+S\+I\+ZE}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+S\+I\+ZE@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+S\+I\+ZE}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+S\+I\+ZE}{APR_FINFO_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+S\+I\+ZE~0x00000100}\hypertarget{group__apr__file__stat_gadf72493da450c0b1e3d279e98a973120}{}\label{group__apr__file__stat_gadf72493da450c0b1e3d279e98a973120}
+Size of the file \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+T\+Y\+PE@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+T\+Y\+PE}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+T\+Y\+PE@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+T\+Y\+PE}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+T\+Y\+PE}{APR_FINFO_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+T\+Y\+PE~0x00008000}\hypertarget{group__apr__file__stat_gad5d25f25527ee77c08bb20aae141306c}{}\label{group__apr__file__stat_gad5d25f25527ee77c08bb20aae141306c}
+Type \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+P\+R\+OT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+P\+R\+OT}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+P\+R\+OT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+P\+R\+OT}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+P\+R\+OT}{APR_FINFO_UPROT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+P\+R\+OT~0x00100000}\hypertarget{group__apr__file__stat_gac85e4335fcf91881b11b3e8a4b224aca}{}\label{group__apr__file__stat_gac85e4335fcf91881b11b3e8a4b224aca}
+User protection bits \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+S\+ER@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+S\+ER}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+S\+ER@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+S\+ER}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+S\+ER}{APR_FINFO_USER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+U\+S\+ER~0x00010000}\hypertarget{group__apr__file__stat_ga599d92111a5cca379a06980025044e12}{}\label{group__apr__file__stat_ga599d92111a5cca379a06980025044e12}
+User \index{Stat Functions@{Stat Functions}!A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+W\+P\+R\+OT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+W\+P\+R\+OT}}
+\index{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+W\+P\+R\+OT@{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+W\+P\+R\+OT}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+W\+P\+R\+OT}{APR_FINFO_WPROT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+\+W\+P\+R\+OT~0x00400000}\hypertarget{group__apr__file__stat_gab970792384fe9a805cf66983350eefdc}{}\label{group__apr__file__stat_gab970792384fe9a805cf66983350eefdc}
+World protection bits 
+
+\subsection{Typedef Documentation}
+\index{Stat Functions@{Stat Functions}!apr\+\_\+finfo\+\_\+t@{apr\+\_\+finfo\+\_\+t}}
+\index{apr\+\_\+finfo\+\_\+t@{apr\+\_\+finfo\+\_\+t}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+finfo\+\_\+t}{apr_finfo_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+finfo\+\_\+t} {\bf apr\+\_\+finfo\+\_\+t}}\hypertarget{group__apr__file__stat_ga3d390fdda1d16ae462c11b2d3b18efd1}{}\label{group__apr__file__stat_ga3d390fdda1d16ae462c11b2d3b18efd1}
+file info structure 
+
+\subsection{Function Documentation}
+\index{Stat Functions@{Stat Functions}!apr\+\_\+stat@{apr\+\_\+stat}}
+\index{apr\+\_\+stat@{apr\+\_\+stat}!Stat Functions@{Stat Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+stat(apr\+\_\+finfo\+\_\+t $\ast$finfo, const char $\ast$fname, apr\+\_\+int32\+\_\+t wanted, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_stat(apr_finfo_t *finfo, const char *fname, apr_int32_t wanted, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+stat (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+finfo\+\_\+t} $\ast$}]{finfo, }
+\item[{const char $\ast$}]{fname, }
+\item[{apr\+\_\+int32\+\_\+t}]{wanted, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__stat_gafb0f4a4fa4545c155e20ddd8f2001c1a}{}\label{group__apr__file__stat_gafb0f4a4fa4545c155e20ddd8f2001c1a}
+get the specified file\textquotesingle{}s stats. The file is specified by filename, instead of using a pre-\/opened file. 
+\begin{DoxyParams}{Parameters}
+{\em finfo} & Where to store the information about the file, which is never touched if the call fails. \\
+\hline
+{\em fname} & The name of the file to stat. \\
+\hline
+{\em wanted} & The desired \hyperlink{structapr__finfo__t}{apr\+\_\+finfo\+\_\+t} fields, as a bit flag of A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+ values \\
+\hline
+{\em pool} & the pool to use to allocate the new file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If {\ttfamily A\+P\+R\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE} is returned all the fields in {\itshape finfo} may not be filled in, and you need to check the {\ttfamily finfo-\/$>$valid} bitmask to verify that what you\textquotesingle{}re looking for is there. 
+\end{DoxyNote}

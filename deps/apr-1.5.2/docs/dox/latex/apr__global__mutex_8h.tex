@@ -1,0 +1,42 @@
+\hypertarget{apr__global__mutex_8h}{}\section{apr\+\_\+global\+\_\+mutex.\+h File Reference}
+\label{apr__global__mutex_8h}\index{apr\+\_\+global\+\_\+mutex.\+h@{apr\+\_\+global\+\_\+mutex.\+h}}
+
+
+A\+PR Global Locking Routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+proc\+\_\+mutex.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t} \hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___global_mutex_ga7a5ade1ba8ea6c7a7a61e3e719683cb0}{apr\+\_\+global\+\_\+mutex\+\_\+create} (\hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t} $\ast$$\ast$mutex, const char $\ast$fname, \hyperlink{group__apr__proc__mutex_ga75dd95a48a1e855a87b509b522746ed4}{apr\+\_\+lockmech\+\_\+e} mech, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___global_mutex_ga51eb034bca0352075c92c08a21d4d7a0}{apr\+\_\+global\+\_\+mutex\+\_\+child\+\_\+init} (\hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t} $\ast$$\ast$mutex, const char $\ast$fname, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___global_mutex_ga1338485664e6c2737340114cace57121}{apr\+\_\+global\+\_\+mutex\+\_\+lock} (\hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___global_mutex_ga2a6543fba6473b47e33a7b7fc2ba6935}{apr\+\_\+global\+\_\+mutex\+\_\+trylock} (\hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___global_mutex_ga16e732ae76dfe104b157e0fc543d3aa3}{apr\+\_\+global\+\_\+mutex\+\_\+unlock} (\hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___global_mutex_ga1f2cb4a1ec57089db49701e747892607}{apr\+\_\+global\+\_\+mutex\+\_\+destroy} (\hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___global_mutex_ga0d14b6c80cc39bb76f6a038fff1ef5ad}{apr\+\_\+global\+\_\+mutex\+\_\+lockfile} (\hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___global_mutex_gaf4ec155e8b9c6f30a979bc0aeb3721cb}{apr\+\_\+global\+\_\+mutex\+\_\+name} (\hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group___a_p_r___global_mutex_ga01d5c1bbb32b976083b9c8234b04cd46}{apr\+\_\+global\+\_\+mutex\+\_\+pool\+\_\+get} (const \hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t} $\ast$theglobal\+\_\+mutex)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Global Locking Routines. 
+

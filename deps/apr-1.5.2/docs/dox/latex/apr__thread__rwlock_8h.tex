@@ -1,0 +1,39 @@
+\hypertarget{apr__thread__rwlock_8h}{}\section{apr\+\_\+thread\+\_\+rwlock.\+h File Reference}
+\label{apr__thread__rwlock_8h}\index{apr\+\_\+thread\+\_\+rwlock.\+h@{apr\+\_\+thread\+\_\+rwlock.\+h}}
+
+
+A\+PR Reader/\+Writer Lock Routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} \hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_gadae9c87ad957112406b48947cb1f0e93}{apr\+\_\+thread\+\_\+rwlock\+\_\+create} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$$\ast$rwlock, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_gad44a106cd9a81eef362d31837ca7018f}{apr\+\_\+thread\+\_\+rwlock\+\_\+rdlock} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_ga2bbbc137f5c610e31bf87fd0a60c428e}{apr\+\_\+thread\+\_\+rwlock\+\_\+tryrdlock} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_ga91543c9f97a6a1265524a5a8f55fef31}{apr\+\_\+thread\+\_\+rwlock\+\_\+wrlock} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_ga54c04596f8a1f44630bdda5a25578d63}{apr\+\_\+thread\+\_\+rwlock\+\_\+trywrlock} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_gac7b31112d972abfcac30252e622eb040}{apr\+\_\+thread\+\_\+rwlock\+\_\+unlock} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_ga136118166f50091fb30011d837a4cdcc}{apr\+\_\+thread\+\_\+rwlock\+\_\+destroy} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__thread__rwlock_ga3e78c5d8f2e7f4cdad46e912e68edd33}{apr\+\_\+thread\+\_\+rwlock\+\_\+pool\+\_\+get} (const \hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$thethread\+\_\+rwlock)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Reader/\+Writer Lock Routines. 
+

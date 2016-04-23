@@ -1,0 +1,71 @@
+\hypertarget{apr__lib_8h}{}\section{apr\+\_\+lib.\+h File Reference}
+\label{apr__lib_8h}\index{apr\+\_\+lib.\+h@{apr\+\_\+lib.\+h}}
+
+
+A\+PR general purpose library routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__vformatter__buff__t}{apr\+\_\+vformatter\+\_\+buff\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__lib_ga0c9dd98f46b90b5bcd4cbf75e252d0da}{H\+U\+G\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+EN}~8192
+\item 
+\#define \hyperlink{group__apr__lib_gaf138e3f0273185532f1aa4443b40d428}{apr\+\_\+killpg}(x,  y)            ~(killpg ((x), (y)))
+\item 
+\#define \hyperlink{group__apr__ctype_ga4fa78e6e7272dae64731768a17a2e003}{apr\+\_\+isalnum}(c)~(isalnum(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga9ecd5b94a7816591afd68040b0624327}{apr\+\_\+isalpha}(c)~(isalpha(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_gacc8b4597be99c895ea042e8088ee94ab}{apr\+\_\+iscntrl}(c)~(iscntrl(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga8c453b1d66015b357c3d3a3ddb7d97d7}{apr\+\_\+isdigit}(c)~(isdigit(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_gad4fbfcf508e7771ca85e85e4ac9567c2}{apr\+\_\+isgraph}(c)~(isgraph(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_gaff5eeb2f6350095ce86cc2cd4b1d38ee}{apr\+\_\+islower}(c)~(islower(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_gae7cab1b39d2e0fc14f343ec14e12565a}{apr\+\_\+isascii}(c)~(((c) \& $\sim$0x7f)==0)
+\item 
+\#define \hyperlink{group__apr__ctype_ga20da56fc8bbedc9f8a40d20c1cc58bac}{apr\+\_\+isprint}(c)~(isprint(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga1db14e8d5f9891010c8bad08aa100674}{apr\+\_\+ispunct}(c)~(ispunct(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga23f4c7721923a0f0f444fd7fb196047a}{apr\+\_\+isspace}(c)~(isspace(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga362f53cc44aab662aaf04fa87e36035b}{apr\+\_\+isupper}(c)~(isupper(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga9d30f3c5d538c21c6d50565cda8654d0}{apr\+\_\+isxdigit}(c)~(isxdigit(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_gaa591f2a7eb578b1fb3ae9aeaab9eafaa}{apr\+\_\+tolower}(c)~(tolower(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga83d2a3217282784d24897658ad0717b7}{apr\+\_\+toupper}(c)~(toupper(((unsigned char)(c))))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__vformatter__buff__t}{apr\+\_\+vformatter\+\_\+buff\+\_\+t} \hyperlink{group__apr__lib_ga5e9986deebda40f2d1cf8364fa03c3c5}{apr\+\_\+vformatter\+\_\+buff\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{group__apr__lib_ga241e929df23aede34eb3f2651cf56bc9}{apr\+\_\+filepath\+\_\+name\+\_\+get} (const char $\ast$pathname)
+\item 
+int \hyperlink{group__apr__lib_gad2cd3594aeaafd45931d1034965f48c1}{apr\+\_\+vformatter} (int($\ast$flush\+\_\+func)(\hyperlink{structapr__vformatter__buff__t}{apr\+\_\+vformatter\+\_\+buff\+\_\+t} $\ast$b), \hyperlink{structapr__vformatter__buff__t}{apr\+\_\+vformatter\+\_\+buff\+\_\+t} $\ast$c, const char $\ast$fmt, va\+\_\+list ap)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__lib_ga377e0677598745769ec6f80fecf8f859}{apr\+\_\+password\+\_\+get} (const char $\ast$prompt, char $\ast$pwbuf, apr\+\_\+size\+\_\+t $\ast$bufsize)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR general purpose library routines. 
+
+This is collection of oddballs that didn\textquotesingle{}t fit anywhere else, and might move to more appropriate headers with the release of A\+PR 1.\+0. 

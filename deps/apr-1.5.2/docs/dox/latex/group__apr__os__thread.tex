@@ -1,0 +1,114 @@
+\hypertarget{group__apr__os__thread}{}\section{Thread portability Routines}
+\label{group__apr__os__thread}\index{Thread portability Routines@{Thread portability Routines}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__os__thread_gadda5e99fc387491a2a9436bf6144bd49}{apr\+\_\+os\+\_\+thread\+\_\+get} (\hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t} $\ast$$\ast$thethd, \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$thd)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__os__thread_ga2fd6ec9d398c4f2564765866c3d31219}{apr\+\_\+os\+\_\+threadkey\+\_\+get} (\hyperlink{group__apr__portabile_ga0a228496d8a1a9b3be744ddb101a3e76}{apr\+\_\+os\+\_\+threadkey\+\_\+t} $\ast$thekey, \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t} $\ast$key)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__os__thread_ga7eda58df34fbc11cd251899e575a1b0f}{apr\+\_\+os\+\_\+thread\+\_\+put} (\hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$$\ast$thd, \hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t} $\ast$thethd, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__os__thread_ga386f6e3e205d422f623132bb50147133}{apr\+\_\+os\+\_\+threadkey\+\_\+put} (\hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t} $\ast$$\ast$key, \hyperlink{group__apr__portabile_ga0a228496d8a1a9b3be744ddb101a3e76}{apr\+\_\+os\+\_\+threadkey\+\_\+t} $\ast$thekey, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t} \hyperlink{group__apr__os__thread_ga669a17c3a41db20bbc41c06d0e8881b3}{apr\+\_\+os\+\_\+thread\+\_\+current} (void)
+\item 
+int \hyperlink{group__apr__os__thread_gac55d4bbc219435046872b1236feb9bfa}{apr\+\_\+os\+\_\+thread\+\_\+equal} (\hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t} tid1, \hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t} tid2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Thread portability Routines@{Thread portability Routines}!apr\+\_\+os\+\_\+thread\+\_\+current@{apr\+\_\+os\+\_\+thread\+\_\+current}}
+\index{apr\+\_\+os\+\_\+thread\+\_\+current@{apr\+\_\+os\+\_\+thread\+\_\+current}!Thread portability Routines@{Thread portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+thread\+\_\+current(void)}{apr_os_thread_current(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+os\+\_\+thread\+\_\+t} apr\+\_\+os\+\_\+thread\+\_\+current (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__os__thread_ga669a17c3a41db20bbc41c06d0e8881b3}{}\label{group__apr__os__thread_ga669a17c3a41db20bbc41c06d0e8881b3}
+Get the thread ID \index{Thread portability Routines@{Thread portability Routines}!apr\+\_\+os\+\_\+thread\+\_\+equal@{apr\+\_\+os\+\_\+thread\+\_\+equal}}
+\index{apr\+\_\+os\+\_\+thread\+\_\+equal@{apr\+\_\+os\+\_\+thread\+\_\+equal}!Thread portability Routines@{Thread portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+thread\+\_\+equal(apr\+\_\+os\+\_\+thread\+\_\+t tid1, apr\+\_\+os\+\_\+thread\+\_\+t tid2)}{apr_os_thread_equal(apr_os_thread_t tid1, apr_os_thread_t tid2)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+os\+\_\+thread\+\_\+equal (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+os\+\_\+thread\+\_\+t}}]{tid1, }
+\item[{{\bf apr\+\_\+os\+\_\+thread\+\_\+t}}]{tid2}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__os__thread_gac55d4bbc219435046872b1236feb9bfa}{}\label{group__apr__os__thread_gac55d4bbc219435046872b1236feb9bfa}
+Compare two thread id\textquotesingle{}s 
+\begin{DoxyParams}{Parameters}
+{\em tid1} & 1st Thread ID to compare \\
+\hline
+{\em tid2} & 2nd Thread ID to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if the two threads are equal, zero otherwise 
+\end{DoxyReturn}
+\index{Thread portability Routines@{Thread portability Routines}!apr\+\_\+os\+\_\+thread\+\_\+get@{apr\+\_\+os\+\_\+thread\+\_\+get}}
+\index{apr\+\_\+os\+\_\+thread\+\_\+get@{apr\+\_\+os\+\_\+thread\+\_\+get}!Thread portability Routines@{Thread portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+thread\+\_\+get(apr\+\_\+os\+\_\+thread\+\_\+t $\ast$$\ast$thethd, apr\+\_\+thread\+\_\+t $\ast$thd)}{apr_os_thread_get(apr_os_thread_t **thethd, apr_thread_t *thd)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+thread\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+os\+\_\+thread\+\_\+t} $\ast$$\ast$}]{thethd, }
+\item[{{\bf apr\+\_\+thread\+\_\+t} $\ast$}]{thd}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__os__thread_gadda5e99fc387491a2a9436bf6144bd49}{}\label{group__apr__os__thread_gadda5e99fc387491a2a9436bf6144bd49}
+convert the thread to os specific type from apr type. 
+\begin{DoxyParams}{Parameters}
+{\em thethd} & The apr thread to convert \\
+\hline
+{\em thd} & The os specific thread we are converting to \\
+\hline
+\end{DoxyParams}
+\index{Thread portability Routines@{Thread portability Routines}!apr\+\_\+os\+\_\+thread\+\_\+put@{apr\+\_\+os\+\_\+thread\+\_\+put}}
+\index{apr\+\_\+os\+\_\+thread\+\_\+put@{apr\+\_\+os\+\_\+thread\+\_\+put}!Thread portability Routines@{Thread portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+thread\+\_\+put(apr\+\_\+thread\+\_\+t $\ast$$\ast$thd, apr\+\_\+os\+\_\+thread\+\_\+t $\ast$thethd, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_thread_put(apr_thread_t **thd, apr_os_thread_t *thethd, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+thread\+\_\+put (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+thread\+\_\+t} $\ast$$\ast$}]{thd, }
+\item[{{\bf apr\+\_\+os\+\_\+thread\+\_\+t} $\ast$}]{thethd, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__os__thread_ga7eda58df34fbc11cd251899e575a1b0f}{}\label{group__apr__os__thread_ga7eda58df34fbc11cd251899e575a1b0f}
+convert the thread from os specific type to apr type. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & The apr thread we are converting to. \\
+\hline
+{\em thethd} & The os specific thread to convert \\
+\hline
+{\em cont} & The pool to use if it is needed. \\
+\hline
+\end{DoxyParams}
+\index{Thread portability Routines@{Thread portability Routines}!apr\+\_\+os\+\_\+threadkey\+\_\+get@{apr\+\_\+os\+\_\+threadkey\+\_\+get}}
+\index{apr\+\_\+os\+\_\+threadkey\+\_\+get@{apr\+\_\+os\+\_\+threadkey\+\_\+get}!Thread portability Routines@{Thread portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+threadkey\+\_\+get(apr\+\_\+os\+\_\+threadkey\+\_\+t $\ast$thekey, apr\+\_\+threadkey\+\_\+t $\ast$key)}{apr_os_threadkey_get(apr_os_threadkey_t *thekey, apr_threadkey_t *key)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+threadkey\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+os\+\_\+threadkey\+\_\+t} $\ast$}]{thekey, }
+\item[{{\bf apr\+\_\+threadkey\+\_\+t} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__os__thread_ga2fd6ec9d398c4f2564765866c3d31219}{}\label{group__apr__os__thread_ga2fd6ec9d398c4f2564765866c3d31219}
+convert the thread private memory key to os specific type from an apr type. 
+\begin{DoxyParams}{Parameters}
+{\em thekey} & The apr handle we are converting from. \\
+\hline
+{\em key} & The os specific handle we are converting to. \\
+\hline
+\end{DoxyParams}
+\index{Thread portability Routines@{Thread portability Routines}!apr\+\_\+os\+\_\+threadkey\+\_\+put@{apr\+\_\+os\+\_\+threadkey\+\_\+put}}
+\index{apr\+\_\+os\+\_\+threadkey\+\_\+put@{apr\+\_\+os\+\_\+threadkey\+\_\+put}!Thread portability Routines@{Thread portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+threadkey\+\_\+put(apr\+\_\+threadkey\+\_\+t $\ast$$\ast$key, apr\+\_\+os\+\_\+threadkey\+\_\+t $\ast$thekey, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_threadkey_put(apr_threadkey_t **key, apr_os_threadkey_t *thekey, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+threadkey\+\_\+put (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+threadkey\+\_\+t} $\ast$$\ast$}]{key, }
+\item[{{\bf apr\+\_\+os\+\_\+threadkey\+\_\+t} $\ast$}]{thekey, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__os__thread_ga386f6e3e205d422f623132bb50147133}{}\label{group__apr__os__thread_ga386f6e3e205d422f623132bb50147133}
+convert the thread private memory key from os specific type to apr type. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The apr handle we are converting to. \\
+\hline
+{\em thekey} & The os specific handle to convert \\
+\hline
+{\em cont} & The pool to use if it is needed. \\
+\hline
+\end{DoxyParams}

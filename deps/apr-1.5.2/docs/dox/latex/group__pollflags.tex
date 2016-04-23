@@ -1,0 +1,32 @@
+\hypertarget{group__pollflags}{}\section{Pollset Flags}
+\label{group__pollflags}\index{Pollset Flags@{Pollset Flags}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__pollflags_gabdfaccfd394c847f692351dee2e5ef7f}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE}~0x001
+\item 
+\#define \hyperlink{group__pollflags_ga0febaf4378d2705bf1256b22fe8dfd24}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+C\+O\+PY}~0x002
+\item 
+\#define \hyperlink{group__pollflags_ga552d7f28d442602e6c9bb6931f183493}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+W\+A\+K\+E\+A\+B\+LE}~0x004
+\item 
+\#define \hyperlink{group__pollflags_gaa46a9cbb23b2e8e71dd3ba88e69fdf13}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+D\+E\+F\+A\+U\+LT}~0x010
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Pollset Flags@{Pollset Flags}!A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+C\+O\+PY@{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+C\+O\+PY}}
+\index{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+C\+O\+PY@{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+C\+O\+PY}!Pollset Flags@{Pollset Flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+C\+O\+PY}{APR_POLLSET_NOCOPY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+C\+O\+PY~0x002}\hypertarget{group__pollflags_ga0febaf4378d2705bf1256b22fe8dfd24}{}\label{group__pollflags_ga0febaf4378d2705bf1256b22fe8dfd24}
+Descriptors passed to \hyperlink{group__apr__poll_ga4ec50bf9a11c6b60927c51b81412f5b9}{apr\+\_\+pollset\+\_\+add()} are not copied \index{Pollset Flags@{Pollset Flags}!A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+D\+E\+F\+A\+U\+LT@{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+D\+E\+F\+A\+U\+LT}}
+\index{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+D\+E\+F\+A\+U\+LT@{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+D\+E\+F\+A\+U\+LT}!Pollset Flags@{Pollset Flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+D\+E\+F\+A\+U\+LT}{APR_POLLSET_NODEFAULT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+D\+E\+F\+A\+U\+LT~0x010}\hypertarget{group__pollflags_gaa46a9cbb23b2e8e71dd3ba88e69fdf13}{}\label{group__pollflags_gaa46a9cbb23b2e8e71dd3ba88e69fdf13}
+Do not try to use the default method if the specified non-\/default method cannot be used \index{Pollset Flags@{Pollset Flags}!A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE@{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE}}
+\index{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE@{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE}!Pollset Flags@{Pollset Flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE}{APR_POLLSET_THREADSAFE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE~0x001}\hypertarget{group__pollflags_gabdfaccfd394c847f692351dee2e5ef7f}{}\label{group__pollflags_gabdfaccfd394c847f692351dee2e5ef7f}
+Adding or removing a descriptor is thread-\/safe \index{Pollset Flags@{Pollset Flags}!A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+W\+A\+K\+E\+A\+B\+LE@{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+W\+A\+K\+E\+A\+B\+LE}}
+\index{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+W\+A\+K\+E\+A\+B\+LE@{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+W\+A\+K\+E\+A\+B\+LE}!Pollset Flags@{Pollset Flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+W\+A\+K\+E\+A\+B\+LE}{APR_POLLSET_WAKEABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+W\+A\+K\+E\+A\+B\+LE~0x004}\hypertarget{group__pollflags_ga552d7f28d442602e6c9bb6931f183493}{}\label{group__pollflags_ga552d7f28d442602e6c9bb6931f183493}
+Poll operations are interruptable by \hyperlink{group__apr__poll_gac5e86828143e169e18b2a6eab94be531}{apr\+\_\+pollset\+\_\+wakeup()} 

@@ -1,0 +1,32 @@
+\hypertarget{group__apr__file__lock__types}{}\section{File Lock Types}
+\label{group__apr__file__lock__types}\index{File Lock Types@{File Lock Types}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__file__lock__types_gaba177fe81cd70b389753ad2096b2ce7c}{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED}~1
+\item 
+\#define \hyperlink{group__apr__file__lock__types_gafbf0caa093b99bdf11e25360b9099852}{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE}~2
+\item 
+\#define \hyperlink{group__apr__file__lock__types_ga40777e364fb20bb9a9ee57e74b19c13d}{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK}~0x000F
+\item 
+\#define \hyperlink{group__apr__file__lock__types_gab327fa0250e19006f20d5ec65fe7f22a}{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK}~0x0010
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{File Lock Types@{File Lock Types}!A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE}}
+\index{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE}!File Lock Types@{File Lock Types}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE}{APR_FLOCK_EXCLUSIVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE~2}\hypertarget{group__apr__file__lock__types_gafbf0caa093b99bdf11e25360b9099852}{}\label{group__apr__file__lock__types_gafbf0caa093b99bdf11e25360b9099852}
+Exclusive lock. Only one process may hold an exclusive lock at any given time. This is analogous to a \char`\"{}write lock\char`\"{}. \index{File Lock Types@{File Lock Types}!A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK}}
+\index{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK}!File Lock Types@{File Lock Types}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK}{APR_FLOCK_NONBLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK~0x0010}\hypertarget{group__apr__file__lock__types_gab327fa0250e19006f20d5ec65fe7f22a}{}\label{group__apr__file__lock__types_gab327fa0250e19006f20d5ec65fe7f22a}
+do not block while acquiring the file lock \index{File Lock Types@{File Lock Types}!A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED}}
+\index{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED}!File Lock Types@{File Lock Types}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED}{APR_FLOCK_SHARED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED~1}\hypertarget{group__apr__file__lock__types_gaba177fe81cd70b389753ad2096b2ce7c}{}\label{group__apr__file__lock__types_gaba177fe81cd70b389753ad2096b2ce7c}
+Shared lock. More than one process or thread can hold a shared lock at any given time. Essentially, this is a \char`\"{}read lock\char`\"{}, preventing writers from establishing an exclusive lock. \index{File Lock Types@{File Lock Types}!A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK}}
+\index{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK}!File Lock Types@{File Lock Types}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK}{APR_FLOCK_TYPEMASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK~0x000F}\hypertarget{group__apr__file__lock__types_ga40777e364fb20bb9a9ee57e74b19c13d}{}\label{group__apr__file__lock__types_ga40777e364fb20bb9a9ee57e74b19c13d}
+mask to extract lock type 

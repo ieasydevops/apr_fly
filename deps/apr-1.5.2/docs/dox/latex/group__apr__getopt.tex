@@ -1,0 +1,139 @@
+\hypertarget{group__apr__getopt}{}\section{Command Argument Parsing}
+\label{group__apr__getopt}\index{Command Argument Parsing@{Command Argument Parsing}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t}
+\item 
+struct \hyperlink{structapr__getopt__option__t}{apr\+\_\+getopt\+\_\+option\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void( \hyperlink{group__apr__getopt_ga67c949e3d93e50e12347acd92a3bbe18}{apr\+\_\+getopt\+\_\+err\+\_\+fn\+\_\+t}) (void $\ast$arg, const char $\ast$err,...)
+\item 
+typedef struct \hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t} \hyperlink{group__apr__getopt_gaed49565eab64803e93f76d0c40d6873d}{apr\+\_\+getopt\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__getopt__option__t}{apr\+\_\+getopt\+\_\+option\+\_\+t} \hyperlink{group__apr__getopt_ga114d2af52f3573eaeee2ffa73b2c4ff5}{apr\+\_\+getopt\+\_\+option\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__getopt_gaaab2b4bfb62361af7a2d427f5f29a3d4}{apr\+\_\+getopt\+\_\+init} (\hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t} $\ast$$\ast$os, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont, int argc, const char $\ast$const $\ast$argv)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__getopt_ga289cdcf7eacc997eb91fea7c02d08934}{apr\+\_\+getopt} (\hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t} $\ast$os, const char $\ast$opts, char $\ast$option\+\_\+ch, const char $\ast$$\ast$option\+\_\+arg)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__getopt_ga80d6ff2213da4e25406b3f179fa13989}{apr\+\_\+getopt\+\_\+long} (\hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t} $\ast$os, const \hyperlink{structapr__getopt__option__t}{apr\+\_\+getopt\+\_\+option\+\_\+t} $\ast$opts, int $\ast$option\+\_\+ch, const char $\ast$$\ast$option\+\_\+arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\index{Command Argument Parsing@{Command Argument Parsing}!apr\+\_\+getopt\+\_\+err\+\_\+fn\+\_\+t@{apr\+\_\+getopt\+\_\+err\+\_\+fn\+\_\+t}}
+\index{apr\+\_\+getopt\+\_\+err\+\_\+fn\+\_\+t@{apr\+\_\+getopt\+\_\+err\+\_\+fn\+\_\+t}!Command Argument Parsing@{Command Argument Parsing}}
+\subsubsection[{\texorpdfstring{apr\+\_\+getopt\+\_\+err\+\_\+fn\+\_\+t}{apr_getopt_err_fn_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void( apr\+\_\+getopt\+\_\+err\+\_\+fn\+\_\+t) (void $\ast$arg, const char $\ast$err,...)}\hypertarget{group__apr__getopt_ga67c949e3d93e50e12347acd92a3bbe18}{}\label{group__apr__getopt_ga67c949e3d93e50e12347acd92a3bbe18}
+An {\ttfamily \hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t}} error callback function.
+
+{\itshape arg} is this {\ttfamily \hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t}\textquotesingle{}s} {\ttfamily errarg} member. \index{Command Argument Parsing@{Command Argument Parsing}!apr\+\_\+getopt\+\_\+option\+\_\+t@{apr\+\_\+getopt\+\_\+option\+\_\+t}}
+\index{apr\+\_\+getopt\+\_\+option\+\_\+t@{apr\+\_\+getopt\+\_\+option\+\_\+t}!Command Argument Parsing@{Command Argument Parsing}}
+\subsubsection[{\texorpdfstring{apr\+\_\+getopt\+\_\+option\+\_\+t}{apr_getopt_option_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+getopt\+\_\+option\+\_\+t} {\bf apr\+\_\+getopt\+\_\+option\+\_\+t}}\hypertarget{group__apr__getopt_ga114d2af52f3573eaeee2ffa73b2c4ff5}{}\label{group__apr__getopt_ga114d2af52f3573eaeee2ffa73b2c4ff5}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structapr__getopt__option__t}{apr\+\_\+getopt\+\_\+option\+\_\+t} 
+\end{DoxySeeAlso}
+\index{Command Argument Parsing@{Command Argument Parsing}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!Command Argument Parsing@{Command Argument Parsing}}
+\subsubsection[{\texorpdfstring{apr\+\_\+getopt\+\_\+t}{apr_getopt_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+getopt\+\_\+t} {\bf apr\+\_\+getopt\+\_\+t}}\hypertarget{group__apr__getopt_gaed49565eab64803e93f76d0c40d6873d}{}\label{group__apr__getopt_gaed49565eab64803e93f76d0c40d6873d}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\index{Command Argument Parsing@{Command Argument Parsing}!apr\+\_\+getopt@{apr\+\_\+getopt}}
+\index{apr\+\_\+getopt@{apr\+\_\+getopt}!Command Argument Parsing@{Command Argument Parsing}}
+\subsubsection[{\texorpdfstring{apr\+\_\+getopt(apr\+\_\+getopt\+\_\+t $\ast$os, const char $\ast$opts, char $\ast$option\+\_\+ch, const char $\ast$$\ast$option\+\_\+arg)}{apr_getopt(apr_getopt_t *os, const char *opts, char *option_ch, const char **option_arg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+getopt (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+getopt\+\_\+t} $\ast$}]{os, }
+\item[{const char $\ast$}]{opts, }
+\item[{char $\ast$}]{option\+\_\+ch, }
+\item[{const char $\ast$$\ast$}]{option\+\_\+arg}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__getopt_ga289cdcf7eacc997eb91fea7c02d08934}{}\label{group__apr__getopt_ga289cdcf7eacc997eb91fea7c02d08934}
+Parse the options initialized by \hyperlink{group__apr__getopt_gaaab2b4bfb62361af7a2d427f5f29a3d4}{apr\+\_\+getopt\+\_\+init()}. 
+\begin{DoxyParams}{Parameters}
+{\em os} & The apr\+\_\+opt\+\_\+t structure returned by \hyperlink{group__apr__getopt_gaaab2b4bfb62361af7a2d427f5f29a3d4}{apr\+\_\+getopt\+\_\+init()} \\
+\hline
+{\em opts} & A string of characters that are acceptable options to the program. Characters followed by \char`\"{}\+:\char`\"{} are required to have an option associated \\
+\hline
+{\em option\+\_\+ch} & The next option character parsed \\
+\hline
+{\em option\+\_\+arg} & The argument following the option character\+: \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+There are four potential status values on exit. They are\+: 
+\begin{DoxyPre}
+            APR\_EOF      --  No more options to parse
+            APR\_BADCH    --  Found a bad option character
+            APR\_BADARG   --  No argument followed the option flag
+            APR\_SUCCESS  --  The next option was found.
+\end{DoxyPre}
+ 
+\end{DoxyReturn}
+\index{Command Argument Parsing@{Command Argument Parsing}!apr\+\_\+getopt\+\_\+init@{apr\+\_\+getopt\+\_\+init}}
+\index{apr\+\_\+getopt\+\_\+init@{apr\+\_\+getopt\+\_\+init}!Command Argument Parsing@{Command Argument Parsing}}
+\subsubsection[{\texorpdfstring{apr\+\_\+getopt\+\_\+init(apr\+\_\+getopt\+\_\+t $\ast$$\ast$os, apr\+\_\+pool\+\_\+t $\ast$cont, int argc, const char $\ast$const $\ast$argv)}{apr_getopt_init(apr_getopt_t **os, apr_pool_t *cont, int argc, const char *const *argv)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+getopt\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+getopt\+\_\+t} $\ast$$\ast$}]{os, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont, }
+\item[{int}]{argc, }
+\item[{const char $\ast$const $\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__getopt_gaaab2b4bfb62361af7a2d427f5f29a3d4}{}\label{group__apr__getopt_gaaab2b4bfb62361af7a2d427f5f29a3d4}
+Initialize the arguments for parsing by \hyperlink{group__apr__getopt_ga289cdcf7eacc997eb91fea7c02d08934}{apr\+\_\+getopt()}. 
+\begin{DoxyParams}{Parameters}
+{\em os} & The options structure created for \hyperlink{group__apr__getopt_ga289cdcf7eacc997eb91fea7c02d08934}{apr\+\_\+getopt()} \\
+\hline
+{\em cont} & The pool to operate on \\
+\hline
+{\em argc} & The number of arguments to parse \\
+\hline
+{\em argv} & The array of arguments to parse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Arguments 3 and 4 are most commonly argc and argv from main(argc, argv) The ($\ast$os)-\/$>$errfn is initialized to fprintf(stderr... but may be overridden. 
+\end{DoxyRemark}
+\index{Command Argument Parsing@{Command Argument Parsing}!apr\+\_\+getopt\+\_\+long@{apr\+\_\+getopt\+\_\+long}}
+\index{apr\+\_\+getopt\+\_\+long@{apr\+\_\+getopt\+\_\+long}!Command Argument Parsing@{Command Argument Parsing}}
+\subsubsection[{\texorpdfstring{apr\+\_\+getopt\+\_\+long(apr\+\_\+getopt\+\_\+t $\ast$os, const apr\+\_\+getopt\+\_\+option\+\_\+t $\ast$opts, int $\ast$option\+\_\+ch, const char $\ast$$\ast$option\+\_\+arg)}{apr_getopt_long(apr_getopt_t *os, const apr_getopt_option_t *opts, int *option_ch, const char **option_arg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+getopt\+\_\+long (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+getopt\+\_\+t} $\ast$}]{os, }
+\item[{const {\bf apr\+\_\+getopt\+\_\+option\+\_\+t} $\ast$}]{opts, }
+\item[{int $\ast$}]{option\+\_\+ch, }
+\item[{const char $\ast$$\ast$}]{option\+\_\+arg}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__getopt_ga80d6ff2213da4e25406b3f179fa13989}{}\label{group__apr__getopt_ga80d6ff2213da4e25406b3f179fa13989}
+Parse the options initialized by \hyperlink{group__apr__getopt_gaaab2b4bfb62361af7a2d427f5f29a3d4}{apr\+\_\+getopt\+\_\+init()}, accepting long options beginning with \char`\"{}-\/-\/\char`\"{} in addition to single-\/character options beginning with \char`\"{}-\/\char`\"{}. 
+\begin{DoxyParams}{Parameters}
+{\em os} & The \hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t} structure created by \hyperlink{group__apr__getopt_gaaab2b4bfb62361af7a2d427f5f29a3d4}{apr\+\_\+getopt\+\_\+init()} \\
+\hline
+{\em opts} & A pointer to a list of \hyperlink{structapr__getopt__option__t}{apr\+\_\+getopt\+\_\+option\+\_\+t} structures, which can be initialized with \{ \char`\"{}name\char`\"{}, optch, has\+\_\+args \}. has\+\_\+args is nonzero if the option requires an argument. A structure with an optch value of 0 terminates the list. \\
+\hline
+{\em option\+\_\+ch} & Receives the value of \char`\"{}optch\char`\"{} from the \hyperlink{structapr__getopt__option__t}{apr\+\_\+getopt\+\_\+option\+\_\+t} structure corresponding to the next option matched. \\
+\hline
+{\em option\+\_\+arg} & Receives the argument following the option, if any. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+There are four potential status values on exit. They are\+: 
+\begin{DoxyPre}
+            APR\_EOF      --  No more options to parse
+            APR\_BADCH    --  Found a bad option character
+            APR\_BADARG   --  No argument followed the option flag
+            APR\_SUCCESS  --  The next option was found.
+\end{DoxyPre}
+ When A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS is returned, os-\/$>$ind gives the index of the first non-\/option argument. On error, a message will be printed to stdout unless os-\/$>$err is set to 0. If os-\/$>$interleave is set to nonzero, options can come after arguments, and os-\/$>$argv will be permuted to leave non-\/option arguments at the end (the original argv is unaffected). 
+\end{DoxyReturn}

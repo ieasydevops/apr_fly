@@ -1,0 +1,723 @@
+\hypertarget{group__apr__pools}{}\section{Memory Pool Functions}
+\label{group__apr__pools}\index{Memory Pool Functions@{Memory Pool Functions}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___pool_cleanup}{Pool Cleanup Functions}
+\item 
+\hyperlink{group___pool_debug}{Pool Debugging functions.}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__pools_ga89ce1d55c7f0c39ea87c88eabd655394}{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR}(type)
+\item 
+\#define \hyperlink{group__apr__pools_ga43a8a52f68f8b7d3b7694c254da4a074}{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+A\+C\+C\+E\+S\+S\+OR}(type)
+\item 
+\#define \hyperlink{group__apr__pools_gac81cff34d0ff4be52fa924663478eade}{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+}~\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+ \char`\"{}\+:\char`\"{} \hyperlink{apr__version_8h_ae90215615972dfa4108018304361ef0b}{A\+P\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}(\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t}
+\item 
+typedef int($\ast$ \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t}) (int retcode)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gad64a6a29515621bc13f8a8da50366d67}{apr\+\_\+pool\+\_\+initialize} (void)
+\item 
+void \hyperlink{group__apr__pools_ga3728aacec227318cef973b8a33f3b430}{apr\+\_\+pool\+\_\+terminate} (void)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gab274bd29e4e4d4944b4618403148074f}{apr\+\_\+pool\+\_\+create\+\_\+ex} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$parent, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_ga20e514c83555398acddc30c4dfa0c540}{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gaae7212db77bb57f86419cd594f73a92f}{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gacbea97ae5c0c861f6b7c147d46ac1d0c}{apr\+\_\+pool\+\_\+create\+\_\+ex\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$parent, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, const char $\ast$file\+\_\+line)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gaa1c5bfc44188884bb439670f81448c20}{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, const char $\ast$file\+\_\+line)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gae220e572b14355f1aa7b21c8fb022524}{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, const char $\ast$file\+\_\+line)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_ga918adf3026c894efeae254a0446aed3b}{apr\+\_\+pool\+\_\+create} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$parent)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gad3675378924bc9d98e46258c049f1761}{apr\+\_\+pool\+\_\+create\+\_\+core} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} {\bfseries apr\+\_\+pool\+\_\+create\+\_\+unmanaged} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool)\hypertarget{group__apr__pools_ga72f86d699b4b2ec2aeb82c334ca3446b}{}\label{group__apr__pools_ga72f86d699b4b2ec2aeb82c334ca3446b}
+
+\item 
+\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$ \hyperlink{group__apr__pools_gaf446fcf5da1fcd62d3f802a4c0c10f97}{apr\+\_\+pool\+\_\+allocator\+\_\+get} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+void \hyperlink{group__apr__pools_gafa8a998cd660e82b62aecec09e239d0d}{apr\+\_\+pool\+\_\+clear} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+void \hyperlink{group__apr__pools_ga9521870e42ec4395a0bf8388706a57b9}{apr\+\_\+pool\+\_\+clear\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$file\+\_\+line)
+\item 
+void \hyperlink{group__apr__pools_ga54759954d2cba7cb649ab5680a33f9e3}{apr\+\_\+pool\+\_\+destroy} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+void \hyperlink{group__apr__pools_ga7efe64dfcce883d7fad9df813d9259fc}{apr\+\_\+pool\+\_\+destroy\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$file\+\_\+line)
+\item 
+void $\ast$ \hyperlink{group__apr__pools_ga85f1e193c31d109affda72f9a92c6915}{apr\+\_\+palloc} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+size\+\_\+t size)
+\item 
+void $\ast$ \hyperlink{group__apr__pools_ga0ac211ac89be868b107776b4183a8174}{apr\+\_\+palloc\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+size\+\_\+t size, const char $\ast$file\+\_\+line)
+\item 
+void $\ast$ \hyperlink{group__apr__pools_gaf61c098ad258069d64cdf8c0a9369f9e}{apr\+\_\+pcalloc} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+size\+\_\+t size)
+\item 
+void $\ast$ \hyperlink{group__apr__pools_ga7b43035318ffdc57a6eddab07dc57cb2}{apr\+\_\+pcalloc\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+size\+\_\+t size, const char $\ast$file\+\_\+line)
+\item 
+void \hyperlink{group__apr__pools_gaa658b1f10dd13967eaa7c4156d4c2174}{apr\+\_\+pool\+\_\+abort\+\_\+set} (\hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abortfunc, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} \hyperlink{group__apr__pools_gaf7610c30ef5f84a8742c0b3e63fdd7b0}{apr\+\_\+pool\+\_\+abort\+\_\+get} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__pools_ga94db31f40609b15b592ff47f989ca9ec}{apr\+\_\+pool\+\_\+parent\+\_\+get} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+int \hyperlink{group__apr__pools_ga05d299f778659d1e0806140d8a7fea79}{apr\+\_\+pool\+\_\+is\+\_\+ancestor} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$a, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$b)
+\item 
+void \hyperlink{group__apr__pools_gaeaa872f7999740a60803e95429890518}{apr\+\_\+pool\+\_\+tag} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool, const char $\ast$tag)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_ga78d1aa2d9fa842d83eaffccb0f0c0c5c}{apr\+\_\+pool\+\_\+userdata\+\_\+set} (const void $\ast$data, const char $\ast$key, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$), \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_ga435644c493dc5b10d80c4b99b8cd4589}{apr\+\_\+pool\+\_\+userdata\+\_\+setn} (const void $\ast$data, const char $\ast$key, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$), \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gaf930f1fad2cf92a2432c0814c8a0b86f}{apr\+\_\+pool\+\_\+userdata\+\_\+get} (void $\ast$$\ast$data, const char $\ast$key, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Memory Pool Functions@{Memory Pool Functions}!A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+@{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+}}
+\index{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+@{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+}{APR_POOL__FILE_LINE__}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+~\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+ \char`\"{}\+:\char`\"{} {\bf A\+P\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}(\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)}\hypertarget{group__apr__pools_gac81cff34d0ff4be52fa924663478eade}{}\label{group__apr__pools_gac81cff34d0ff4be52fa924663478eade}
+Pool debug levels
+
+
+\begin{DoxyPre}
+\subsubsection*{| 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+|   |   |   |   |   |   |   | x |  General debug code enabled (useful in
+                                   combination with --with-efence).\end{DoxyPre}
+
+
+
+\begin{DoxyPre}|   |   |   |   |   |   | x |   |  Verbose output on stderr (report
+                                   CREATE, CLEAR, DESTROY).\end{DoxyPre}
+
+
+
+\begin{DoxyPre}|   |   |   | x |   |   |   |   |  Verbose output on stderr (report
+                                   PALLOC, PCALLOC).\end{DoxyPre}
+
+
+
+\begin{DoxyPre}|   |   |   |   |   | x |   |   |  Lifetime checking. On each use of a
+                                   pool, check its lifetime.  If the pool
+                                   is out of scope, abort().
+                                   In combination with the verbose flag
+                                   above, it will output LIFE in such an
+                                   event prior to aborting.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}|   |   |   |   | x |   |   |   |  Pool owner checking.  On each use of a
+                                   pool, check if the current thread is the
+                                   pool's owner.  If not, abort().  In
+                                   combination with the verbose flag above,
+                                   it will output OWNER in such an event
+                                   prior to aborting.  Use the debug
+                                   function apr\_pool\_owner\_set() to switch
+                                   a pool's ownership.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}When no debug level was specified, assume general debug mode.
+If level 0 was specified, debugging is switched off.
+\end{DoxyPre}
+the place in the code where the particular function was called \index{Memory Pool Functions@{Memory Pool Functions}!A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR@{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR}}
+\index{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR@{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR}{APR_POOL_DECLARE_ACCESSOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR(
+\begin{DoxyParamCaption}
+\item[{}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga89ce1d55c7f0c39ea87c88eabd655394}{}\label{group__apr__pools_ga89ce1d55c7f0c39ea87c88eabd655394}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{group__apr__platform_ga51bb2fd47cdff20cd9cb91d82e9b0efa}{APR\_DECLARE}(\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\_pool\_t} *) apr\_\textcolor{preprocessor}{##type##\_pool\_get \(\backslash\)}
+\textcolor{preprocessor}{        (const apr\_##type##\_t *the##type)}
+\end{DoxyCode}
+Declaration helper macro to construct apr\+\_\+foo\+\_\+pool\+\_\+get()s.
+
+This standardized macro is used by opaque (A\+PR) data types to return the apr\+\_\+pool\+\_\+t that is associated with the data type.
+
+\hyperlink{group__apr__pools_ga89ce1d55c7f0c39ea87c88eabd655394}{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R()} is used in a header file to declare the accessor function. A typical usage and result would be\+: 
+\begin{DoxyPre}
+   \hyperlink{group__apr__pools_ga89ce1d55c7f0c39ea87c88eabd655394}{APR\_POOL\_DECLARE\_ACCESSOR(file)};
+becomes:
+   \hyperlink{group__apr__platform_ga51bb2fd47cdff20cd9cb91d82e9b0efa}{APR\_DECLARE(apr\_pool\_t *)} \hyperlink{group__apr__file__io_gab5950b3b0156097b0181394a37e03ede}{apr\_file\_pool\_get(const apr\_file\_t *thefile)};
+\end{DoxyPre}
+ \begin{DoxyRemark}{Remarks}
+Doxygen unwraps this macro (via doxygen.\+conf) to provide actual help for each specific occurrence of apr\+\_\+foo\+\_\+pool\+\_\+get. 
+
+the linkage is specified for A\+PR. It would be possible to expand the macros to support other linkages. 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+A\+C\+C\+E\+S\+S\+OR@{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+A\+C\+C\+E\+S\+S\+OR}}
+\index{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+A\+C\+C\+E\+S\+S\+OR@{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+A\+C\+C\+E\+S\+S\+OR}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+A\+C\+C\+E\+S\+S\+OR}{APR_POOL_IMPLEMENT_ACCESSOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+A\+C\+C\+E\+S\+S\+OR(
+\begin{DoxyParamCaption}
+\item[{}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga43a8a52f68f8b7d3b7694c254da4a074}{}\label{group__apr__pools_ga43a8a52f68f8b7d3b7694c254da4a074}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{group__apr__platform_ga51bb2fd47cdff20cd9cb91d82e9b0efa}{APR\_DECLARE}(\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\_pool\_t} *) apr\_\textcolor{preprocessor}{##type##\_pool\_get \(\backslash\)}
+\textcolor{preprocessor}{            (const apr\_##type##\_t *the##type) \(\backslash\)}
+\textcolor{preprocessor}{        \{ return the##type->pool; \}}
+\end{DoxyCode}
+Implementation helper macro to provide apr\+\_\+foo\+\_\+pool\+\_\+get()s.
+
+In the implementation, the \hyperlink{group__apr__pools_ga43a8a52f68f8b7d3b7694c254da4a074}{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R()} is used to actually define the function. It assumes the field is named \char`\"{}pool\char`\"{}. 
+
+\subsection{Typedef Documentation}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+abortfunc\+\_\+t@{apr\+\_\+abortfunc\+\_\+t}}
+\index{apr\+\_\+abortfunc\+\_\+t@{apr\+\_\+abortfunc\+\_\+t}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+abortfunc\+\_\+t}{apr_abortfunc_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ apr\+\_\+abortfunc\+\_\+t) (int retcode)}\hypertarget{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{}\label{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}
+A function that is called when allocation fails. \index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+t@{apr\+\_\+pool\+\_\+t}}
+\index{apr\+\_\+pool\+\_\+t@{apr\+\_\+pool\+\_\+t}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+t}{apr_pool_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+pool\+\_\+t} {\bf apr\+\_\+pool\+\_\+t}}\hypertarget{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{}\label{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}
+The fundamental pool type 
+
+\subsection{Function Documentation}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+palloc@{apr\+\_\+palloc}}
+\index{apr\+\_\+palloc@{apr\+\_\+palloc}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+palloc(apr\+\_\+pool\+\_\+t $\ast$p, apr\+\_\+size\+\_\+t size)}{apr_palloc(apr_pool_t *p, apr_size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+palloc (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{apr\+\_\+size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga85f1e193c31d109affda72f9a92c6915}{}\label{group__apr__pools_ga85f1e193c31d109affda72f9a92c6915}
+Allocate a block of memory from a pool 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate from \\
+\hline
+{\em size} & The amount of memory to allocate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The allocated memory 
+\end{DoxyReturn}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+palloc\+\_\+debug@{apr\+\_\+palloc\+\_\+debug}}
+\index{apr\+\_\+palloc\+\_\+debug@{apr\+\_\+palloc\+\_\+debug}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+palloc\+\_\+debug(apr\+\_\+pool\+\_\+t $\ast$p, apr\+\_\+size\+\_\+t size, const char $\ast$file\+\_\+line)}{apr_palloc_debug(apr_pool_t *p, apr_size_t size, const char *file_line)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+palloc\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{apr\+\_\+size\+\_\+t}]{size, }
+\item[{const char $\ast$}]{file\+\_\+line}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga0ac211ac89be868b107776b4183a8174}{}\label{group__apr__pools_ga0ac211ac89be868b107776b4183a8174}
+Debug version of apr\+\_\+palloc 
+\begin{DoxyParams}{Parameters}
+{\em p} & See\+: apr\+\_\+palloc \\
+\hline
+{\em size} & See\+: apr\+\_\+palloc \\
+\hline
+{\em file\+\_\+line} & Where the function is called from. This is usually A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+See\+: apr\+\_\+palloc 
+\end{DoxyReturn}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pcalloc@{apr\+\_\+pcalloc}}
+\index{apr\+\_\+pcalloc@{apr\+\_\+pcalloc}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pcalloc(apr\+\_\+pool\+\_\+t $\ast$p, apr\+\_\+size\+\_\+t size)}{apr_pcalloc(apr_pool_t *p, apr_size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+pcalloc (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{apr\+\_\+size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gaf61c098ad258069d64cdf8c0a9369f9e}{}\label{group__apr__pools_gaf61c098ad258069d64cdf8c0a9369f9e}
+Allocate a block of memory from a pool and set all of the memory to 0 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate from \\
+\hline
+{\em size} & The amount of memory to allocate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The allocated memory 
+\end{DoxyReturn}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pcalloc\+\_\+debug@{apr\+\_\+pcalloc\+\_\+debug}}
+\index{apr\+\_\+pcalloc\+\_\+debug@{apr\+\_\+pcalloc\+\_\+debug}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pcalloc\+\_\+debug(apr\+\_\+pool\+\_\+t $\ast$p, apr\+\_\+size\+\_\+t size, const char $\ast$file\+\_\+line)}{apr_pcalloc_debug(apr_pool_t *p, apr_size_t size, const char *file_line)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+pcalloc\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{apr\+\_\+size\+\_\+t}]{size, }
+\item[{const char $\ast$}]{file\+\_\+line}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga7b43035318ffdc57a6eddab07dc57cb2}{}\label{group__apr__pools_ga7b43035318ffdc57a6eddab07dc57cb2}
+Debug version of apr\+\_\+pcalloc 
+\begin{DoxyParams}{Parameters}
+{\em p} & See\+: apr\+\_\+pcalloc \\
+\hline
+{\em size} & See\+: apr\+\_\+pcalloc \\
+\hline
+{\em file\+\_\+line} & Where the function is called from. This is usually A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+See\+: apr\+\_\+pcalloc 
+\end{DoxyReturn}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+abort\+\_\+get@{apr\+\_\+pool\+\_\+abort\+\_\+get}}
+\index{apr\+\_\+pool\+\_\+abort\+\_\+get@{apr\+\_\+pool\+\_\+abort\+\_\+get}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+abort\+\_\+get(apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_pool_abort_get(apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+abortfunc\+\_\+t} apr\+\_\+pool\+\_\+abort\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gaf7610c30ef5f84a8742c0b3e63fdd7b0}{}\label{group__apr__pools_gaf7610c30ef5f84a8742c0b3e63fdd7b0}
+Get the abort function associated with the specified pool. 
+\begin{DoxyParams}{Parameters}
+{\em pool} & The pool for retrieving the abort function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The abort function for the given pool. 
+\end{DoxyReturn}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+abort\+\_\+set@{apr\+\_\+pool\+\_\+abort\+\_\+set}}
+\index{apr\+\_\+pool\+\_\+abort\+\_\+set@{apr\+\_\+pool\+\_\+abort\+\_\+set}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+abort\+\_\+set(apr\+\_\+abortfunc\+\_\+t abortfunc, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_pool_abort_set(apr_abortfunc_t abortfunc, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+abort\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+abortfunc\+\_\+t}}]{abortfunc, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gaa658b1f10dd13967eaa7c4156d4c2174}{}\label{group__apr__pools_gaa658b1f10dd13967eaa7c4156d4c2174}
+Set the function to be called when an allocation failure occurs. \begin{DoxyRemark}{Remarks}
+If the program wants A\+PR to exit on a memory allocation error, then this function can be called to set the callback to use (for performing cleanup and then exiting). If this function is not called, then A\+PR will return an error and expect the calling program to deal with the error accordingly. 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+allocator\+\_\+get@{apr\+\_\+pool\+\_\+allocator\+\_\+get}}
+\index{apr\+\_\+pool\+\_\+allocator\+\_\+get@{apr\+\_\+pool\+\_\+allocator\+\_\+get}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+allocator\+\_\+get(apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_pool_allocator_get(apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+allocator\+\_\+t}$\ast$ apr\+\_\+pool\+\_\+allocator\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gaf446fcf5da1fcd62d3f802a4c0c10f97}{}\label{group__apr__pools_gaf446fcf5da1fcd62d3f802a4c0c10f97}
+Find the pool\textquotesingle{}s allocator 
+\begin{DoxyParams}{Parameters}
+{\em pool} & The pool to get the allocator from. \\
+\hline
+\end{DoxyParams}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+clear@{apr\+\_\+pool\+\_\+clear}}
+\index{apr\+\_\+pool\+\_\+clear@{apr\+\_\+pool\+\_\+clear}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+clear(apr\+\_\+pool\+\_\+t $\ast$p)}{apr_pool_clear(apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gafa8a998cd660e82b62aecec09e239d0d}{}\label{group__apr__pools_gafa8a998cd660e82b62aecec09e239d0d}
+Clear all memory in the pool and run all the cleanups. This also destroys all subpools. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to clear \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This does not actually free the memory, it just allows the pool to re-\/use this memory for the next allocation. 
+\end{DoxyRemark}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__pools_ga54759954d2cba7cb649ab5680a33f9e3}{apr\+\_\+pool\+\_\+destroy()} 
+\end{DoxySeeAlso}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+clear\+\_\+debug@{apr\+\_\+pool\+\_\+clear\+\_\+debug}}
+\index{apr\+\_\+pool\+\_\+clear\+\_\+debug@{apr\+\_\+pool\+\_\+clear\+\_\+debug}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+clear\+\_\+debug(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$file\+\_\+line)}{apr_pool_clear_debug(apr_pool_t *p, const char *file_line)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+clear\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{file\+\_\+line}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga9521870e42ec4395a0bf8388706a57b9}{}\label{group__apr__pools_ga9521870e42ec4395a0bf8388706a57b9}
+Debug version of apr\+\_\+pool\+\_\+clear. 
+\begin{DoxyParams}{Parameters}
+{\em p} & See\+: apr\+\_\+pool\+\_\+clear. \\
+\hline
+{\em file\+\_\+line} & Where the function is called from. This is usually A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Only available when A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+B\+UG is defined. Call this directly if you have your apr\+\_\+pool\+\_\+clear calls in a wrapper function and wish to override the file\+\_\+line argument to reflect the caller of your wrapper function. If you do not have apr\+\_\+pool\+\_\+clear in a wrapper, trust the macro and don\textquotesingle{}t call apr\+\_\+pool\+\_\+destroy\+\_\+clear directly. 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+create@{apr\+\_\+pool\+\_\+create}}
+\index{apr\+\_\+pool\+\_\+create@{apr\+\_\+pool\+\_\+create}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+create(apr\+\_\+pool\+\_\+t $\ast$$\ast$newpool, apr\+\_\+pool\+\_\+t $\ast$parent)}{apr_pool_create(apr_pool_t **newpool, apr_pool_t *parent)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$$\ast$}]{newpool, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga918adf3026c894efeae254a0446aed3b}{}\label{group__apr__pools_ga918adf3026c894efeae254a0446aed3b}
+Create a new pool. 
+\begin{DoxyParams}{Parameters}
+{\em newpool} & The pool we have just created. \\
+\hline
+{\em parent} & The parent pool. If this is N\+U\+LL, the new pool is a root pool. If it is non-\/\+N\+U\+LL, the new pool will inherit all of its parent pool\textquotesingle{}s attributes, except the apr\+\_\+pool\+\_\+t will be a sub-\/pool. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function is thread-\/safe, in the sense that multiple threads can safely create subpools of the same parent pool concurrently. Similarly, a subpool can be created by one thread at the same time that another thread accesses the parent pool. 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+create\+\_\+core@{apr\+\_\+pool\+\_\+create\+\_\+core}}
+\index{apr\+\_\+pool\+\_\+create\+\_\+core@{apr\+\_\+pool\+\_\+create\+\_\+core}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+create\+\_\+core(apr\+\_\+pool\+\_\+t $\ast$$\ast$newpool)}{apr_pool_create_core(apr_pool_t **newpool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+create\+\_\+core (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$$\ast$}]{newpool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gad3675378924bc9d98e46258c049f1761}{}\label{group__apr__pools_gad3675378924bc9d98e46258c049f1761}
+Create a new unmanaged pool. 
+\begin{DoxyParams}{Parameters}
+{\em newpool} & The pool we have just created. \\
+\hline
+\end{DoxyParams}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex@{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex}}
+\index{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex@{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex(apr\+\_\+pool\+\_\+t $\ast$$\ast$newpool, apr\+\_\+abortfunc\+\_\+t abort\+\_\+fn, apr\+\_\+allocator\+\_\+t $\ast$allocator)}{apr_pool_create_core_ex(apr_pool_t **newpool, apr_abortfunc_t abort_fn, apr_allocator_t *allocator)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$$\ast$}]{newpool, }
+\item[{{\bf apr\+\_\+abortfunc\+\_\+t}}]{abort\+\_\+fn, }
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga20e514c83555398acddc30c4dfa0c540}{}\label{group__apr__pools_ga20e514c83555398acddc30c4dfa0c540}
+Create a new pool. \begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000033}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__pools_gaae7212db77bb57f86419cd594f73a92f}{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex}. 
+\end{DoxySeeAlso}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex\+\_\+debug@{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex\+\_\+debug}}
+\index{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex\+\_\+debug@{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex\+\_\+debug}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex\+\_\+debug(apr\+\_\+pool\+\_\+t $\ast$$\ast$newpool, apr\+\_\+abortfunc\+\_\+t abort\+\_\+fn, apr\+\_\+allocator\+\_\+t $\ast$allocator, const char $\ast$file\+\_\+line)}{apr_pool_create_core_ex_debug(apr_pool_t **newpool, apr_abortfunc_t abort_fn, apr_allocator_t *allocator, const char *file_line)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$$\ast$}]{newpool, }
+\item[{{\bf apr\+\_\+abortfunc\+\_\+t}}]{abort\+\_\+fn, }
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator, }
+\item[{const char $\ast$}]{file\+\_\+line}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gaa1c5bfc44188884bb439670f81448c20}{}\label{group__apr__pools_gaa1c5bfc44188884bb439670f81448c20}
+Debug version of apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex. \begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000034}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__pools_gae220e572b14355f1aa7b21c8fb022524}{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex\+\_\+debug}. 
+\end{DoxySeeAlso}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+create\+\_\+ex@{apr\+\_\+pool\+\_\+create\+\_\+ex}}
+\index{apr\+\_\+pool\+\_\+create\+\_\+ex@{apr\+\_\+pool\+\_\+create\+\_\+ex}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+create\+\_\+ex(apr\+\_\+pool\+\_\+t $\ast$$\ast$newpool, apr\+\_\+pool\+\_\+t $\ast$parent, apr\+\_\+abortfunc\+\_\+t abort\+\_\+fn, apr\+\_\+allocator\+\_\+t $\ast$allocator)}{apr_pool_create_ex(apr_pool_t **newpool, apr_pool_t *parent, apr_abortfunc_t abort_fn, apr_allocator_t *allocator)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+create\+\_\+ex (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$$\ast$}]{newpool, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{parent, }
+\item[{{\bf apr\+\_\+abortfunc\+\_\+t}}]{abort\+\_\+fn, }
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gab274bd29e4e4d4944b4618403148074f}{}\label{group__apr__pools_gab274bd29e4e4d4944b4618403148074f}
+Create a new pool. 
+\begin{DoxyParams}{Parameters}
+{\em newpool} & The pool we have just created. \\
+\hline
+{\em parent} & The parent pool. If this is N\+U\+LL, the new pool is a root pool. If it is non-\/\+N\+U\+LL, the new pool will inherit all of its parent pool\textquotesingle{}s attributes, except the apr\+\_\+pool\+\_\+t will be a sub-\/pool. \\
+\hline
+{\em abort\+\_\+fn} & A function to use if the pool cannot allocate more memory. \\
+\hline
+{\em allocator} & The allocator to use with the new pool. If N\+U\+LL the allocator of the parent pool will be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function is thread-\/safe, in the sense that multiple threads can safely create subpools of the same parent pool concurrently. Similarly, a subpool can be created by one thread at the same time that another thread accesses the parent pool. 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+create\+\_\+ex\+\_\+debug@{apr\+\_\+pool\+\_\+create\+\_\+ex\+\_\+debug}}
+\index{apr\+\_\+pool\+\_\+create\+\_\+ex\+\_\+debug@{apr\+\_\+pool\+\_\+create\+\_\+ex\+\_\+debug}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+create\+\_\+ex\+\_\+debug(apr\+\_\+pool\+\_\+t $\ast$$\ast$newpool, apr\+\_\+pool\+\_\+t $\ast$parent, apr\+\_\+abortfunc\+\_\+t abort\+\_\+fn, apr\+\_\+allocator\+\_\+t $\ast$allocator, const char $\ast$file\+\_\+line)}{apr_pool_create_ex_debug(apr_pool_t **newpool, apr_pool_t *parent, apr_abortfunc_t abort_fn, apr_allocator_t *allocator, const char *file_line)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+create\+\_\+ex\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$$\ast$}]{newpool, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{parent, }
+\item[{{\bf apr\+\_\+abortfunc\+\_\+t}}]{abort\+\_\+fn, }
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator, }
+\item[{const char $\ast$}]{file\+\_\+line}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gacbea97ae5c0c861f6b7c147d46ac1d0c}{}\label{group__apr__pools_gacbea97ae5c0c861f6b7c147d46ac1d0c}
+Debug version of apr\+\_\+pool\+\_\+create\+\_\+ex. 
+\begin{DoxyParams}{Parameters}
+{\em newpool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__pools_ga918adf3026c894efeae254a0446aed3b}{apr\+\_\+pool\+\_\+create}. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__pools_ga918adf3026c894efeae254a0446aed3b}{apr\+\_\+pool\+\_\+create}. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em abort\+\_\+fn} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__pools_ga918adf3026c894efeae254a0446aed3b}{apr\+\_\+pool\+\_\+create}. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__pools_ga918adf3026c894efeae254a0446aed3b}{apr\+\_\+pool\+\_\+create}. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+line} & Where the function is called from. This is usually A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Only available when A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+B\+UG is defined. Call this directly if you have your apr\+\_\+pool\+\_\+create\+\_\+ex calls in a wrapper function and wish to override the file\+\_\+line argument to reflect the caller of your wrapper function. If you do not have apr\+\_\+pool\+\_\+create\+\_\+ex in a wrapper, trust the macro and don\textquotesingle{}t call apr\+\_\+pool\+\_\+create\+\_\+ex\+\_\+debug directly. 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex@{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex}}
+\index{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex@{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex(apr\+\_\+pool\+\_\+t $\ast$$\ast$newpool, apr\+\_\+abortfunc\+\_\+t abort\+\_\+fn, apr\+\_\+allocator\+\_\+t $\ast$allocator)}{apr_pool_create_unmanaged_ex(apr_pool_t **newpool, apr_abortfunc_t abort_fn, apr_allocator_t *allocator)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$$\ast$}]{newpool, }
+\item[{{\bf apr\+\_\+abortfunc\+\_\+t}}]{abort\+\_\+fn, }
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gaae7212db77bb57f86419cd594f73a92f}{}\label{group__apr__pools_gaae7212db77bb57f86419cd594f73a92f}
+Create a new unmanaged pool. 
+\begin{DoxyParams}{Parameters}
+{\em newpool} & The pool we have just created. \\
+\hline
+{\em abort\+\_\+fn} & A function to use if the pool cannot allocate more memory. \\
+\hline
+{\em allocator} & The allocator to use with the new pool. If N\+U\+LL a new allocator will be created with the new pool as owner. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+An unmanaged pool is a special pool without a parent; it will N\+OT be destroyed upon apr\+\_\+terminate. It must be explicitly destroyed by calling apr\+\_\+pool\+\_\+destroy, to prevent memory leaks. Use of this function is discouraged, think twice about whether you really really need it. 
+\end{DoxyRemark}
+\begin{DoxyWarning}{Warning}
+Any child cleanups registered against the new pool, or against sub-\/pools thereof, will not be executed during an invocation of \hyperlink{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{apr\+\_\+proc\+\_\+create()}, so resources created in an \char`\"{}unmanaged\char`\"{} pool hierarchy will leak to child processes. 
+\end{DoxyWarning}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex\+\_\+debug@{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex\+\_\+debug}}
+\index{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex\+\_\+debug@{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex\+\_\+debug}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex\+\_\+debug(apr\+\_\+pool\+\_\+t $\ast$$\ast$newpool, apr\+\_\+abortfunc\+\_\+t abort\+\_\+fn, apr\+\_\+allocator\+\_\+t $\ast$allocator, const char $\ast$file\+\_\+line)}{apr_pool_create_unmanaged_ex_debug(apr_pool_t **newpool, apr_abortfunc_t abort_fn, apr_allocator_t *allocator, const char *file_line)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$$\ast$}]{newpool, }
+\item[{{\bf apr\+\_\+abortfunc\+\_\+t}}]{abort\+\_\+fn, }
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator, }
+\item[{const char $\ast$}]{file\+\_\+line}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gae220e572b14355f1aa7b21c8fb022524}{}\label{group__apr__pools_gae220e572b14355f1aa7b21c8fb022524}
+Debug version of apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex. 
+\begin{DoxyParams}{Parameters}
+{\em newpool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+apr\+\_\+pool\+\_\+create\+\_\+unmanaged. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em abort\+\_\+fn} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+apr\+\_\+pool\+\_\+create\+\_\+unmanaged. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+apr\+\_\+pool\+\_\+create\+\_\+unmanaged. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+line} & Where the function is called from. This is usually A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Only available when A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+B\+UG is defined. Call this directly if you have your apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex calls in a wrapper function and wish to override the file\+\_\+line argument to reflect the caller of your wrapper function. If you do not have apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex in a wrapper, trust the macro and don\textquotesingle{}t call apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex\+\_\+debug directly. 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+destroy@{apr\+\_\+pool\+\_\+destroy}}
+\index{apr\+\_\+pool\+\_\+destroy@{apr\+\_\+pool\+\_\+destroy}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+destroy(apr\+\_\+pool\+\_\+t $\ast$p)}{apr_pool_destroy(apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga54759954d2cba7cb649ab5680a33f9e3}{}\label{group__apr__pools_ga54759954d2cba7cb649ab5680a33f9e3}
+Destroy the pool. This takes similar action as \hyperlink{group__apr__pools_gafa8a998cd660e82b62aecec09e239d0d}{apr\+\_\+pool\+\_\+clear()} and then frees all the memory. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to destroy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This will actually free the memory 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+destroy\+\_\+debug@{apr\+\_\+pool\+\_\+destroy\+\_\+debug}}
+\index{apr\+\_\+pool\+\_\+destroy\+\_\+debug@{apr\+\_\+pool\+\_\+destroy\+\_\+debug}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+destroy\+\_\+debug(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$file\+\_\+line)}{apr_pool_destroy_debug(apr_pool_t *p, const char *file_line)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+destroy\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{file\+\_\+line}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga7efe64dfcce883d7fad9df813d9259fc}{}\label{group__apr__pools_ga7efe64dfcce883d7fad9df813d9259fc}
+Debug version of apr\+\_\+pool\+\_\+destroy. 
+\begin{DoxyParams}{Parameters}
+{\em p} & See\+: apr\+\_\+pool\+\_\+destroy. \\
+\hline
+{\em file\+\_\+line} & Where the function is called from. This is usually A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Only available when A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+B\+UG is defined. Call this directly if you have your apr\+\_\+pool\+\_\+destroy calls in a wrapper function and wish to override the file\+\_\+line argument to reflect the caller of your wrapper function. If you do not have apr\+\_\+pool\+\_\+destroy in a wrapper, trust the macro and don\textquotesingle{}t call apr\+\_\+pool\+\_\+destroy\+\_\+debug directly. 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+initialize@{apr\+\_\+pool\+\_\+initialize}}
+\index{apr\+\_\+pool\+\_\+initialize@{apr\+\_\+pool\+\_\+initialize}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+initialize(void)}{apr_pool_initialize(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gad64a6a29515621bc13f8a8da50366d67}{}\label{group__apr__pools_gad64a6a29515621bc13f8a8da50366d67}
+Setup all of the internal structures required to use pools \begin{DoxyRemark}{Remarks}
+Programs do N\+OT need to call this directly. A\+PR will call this automatically from apr\+\_\+initialize. 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+is\+\_\+ancestor@{apr\+\_\+pool\+\_\+is\+\_\+ancestor}}
+\index{apr\+\_\+pool\+\_\+is\+\_\+ancestor@{apr\+\_\+pool\+\_\+is\+\_\+ancestor}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+is\+\_\+ancestor(apr\+\_\+pool\+\_\+t $\ast$a, apr\+\_\+pool\+\_\+t $\ast$b)}{apr_pool_is_ancestor(apr_pool_t *a, apr_pool_t *b)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+pool\+\_\+is\+\_\+ancestor (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{a, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga05d299f778659d1e0806140d8a7fea79}{}\label{group__apr__pools_ga05d299f778659d1e0806140d8a7fea79}
+Determine if pool a is an ancestor of pool b. 
+\begin{DoxyParams}{Parameters}
+{\em a} & The pool to search \\
+\hline
+{\em b} & The pool to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a is an ancestor of b, N\+U\+LL is considered an ancestor of all pools. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+if compiled with A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+B\+UG, this function will also return true if A is a pool which has been guaranteed by the caller (using apr\+\_\+pool\+\_\+join) to have a lifetime at least as long as some ancestor of pool B. 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+parent\+\_\+get@{apr\+\_\+pool\+\_\+parent\+\_\+get}}
+\index{apr\+\_\+pool\+\_\+parent\+\_\+get@{apr\+\_\+pool\+\_\+parent\+\_\+get}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+parent\+\_\+get(apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_pool_parent_get(apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+pool\+\_\+t}$\ast$ apr\+\_\+pool\+\_\+parent\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga94db31f40609b15b592ff47f989ca9ec}{}\label{group__apr__pools_ga94db31f40609b15b592ff47f989ca9ec}
+Get the parent pool of the specified pool. 
+\begin{DoxyParams}{Parameters}
+{\em pool} & The pool for retrieving the parent pool. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The parent of the given pool. 
+\end{DoxyReturn}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+tag@{apr\+\_\+pool\+\_\+tag}}
+\index{apr\+\_\+pool\+\_\+tag@{apr\+\_\+pool\+\_\+tag}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+tag(apr\+\_\+pool\+\_\+t $\ast$pool, const char $\ast$tag)}{apr_pool_tag(apr_pool_t *pool, const char *tag)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+tag (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool, }
+\item[{const char $\ast$}]{tag}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gaeaa872f7999740a60803e95429890518}{}\label{group__apr__pools_gaeaa872f7999740a60803e95429890518}
+Tag a pool (give it a name) 
+\begin{DoxyParams}{Parameters}
+{\em pool} & The pool to tag \\
+\hline
+{\em tag} & The tag \\
+\hline
+\end{DoxyParams}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+terminate@{apr\+\_\+pool\+\_\+terminate}}
+\index{apr\+\_\+pool\+\_\+terminate@{apr\+\_\+pool\+\_\+terminate}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+terminate(void)}{apr_pool_terminate(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+terminate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga3728aacec227318cef973b8a33f3b430}{}\label{group__apr__pools_ga3728aacec227318cef973b8a33f3b430}
+Tear down all of the internal structures required to use pools \begin{DoxyRemark}{Remarks}
+Programs do N\+OT need to call this directly. A\+PR will call this automatically from apr\+\_\+terminate. 
+\end{DoxyRemark}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+userdata\+\_\+get@{apr\+\_\+pool\+\_\+userdata\+\_\+get}}
+\index{apr\+\_\+pool\+\_\+userdata\+\_\+get@{apr\+\_\+pool\+\_\+userdata\+\_\+get}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+userdata\+\_\+get(void $\ast$$\ast$data, const char $\ast$key, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_pool_userdata_get(void **data, const char *key, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+userdata\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{void $\ast$$\ast$}]{data, }
+\item[{const char $\ast$}]{key, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_gaf930f1fad2cf92a2432c0814c8a0b86f}{}\label{group__apr__pools_gaf930f1fad2cf92a2432c0814c8a0b86f}
+Return the data associated with the current pool. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The user data associated with the pool. \\
+\hline
+{\em key} & The key for the data to retrieve \\
+\hline
+{\em pool} & The current pool. \\
+\hline
+\end{DoxyParams}
+\index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+userdata\+\_\+set@{apr\+\_\+pool\+\_\+userdata\+\_\+set}}
+\index{apr\+\_\+pool\+\_\+userdata\+\_\+set@{apr\+\_\+pool\+\_\+userdata\+\_\+set}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+userdata\+\_\+set(const void $\ast$data, const char $\ast$key, apr\+\_\+status\+\_\+t($\ast$cleanup)(void $\ast$), apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_pool_userdata_set(const void *data, const char *key, apr_status_t(*cleanup)(void *), apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+userdata\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{data, }
+\item[{const char $\ast$}]{key, }
+\item[{{\bf apr\+\_\+status\+\_\+t}($\ast$)(void $\ast$)}]{cleanup, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga78d1aa2d9fa842d83eaffccb0f0c0c5c}{}\label{group__apr__pools_ga78d1aa2d9fa842d83eaffccb0f0c0c5c}
+Set the data associated with the current pool 
+\begin{DoxyParams}{Parameters}
+{\em data} & The user data associated with the pool. \\
+\hline
+{\em key} & The key to use for association \\
+\hline
+{\em cleanup} & The cleanup program to use to cleanup the data (N\+U\+LL if none) \\
+\hline
+{\em pool} & The current pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The data to be attached to the pool should have a life span at least as long as the pool it is being attached to.
+\end{DoxyWarning}
+Users of A\+PR must take E\+X\+T\+R\+E\+ME care when choosing a key to use for their data. It is possible to accidentally overwrite data by choosing a key that another part of the program is using. Therefore it is advised that steps are taken to ensure that unique keys are used for all of the userdata objects in a particular pool (the same key in two different pools or a pool and one of its subpools is okay) at all times. Careful namespace prefixing of key names is a typical way to help ensure this uniqueness. \index{Memory Pool Functions@{Memory Pool Functions}!apr\+\_\+pool\+\_\+userdata\+\_\+setn@{apr\+\_\+pool\+\_\+userdata\+\_\+setn}}
+\index{apr\+\_\+pool\+\_\+userdata\+\_\+setn@{apr\+\_\+pool\+\_\+userdata\+\_\+setn}!Memory Pool Functions@{Memory Pool Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+userdata\+\_\+setn(const void $\ast$data, const char $\ast$key, apr\+\_\+status\+\_\+t($\ast$cleanup)(void $\ast$), apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_pool_userdata_setn(const void *data, const char *key, apr_status_t(*cleanup)(void *), apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+userdata\+\_\+setn (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{data, }
+\item[{const char $\ast$}]{key, }
+\item[{{\bf apr\+\_\+status\+\_\+t}($\ast$)(void $\ast$)}]{cleanup, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__pools_ga435644c493dc5b10d80c4b99b8cd4589}{}\label{group__apr__pools_ga435644c493dc5b10d80c4b99b8cd4589}
+Set the data associated with the current pool 
+\begin{DoxyParams}{Parameters}
+{\em data} & The user data associated with the pool. \\
+\hline
+{\em key} & The key to use for association \\
+\hline
+{\em cleanup} & The cleanup program to use to cleanup the data (N\+U\+LL if none) \\
+\hline
+{\em pool} & The current pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+same as \hyperlink{group__apr__pools_ga78d1aa2d9fa842d83eaffccb0f0c0c5c}{apr\+\_\+pool\+\_\+userdata\+\_\+set()}, except that this version doesn\textquotesingle{}t make a copy of the key (this function is useful, for example, when the key is a string literal) 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+This should N\+OT be used if the key could change addresses by any means between the \hyperlink{group__apr__pools_ga435644c493dc5b10d80c4b99b8cd4589}{apr\+\_\+pool\+\_\+userdata\+\_\+setn()} call and a subsequent \hyperlink{group__apr__pools_gaf930f1fad2cf92a2432c0814c8a0b86f}{apr\+\_\+pool\+\_\+userdata\+\_\+get()} on that key, such as if a static string is used as a userdata key in a D\+SO and the D\+SO could be unloaded and reloaded between the \+\_\+setn() and the \+\_\+get(). You M\+U\+ST use \hyperlink{group__apr__pools_ga78d1aa2d9fa842d83eaffccb0f0c0c5c}{apr\+\_\+pool\+\_\+userdata\+\_\+set()} in such cases. 
+
+More generally, the key and the data to be attached to the pool should have a life span at least as long as the pool itself. 
+\end{DoxyWarning}

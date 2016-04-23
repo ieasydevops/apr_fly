@@ -1,0 +1,99 @@
+\hypertarget{group__apr__signal}{}\section{Signal Handling}
+\label{group__apr__signal}\index{Signal Handling@{Signal Handling}}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void \hyperlink{group__apr__signal_ga2afd99d29d57dc1358aeccedb714368a}{apr\+\_\+sigfunc\+\_\+t}(int)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__signal_ga2afd99d29d57dc1358aeccedb714368a}{apr\+\_\+sigfunc\+\_\+t} $\ast$ \hyperlink{group__apr__signal_ga77ecb509002eeb784c06014c635a9a5a}{apr\+\_\+signal} (int signo, \hyperlink{group__apr__signal_ga2afd99d29d57dc1358aeccedb714368a}{apr\+\_\+sigfunc\+\_\+t} $\ast$func)
+\item 
+const char $\ast$ \hyperlink{group__apr__signal_ga685b8a8e5e7a5067e3fe3456c5c1a150}{apr\+\_\+signal\+\_\+description\+\_\+get} (int signum)
+\item 
+void \hyperlink{group__apr__signal_ga76f1701a2f33697425b3fa6fa44a192b}{apr\+\_\+signal\+\_\+init} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pglobal)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__signal_ga111744ccf1db400150bf7c14c2cfc312}{apr\+\_\+signal\+\_\+block} (int signum)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__signal_ga9d8a1d786de4ace76f711806e9e34071}{apr\+\_\+signal\+\_\+unblock} (int signum)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\index{Signal Handling@{Signal Handling}!apr\+\_\+sigfunc\+\_\+t@{apr\+\_\+sigfunc\+\_\+t}}
+\index{apr\+\_\+sigfunc\+\_\+t@{apr\+\_\+sigfunc\+\_\+t}!Signal Handling@{Signal Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+sigfunc\+\_\+t}{apr_sigfunc_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void apr\+\_\+sigfunc\+\_\+t(int)}\hypertarget{group__apr__signal_ga2afd99d29d57dc1358aeccedb714368a}{}\label{group__apr__signal_ga2afd99d29d57dc1358aeccedb714368a}
+Function prototype for signal handlers 
+
+\subsection{Function Documentation}
+\index{Signal Handling@{Signal Handling}!apr\+\_\+signal@{apr\+\_\+signal}}
+\index{apr\+\_\+signal@{apr\+\_\+signal}!Signal Handling@{Signal Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+signal(int signo, apr\+\_\+sigfunc\+\_\+t $\ast$func)}{apr_signal(int signo, apr_sigfunc_t *func)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+sigfunc\+\_\+t}$\ast$ apr\+\_\+signal (
+\begin{DoxyParamCaption}
+\item[{int}]{signo, }
+\item[{{\bf apr\+\_\+sigfunc\+\_\+t} $\ast$}]{func}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__signal_ga77ecb509002eeb784c06014c635a9a5a}{}\label{group__apr__signal_ga77ecb509002eeb784c06014c635a9a5a}
+Set the signal handler function for a given signal 
+\begin{DoxyParams}{Parameters}
+{\em signo} & The signal (eg... S\+I\+G\+W\+I\+N\+CH) \\
+\hline
+{\em func} & the function to get called \\
+\hline
+\end{DoxyParams}
+\index{Signal Handling@{Signal Handling}!apr\+\_\+signal\+\_\+block@{apr\+\_\+signal\+\_\+block}}
+\index{apr\+\_\+signal\+\_\+block@{apr\+\_\+signal\+\_\+block}!Signal Handling@{Signal Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+signal\+\_\+block(int signum)}{apr_signal_block(int signum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+signal\+\_\+block (
+\begin{DoxyParamCaption}
+\item[{int}]{signum}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__signal_ga111744ccf1db400150bf7c14c2cfc312}{}\label{group__apr__signal_ga111744ccf1db400150bf7c14c2cfc312}
+Block the delivery of a particular signal 
+\begin{DoxyParams}{Parameters}
+{\em signum} & The signal number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status 
+\end{DoxyReturn}
+\index{Signal Handling@{Signal Handling}!apr\+\_\+signal\+\_\+description\+\_\+get@{apr\+\_\+signal\+\_\+description\+\_\+get}}
+\index{apr\+\_\+signal\+\_\+description\+\_\+get@{apr\+\_\+signal\+\_\+description\+\_\+get}!Signal Handling@{Signal Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+signal\+\_\+description\+\_\+get(int signum)}{apr_signal_description_get(int signum)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+signal\+\_\+description\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{int}]{signum}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__signal_ga685b8a8e5e7a5067e3fe3456c5c1a150}{}\label{group__apr__signal_ga685b8a8e5e7a5067e3fe3456c5c1a150}
+Get the description for a specific signal number 
+\begin{DoxyParams}{Parameters}
+{\em signum} & The signal number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The description of the signal 
+\end{DoxyReturn}
+\index{Signal Handling@{Signal Handling}!apr\+\_\+signal\+\_\+init@{apr\+\_\+signal\+\_\+init}}
+\index{apr\+\_\+signal\+\_\+init@{apr\+\_\+signal\+\_\+init}!Signal Handling@{Signal Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+signal\+\_\+init(apr\+\_\+pool\+\_\+t $\ast$pglobal)}{apr_signal_init(apr_pool_t *pglobal)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+signal\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pglobal}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__signal_ga76f1701a2f33697425b3fa6fa44a192b}{}\label{group__apr__signal_ga76f1701a2f33697425b3fa6fa44a192b}
+A\+P\+R-\/private function for initializing the signal package \index{Signal Handling@{Signal Handling}!apr\+\_\+signal\+\_\+unblock@{apr\+\_\+signal\+\_\+unblock}}
+\index{apr\+\_\+signal\+\_\+unblock@{apr\+\_\+signal\+\_\+unblock}!Signal Handling@{Signal Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+signal\+\_\+unblock(int signum)}{apr_signal_unblock(int signum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+signal\+\_\+unblock (
+\begin{DoxyParamCaption}
+\item[{int}]{signum}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__signal_ga9d8a1d786de4ace76f711806e9e34071}{}\label{group__apr__signal_ga9d8a1d786de4ace76f711806e9e34071}
+Enable the delivery of a particular signal 
+\begin{DoxyParams}{Parameters}
+{\em signum} & The signal number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status 
+\end{DoxyReturn}

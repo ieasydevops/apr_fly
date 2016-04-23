@@ -1,0 +1,39 @@
+\hypertarget{apr__thread__cond_8h}{}\section{apr\+\_\+thread\+\_\+cond.\+h File Reference}
+\label{apr__thread__cond_8h}\index{apr\+\_\+thread\+\_\+cond.\+h@{apr\+\_\+thread\+\_\+cond.\+h}}
+
+
+A\+PR Condition Variable Routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+time.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+thread\+\_\+mutex.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__thread__cond_gae8f918d38bf1c58bc09670eee456ae5e}{apr\+\_\+thread\+\_\+cond\+\_\+t} \hyperlink{group__apr__thread__cond_gae8f918d38bf1c58bc09670eee456ae5e}{apr\+\_\+thread\+\_\+cond\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__cond_gab39e8b722d46d23466e9e346ada85a7f}{apr\+\_\+thread\+\_\+cond\+\_\+create} (\hyperlink{group__apr__thread__cond_gae8f918d38bf1c58bc09670eee456ae5e}{apr\+\_\+thread\+\_\+cond\+\_\+t} $\ast$$\ast$cond, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__cond_ga789719a5f02bdab8b8abbc8bddd0406b}{apr\+\_\+thread\+\_\+cond\+\_\+wait} (\hyperlink{group__apr__thread__cond_gae8f918d38bf1c58bc09670eee456ae5e}{apr\+\_\+thread\+\_\+cond\+\_\+t} $\ast$cond, \hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__cond_ga67f2feecb7fa1929cc9b354dafd00306}{apr\+\_\+thread\+\_\+cond\+\_\+timedwait} (\hyperlink{group__apr__thread__cond_gae8f918d38bf1c58bc09670eee456ae5e}{apr\+\_\+thread\+\_\+cond\+\_\+t} $\ast$cond, \hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$mutex, \hyperlink{group__apr__time_gaae2129185a395cc393f76fabf4f43e47}{apr\+\_\+interval\+\_\+time\+\_\+t} timeout)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__cond_gadf7ad6c2731bc6128f969d3efc7ff5eb}{apr\+\_\+thread\+\_\+cond\+\_\+signal} (\hyperlink{group__apr__thread__cond_gae8f918d38bf1c58bc09670eee456ae5e}{apr\+\_\+thread\+\_\+cond\+\_\+t} $\ast$cond)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__cond_gafbbedd2a07629fe3186343035ae83152}{apr\+\_\+thread\+\_\+cond\+\_\+broadcast} (\hyperlink{group__apr__thread__cond_gae8f918d38bf1c58bc09670eee456ae5e}{apr\+\_\+thread\+\_\+cond\+\_\+t} $\ast$cond)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__cond_ga049e646e23c670f3a79fe25401b9c1b0}{apr\+\_\+thread\+\_\+cond\+\_\+destroy} (\hyperlink{group__apr__thread__cond_gae8f918d38bf1c58bc09670eee456ae5e}{apr\+\_\+thread\+\_\+cond\+\_\+t} $\ast$cond)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__thread__cond_gafc2d7f2907eb12e5543c971a4c0140ee}{apr\+\_\+thread\+\_\+cond\+\_\+pool\+\_\+get} (const \hyperlink{group__apr__thread__cond_gae8f918d38bf1c58bc09670eee456ae5e}{apr\+\_\+thread\+\_\+cond\+\_\+t} $\ast$thethread\+\_\+cond)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Condition Variable Routines. 
+

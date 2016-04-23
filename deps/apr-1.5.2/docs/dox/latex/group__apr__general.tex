@@ -1,0 +1,102 @@
+\hypertarget{group__apr__general}{}\section{Miscellaneous library routines}
+\label{group__apr__general}\index{Miscellaneous library routines@{Miscellaneous library routines}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__general_ga60fc208d93123acc7cf915a66e49e654}{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+B\+L\+A\+NK}~\textquotesingle{}\textbackslash{}040\textquotesingle{}
+\item 
+\#define \hyperlink{group__apr__general_ga91c14ef7f03e82c07f4d3d56f63f8b6a}{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+CR}~\textquotesingle{}\textbackslash{}015\textquotesingle{}
+\item 
+\#define \hyperlink{group__apr__general_ga9e76601cef56a7a5b25f73fe6d57d7d9}{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+LF}~\textquotesingle{}\textbackslash{}012\textquotesingle{}
+\item 
+\#define \hyperlink{group__apr__general_gac7162c0b5d026a0717aaa98bf581349d}{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+AB}~\textquotesingle{}\textbackslash{}011\textquotesingle{}
+\item 
+\#define \hyperlink{group__apr__general_ga41e537d6ad732766d12cd4eb61531678}{A\+P\+R\+\_\+\+O\+F\+F\+S\+ET}(p\+\_\+type,  field)~((long) (((char $\ast$) (\&(((p\+\_\+type)N\+U\+LL)-\/$>$field))) -\/ ((char $\ast$) N\+U\+LL)))
+\item 
+\#define \hyperlink{group__apr__general_gac16b1187b6ea63706c5dd48c88323dec}{A\+P\+R\+\_\+\+O\+F\+F\+S\+E\+T\+OF}(s\+\_\+type,  field)~\hyperlink{group__apr__general_ga41e537d6ad732766d12cd4eb61531678}{A\+P\+R\+\_\+\+O\+F\+F\+S\+ET}(s\+\_\+type$\ast$,field)
+\item 
+\#define \hyperlink{group__apr__general_ga3c4f50d14ebe7a6add282d879521d552}{A\+P\+R\+\_\+\+A\+L\+I\+GN}(size,  boundary)~(((size) + ((boundary) -\/ 1)) \& $\sim$((boundary) -\/ 1))
+\item 
+\#define \hyperlink{group__apr__general_gab484e98426221f3212fcb67af0467381}{A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT}(size)~\hyperlink{group__apr__general_ga3c4f50d14ebe7a6add282d879521d552}{A\+P\+R\+\_\+\+A\+L\+I\+GN}(size, 8)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{group__apr__general_gafe9e657d61b61d62ecba34299a82a7ea}{apr\+\_\+signum\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is collection of oddballs that didn\textquotesingle{}t fit anywhere else, and might move to more appropriate headers with the release of A\+PR 1.\+0. 
+
+\subsection{Macro Definition Documentation}
+\index{Miscellaneous library routines@{Miscellaneous library routines}!A\+P\+R\+\_\+\+A\+L\+I\+GN@{A\+P\+R\+\_\+\+A\+L\+I\+GN}}
+\index{A\+P\+R\+\_\+\+A\+L\+I\+GN@{A\+P\+R\+\_\+\+A\+L\+I\+GN}!Miscellaneous library routines@{Miscellaneous library routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+A\+L\+I\+GN}{APR_ALIGN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+A\+L\+I\+GN(
+\begin{DoxyParamCaption}
+\item[{}]{size, }
+\item[{}]{boundary}
+\end{DoxyParamCaption}
+)~(((size) + ((boundary) -\/ 1)) \& $\sim$((boundary) -\/ 1))}\hypertarget{group__apr__general_ga3c4f50d14ebe7a6add282d879521d552}{}\label{group__apr__general_ga3c4f50d14ebe7a6add282d879521d552}
+Alignment macros \index{Miscellaneous library routines@{Miscellaneous library routines}!A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT@{A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT@{A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT}!Miscellaneous library routines@{Miscellaneous library routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT}{APR_ALIGN_DEFAULT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT(
+\begin{DoxyParamCaption}
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~{\bf A\+P\+R\+\_\+\+A\+L\+I\+GN}(size, 8)}\hypertarget{group__apr__general_gab484e98426221f3212fcb67af0467381}{}\label{group__apr__general_gab484e98426221f3212fcb67af0467381}
+Default alignment \index{Miscellaneous library routines@{Miscellaneous library routines}!A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+B\+L\+A\+NK@{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+B\+L\+A\+NK}}
+\index{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+B\+L\+A\+NK@{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+B\+L\+A\+NK}!Miscellaneous library routines@{Miscellaneous library routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+B\+L\+A\+NK}{APR_ASCII_BLANK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+B\+L\+A\+NK~\textquotesingle{}\textbackslash{}040\textquotesingle{}}\hypertarget{group__apr__general_ga60fc208d93123acc7cf915a66e49e654}{}\label{group__apr__general_ga60fc208d93123acc7cf915a66e49e654}
+F\+A\+L\+SE T\+R\+UE a space \index{Miscellaneous library routines@{Miscellaneous library routines}!A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+CR@{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+CR}}
+\index{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+CR@{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+CR}!Miscellaneous library routines@{Miscellaneous library routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+CR}{APR_ASCII_CR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+CR~\textquotesingle{}\textbackslash{}015\textquotesingle{}}\hypertarget{group__apr__general_ga91c14ef7f03e82c07f4d3d56f63f8b6a}{}\label{group__apr__general_ga91c14ef7f03e82c07f4d3d56f63f8b6a}
+a carrige return \index{Miscellaneous library routines@{Miscellaneous library routines}!A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+LF@{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+LF}}
+\index{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+LF@{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+LF}!Miscellaneous library routines@{Miscellaneous library routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+LF}{APR_ASCII_LF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+LF~\textquotesingle{}\textbackslash{}012\textquotesingle{}}\hypertarget{group__apr__general_ga9e76601cef56a7a5b25f73fe6d57d7d9}{}\label{group__apr__general_ga9e76601cef56a7a5b25f73fe6d57d7d9}
+a line feed \index{Miscellaneous library routines@{Miscellaneous library routines}!A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+AB@{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+AB}}
+\index{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+AB@{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+AB}!Miscellaneous library routines@{Miscellaneous library routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+AB}{APR_ASCII_TAB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+AB~\textquotesingle{}\textbackslash{}011\textquotesingle{}}\hypertarget{group__apr__general_gac7162c0b5d026a0717aaa98bf581349d}{}\label{group__apr__general_gac7162c0b5d026a0717aaa98bf581349d}
+a tab \index{Miscellaneous library routines@{Miscellaneous library routines}!A\+P\+R\+\_\+\+O\+F\+F\+S\+ET@{A\+P\+R\+\_\+\+O\+F\+F\+S\+ET}}
+\index{A\+P\+R\+\_\+\+O\+F\+F\+S\+ET@{A\+P\+R\+\_\+\+O\+F\+F\+S\+ET}!Miscellaneous library routines@{Miscellaneous library routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+F\+F\+S\+ET}{APR_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+F\+F\+S\+ET(
+\begin{DoxyParamCaption}
+\item[{}]{p\+\_\+type, }
+\item[{}]{field}
+\end{DoxyParamCaption}
+)~((long) (((char $\ast$) (\&(((p\+\_\+type)N\+U\+LL)-\/$>$field))) -\/ ((char $\ast$) N\+U\+LL)))}\hypertarget{group__apr__general_ga41e537d6ad732766d12cd4eb61531678}{}\label{group__apr__general_ga41e537d6ad732766d12cd4eb61531678}
+Finding offsets of elements within structures. Taken from the X code... they\textquotesingle{}ve sweated portability of this stuff so we don\textquotesingle{}t have to. Sigh... 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+type} & pointer type name \\
+\hline
+{\em field} & data field within the structure pointed to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+offset 
+\end{DoxyReturn}
+\index{Miscellaneous library routines@{Miscellaneous library routines}!A\+P\+R\+\_\+\+O\+F\+F\+S\+E\+T\+OF@{A\+P\+R\+\_\+\+O\+F\+F\+S\+E\+T\+OF}}
+\index{A\+P\+R\+\_\+\+O\+F\+F\+S\+E\+T\+OF@{A\+P\+R\+\_\+\+O\+F\+F\+S\+E\+T\+OF}!Miscellaneous library routines@{Miscellaneous library routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+F\+F\+S\+E\+T\+OF}{APR_OFFSETOF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+F\+F\+S\+E\+T\+OF(
+\begin{DoxyParamCaption}
+\item[{}]{s\+\_\+type, }
+\item[{}]{field}
+\end{DoxyParamCaption}
+)~{\bf A\+P\+R\+\_\+\+O\+F\+F\+S\+ET}(s\+\_\+type$\ast$,field)}\hypertarget{group__apr__general_gac16b1187b6ea63706c5dd48c88323dec}{}\label{group__apr__general_gac16b1187b6ea63706c5dd48c88323dec}
+Finding offsets of elements within structures. 
+\begin{DoxyParams}{Parameters}
+{\em s\+\_\+type} & structure type name \\
+\hline
+{\em field} & data field within the structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+offset 
+\end{DoxyReturn}
+
+
+\subsection{Typedef Documentation}
+\index{Miscellaneous library routines@{Miscellaneous library routines}!apr\+\_\+signum\+\_\+t@{apr\+\_\+signum\+\_\+t}}
+\index{apr\+\_\+signum\+\_\+t@{apr\+\_\+signum\+\_\+t}!Miscellaneous library routines@{Miscellaneous library routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+signum\+\_\+t}{apr_signum_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf apr\+\_\+signum\+\_\+t}}\hypertarget{group__apr__general_gafe9e657d61b61d62ecba34299a82a7ea}{}\label{group__apr__general_gafe9e657d61b61d62ecba34299a82a7ea}
+signal numbers typedef 

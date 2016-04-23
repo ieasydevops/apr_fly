@@ -1,0 +1,51 @@
+\hypertarget{apr__mmap_8h}{}\section{apr\+\_\+mmap.\+h File Reference}
+\label{apr__mmap_8h}\index{apr\+\_\+mmap.\+h@{apr\+\_\+mmap.\+h}}
+
+
+A\+PR M\+M\+AP routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+ring.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+file\+\_\+io.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__mmap_gac231fdf15d2d29802e0abbc5d0cf25b8}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+R\+E\+AD}~1
+\item 
+\#define \hyperlink{group__apr__mmap_gac2eb7f697d8bf190e630b85f967c8273}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+W\+R\+I\+TE}~2
+\item 
+\#define \hyperlink{group__apr__mmap_ga19d1916e7b64bfb1a969648fe7b0846a}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}~1
+\item 
+\#define \hyperlink{group__apr__mmap_ga548e49b3c9e8265ad8ccf70994f4fe25}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+L\+I\+M\+IT}~(4$\ast$1024$\ast$1024)
+\item 
+\#define \hyperlink{group__apr__mmap_ga4f469432098e986567576fd4c4ce5adc}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+C\+A\+N\+D\+I\+D\+A\+TE}(filelength)~((filelength $>$= \hyperlink{group__apr__mmap_ga19d1916e7b64bfb1a969648fe7b0846a}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}) \&\& (filelength $<$ \hyperlink{group__apr__mmap_ga548e49b3c9e8265ad8ccf70994f4fe25}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+L\+I\+M\+IT}))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} \hyperlink{group__apr__mmap_ga766b01a3e1e0438d06dc88d76f826f80}{apr\+\_\+mmap\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mmap_gac6b103139be2e859741ec94cc6ad34cc}{apr\+\_\+mmap\+\_\+create} (\hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} $\ast$$\ast$newmmap, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$file, apr\+\_\+off\+\_\+t offset, apr\+\_\+size\+\_\+t size, apr\+\_\+int32\+\_\+t flag, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cntxt)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mmap_ga9fcdbf8090e924a4e8f2b301519bb4c8}{apr\+\_\+mmap\+\_\+dup} (\hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} $\ast$$\ast$new\+\_\+mmap, \hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} $\ast$old\+\_\+mmap, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mmap_ga4b67a2d22a07707897cc1183a1682040}{apr\+\_\+mmap\+\_\+delete} (\hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} $\ast$mm)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mmap_ga4c1d31bd9e911744bd5edb97e17210ec}{apr\+\_\+mmap\+\_\+offset} (void $\ast$$\ast$addr, \hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} $\ast$mm, apr\+\_\+off\+\_\+t offset)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR M\+M\+AP routines. 
+

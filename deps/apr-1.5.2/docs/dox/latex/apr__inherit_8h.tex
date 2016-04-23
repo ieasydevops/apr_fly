@@ -1,0 +1,59 @@
+\hypertarget{apr__inherit_8h}{}\section{apr\+\_\+inherit.\+h File Reference}
+\label{apr__inherit_8h}\index{apr\+\_\+inherit.\+h@{apr\+\_\+inherit.\+h}}
+
+
+A\+PR File Handle Inheritance Helpers.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{apr__inherit_8h_aa67d345784df8cce8114086e1f67cf3d}{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET}(type)
+\item 
+\#define \hyperlink{apr__inherit_8h_ad4886be514d6cead6bd119a48984d4b5}{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET}(type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR File Handle Inheritance Helpers. 
+
+\begin{DoxyRemark}{Remarks}
+This internal header includes internal declaration helpers for other headers to declare apr\+\_\+foo\+\_\+inherit\+\_\+\mbox{[}un\mbox{]}set functions. 
+\end{DoxyRemark}
+
+
+\subsection{Macro Definition Documentation}
+\index{apr\+\_\+inherit.\+h@{apr\+\_\+inherit.\+h}!A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET}}
+\index{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET}!apr\+\_\+inherit.\+h@{apr\+\_\+inherit.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET}{APR_DECLARE_INHERIT_SET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET(
+\begin{DoxyParamCaption}
+\item[{}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{apr__inherit_8h_aa67d345784df8cce8114086e1f67cf3d}{}\label{apr__inherit_8h_aa67d345784df8cce8114086e1f67cf3d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{group__apr__platform_ga51bb2fd47cdff20cd9cb91d82e9b0efa}{APR\_DECLARE}(\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\_status\_t}) apr\_\textcolor{preprocessor}{##type##\_inherit\_set( \(\backslash\)}
+\textcolor{preprocessor}{                                          apr\_##type##\_t *the##type)}
+\end{DoxyCode}
+Prototype for type-\/specific declarations of apr\+\_\+foo\+\_\+inherit\+\_\+set functions. \begin{DoxyRemark}{Remarks}
+Doxygen unwraps this macro (via doxygen.\+conf) to provide actual help for each specific occurrence of apr\+\_\+foo\+\_\+inherit\+\_\+set. 
+
+the linkage is specified for A\+PR. It would be possible to expand the macros to support other linkages. 
+\end{DoxyRemark}
+\index{apr\+\_\+inherit.\+h@{apr\+\_\+inherit.\+h}!A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET}}
+\index{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET}!apr\+\_\+inherit.\+h@{apr\+\_\+inherit.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET}{APR_DECLARE_INHERIT_UNSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET(
+\begin{DoxyParamCaption}
+\item[{}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{apr__inherit_8h_ad4886be514d6cead6bd119a48984d4b5}{}\label{apr__inherit_8h_ad4886be514d6cead6bd119a48984d4b5}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{group__apr__platform_ga51bb2fd47cdff20cd9cb91d82e9b0efa}{APR\_DECLARE}(\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\_status\_t}) apr\_\textcolor{preprocessor}{##type##\_inherit\_unset( \(\backslash\)}
+\textcolor{preprocessor}{                                          apr\_##type##\_t *the##type)}
+\end{DoxyCode}
+Prototype for type-\/specific declarations of apr\+\_\+foo\+\_\+inherit\+\_\+unset functions. \begin{DoxyRemark}{Remarks}
+Doxygen unwraps this macro (via doxygen.\+conf) to provide actual help for each specific occurrence of apr\+\_\+foo\+\_\+inherit\+\_\+unset. 
+
+the linkage is specified for A\+PR. It would be possible to expand the macros to support other linkages. 
+\end{DoxyRemark}

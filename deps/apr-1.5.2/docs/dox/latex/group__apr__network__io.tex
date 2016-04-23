@@ -1,0 +1,1083 @@
+\hypertarget{group__apr__network__io}{}\section{Network Routines}
+\label{group__apr__network__io}\index{Network Routines@{Network Routines}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__sockopt}{Socket option definitions}
+\item 
+\hyperlink{group___i_p___proto}{I\+P Protocol Definitions for use when creating sockets}
+\item 
+\hyperlink{group__apr__mcast}{I\+P Multicast}
+\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t}
+\item 
+struct \hyperlink{structapr__hdtr__t}{apr\+\_\+hdtr\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__network__io_ga8311c84f6946742188a6b9a45e92ea8e}{A\+P\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+C\+S\+\_\+\+T\+O\+\_\+\+L\+I\+N\+G\+ER}~30
+\item 
+\#define \hyperlink{group__apr__network__io_ga7f5b3882209106bb407b1d518d6ad59d}{A\+P\+R\+M\+A\+X\+H\+O\+S\+T\+L\+EN}~256
+\item 
+\#define \hyperlink{group__apr__network__io_gadce1131c46b897ec63e9e4316a4631dd}{A\+P\+R\+\_\+\+A\+N\+Y\+A\+D\+DR}~\char`\"{}0.\+0.\+0.\+0\char`\"{}
+\item 
+\#define \hyperlink{group__apr__network__io_ga58aa30a94127b4a80f27fbf2e03fdfd8}{A\+P\+R\+\_\+\+I\+P\+V4\+\_\+\+A\+D\+D\+R\+\_\+\+OK}~0x01
+\item 
+\#define \hyperlink{group__apr__network__io_gaef1f70f9b969d25832a230f429837207}{A\+P\+R\+\_\+\+I\+P\+V6\+\_\+\+A\+D\+D\+R\+\_\+\+OK}~0x02
+\item 
+\#define \hyperlink{group__apr__network__io_ga16eb7ee55ff87a5093f2114ea5351217}{A\+P\+R\+\_\+\+I\+N\+A\+D\+D\+R\+\_\+\+N\+O\+NE}~((unsigned int) 0xffffffff)
+\item 
+\#define \hyperlink{group__apr__network__io_gaa96e8e8dbf92bc77643a4032017b3d67}{A\+P\+R\+\_\+\+I\+N\+ET}~A\+F\+\_\+\+I\+N\+ET
+\item 
+\#define \hyperlink{group__apr__network__io_gaa7a33b17a7d0820b09ef489bd3328f85}{A\+P\+R\+\_\+\+U\+N\+S\+P\+EC}~0
+\item 
+\#define \hyperlink{group__apr__network__io_gad09d9ea8995f50f35073ae0c77efb44f}{A\+P\+R\+\_\+\+I\+N\+E\+T6}~A\+F\+\_\+\+I\+N\+E\+T6
+\item 
+\#define \hyperlink{group__apr__network__io_ga46a8b06887871cfd60a3e37385775e22}{apr\+\_\+inet\+\_\+addr}~inet\+\_\+addr
+\item 
+\#define \hyperlink{group__apr__network__io_gaca378d0e24b1588e3fdb143e4ea9090d}{A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+\+S\+O\+C\+K\+ET}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} \hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__hdtr__t}{apr\+\_\+hdtr\+\_\+t} \hyperlink{group__apr__network__io_ga97887d5358a9c79c241ccafab61d8ff5}{apr\+\_\+hdtr\+\_\+t}
+\item 
+typedef struct in\+\_\+addr \hyperlink{group__apr__network__io_gad30d6c55a354a9a2e0a8747abb0c8176}{apr\+\_\+in\+\_\+addr\+\_\+t}
+\item 
+typedef struct \hyperlink{group__apr__network__io_gac86ee04eb80f938902095d1d0a67c324}{apr\+\_\+ipsubnet\+\_\+t} \hyperlink{group__apr__network__io_gac86ee04eb80f938902095d1d0a67c324}{apr\+\_\+ipsubnet\+\_\+t}
+\item 
+typedef apr\+\_\+uint16\+\_\+t \hyperlink{group__apr__network__io_gaa670a71960f6eb4fe0d0de2a1e7aba03}{apr\+\_\+port\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} \hyperlink{group__apr__network__io_ga373fb6f32d0875c5deb648b779c8a709}{apr\+\_\+sockaddr\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__apr__network__io_gae2130f1fa2d0db58c5c3c9c73d9b4009}{apr\+\_\+shutdown\+\_\+how\+\_\+e} \{ \hyperlink{group__apr__network__io_ggae2130f1fa2d0db58c5c3c9c73d9b4009a88d0661d35eea5319715d6ca69265b01}{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+AD}, 
+\hyperlink{group__apr__network__io_ggae2130f1fa2d0db58c5c3c9c73d9b4009a5e335b392088e14df65d1bd5e0db7c46}{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+W\+R\+I\+TE}, 
+\hyperlink{group__apr__network__io_ggae2130f1fa2d0db58c5c3c9c73d9b4009add172f55ff5ee7b930683a3903c99768}{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+A\+D\+W\+R\+I\+TE}
+ \}
+\item 
+enum \hyperlink{group__apr__network__io_ga1982f44f48fdf00a8bd754bc7b773edc}{apr\+\_\+interface\+\_\+e} \{ \hyperlink{group__apr__network__io_gga1982f44f48fdf00a8bd754bc7b773edca6c23a4bf48b8f93dff08adf827382616}{A\+P\+R\+\_\+\+L\+O\+C\+AL}, 
+\hyperlink{group__apr__network__io_gga1982f44f48fdf00a8bd754bc7b773edcaeb8be70b031f06a513ac0ebcaa5bac8a}{A\+P\+R\+\_\+\+R\+E\+M\+O\+TE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga46b81e267ef80e64510d4e83880a91bd}{apr\+\_\+socket\+\_\+create} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$$\ast$new\+\_\+sock, int family, int type, int protocol, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_gac5aea857a50c493f840c48b930abc48e}{apr\+\_\+socket\+\_\+shutdown} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$thesocket, \hyperlink{group__apr__network__io_gae2130f1fa2d0db58c5c3c9c73d9b4009}{apr\+\_\+shutdown\+\_\+how\+\_\+e} how)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga88779f243ce19a2563544aee81894e6d}{apr\+\_\+socket\+\_\+close} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$thesocket)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga512882c9979c2b9cad7cbc2508516d65}{apr\+\_\+socket\+\_\+bind} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$sa)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga154bcee918f6f01fe0373359dd74b0c4}{apr\+\_\+socket\+\_\+listen} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, apr\+\_\+int32\+\_\+t backlog)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga1d62711ca77ccc0f6413a298a47876da}{apr\+\_\+socket\+\_\+accept} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$$\ast$new\+\_\+sock, \hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$connection\+\_\+pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga8e58bd8112ed2ce5004487918cd9275e}{apr\+\_\+socket\+\_\+connect} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$sa)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_gabfcb1fe4447921e5b86d395126b5d6f0}{apr\+\_\+socket\+\_\+atreadeof} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, int $\ast$atreadeof)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_gaa2f399ca2b60b35c0abf7630298c6c9f}{apr\+\_\+sockaddr\+\_\+info\+\_\+get} (\hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$$\ast$sa, const char $\ast$hostname, apr\+\_\+int32\+\_\+t family, \hyperlink{group__apr__network__io_gaa670a71960f6eb4fe0d0de2a1e7aba03}{apr\+\_\+port\+\_\+t} port, apr\+\_\+int32\+\_\+t flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga7a56fd9573b942753738ec30b887c9de}{apr\+\_\+getnameinfo} (char $\ast$$\ast$hostname, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$sa, apr\+\_\+int32\+\_\+t flags)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga90c31b2f012c6b1e2d842a96c4431de3}{apr\+\_\+parse\+\_\+addr\+\_\+port} (char $\ast$$\ast$addr, char $\ast$$\ast$scope\+\_\+id, \hyperlink{group__apr__network__io_gaa670a71960f6eb4fe0d0de2a1e7aba03}{apr\+\_\+port\+\_\+t} $\ast$port, const char $\ast$str, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga6bd3d656ba935ca428075f477b8a6f8b}{apr\+\_\+gethostname} (char $\ast$buf, int len, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_gae76b48d0224a608b4ddb8bd00582eaa7}{apr\+\_\+socket\+\_\+data\+\_\+get} (void $\ast$$\ast$data, const char $\ast$key, \hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_gafec197f3aa9a495801cdf7892ff8dcb5}{apr\+\_\+socket\+\_\+data\+\_\+set} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, void $\ast$data, const char $\ast$key, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$))
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga943268245cf59f6ff8cf1458c9a9ba8d}{apr\+\_\+socket\+\_\+send} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, const char $\ast$buf, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga99ece70c34a7a332daa3941de3950c64}{apr\+\_\+socket\+\_\+sendv} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, const struct iovec $\ast$vec, apr\+\_\+int32\+\_\+t nvec, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga03ae34bc5712dac2b3fdee39e5f87be3}{apr\+\_\+socket\+\_\+sendto} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$where, apr\+\_\+int32\+\_\+t flags, const char $\ast$buf, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga80880312b41e86c9c266ede1a504e2ca}{apr\+\_\+socket\+\_\+recvfrom} (\hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$from, \hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, apr\+\_\+int32\+\_\+t flags, char $\ast$buf, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga3d93e6212c4c27f2390b0057f8f4a8be}{apr\+\_\+socket\+\_\+sendfile} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$file, \hyperlink{structapr__hdtr__t}{apr\+\_\+hdtr\+\_\+t} $\ast$hdtr, apr\+\_\+off\+\_\+t $\ast$offset, apr\+\_\+size\+\_\+t $\ast$len, apr\+\_\+int32\+\_\+t flags)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_gaa6ee00191f197f64b5a5409f4aff53d1}{apr\+\_\+socket\+\_\+recv} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, char $\ast$buf, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga08f5e505fa611005f56c12783269ffa9}{apr\+\_\+socket\+\_\+opt\+\_\+set} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, apr\+\_\+int32\+\_\+t opt, apr\+\_\+int32\+\_\+t on)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga945bdbe807ec5635d65a6fd9ddb78c29}{apr\+\_\+socket\+\_\+timeout\+\_\+set} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, \hyperlink{group__apr__time_gaae2129185a395cc393f76fabf4f43e47}{apr\+\_\+interval\+\_\+time\+\_\+t} t)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga1934c2d5943efc8ce925f376f3c2e17e}{apr\+\_\+socket\+\_\+opt\+\_\+get} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, apr\+\_\+int32\+\_\+t opt, apr\+\_\+int32\+\_\+t $\ast$on)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_gaa32313b54afed590367c8571075d2bc1}{apr\+\_\+socket\+\_\+timeout\+\_\+get} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, \hyperlink{group__apr__time_gaae2129185a395cc393f76fabf4f43e47}{apr\+\_\+interval\+\_\+time\+\_\+t} $\ast$t)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga2389de257444870974b5ded91cf7a10c}{apr\+\_\+socket\+\_\+atmark} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, int $\ast$atmark)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_gacad56b59eafc6ad2459bf6493c992515}{apr\+\_\+socket\+\_\+addr\+\_\+get} (\hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$$\ast$sa, \hyperlink{group__apr__network__io_ga1982f44f48fdf00a8bd754bc7b773edc}{apr\+\_\+interface\+\_\+e} which, \hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_gab78fc9b9799c119f4a5517411458a660}{apr\+\_\+sockaddr\+\_\+ip\+\_\+get} (char $\ast$$\ast$addr, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$sockaddr)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga8c88ae154304e30d47c2696f4370dc6d}{apr\+\_\+sockaddr\+\_\+ip\+\_\+getbuf} (char $\ast$buf, apr\+\_\+size\+\_\+t buflen, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$sockaddr)
+\item 
+int \hyperlink{group__apr__network__io_ga1bf65369305ae352f3280af2acc684f5}{apr\+\_\+sockaddr\+\_\+equal} (const \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$addr1, const \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$addr2)
+\item 
+int \hyperlink{group__apr__network__io_gab9e53832f95e39cb780345c2b7783830}{apr\+\_\+sockaddr\+\_\+is\+\_\+wildcard} (const \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$addr)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga8d23ee2db9a84af2e6408ef460613514}{apr\+\_\+socket\+\_\+type\+\_\+get} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, int $\ast$type)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_gad5b504c0fe4d578e72531e3ca0263654}{apr\+\_\+getservbyname} (\hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$sockaddr, const char $\ast$servname)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga34a3c7f1666427f4e381e857b9e9c298}{apr\+\_\+ipsubnet\+\_\+create} (\hyperlink{group__apr__network__io_gac86ee04eb80f938902095d1d0a67c324}{apr\+\_\+ipsubnet\+\_\+t} $\ast$$\ast$ipsub, const char $\ast$ipstr, const char $\ast$mask\+\_\+or\+\_\+numbits, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+int \hyperlink{group__apr__network__io_gab74d21b8898b7c40bf7fd07ad3eb993d}{apr\+\_\+ipsubnet\+\_\+test} (\hyperlink{group__apr__network__io_gac86ee04eb80f938902095d1d0a67c324}{apr\+\_\+ipsubnet\+\_\+t} $\ast$ipsub, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$sa)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga270b7c0835283fa2b85a05d295dd7ee5}{apr\+\_\+socket\+\_\+accept\+\_\+filter} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, char $\ast$name, char $\ast$args)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_gac402d9426de37b6cede18fa157020bd9}{apr\+\_\+socket\+\_\+protocol\+\_\+get} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, int $\ast$protocol)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__network__io_ga4f109ecf176aee8fca8ecfa7f8b07d93}{apr\+\_\+socket\+\_\+pool\+\_\+get} (const \hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$thesocket)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga8ae81c6a7acf90112ebcfb9221ccc649}{apr\+\_\+socket\+\_\+inherit\+\_\+set} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$thesocket)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__network__io_ga5afabb2cee38c141d076b9c52a3f2ce1}{apr\+\_\+socket\+\_\+inherit\+\_\+unset} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$thesocket)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+A\+N\+Y\+A\+D\+DR@{A\+P\+R\+\_\+\+A\+N\+Y\+A\+D\+DR}}
+\index{A\+P\+R\+\_\+\+A\+N\+Y\+A\+D\+DR@{A\+P\+R\+\_\+\+A\+N\+Y\+A\+D\+DR}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+A\+N\+Y\+A\+D\+DR}{APR_ANYADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+A\+N\+Y\+A\+D\+DR~\char`\"{}0.\+0.\+0.\+0\char`\"{}}\hypertarget{group__apr__network__io_gadce1131c46b897ec63e9e4316a4631dd}{}\label{group__apr__network__io_gadce1131c46b897ec63e9e4316a4631dd}
+Default \textquotesingle{}any\textquotesingle{} address \index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+I\+N\+A\+D\+D\+R\+\_\+\+N\+O\+NE@{A\+P\+R\+\_\+\+I\+N\+A\+D\+D\+R\+\_\+\+N\+O\+NE}}
+\index{A\+P\+R\+\_\+\+I\+N\+A\+D\+D\+R\+\_\+\+N\+O\+NE@{A\+P\+R\+\_\+\+I\+N\+A\+D\+D\+R\+\_\+\+N\+O\+NE}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+I\+N\+A\+D\+D\+R\+\_\+\+N\+O\+NE}{APR_INADDR_NONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+I\+N\+A\+D\+D\+R\+\_\+\+N\+O\+NE~((unsigned int) 0xffffffff)}\hypertarget{group__apr__network__io_ga16eb7ee55ff87a5093f2114ea5351217}{}\label{group__apr__network__io_ga16eb7ee55ff87a5093f2114ea5351217}
+Not all platforms have a real I\+N\+A\+D\+D\+R\+\_\+\+N\+O\+NE. This macro replaces I\+N\+A\+D\+D\+R\+\_\+\+N\+O\+NE on all platforms. \index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+I\+N\+ET@{A\+P\+R\+\_\+\+I\+N\+ET}}
+\index{A\+P\+R\+\_\+\+I\+N\+ET@{A\+P\+R\+\_\+\+I\+N\+ET}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+I\+N\+ET}{APR_INET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+I\+N\+ET~A\+F\+\_\+\+I\+N\+ET}\hypertarget{group__apr__network__io_gaa96e8e8dbf92bc77643a4032017b3d67}{}\label{group__apr__network__io_gaa96e8e8dbf92bc77643a4032017b3d67}
+Not all platforms have these defined, so we\textquotesingle{}ll define them here The default values come from Free\+B\+SD 4.\+1.\+1 \index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+I\+N\+E\+T6@{A\+P\+R\+\_\+\+I\+N\+E\+T6}}
+\index{A\+P\+R\+\_\+\+I\+N\+E\+T6@{A\+P\+R\+\_\+\+I\+N\+E\+T6}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+I\+N\+E\+T6}{APR_INET6}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+I\+N\+E\+T6~A\+F\+\_\+\+I\+N\+E\+T6}\hypertarget{group__apr__network__io_gad09d9ea8995f50f35073ae0c77efb44f}{}\label{group__apr__network__io_gad09d9ea8995f50f35073ae0c77efb44f}
+I\+Pv6 Address Family. Not all platforms may have this defined. \index{Network Routines@{Network Routines}!apr\+\_\+inet\+\_\+addr@{apr\+\_\+inet\+\_\+addr}}
+\index{apr\+\_\+inet\+\_\+addr@{apr\+\_\+inet\+\_\+addr}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+inet\+\_\+addr}{apr_inet_addr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+inet\+\_\+addr~inet\+\_\+addr}\hypertarget{group__apr__network__io_ga46a8b06887871cfd60a3e37385775e22}{}\label{group__apr__network__io_ga46a8b06887871cfd60a3e37385775e22}
+The specific declaration of inet\+\_\+addr\textquotesingle{}s ... some platforms fall back inet\+\_\+network (this is not good, but necessary) \index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+I\+P\+V4\+\_\+\+A\+D\+D\+R\+\_\+\+OK@{A\+P\+R\+\_\+\+I\+P\+V4\+\_\+\+A\+D\+D\+R\+\_\+\+OK}}
+\index{A\+P\+R\+\_\+\+I\+P\+V4\+\_\+\+A\+D\+D\+R\+\_\+\+OK@{A\+P\+R\+\_\+\+I\+P\+V4\+\_\+\+A\+D\+D\+R\+\_\+\+OK}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+I\+P\+V4\+\_\+\+A\+D\+D\+R\+\_\+\+OK}{APR_IPV4_ADDR_OK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+I\+P\+V4\+\_\+\+A\+D\+D\+R\+\_\+\+OK~0x01}\hypertarget{group__apr__network__io_ga58aa30a94127b4a80f27fbf2e03fdfd8}{}\label{group__apr__network__io_ga58aa30a94127b4a80f27fbf2e03fdfd8}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__network__io_gaa2f399ca2b60b35c0abf7630298c6c9f}{apr\+\_\+sockaddr\+\_\+info\+\_\+get()} 
+\end{DoxySeeAlso}
+\index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+I\+P\+V6\+\_\+\+A\+D\+D\+R\+\_\+\+OK@{A\+P\+R\+\_\+\+I\+P\+V6\+\_\+\+A\+D\+D\+R\+\_\+\+OK}}
+\index{A\+P\+R\+\_\+\+I\+P\+V6\+\_\+\+A\+D\+D\+R\+\_\+\+OK@{A\+P\+R\+\_\+\+I\+P\+V6\+\_\+\+A\+D\+D\+R\+\_\+\+OK}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+I\+P\+V6\+\_\+\+A\+D\+D\+R\+\_\+\+OK}{APR_IPV6_ADDR_OK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+I\+P\+V6\+\_\+\+A\+D\+D\+R\+\_\+\+OK~0x02}\hypertarget{group__apr__network__io_gaef1f70f9b969d25832a230f429837207}{}\label{group__apr__network__io_gaef1f70f9b969d25832a230f429837207}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__network__io_gaa2f399ca2b60b35c0abf7630298c6c9f}{apr\+\_\+sockaddr\+\_\+info\+\_\+get()} 
+\end{DoxySeeAlso}
+\index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+C\+S\+\_\+\+T\+O\+\_\+\+L\+I\+N\+G\+ER@{A\+P\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+C\+S\+\_\+\+T\+O\+\_\+\+L\+I\+N\+G\+ER}}
+\index{A\+P\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+C\+S\+\_\+\+T\+O\+\_\+\+L\+I\+N\+G\+ER@{A\+P\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+C\+S\+\_\+\+T\+O\+\_\+\+L\+I\+N\+G\+ER}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+C\+S\+\_\+\+T\+O\+\_\+\+L\+I\+N\+G\+ER}{APR_MAX_SECS_TO_LINGER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+C\+S\+\_\+\+T\+O\+\_\+\+L\+I\+N\+G\+ER~30}\hypertarget{group__apr__network__io_ga8311c84f6946742188a6b9a45e92ea8e}{}\label{group__apr__network__io_ga8311c84f6946742188a6b9a45e92ea8e}
+Maximum seconds to linger \index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+\+S\+O\+C\+K\+ET@{A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+\+S\+O\+C\+K\+ET}}
+\index{A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+\+S\+O\+C\+K\+ET@{A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+\+S\+O\+C\+K\+ET}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+\+S\+O\+C\+K\+ET}{APR_SENDFILE_DISCONNECT_SOCKET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+\+S\+O\+C\+K\+ET~1}\hypertarget{group__apr__network__io_gaca378d0e24b1588e3fdb143e4ea9090d}{}\label{group__apr__network__io_gaca378d0e24b1588e3fdb143e4ea9090d}
+Support reusing the socket on platforms which support it (from disconnect, specifically Win32. \begin{DoxyRemark}{Remarks}
+Optional flag passed into \hyperlink{group__apr__network__io_ga3d93e6212c4c27f2390b0057f8f4a8be}{apr\+\_\+socket\+\_\+sendfile()} 
+\end{DoxyRemark}
+\index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+U\+N\+S\+P\+EC@{A\+P\+R\+\_\+\+U\+N\+S\+P\+EC}}
+\index{A\+P\+R\+\_\+\+U\+N\+S\+P\+EC@{A\+P\+R\+\_\+\+U\+N\+S\+P\+EC}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+U\+N\+S\+P\+EC}{APR_UNSPEC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+U\+N\+S\+P\+EC~0}\hypertarget{group__apr__network__io_gaa7a33b17a7d0820b09ef489bd3328f85}{}\label{group__apr__network__io_gaa7a33b17a7d0820b09ef489bd3328f85}
+Let the system decide which address family to use \index{Network Routines@{Network Routines}!A\+P\+R\+M\+A\+X\+H\+O\+S\+T\+L\+EN@{A\+P\+R\+M\+A\+X\+H\+O\+S\+T\+L\+EN}}
+\index{A\+P\+R\+M\+A\+X\+H\+O\+S\+T\+L\+EN@{A\+P\+R\+M\+A\+X\+H\+O\+S\+T\+L\+EN}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+M\+A\+X\+H\+O\+S\+T\+L\+EN}{APRMAXHOSTLEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+M\+A\+X\+H\+O\+S\+T\+L\+EN~256}\hypertarget{group__apr__network__io_ga7f5b3882209106bb407b1d518d6ad59d}{}\label{group__apr__network__io_ga7f5b3882209106bb407b1d518d6ad59d}
+Maximum hostname length 
+
+\subsection{Typedef Documentation}
+\index{Network Routines@{Network Routines}!apr\+\_\+hdtr\+\_\+t@{apr\+\_\+hdtr\+\_\+t}}
+\index{apr\+\_\+hdtr\+\_\+t@{apr\+\_\+hdtr\+\_\+t}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hdtr\+\_\+t}{apr_hdtr_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+hdtr\+\_\+t} {\bf apr\+\_\+hdtr\+\_\+t}}\hypertarget{group__apr__network__io_ga97887d5358a9c79c241ccafab61d8ff5}{}\label{group__apr__network__io_ga97887d5358a9c79c241ccafab61d8ff5}
+A structure to encapsulate headers and trailers for apr\+\_\+socket\+\_\+sendfile \index{Network Routines@{Network Routines}!apr\+\_\+in\+\_\+addr\+\_\+t@{apr\+\_\+in\+\_\+addr\+\_\+t}}
+\index{apr\+\_\+in\+\_\+addr\+\_\+t@{apr\+\_\+in\+\_\+addr\+\_\+t}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+in\+\_\+addr\+\_\+t}{apr_in_addr_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct in\+\_\+addr {\bf apr\+\_\+in\+\_\+addr\+\_\+t}}\hypertarget{group__apr__network__io_gad30d6c55a354a9a2e0a8747abb0c8176}{}\label{group__apr__network__io_gad30d6c55a354a9a2e0a8747abb0c8176}
+A structure to represent in\+\_\+addr \index{Network Routines@{Network Routines}!apr\+\_\+ipsubnet\+\_\+t@{apr\+\_\+ipsubnet\+\_\+t}}
+\index{apr\+\_\+ipsubnet\+\_\+t@{apr\+\_\+ipsubnet\+\_\+t}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+ipsubnet\+\_\+t}{apr_ipsubnet_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+ipsubnet\+\_\+t} {\bf apr\+\_\+ipsubnet\+\_\+t}}\hypertarget{group__apr__network__io_gac86ee04eb80f938902095d1d0a67c324}{}\label{group__apr__network__io_gac86ee04eb80f938902095d1d0a67c324}
+A structure to represent an IP subnet \index{Network Routines@{Network Routines}!apr\+\_\+port\+\_\+t@{apr\+\_\+port\+\_\+t}}
+\index{apr\+\_\+port\+\_\+t@{apr\+\_\+port\+\_\+t}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+port\+\_\+t}{apr_port_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef apr\+\_\+uint16\+\_\+t {\bf apr\+\_\+port\+\_\+t}}\hypertarget{group__apr__network__io_gaa670a71960f6eb4fe0d0de2a1e7aba03}{}\label{group__apr__network__io_gaa670a71960f6eb4fe0d0de2a1e7aba03}
+\begin{DoxyRemark}{Remarks}
+use apr\+\_\+uint16\+\_\+t just in case some system has a short that isn\textquotesingle{}t 16 bits... 
+\end{DoxyRemark}
+\index{Network Routines@{Network Routines}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+sockaddr\+\_\+t}{apr_sockaddr_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+sockaddr\+\_\+t} {\bf apr\+\_\+sockaddr\+\_\+t}}\hypertarget{group__apr__network__io_ga373fb6f32d0875c5deb648b779c8a709}{}\label{group__apr__network__io_ga373fb6f32d0875c5deb648b779c8a709}
+\begin{DoxyRemark}{Remarks}
+It\textquotesingle{}s defined here as I think it should all be platform safe... 
+\end{DoxyRemark}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} 
+\end{DoxySeeAlso}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+t@{apr\+\_\+socket\+\_\+t}}
+\index{apr\+\_\+socket\+\_\+t@{apr\+\_\+socket\+\_\+t}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+t}{apr_socket_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+socket\+\_\+t} {\bf apr\+\_\+socket\+\_\+t}}\hypertarget{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{}\label{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}
+A structure to represent sockets 
+
+\subsection{Enumeration Type Documentation}
+\index{Network Routines@{Network Routines}!apr\+\_\+interface\+\_\+e@{apr\+\_\+interface\+\_\+e}}
+\index{apr\+\_\+interface\+\_\+e@{apr\+\_\+interface\+\_\+e}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+interface\+\_\+e}{apr_interface_e}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\+\_\+interface\+\_\+e}}\hypertarget{group__apr__network__io_ga1982f44f48fdf00a8bd754bc7b773edc}{}\label{group__apr__network__io_ga1982f44f48fdf00a8bd754bc7b773edc}
+Enum used to denote either the local and remote endpoint of a connection. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+P\+R\+\_\+\+L\+O\+C\+AL@{A\+P\+R\+\_\+\+L\+O\+C\+AL}!Network Routines@{Network Routines}}\index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+L\+O\+C\+AL@{A\+P\+R\+\_\+\+L\+O\+C\+AL}}\item[{\em 
+A\+P\+R\+\_\+\+L\+O\+C\+AL\hypertarget{group__apr__network__io_gga1982f44f48fdf00a8bd754bc7b773edca6c23a4bf48b8f93dff08adf827382616}{}\label{group__apr__network__io_gga1982f44f48fdf00a8bd754bc7b773edca6c23a4bf48b8f93dff08adf827382616}
+}]Socket information for local end of connection \index{A\+P\+R\+\_\+\+R\+E\+M\+O\+TE@{A\+P\+R\+\_\+\+R\+E\+M\+O\+TE}!Network Routines@{Network Routines}}\index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+R\+E\+M\+O\+TE@{A\+P\+R\+\_\+\+R\+E\+M\+O\+TE}}\item[{\em 
+A\+P\+R\+\_\+\+R\+E\+M\+O\+TE\hypertarget{group__apr__network__io_gga1982f44f48fdf00a8bd754bc7b773edcaeb8be70b031f06a513ac0ebcaa5bac8a}{}\label{group__apr__network__io_gga1982f44f48fdf00a8bd754bc7b773edcaeb8be70b031f06a513ac0ebcaa5bac8a}
+}]Socket information for remote end of connection \end{description}
+\end{Desc}
+\index{Network Routines@{Network Routines}!apr\+\_\+shutdown\+\_\+how\+\_\+e@{apr\+\_\+shutdown\+\_\+how\+\_\+e}}
+\index{apr\+\_\+shutdown\+\_\+how\+\_\+e@{apr\+\_\+shutdown\+\_\+how\+\_\+e}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shutdown\+\_\+how\+\_\+e}{apr_shutdown_how_e}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\+\_\+shutdown\+\_\+how\+\_\+e}}\hypertarget{group__apr__network__io_gae2130f1fa2d0db58c5c3c9c73d9b4009}{}\label{group__apr__network__io_gae2130f1fa2d0db58c5c3c9c73d9b4009}
+Define what type of socket shutdown should occur. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+AD@{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+AD}!Network Routines@{Network Routines}}\index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+AD@{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+AD}}\item[{\em 
+A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+AD\hypertarget{group__apr__network__io_ggae2130f1fa2d0db58c5c3c9c73d9b4009a88d0661d35eea5319715d6ca69265b01}{}\label{group__apr__network__io_ggae2130f1fa2d0db58c5c3c9c73d9b4009a88d0661d35eea5319715d6ca69265b01}
+}]no longer allow read request \index{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+W\+R\+I\+TE}!Network Routines@{Network Routines}}\index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+W\+R\+I\+TE}}\item[{\em 
+A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+W\+R\+I\+TE\hypertarget{group__apr__network__io_ggae2130f1fa2d0db58c5c3c9c73d9b4009a5e335b392088e14df65d1bd5e0db7c46}{}\label{group__apr__network__io_ggae2130f1fa2d0db58c5c3c9c73d9b4009a5e335b392088e14df65d1bd5e0db7c46}
+}]no longer allow write requests \index{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+A\+D\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+A\+D\+W\+R\+I\+TE}!Network Routines@{Network Routines}}\index{Network Routines@{Network Routines}!A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+A\+D\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+A\+D\+W\+R\+I\+TE}}\item[{\em 
+A\+P\+R\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+\_\+\+R\+E\+A\+D\+W\+R\+I\+TE\hypertarget{group__apr__network__io_ggae2130f1fa2d0db58c5c3c9c73d9b4009add172f55ff5ee7b930683a3903c99768}{}\label{group__apr__network__io_ggae2130f1fa2d0db58c5c3c9c73d9b4009add172f55ff5ee7b930683a3903c99768}
+}]no longer allow read or write requests \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{Network Routines@{Network Routines}!apr\+\_\+gethostname@{apr\+\_\+gethostname}}
+\index{apr\+\_\+gethostname@{apr\+\_\+gethostname}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+gethostname(char $\ast$buf, int len, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_gethostname(char *buf, int len, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+gethostname (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{int}]{len, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga6bd3d656ba935ca428075f477b8a6f8b}{}\label{group__apr__network__io_ga6bd3d656ba935ca428075f477b8a6f8b}
+Get name of the current machine 
+\begin{DoxyParams}{Parameters}
+{\em buf} & A buffer to store the hostname in. \\
+\hline
+{\em len} & The maximum length of the hostname that can be stored in the buffer provided. The suggested length is A\+P\+R\+M\+A\+X\+H\+O\+S\+T\+L\+EN + 1. \\
+\hline
+{\em cont} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If the buffer was not large enough, an error will be returned. 
+\end{DoxyRemark}
+\index{Network Routines@{Network Routines}!apr\+\_\+getnameinfo@{apr\+\_\+getnameinfo}}
+\index{apr\+\_\+getnameinfo@{apr\+\_\+getnameinfo}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+getnameinfo(char $\ast$$\ast$hostname, apr\+\_\+sockaddr\+\_\+t $\ast$sa, apr\+\_\+int32\+\_\+t flags)}{apr_getnameinfo(char **hostname, apr_sockaddr_t *sa, apr_int32_t flags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+getnameinfo (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{hostname, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{sa, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga7a56fd9573b942753738ec30b887c9de}{}\label{group__apr__network__io_ga7a56fd9573b942753738ec30b887c9de}
+Look up the host name from an \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t}. 
+\begin{DoxyParams}{Parameters}
+{\em hostname} & The hostname. \\
+\hline
+{\em sa} & The \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t}. \\
+\hline
+{\em flags} & Special processing flags. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Results can vary significantly between platforms when processing wildcard socket addresses. 
+\end{DoxyRemark}
+\index{Network Routines@{Network Routines}!apr\+\_\+getservbyname@{apr\+\_\+getservbyname}}
+\index{apr\+\_\+getservbyname@{apr\+\_\+getservbyname}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+getservbyname(apr\+\_\+sockaddr\+\_\+t $\ast$sockaddr, const char $\ast$servname)}{apr_getservbyname(apr_sockaddr_t *sockaddr, const char *servname)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+getservbyname (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{sockaddr, }
+\item[{const char $\ast$}]{servname}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gad5b504c0fe4d578e72531e3ca0263654}{}\label{group__apr__network__io_gad5b504c0fe4d578e72531e3ca0263654}
+Given an \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} and a service name, set the port for the service 
+\begin{DoxyParams}{Parameters}
+{\em sockaddr} & The \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} that will have its port set \\
+\hline
+{\em servname} & The name of the service you wish to use \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+ipsubnet\+\_\+create@{apr\+\_\+ipsubnet\+\_\+create}}
+\index{apr\+\_\+ipsubnet\+\_\+create@{apr\+\_\+ipsubnet\+\_\+create}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+ipsubnet\+\_\+create(apr\+\_\+ipsubnet\+\_\+t $\ast$$\ast$ipsub, const char $\ast$ipstr, const char $\ast$mask\+\_\+or\+\_\+numbits, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_ipsubnet_create(apr_ipsubnet_t **ipsub, const char *ipstr, const char *mask_or_numbits, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+ipsubnet\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+ipsubnet\+\_\+t} $\ast$$\ast$}]{ipsub, }
+\item[{const char $\ast$}]{ipstr, }
+\item[{const char $\ast$}]{mask\+\_\+or\+\_\+numbits, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga34a3c7f1666427f4e381e857b9e9c298}{}\label{group__apr__network__io_ga34a3c7f1666427f4e381e857b9e9c298}
+Build an ip-\/subnet representation from an IP address and optional netmask or number-\/of-\/bits. 
+\begin{DoxyParams}{Parameters}
+{\em ipsub} & The new ip-\/subnet representation \\
+\hline
+{\em ipstr} & The input IP address string \\
+\hline
+{\em mask\+\_\+or\+\_\+numbits} & The input netmask or number-\/of-\/bits string, or N\+U\+LL \\
+\hline
+{\em p} & The pool to allocate from \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+ipsubnet\+\_\+test@{apr\+\_\+ipsubnet\+\_\+test}}
+\index{apr\+\_\+ipsubnet\+\_\+test@{apr\+\_\+ipsubnet\+\_\+test}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+ipsubnet\+\_\+test(apr\+\_\+ipsubnet\+\_\+t $\ast$ipsub, apr\+\_\+sockaddr\+\_\+t $\ast$sa)}{apr_ipsubnet_test(apr_ipsubnet_t *ipsub, apr_sockaddr_t *sa)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+ipsubnet\+\_\+test (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+ipsubnet\+\_\+t} $\ast$}]{ipsub, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{sa}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gab74d21b8898b7c40bf7fd07ad3eb993d}{}\label{group__apr__network__io_gab74d21b8898b7c40bf7fd07ad3eb993d}
+Test the IP address in an \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} against a pre-\/built ip-\/subnet representation. 
+\begin{DoxyParams}{Parameters}
+{\em ipsub} & The ip-\/subnet representation \\
+\hline
+{\em sa} & The socket address to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if the socket address is within the subnet, 0 otherwise 
+\end{DoxyReturn}
+\index{Network Routines@{Network Routines}!apr\+\_\+parse\+\_\+addr\+\_\+port@{apr\+\_\+parse\+\_\+addr\+\_\+port}}
+\index{apr\+\_\+parse\+\_\+addr\+\_\+port@{apr\+\_\+parse\+\_\+addr\+\_\+port}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+parse\+\_\+addr\+\_\+port(char $\ast$$\ast$addr, char $\ast$$\ast$scope\+\_\+id, apr\+\_\+port\+\_\+t $\ast$port, const char $\ast$str, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_parse_addr_port(char **addr, char **scope_id, apr_port_t *port, const char *str, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+parse\+\_\+addr\+\_\+port (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{addr, }
+\item[{char $\ast$$\ast$}]{scope\+\_\+id, }
+\item[{{\bf apr\+\_\+port\+\_\+t} $\ast$}]{port, }
+\item[{const char $\ast$}]{str, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga90c31b2f012c6b1e2d842a96c4431de3}{}\label{group__apr__network__io_ga90c31b2f012c6b1e2d842a96c4431de3}
+Parse hostname/\+IP address with scope id and port.
+
+Any of the following strings are accepted\+: 8080 (just the port number) www.\+apache.\+org (just the hostname) www.\+apache.\+org\+:8080 (hostname and port number)
+
+\mbox{[}fe80\+:\+:1eth0\mbox{]} (I\+Pv6 numeric address string and scope id)
+
+Invalid strings\+: (empty string) \mbox{[}abc\mbox{]} (not valid I\+Pv6 numeric address string) abc\+:65536 (invalid port number)
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & The new buffer containing just the hostname. On output, $\ast$addr will be N\+U\+LL if no hostname/\+IP address was specfied. \\
+\hline
+{\em scope\+\_\+id} & The new buffer containing just the scope id. On output, $\ast$scope\+\_\+id will be N\+U\+LL if no scope id was specified. \\
+\hline
+{\em port} & The port number. On output, $\ast$port will be 0 if no port was specified. \paragraph*{F\+I\+X\+ME\+: 0 is a legal port (per R\+FC 1700). this should}\\
+\hline
+\end{DoxyParams}
+\paragraph*{return something besides zero if the port is missing.}
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The input string to be parsed. \\
+\hline
+{\em p} & The pool from which $\ast$addr and $\ast$scope\+\_\+id are allocated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If scope id shouldn\textquotesingle{}t be allowed, check for scope\+\_\+id != N\+U\+LL in addition to checking the return code. If addr/hostname should be required, check for addr == N\+U\+LL in addition to checking the return code. 
+\end{DoxyRemark}
+\index{Network Routines@{Network Routines}!apr\+\_\+sockaddr\+\_\+equal@{apr\+\_\+sockaddr\+\_\+equal}}
+\index{apr\+\_\+sockaddr\+\_\+equal@{apr\+\_\+sockaddr\+\_\+equal}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+sockaddr\+\_\+equal(const apr\+\_\+sockaddr\+\_\+t $\ast$addr1, const apr\+\_\+sockaddr\+\_\+t $\ast$addr2)}{apr_sockaddr_equal(const apr_sockaddr_t *addr1, const apr_sockaddr_t *addr2)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+sockaddr\+\_\+equal (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{addr1, }
+\item[{const {\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{addr2}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga1bf65369305ae352f3280af2acc684f5}{}\label{group__apr__network__io_ga1bf65369305ae352f3280af2acc684f5}
+See if the IP addresses in two A\+PR socket addresses are equivalent. Appropriate logic is present for comparing I\+Pv4-\/mapped I\+Pv6 addresses with I\+Pv4 addresses.
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr1} & One of the A\+PR socket addresses. \\
+\hline
+{\em addr2} & The other A\+PR socket address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The return value will be non-\/zero if the addresses are equivalent. 
+\end{DoxyRemark}
+\index{Network Routines@{Network Routines}!apr\+\_\+sockaddr\+\_\+info\+\_\+get@{apr\+\_\+sockaddr\+\_\+info\+\_\+get}}
+\index{apr\+\_\+sockaddr\+\_\+info\+\_\+get@{apr\+\_\+sockaddr\+\_\+info\+\_\+get}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+sockaddr\+\_\+info\+\_\+get(apr\+\_\+sockaddr\+\_\+t $\ast$$\ast$sa, const char $\ast$hostname, apr\+\_\+int32\+\_\+t family, apr\+\_\+port\+\_\+t port, apr\+\_\+int32\+\_\+t flags, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_sockaddr_info_get(apr_sockaddr_t **sa, const char *hostname, apr_int32_t family, apr_port_t port, apr_int32_t flags, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+sockaddr\+\_\+info\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$$\ast$}]{sa, }
+\item[{const char $\ast$}]{hostname, }
+\item[{apr\+\_\+int32\+\_\+t}]{family, }
+\item[{{\bf apr\+\_\+port\+\_\+t}}]{port, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gaa2f399ca2b60b35c0abf7630298c6c9f}{}\label{group__apr__network__io_gaa2f399ca2b60b35c0abf7630298c6c9f}
+Create \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} from hostname, address family, and port. 
+\begin{DoxyParams}{Parameters}
+{\em sa} & The new \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t}. \\
+\hline
+{\em hostname} & The hostname or numeric address string to resolve/parse, or N\+U\+LL to build an address that corresponds to 0.\+0.\+0.\+0 or \+:\+: \\
+\hline
+{\em family} & The address family to use, or A\+P\+R\+\_\+\+U\+N\+S\+P\+EC if the system should decide. \\
+\hline
+{\em port} & The port number. \\
+\hline
+{\em flags} & Special processing flags\+: 
+\begin{DoxyPre}
+      APR\_IPV4\_ADDR\_OK          first query for IPv4 addresses; only look
+                                for IPv6 addresses if the first query failed;
+                                only valid if family is APR\_UNSPEC and hostname
+                                isn't NULL; mutually exclusive with
+                                APR\_IPV6\_ADDR\_OK
+      APR\_IPV6\_ADDR\_OK          first query for IPv6 addresses; only look
+                                for IPv4 addresses if the first query failed;
+                                only valid if family is APR\_UNSPEC and hostname
+                                isn't NULL and APR\_HAVE\_IPV6; mutually exclusive
+                                with APR\_IPV4\_ADDR\_OK
+\end{DoxyPre}
+ \\
+\hline
+{\em p} & The pool for the \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} and associated storage. \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+sockaddr\+\_\+ip\+\_\+get@{apr\+\_\+sockaddr\+\_\+ip\+\_\+get}}
+\index{apr\+\_\+sockaddr\+\_\+ip\+\_\+get@{apr\+\_\+sockaddr\+\_\+ip\+\_\+get}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+sockaddr\+\_\+ip\+\_\+get(char $\ast$$\ast$addr, apr\+\_\+sockaddr\+\_\+t $\ast$sockaddr)}{apr_sockaddr_ip_get(char **addr, apr_sockaddr_t *sockaddr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+sockaddr\+\_\+ip\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{addr, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{sockaddr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gab78fc9b9799c119f4a5517411458a660}{}\label{group__apr__network__io_gab78fc9b9799c119f4a5517411458a660}
+Return the IP address (in numeric address string format) in an A\+PR socket address. A\+PR will allocate storage for the IP address string from the pool of the \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t}. 
+\begin{DoxyParams}{Parameters}
+{\em addr} & The IP address. \\
+\hline
+{\em sockaddr} & The socket address to reference. \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+sockaddr\+\_\+ip\+\_\+getbuf@{apr\+\_\+sockaddr\+\_\+ip\+\_\+getbuf}}
+\index{apr\+\_\+sockaddr\+\_\+ip\+\_\+getbuf@{apr\+\_\+sockaddr\+\_\+ip\+\_\+getbuf}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+sockaddr\+\_\+ip\+\_\+getbuf(char $\ast$buf, apr\+\_\+size\+\_\+t buflen, apr\+\_\+sockaddr\+\_\+t $\ast$sockaddr)}{apr_sockaddr_ip_getbuf(char *buf, apr_size_t buflen, apr_sockaddr_t *sockaddr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+sockaddr\+\_\+ip\+\_\+getbuf (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t}]{buflen, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{sockaddr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga8c88ae154304e30d47c2696f4370dc6d}{}\label{group__apr__network__io_ga8c88ae154304e30d47c2696f4370dc6d}
+Write the IP address (in numeric address string format) of the A\+PR socket address {\itshape sockaddr} into the buffer {\itshape buf} (of size {\itshape buflen}). 
+\begin{DoxyParams}{Parameters}
+{\em sockaddr} & The socket address to reference. \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+sockaddr\+\_\+is\+\_\+wildcard@{apr\+\_\+sockaddr\+\_\+is\+\_\+wildcard}}
+\index{apr\+\_\+sockaddr\+\_\+is\+\_\+wildcard@{apr\+\_\+sockaddr\+\_\+is\+\_\+wildcard}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+sockaddr\+\_\+is\+\_\+wildcard(const apr\+\_\+sockaddr\+\_\+t $\ast$addr)}{apr_sockaddr_is_wildcard(const apr_sockaddr_t *addr)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+sockaddr\+\_\+is\+\_\+wildcard (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gab9e53832f95e39cb780345c2b7783830}{}\label{group__apr__network__io_gab9e53832f95e39cb780345c2b7783830}
+See if the IP address in an A\+PR socket address refers to the wildcard address for the protocol family (e.\+g., I\+N\+A\+D\+D\+R\+\_\+\+A\+NY for I\+Pv4).
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & The A\+PR socket address to examine. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The return value will be non-\/zero if the address is initialized and is the wildcard address. 
+\end{DoxyRemark}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+accept@{apr\+\_\+socket\+\_\+accept}}
+\index{apr\+\_\+socket\+\_\+accept@{apr\+\_\+socket\+\_\+accept}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+accept(apr\+\_\+socket\+\_\+t $\ast$$\ast$new\+\_\+sock, apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+pool\+\_\+t $\ast$connection\+\_\+pool)}{apr_socket_accept(apr_socket_t **new_sock, apr_socket_t *sock, apr_pool_t *connection_pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+accept (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$$\ast$}]{new\+\_\+sock, }
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{connection\+\_\+pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga1d62711ca77ccc0f6413a298a47876da}{}\label{group__apr__network__io_ga1d62711ca77ccc0f6413a298a47876da}
+Accept a new connection request 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+sock} & A copy of the socket that is connected to the socket that made the connection request. This is the socket which should be used for all future communication. \\
+\hline
+{\em sock} & The socket we are listening on. \\
+\hline
+{\em connection\+\_\+pool} & The pool for the new socket. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The pool will be used by various functions that operate on the socket. The caller must ensure that it is not used by other threads at the same time. 
+\end{DoxyNote}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+accept\+\_\+filter@{apr\+\_\+socket\+\_\+accept\+\_\+filter}}
+\index{apr\+\_\+socket\+\_\+accept\+\_\+filter@{apr\+\_\+socket\+\_\+accept\+\_\+filter}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+accept\+\_\+filter(apr\+\_\+socket\+\_\+t $\ast$sock, char $\ast$name, char $\ast$args)}{apr_socket_accept_filter(apr_socket_t *sock, char *name, char *args)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+accept\+\_\+filter (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{char $\ast$}]{name, }
+\item[{char $\ast$}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga270b7c0835283fa2b85a05d295dd7ee5}{}\label{group__apr__network__io_ga270b7c0835283fa2b85a05d295dd7ee5}
+Set an OS level accept filter. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to put the accept filter on. \\
+\hline
+{\em name} & The accept filter \\
+\hline
+{\em args} & Any extra args to the accept filter. Passing N\+U\+LL here removes the accept filter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000004}{Bug}]name and args should have been declared as const char $\ast$, as they are in A\+PR 2.\+0 \end{DoxyRefDesc}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+addr\+\_\+get@{apr\+\_\+socket\+\_\+addr\+\_\+get}}
+\index{apr\+\_\+socket\+\_\+addr\+\_\+get@{apr\+\_\+socket\+\_\+addr\+\_\+get}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+addr\+\_\+get(apr\+\_\+sockaddr\+\_\+t $\ast$$\ast$sa, apr\+\_\+interface\+\_\+e which, apr\+\_\+socket\+\_\+t $\ast$sock)}{apr_socket_addr_get(apr_sockaddr_t **sa, apr_interface_e which, apr_socket_t *sock)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+addr\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$$\ast$}]{sa, }
+\item[{{\bf apr\+\_\+interface\+\_\+e}}]{which, }
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gacad56b59eafc6ad2459bf6493c992515}{}\label{group__apr__network__io_gacad56b59eafc6ad2459bf6493c992515}
+Return an address associated with a socket; either the address to which the socket is bound locally or the address of the peer to which the socket is connected. 
+\begin{DoxyParams}{Parameters}
+{\em sa} & The returned \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t}. \\
+\hline
+{\em which} & Whether to retrieve the local or remote address \\
+\hline
+{\em sock} & The socket to use \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+atmark@{apr\+\_\+socket\+\_\+atmark}}
+\index{apr\+\_\+socket\+\_\+atmark@{apr\+\_\+socket\+\_\+atmark}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+atmark(apr\+\_\+socket\+\_\+t $\ast$sock, int $\ast$atmark)}{apr_socket_atmark(apr_socket_t *sock, int *atmark)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+atmark (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{int $\ast$}]{atmark}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga2389de257444870974b5ded91cf7a10c}{}\label{group__apr__network__io_ga2389de257444870974b5ded91cf7a10c}
+Query the specified socket if at the O\+O\+B/\+Urgent data mark 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to query \\
+\hline
+{\em atmark} & Is set to true if socket is at the O\+O\+B/urgent mark, otherwise is set to false. \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+atreadeof@{apr\+\_\+socket\+\_\+atreadeof}}
+\index{apr\+\_\+socket\+\_\+atreadeof@{apr\+\_\+socket\+\_\+atreadeof}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+atreadeof(apr\+\_\+socket\+\_\+t $\ast$sock, int $\ast$atreadeof)}{apr_socket_atreadeof(apr_socket_t *sock, int *atreadeof)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+atreadeof (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{int $\ast$}]{atreadeof}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gabfcb1fe4447921e5b86d395126b5d6f0}{}\label{group__apr__network__io_gabfcb1fe4447921e5b86d395126b5d6f0}
+Determine whether the receive part of the socket has been closed by the peer (such that a subsequent call to apr\+\_\+socket\+\_\+read would return A\+P\+R\+\_\+\+E\+OF), if the socket\textquotesingle{}s receive buffer is empty. This function does not block waiting for I/O.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to check \\
+\hline
+{\em atreadeof} & If A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS is returned, $\ast$atreadeof is set to non-\/zero if a subsequent read would return A\+P\+R\+\_\+\+E\+OF \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an error is returned if it was not possible to determine the status, in which case $\ast$atreadeof is not changed. 
+\end{DoxyReturn}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+bind@{apr\+\_\+socket\+\_\+bind}}
+\index{apr\+\_\+socket\+\_\+bind@{apr\+\_\+socket\+\_\+bind}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+bind(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+sockaddr\+\_\+t $\ast$sa)}{apr_socket_bind(apr_socket_t *sock, apr_sockaddr_t *sa)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+bind (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{sa}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga512882c9979c2b9cad7cbc2508516d65}{}\label{group__apr__network__io_ga512882c9979c2b9cad7cbc2508516d65}
+Bind the socket to its associated port 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to bind \\
+\hline
+{\em sa} & The socket address to bind to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This may be where we will find out if there is any other process using the selected port. 
+\end{DoxyRemark}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+close@{apr\+\_\+socket\+\_\+close}}
+\index{apr\+\_\+socket\+\_\+close@{apr\+\_\+socket\+\_\+close}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+close(apr\+\_\+socket\+\_\+t $\ast$thesocket)}{apr_socket_close(apr_socket_t *thesocket)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+close (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{thesocket}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga88779f243ce19a2563544aee81894e6d}{}\label{group__apr__network__io_ga88779f243ce19a2563544aee81894e6d}
+Close a socket. 
+\begin{DoxyParams}{Parameters}
+{\em thesocket} & The socket to close \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+connect@{apr\+\_\+socket\+\_\+connect}}
+\index{apr\+\_\+socket\+\_\+connect@{apr\+\_\+socket\+\_\+connect}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+connect(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+sockaddr\+\_\+t $\ast$sa)}{apr_socket_connect(apr_socket_t *sock, apr_sockaddr_t *sa)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+connect (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{sa}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga8e58bd8112ed2ce5004487918cd9275e}{}\label{group__apr__network__io_ga8e58bd8112ed2ce5004487918cd9275e}
+Issue a connection request to a socket either on the same machine or a different one. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket we wish to use for our side of the connection \\
+\hline
+{\em sa} & The address of the machine we wish to connect to. \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+create@{apr\+\_\+socket\+\_\+create}}
+\index{apr\+\_\+socket\+\_\+create@{apr\+\_\+socket\+\_\+create}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+create(apr\+\_\+socket\+\_\+t $\ast$$\ast$new\+\_\+sock, int family, int type, int protocol, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_socket_create(apr_socket_t **new_sock, int family, int type, int protocol, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$$\ast$}]{new\+\_\+sock, }
+\item[{int}]{family, }
+\item[{int}]{type, }
+\item[{int}]{protocol, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga46b81e267ef80e64510d4e83880a91bd}{}\label{group__apr__network__io_ga46b81e267ef80e64510d4e83880a91bd}
+Create a socket. 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+sock} & The new socket that has been set up. \\
+\hline
+{\em family} & The address family of the socket (e.\+g., A\+P\+R\+\_\+\+I\+N\+ET). \\
+\hline
+{\em type} & The type of the socket (e.\+g., S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+AM). \\
+\hline
+{\em protocol} & The protocol of the socket (e.\+g., A\+P\+R\+\_\+\+P\+R\+O\+T\+O\+\_\+\+T\+CP). \\
+\hline
+{\em cont} & The pool for the apr\+\_\+socket\+\_\+t and associated storage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The pool will be used by various functions that operate on the socket. The caller must ensure that it is not used by other threads at the same time. 
+\end{DoxyNote}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+data\+\_\+get@{apr\+\_\+socket\+\_\+data\+\_\+get}}
+\index{apr\+\_\+socket\+\_\+data\+\_\+get@{apr\+\_\+socket\+\_\+data\+\_\+get}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+data\+\_\+get(void $\ast$$\ast$data, const char $\ast$key, apr\+\_\+socket\+\_\+t $\ast$sock)}{apr_socket_data_get(void **data, const char *key, apr_socket_t *sock)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+data\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{void $\ast$$\ast$}]{data, }
+\item[{const char $\ast$}]{key, }
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gae76b48d0224a608b4ddb8bd00582eaa7}{}\label{group__apr__network__io_gae76b48d0224a608b4ddb8bd00582eaa7}
+Return the data associated with the current socket 
+\begin{DoxyParams}{Parameters}
+{\em data} & The user data associated with the socket. \\
+\hline
+{\em key} & The key to associate with the user data. \\
+\hline
+{\em sock} & The currently open socket. \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+data\+\_\+set@{apr\+\_\+socket\+\_\+data\+\_\+set}}
+\index{apr\+\_\+socket\+\_\+data\+\_\+set@{apr\+\_\+socket\+\_\+data\+\_\+set}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+data\+\_\+set(apr\+\_\+socket\+\_\+t $\ast$sock, void $\ast$data, const char $\ast$key, apr\+\_\+status\+\_\+t($\ast$cleanup)(void $\ast$))}{apr_socket_data_set(apr_socket_t *sock, void *data, const char *key, apr_status_t(*cleanup)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+data\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{void $\ast$}]{data, }
+\item[{const char $\ast$}]{key, }
+\item[{{\bf apr\+\_\+status\+\_\+t}($\ast$)(void $\ast$)}]{cleanup}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gafec197f3aa9a495801cdf7892ff8dcb5}{}\label{group__apr__network__io_gafec197f3aa9a495801cdf7892ff8dcb5}
+Set the data associated with the current socket. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The currently open socket. \\
+\hline
+{\em data} & The user data to associate with the socket. \\
+\hline
+{\em key} & The key to associate with the data. \\
+\hline
+{\em cleanup} & The cleanup to call when the socket is destroyed. \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+inherit\+\_\+set@{apr\+\_\+socket\+\_\+inherit\+\_\+set}}
+\index{apr\+\_\+socket\+\_\+inherit\+\_\+set@{apr\+\_\+socket\+\_\+inherit\+\_\+set}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+inherit\+\_\+set(apr\+\_\+socket\+\_\+t $\ast$thesocket)}{apr_socket_inherit_set(apr_socket_t *thesocket)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+inherit\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{thesocket}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga8ae81c6a7acf90112ebcfb9221ccc649}{}\label{group__apr__network__io_ga8ae81c6a7acf90112ebcfb9221ccc649}
+Set a socket to be inherited by child processes. \index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+inherit\+\_\+unset@{apr\+\_\+socket\+\_\+inherit\+\_\+unset}}
+\index{apr\+\_\+socket\+\_\+inherit\+\_\+unset@{apr\+\_\+socket\+\_\+inherit\+\_\+unset}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+inherit\+\_\+unset(apr\+\_\+socket\+\_\+t $\ast$thesocket)}{apr_socket_inherit_unset(apr_socket_t *thesocket)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+inherit\+\_\+unset (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{thesocket}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga5afabb2cee38c141d076b9c52a3f2ce1}{}\label{group__apr__network__io_ga5afabb2cee38c141d076b9c52a3f2ce1}
+Unset a socket from being inherited by child processes. \index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+listen@{apr\+\_\+socket\+\_\+listen}}
+\index{apr\+\_\+socket\+\_\+listen@{apr\+\_\+socket\+\_\+listen}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+listen(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+int32\+\_\+t backlog)}{apr_socket_listen(apr_socket_t *sock, apr_int32_t backlog)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+listen (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{apr\+\_\+int32\+\_\+t}]{backlog}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga154bcee918f6f01fe0373359dd74b0c4}{}\label{group__apr__network__io_ga154bcee918f6f01fe0373359dd74b0c4}
+Listen to a bound socket for connections. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to listen on \\
+\hline
+{\em backlog} & The number of outstanding connections allowed in the sockets listen queue. If this value is less than zero, the listen queue size is set to zero. \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+opt\+\_\+get@{apr\+\_\+socket\+\_\+opt\+\_\+get}}
+\index{apr\+\_\+socket\+\_\+opt\+\_\+get@{apr\+\_\+socket\+\_\+opt\+\_\+get}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+opt\+\_\+get(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+int32\+\_\+t opt, apr\+\_\+int32\+\_\+t $\ast$on)}{apr_socket_opt_get(apr_socket_t *sock, apr_int32_t opt, apr_int32_t *on)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+opt\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{apr\+\_\+int32\+\_\+t}]{opt, }
+\item[{apr\+\_\+int32\+\_\+t $\ast$}]{on}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga1934c2d5943efc8ce925f376f3c2e17e}{}\label{group__apr__network__io_ga1934c2d5943efc8ce925f376f3c2e17e}
+Query socket options for the specified socket 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to query \\
+\hline
+{\em opt} & The option we would like to query. One of\+: 
+\begin{DoxyPre}
+           APR\_SO\_DEBUG      --  turn on debugging information 
+           APR\_SO\_KEEPALIVE  --  keep connections active
+           APR\_SO\_LINGER     --  lingers on close if data is present
+           APR\_SO\_NONBLOCK   --  Turns blocking on/off for socket
+           APR\_SO\_REUSEADDR  --  The rules used in validating addresses
+                                 supplied to bind should allow reuse
+                                 of local addresses.
+           APR\_SO\_SNDBUF     --  Set the SendBufferSize
+           APR\_SO\_RCVBUF     --  Set the ReceiveBufferSize
+           APR\_SO\_DISCONNECTED -- Query the disconnected state of the socket.
+                                 (Currently only used on Windows)
+\end{DoxyPre}
+ \\
+\hline
+{\em on} & Socket option returned on the call. \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+opt\+\_\+set@{apr\+\_\+socket\+\_\+opt\+\_\+set}}
+\index{apr\+\_\+socket\+\_\+opt\+\_\+set@{apr\+\_\+socket\+\_\+opt\+\_\+set}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+opt\+\_\+set(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+int32\+\_\+t opt, apr\+\_\+int32\+\_\+t on)}{apr_socket_opt_set(apr_socket_t *sock, apr_int32_t opt, apr_int32_t on)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+opt\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{apr\+\_\+int32\+\_\+t}]{opt, }
+\item[{apr\+\_\+int32\+\_\+t}]{on}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga08f5e505fa611005f56c12783269ffa9}{}\label{group__apr__network__io_ga08f5e505fa611005f56c12783269ffa9}
+Setup socket options for the specified socket 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to set up. \\
+\hline
+{\em opt} & The option we would like to configure. One of\+: 
+\begin{DoxyPre}
+           APR\_SO\_DEBUG      --  turn on debugging information 
+           APR\_SO\_KEEPALIVE  --  keep connections active
+           APR\_SO\_LINGER     --  lingers on close if data is present
+           APR\_SO\_NONBLOCK   --  Turns blocking on/off for socket
+                                 When this option is enabled, use
+                                 the \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga56aa0a70756b5e83bc9d90f920527be4}{APR\_STATUS\_IS\_EAGAIN()} macro to
+                                 see if a send or receive function
+                                 could not transfer data without
+                                 blocking.
+           APR\_SO\_REUSEADDR  --  The rules used in validating addresses
+                                 supplied to bind should allow reuse
+                                 of local addresses.
+           APR\_SO\_SNDBUF     --  Set the SendBufferSize
+           APR\_SO\_RCVBUF     --  Set the ReceiveBufferSize
+\end{DoxyPre}
+ \\
+\hline
+{\em on} & Value for the option. \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+pool\+\_\+get@{apr\+\_\+socket\+\_\+pool\+\_\+get}}
+\index{apr\+\_\+socket\+\_\+pool\+\_\+get@{apr\+\_\+socket\+\_\+pool\+\_\+get}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+pool\+\_\+get(const apr\+\_\+socket\+\_\+t $\ast$thesocket)}{apr_socket_pool_get(const apr_socket_t *thesocket)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+pool\+\_\+t}$\ast$ apr\+\_\+socket\+\_\+pool\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+socket\+\_\+t} $\ast$}]{thesocket}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga4f109ecf176aee8fca8ecfa7f8b07d93}{}\label{group__apr__network__io_ga4f109ecf176aee8fca8ecfa7f8b07d93}
+Get the pool used by the socket. \index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+protocol\+\_\+get@{apr\+\_\+socket\+\_\+protocol\+\_\+get}}
+\index{apr\+\_\+socket\+\_\+protocol\+\_\+get@{apr\+\_\+socket\+\_\+protocol\+\_\+get}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+protocol\+\_\+get(apr\+\_\+socket\+\_\+t $\ast$sock, int $\ast$protocol)}{apr_socket_protocol_get(apr_socket_t *sock, int *protocol)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+protocol\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{int $\ast$}]{protocol}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gac402d9426de37b6cede18fa157020bd9}{}\label{group__apr__network__io_gac402d9426de37b6cede18fa157020bd9}
+Return the protocol of the socket. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to query. \\
+\hline
+{\em protocol} & The returned protocol (e.\+g., A\+P\+R\+\_\+\+P\+R\+O\+T\+O\+\_\+\+T\+CP). \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+recv@{apr\+\_\+socket\+\_\+recv}}
+\index{apr\+\_\+socket\+\_\+recv@{apr\+\_\+socket\+\_\+recv}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+recv(apr\+\_\+socket\+\_\+t $\ast$sock, char $\ast$buf, apr\+\_\+size\+\_\+t $\ast$len)}{apr_socket_recv(apr_socket_t *sock, char *buf, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+recv (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{char $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gaa6ee00191f197f64b5a5409f4aff53d1}{}\label{group__apr__network__io_gaa6ee00191f197f64b5a5409f4aff53d1}
+Read data from a network. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to read the data from. \\
+\hline
+{\em buf} & The buffer to store the data in. \\
+\hline
+{\em len} & On entry, the number of bytes to receive; on exit, the number of bytes received. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+
+\begin{DoxyPre}
+This functions acts like a blocking read by default.  To change 
+this behavior, use \hyperlink{group__apr__network__io_ga945bdbe807ec5635d65a6fd9ddb78c29}{apr\_socket\_timeout\_set()} or the APR\_SO\_NONBLOCK
+socket option.
+The number of bytes actually received is stored in argument 3.\end{DoxyPre}
+
+\end{DoxyRemark}
+It is possible for both bytes to be received and an A\+P\+R\+\_\+\+E\+OF or other error to be returned.
+
+
+\begin{DoxyPre}APR\_EINTR is never returned.
+\end{DoxyPre}
+ \index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+recvfrom@{apr\+\_\+socket\+\_\+recvfrom}}
+\index{apr\+\_\+socket\+\_\+recvfrom@{apr\+\_\+socket\+\_\+recvfrom}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+recvfrom(apr\+\_\+sockaddr\+\_\+t $\ast$from, apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+int32\+\_\+t flags, char $\ast$buf, apr\+\_\+size\+\_\+t $\ast$len)}{apr_socket_recvfrom(apr_sockaddr_t *from, apr_socket_t *sock, apr_int32_t flags, char *buf, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+recvfrom (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{from, }
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags, }
+\item[{char $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga80880312b41e86c9c266ede1a504e2ca}{}\label{group__apr__network__io_ga80880312b41e86c9c266ede1a504e2ca}
+Read data from a socket. On success, the address of the peer from which the data was sent is copied into the {\itshape from} parameter, and the {\itshape len} parameter is updated to give the number of bytes written to {\itshape buf}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Updated with the address from which the data was received \\
+\hline
+{\em sock} & The socket to use \\
+\hline
+{\em flags} & The flags to use \\
+\hline
+{\em buf} & The buffer to use \\
+\hline
+{\em len} & The length of the available buffer \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+send@{apr\+\_\+socket\+\_\+send}}
+\index{apr\+\_\+socket\+\_\+send@{apr\+\_\+socket\+\_\+send}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+send(apr\+\_\+socket\+\_\+t $\ast$sock, const char $\ast$buf, apr\+\_\+size\+\_\+t $\ast$len)}{apr_socket_send(apr_socket_t *sock, const char *buf, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+send (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{const char $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga943268245cf59f6ff8cf1458c9a9ba8d}{}\label{group__apr__network__io_ga943268245cf59f6ff8cf1458c9a9ba8d}
+Send data over a network. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to send the data over. \\
+\hline
+{\em buf} & The buffer which contains the data to be sent. \\
+\hline
+{\em len} & On entry, the number of bytes to send; on exit, the number of bytes sent. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+
+\begin{DoxyPre}
+This functions acts like a blocking write by default.  To change 
+this behavior, use \hyperlink{group__apr__network__io_ga945bdbe807ec5635d65a6fd9ddb78c29}{apr\_socket\_timeout\_set()} or the APR\_SO\_NONBLOCK
+socket option.\end{DoxyPre}
+
+\end{DoxyRemark}
+It is possible for both bytes to be sent and an error to be returned.
+
+
+\begin{DoxyPre}APR\_EINTR is never returned.
+\end{DoxyPre}
+ \index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+sendfile@{apr\+\_\+socket\+\_\+sendfile}}
+\index{apr\+\_\+socket\+\_\+sendfile@{apr\+\_\+socket\+\_\+sendfile}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+sendfile(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+file\+\_\+t $\ast$file, apr\+\_\+hdtr\+\_\+t $\ast$hdtr, apr\+\_\+off\+\_\+t $\ast$offset, apr\+\_\+size\+\_\+t $\ast$len, apr\+\_\+int32\+\_\+t flags)}{apr_socket_sendfile(apr_socket_t *sock, apr_file_t *file, apr_hdtr_t *hdtr, apr_off_t *offset, apr_size_t *len, apr_int32_t flags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+sendfile (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{file, }
+\item[{{\bf apr\+\_\+hdtr\+\_\+t} $\ast$}]{hdtr, }
+\item[{apr\+\_\+off\+\_\+t $\ast$}]{offset, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga3d93e6212c4c27f2390b0057f8f4a8be}{}\label{group__apr__network__io_ga3d93e6212c4c27f2390b0057f8f4a8be}
+Send a file from an open file descriptor to a socket, along with optional headers and trailers 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to which we\textquotesingle{}re writing \\
+\hline
+{\em file} & The open file from which to read \\
+\hline
+{\em hdtr} & A structure containing the headers and trailers to send \\
+\hline
+{\em offset} & Offset into the file where we should begin writing \\
+\hline
+{\em len} & (input) -\/ Number of bytes to send from the file (output) -\/ Number of bytes actually sent, including headers, file, and trailers \\
+\hline
+{\em flags} & A\+PR flags that are mapped to OS specific flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This functions acts like a blocking write by default. To change this behavior, use \hyperlink{group__apr__network__io_ga945bdbe807ec5635d65a6fd9ddb78c29}{apr\+\_\+socket\+\_\+timeout\+\_\+set()} or the A\+P\+R\+\_\+\+S\+O\+\_\+\+N\+O\+N\+B\+L\+O\+CK socket option. The number of bytes actually sent is stored in the len parameter. The offset parameter is passed by reference for no reason; its value will never be modified by the \hyperlink{group__apr__network__io_ga3d93e6212c4c27f2390b0057f8f4a8be}{apr\+\_\+socket\+\_\+sendfile()} function. 
+\end{DoxyRemark}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+sendto@{apr\+\_\+socket\+\_\+sendto}}
+\index{apr\+\_\+socket\+\_\+sendto@{apr\+\_\+socket\+\_\+sendto}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+sendto(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+sockaddr\+\_\+t $\ast$where, apr\+\_\+int32\+\_\+t flags, const char $\ast$buf, apr\+\_\+size\+\_\+t $\ast$len)}{apr_socket_sendto(apr_socket_t *sock, apr_sockaddr_t *where, apr_int32_t flags, const char *buf, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+sendto (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{where, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags, }
+\item[{const char $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga03ae34bc5712dac2b3fdee39e5f87be3}{}\label{group__apr__network__io_ga03ae34bc5712dac2b3fdee39e5f87be3}
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to send from \\
+\hline
+{\em where} & The \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} describing where to send the data \\
+\hline
+{\em flags} & The flags to use \\
+\hline
+{\em buf} & The data to send \\
+\hline
+{\em len} & The length of the data to send \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+sendv@{apr\+\_\+socket\+\_\+sendv}}
+\index{apr\+\_\+socket\+\_\+sendv@{apr\+\_\+socket\+\_\+sendv}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+sendv(apr\+\_\+socket\+\_\+t $\ast$sock, const struct iovec $\ast$vec, apr\+\_\+int32\+\_\+t nvec, apr\+\_\+size\+\_\+t $\ast$len)}{apr_socket_sendv(apr_socket_t *sock, const struct iovec *vec, apr_int32_t nvec, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+sendv (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{const struct iovec $\ast$}]{vec, }
+\item[{apr\+\_\+int32\+\_\+t}]{nvec, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga99ece70c34a7a332daa3941de3950c64}{}\label{group__apr__network__io_ga99ece70c34a7a332daa3941de3950c64}
+Send multiple buffers over a network. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to send the data over. \\
+\hline
+{\em vec} & The array of iovec structs containing the data to send \\
+\hline
+{\em nvec} & The number of iovec structs in the array \\
+\hline
+{\em len} & Receives the number of bytes actually written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+
+\begin{DoxyPre}
+This functions acts like a blocking write by default.  To change 
+this behavior, use \hyperlink{group__apr__network__io_ga945bdbe807ec5635d65a6fd9ddb78c29}{apr\_socket\_timeout\_set()} or the APR\_SO\_NONBLOCK
+socket option.
+The number of bytes actually sent is stored in argument 4.\end{DoxyPre}
+
+\end{DoxyRemark}
+It is possible for both bytes to be sent and an error to be returned.
+
+
+\begin{DoxyPre}APR\_EINTR is never returned.
+\end{DoxyPre}
+ \index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+shutdown@{apr\+\_\+socket\+\_\+shutdown}}
+\index{apr\+\_\+socket\+\_\+shutdown@{apr\+\_\+socket\+\_\+shutdown}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+shutdown(apr\+\_\+socket\+\_\+t $\ast$thesocket, apr\+\_\+shutdown\+\_\+how\+\_\+e how)}{apr_socket_shutdown(apr_socket_t *thesocket, apr_shutdown_how_e how)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+shutdown (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{thesocket, }
+\item[{{\bf apr\+\_\+shutdown\+\_\+how\+\_\+e}}]{how}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gac5aea857a50c493f840c48b930abc48e}{}\label{group__apr__network__io_gac5aea857a50c493f840c48b930abc48e}
+Shutdown either reading, writing, or both sides of a socket. 
+\begin{DoxyParams}{Parameters}
+{\em thesocket} & The socket to close \\
+\hline
+{\em how} & How to shutdown the socket. One of\+: 
+\begin{DoxyPre}
+           APR\_SHUTDOWN\_READ         no longer allow read requests
+           APR\_SHUTDOWN\_WRITE        no longer allow write requests
+           APR\_SHUTDOWN\_READWRITE    no longer allow read or write requests 
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__network__io_gae2130f1fa2d0db58c5c3c9c73d9b4009}{apr\+\_\+shutdown\+\_\+how\+\_\+e} 
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{Remarks}
+This does not actually close the socket descriptor, it just controls which calls are still valid on the socket. 
+\end{DoxyRemark}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+timeout\+\_\+get@{apr\+\_\+socket\+\_\+timeout\+\_\+get}}
+\index{apr\+\_\+socket\+\_\+timeout\+\_\+get@{apr\+\_\+socket\+\_\+timeout\+\_\+get}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+timeout\+\_\+get(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+interval\+\_\+time\+\_\+t $\ast$t)}{apr_socket_timeout_get(apr_socket_t *sock, apr_interval_time_t *t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+timeout\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{{\bf apr\+\_\+interval\+\_\+time\+\_\+t} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_gaa32313b54afed590367c8571075d2bc1}{}\label{group__apr__network__io_gaa32313b54afed590367c8571075d2bc1}
+Query socket timeout for the specified socket 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to query \\
+\hline
+{\em t} & Socket timeout returned from the query. \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+timeout\+\_\+set@{apr\+\_\+socket\+\_\+timeout\+\_\+set}}
+\index{apr\+\_\+socket\+\_\+timeout\+\_\+set@{apr\+\_\+socket\+\_\+timeout\+\_\+set}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+timeout\+\_\+set(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+interval\+\_\+time\+\_\+t t)}{apr_socket_timeout_set(apr_socket_t *sock, apr_interval_time_t t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+timeout\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{{\bf apr\+\_\+interval\+\_\+time\+\_\+t}}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga945bdbe807ec5635d65a6fd9ddb78c29}{}\label{group__apr__network__io_ga945bdbe807ec5635d65a6fd9ddb78c29}
+Setup socket timeout for the specified socket 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to set up. \\
+\hline
+{\em t} & Value for the timeout. 
+\begin{DoxyPre}
+  t > 0  -- read and write calls return APR\_TIMEUP if specified time
+            elapsess with no data read or written
+  t == 0 -- read and write calls never block
+  t < 0  -- read and write calls block
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\index{Network Routines@{Network Routines}!apr\+\_\+socket\+\_\+type\+\_\+get@{apr\+\_\+socket\+\_\+type\+\_\+get}}
+\index{apr\+\_\+socket\+\_\+type\+\_\+get@{apr\+\_\+socket\+\_\+type\+\_\+get}!Network Routines@{Network Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+socket\+\_\+type\+\_\+get(apr\+\_\+socket\+\_\+t $\ast$sock, int $\ast$type)}{apr_socket_type_get(apr_socket_t *sock, int *type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+socket\+\_\+type\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{int $\ast$}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__network__io_ga8d23ee2db9a84af2e6408ef460613514}{}\label{group__apr__network__io_ga8d23ee2db9a84af2e6408ef460613514}
+Return the type of the socket. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to query. \\
+\hline
+{\em type} & The returned type (e.\+g., S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+AM). \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,495 @@
+\hypertarget{group__apr__strings}{}\section{String routines}
+\label{group__apr__strings}\index{String routines@{String routines}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___a_p_r___strings___snprintf}{snprintf implementations}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__apr__strings_gabe7e226c26e1535d787a7836b9c8d0a1}{apr\+\_\+strnatcmp} (char const $\ast$a, char const $\ast$b)
+\item 
+int \hyperlink{group__apr__strings_ga1708d51c4989934fec663b23366430f3}{apr\+\_\+strnatcasecmp} (char const $\ast$a, char const $\ast$b)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gabc79e99ff19abbd7cfd18308c5f85d47}{apr\+\_\+pstrdup} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$s)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga0eae1185559578c0f9792413305eca25}{apr\+\_\+pstrmemdup} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$s, apr\+\_\+size\+\_\+t n)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gad17053ffe6604d908ae7cac33543a6b4}{apr\+\_\+pstrndup} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$s, apr\+\_\+size\+\_\+t n)
+\item 
+void $\ast$ \hyperlink{group__apr__strings_gac3886f14ecf5aed8fe4493087799685c}{apr\+\_\+pmemdup} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$m, apr\+\_\+size\+\_\+t n)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga7bd80c95ffb7b3f96bc78e7b5b5b0045}{apr\+\_\+pstrcat} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p,...)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga15d0853af252a894e288c682b8f84309}{apr\+\_\+pstrcatv} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const struct iovec $\ast$vec, apr\+\_\+size\+\_\+t nvec, apr\+\_\+size\+\_\+t $\ast$nbytes)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga05248544edebc71070140d2ce5969c10}{apr\+\_\+pvsprintf} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$fmt, va\+\_\+list ap)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga3eca76b8d293c5c3f8021e45eda813d8}{apr\+\_\+psprintf} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$fmt,...)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga69700a825e82dd646f9f166599040431}{apr\+\_\+cpystrn} (char $\ast$dst, const char $\ast$src, apr\+\_\+size\+\_\+t dst\+\_\+size)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gafd92441a5f4fa3b5f5aa49e1f9884bc7}{apr\+\_\+collapse\+\_\+spaces} (char $\ast$dest, const char $\ast$src)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__strings_ga5213cee7e8ba799df9dc2e57f71cd4dd}{apr\+\_\+tokenize\+\_\+to\+\_\+argv} (const char $\ast$arg\+\_\+str, char $\ast$$\ast$$\ast$argv\+\_\+out, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$token\+\_\+context)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga1cf7fcb5843707ece733e27aad85c516}{apr\+\_\+strtok} (char $\ast$str, const char $\ast$sep, char $\ast$$\ast$last)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gae1c780f2d908a286a141e4b885254a9c}{apr\+\_\+itoa} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, int n)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga578ea3fa78957c6b2e9b8ab4cbfd60b1}{apr\+\_\+ltoa} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, long n)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gabce9fb74bbad08d795389bfe859053d3}{apr\+\_\+off\+\_\+t\+\_\+toa} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+off\+\_\+t n)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__strings_ga1583688e0777398174f62e46a522ae8f}{apr\+\_\+strtoff} (apr\+\_\+off\+\_\+t $\ast$offset, const char $\ast$buf, char $\ast$$\ast$end, int base)
+\item 
+apr\+\_\+int64\+\_\+t \hyperlink{group__apr__strings_ga1da34829609e8976f498b235afd6cbe4}{apr\+\_\+strtoi64} (const char $\ast$buf, char $\ast$$\ast$end, int base)
+\item 
+apr\+\_\+int64\+\_\+t \hyperlink{group__apr__strings_gaf0653577ee64efb5406d932db95cce3d}{apr\+\_\+atoi64} (const char $\ast$buf)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gaf66522fda6d2dfa540fdc58831405980}{apr\+\_\+strfsize} (apr\+\_\+off\+\_\+t size, char $\ast$buf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{String routines@{String routines}!apr\+\_\+atoi64@{apr\+\_\+atoi64}}
+\index{apr\+\_\+atoi64@{apr\+\_\+atoi64}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atoi64(const char $\ast$buf)}{apr_atoi64(const char *buf)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int64\+\_\+t apr\+\_\+atoi64 (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buf}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_gaf0653577ee64efb5406d932db95cce3d}{}\label{group__apr__strings_gaf0653577ee64efb5406d932db95cce3d}
+parse a base-\/10 numeric string into a 64-\/bit numeric value. Equivalent to apr\+\_\+strtoi64(buf, (char$\ast$$\ast$)\+N\+U\+L\+L, 10). 
+\begin{DoxyParams}{Parameters}
+{\em buf} & The string to parse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The numeric value of the string. On overflow, errno is set to E\+R\+A\+N\+GE. On success, errno is set to 0. 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+collapse\+\_\+spaces@{apr\+\_\+collapse\+\_\+spaces}}
+\index{apr\+\_\+collapse\+\_\+spaces@{apr\+\_\+collapse\+\_\+spaces}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+collapse\+\_\+spaces(char $\ast$dest, const char $\ast$src)}{apr_collapse_spaces(char *dest, const char *src)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+collapse\+\_\+spaces (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{const char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_gafd92441a5f4fa3b5f5aa49e1f9884bc7}{}\label{group__apr__strings_gafd92441a5f4fa3b5f5aa49e1f9884bc7}
+Remove all whitespace from a string 
+\begin{DoxyParams}{Parameters}
+{\em dest} & The destination string. It is okay to modify the string in place. Namely dest == src \\
+\hline
+{\em src} & The string to rid the spaces from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the destination string\textquotesingle{}s null terminator. 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+cpystrn@{apr\+\_\+cpystrn}}
+\index{apr\+\_\+cpystrn@{apr\+\_\+cpystrn}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+cpystrn(char $\ast$dst, const char $\ast$src, apr\+\_\+size\+\_\+t dst\+\_\+size)}{apr_cpystrn(char *dst, const char *src, apr_size_t dst_size)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+cpystrn (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dst, }
+\item[{const char $\ast$}]{src, }
+\item[{apr\+\_\+size\+\_\+t}]{dst\+\_\+size}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga69700a825e82dd646f9f166599040431}{}\label{group__apr__strings_ga69700a825e82dd646f9f166599040431}
+Copy up to dst\+\_\+size characters from src to dst; does not copy past a N\+UL terminator in src, but always terminates dst with a N\+UL regardless. 
+\begin{DoxyParams}{Parameters}
+{\em dst} & The destination string \\
+\hline
+{\em src} & The source string \\
+\hline
+{\em dst\+\_\+size} & The space available in dst; dst always receives N\+UL termination, so if src is longer than dst\+\_\+size, the actual number of characters copied is dst\+\_\+size -\/ 1. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the N\+UL terminator of the destination string, dst 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+
+\begin{DoxyPre}
+Note the differences between this function and strncpy():
+ 1) strncpy() doesn't always NUL terminate; \hyperlink{group__apr__strings_ga69700a825e82dd646f9f166599040431}{apr\_cpystrn()} does.
+ 2) strncpy() pads the destination string with NULs, which is often 
+    unnecessary; \hyperlink{group__apr__strings_ga69700a825e82dd646f9f166599040431}{apr\_cpystrn()} does not.
+ 3) strncpy() returns a pointer to the beginning of the dst string;
+    \hyperlink{group__apr__strings_ga69700a825e82dd646f9f166599040431}{apr\_cpystrn()} returns a pointer to the NUL terminator of dst, 
+    to allow a check for truncation.
+\end{DoxyPre}
+ 
+\end{DoxyRemark}
+\index{String routines@{String routines}!apr\+\_\+itoa@{apr\+\_\+itoa}}
+\index{apr\+\_\+itoa@{apr\+\_\+itoa}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+itoa(apr\+\_\+pool\+\_\+t $\ast$p, int n)}{apr_itoa(apr_pool_t *p, int n)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+itoa (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_gae1c780f2d908a286a141e4b885254a9c}{}\label{group__apr__strings_gae1c780f2d908a286a141e4b885254a9c}
+create a string representation of an int, allocated from a pool 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool from which to allocate \\
+\hline
+{\em n} & The number to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representation of the number 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+ltoa@{apr\+\_\+ltoa}}
+\index{apr\+\_\+ltoa@{apr\+\_\+ltoa}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+ltoa(apr\+\_\+pool\+\_\+t $\ast$p, long n)}{apr_ltoa(apr_pool_t *p, long n)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+ltoa (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga578ea3fa78957c6b2e9b8ab4cbfd60b1}{}\label{group__apr__strings_ga578ea3fa78957c6b2e9b8ab4cbfd60b1}
+create a string representation of a long, allocated from a pool 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool from which to allocate \\
+\hline
+{\em n} & The number to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representation of the number 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+off\+\_\+t\+\_\+toa@{apr\+\_\+off\+\_\+t\+\_\+toa}}
+\index{apr\+\_\+off\+\_\+t\+\_\+toa@{apr\+\_\+off\+\_\+t\+\_\+toa}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+off\+\_\+t\+\_\+toa(apr\+\_\+pool\+\_\+t $\ast$p, apr\+\_\+off\+\_\+t n)}{apr_off_t_toa(apr_pool_t *p, apr_off_t n)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+off\+\_\+t\+\_\+toa (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{apr\+\_\+off\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_gabce9fb74bbad08d795389bfe859053d3}{}\label{group__apr__strings_gabce9fb74bbad08d795389bfe859053d3}
+create a string representation of an apr\+\_\+off\+\_\+t, allocated from a pool 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool from which to allocate \\
+\hline
+{\em n} & The number to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representation of the number 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+pmemdup@{apr\+\_\+pmemdup}}
+\index{apr\+\_\+pmemdup@{apr\+\_\+pmemdup}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pmemdup(apr\+\_\+pool\+\_\+t $\ast$p, const void $\ast$m, apr\+\_\+size\+\_\+t n)}{apr_pmemdup(apr_pool_t *p, const void *m, apr_size_t n)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+pmemdup (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const void $\ast$}]{m, }
+\item[{apr\+\_\+size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_gac3886f14ecf5aed8fe4493087799685c}{}\label{group__apr__strings_gac3886f14ecf5aed8fe4493087799685c}
+Duplicate a block of memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate from \\
+\hline
+{\em m} & The memory to duplicate \\
+\hline
+{\em n} & The number of bytes to duplicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new block of memory or N\+U\+LL if m == N\+U\+LL 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+psprintf@{apr\+\_\+psprintf}}
+\index{apr\+\_\+psprintf@{apr\+\_\+psprintf}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+psprintf(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$fmt,...)}{apr_psprintf(apr_pool_t *p, const char *fmt,...)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+psprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga3eca76b8d293c5c3f8021e45eda813d8}{}\label{group__apr__strings_ga3eca76b8d293c5c3f8021e45eda813d8}
+printf-\/style style printing routine. The data is output to a string allocated from a pool 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate out of \\
+\hline
+{\em fmt} & The format of the string \\
+\hline
+{\em ...} & The arguments to use while printing the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new string 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+pstrcat@{apr\+\_\+pstrcat}}
+\index{apr\+\_\+pstrcat@{apr\+\_\+pstrcat}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pstrcat(apr\+\_\+pool\+\_\+t $\ast$p,...)}{apr_pstrcat(apr_pool_t *p,...)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+pstrcat (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga7bd80c95ffb7b3f96bc78e7b5b5b0045}{}\label{group__apr__strings_ga7bd80c95ffb7b3f96bc78e7b5b5b0045}
+Concatenate multiple strings, allocating memory out a pool 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate out of \\
+\hline
+{\em ...} & The strings to concatenate. The final string must be N\+U\+LL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new string 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+pstrcatv@{apr\+\_\+pstrcatv}}
+\index{apr\+\_\+pstrcatv@{apr\+\_\+pstrcatv}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pstrcatv(apr\+\_\+pool\+\_\+t $\ast$p, const struct iovec $\ast$vec, apr\+\_\+size\+\_\+t nvec, apr\+\_\+size\+\_\+t $\ast$nbytes)}{apr_pstrcatv(apr_pool_t *p, const struct iovec *vec, apr_size_t nvec, apr_size_t *nbytes)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+pstrcatv (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const struct iovec $\ast$}]{vec, }
+\item[{apr\+\_\+size\+\_\+t}]{nvec, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{nbytes}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga15d0853af252a894e288c682b8f84309}{}\label{group__apr__strings_ga15d0853af252a894e288c682b8f84309}
+Concatenate multiple strings specified in a writev-\/style vector 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool from which to allocate \\
+\hline
+{\em vec} & The strings to concatenate \\
+\hline
+{\em nvec} & The number of strings to concatenate \\
+\hline
+{\em nbytes} & (output) strlen of new string (pass in N\+U\+LL to omit) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new string 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+pstrdup@{apr\+\_\+pstrdup}}
+\index{apr\+\_\+pstrdup@{apr\+\_\+pstrdup}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pstrdup(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$s)}{apr_pstrdup(apr_pool_t *p, const char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+pstrdup (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_gabc79e99ff19abbd7cfd18308c5f85d47}{}\label{group__apr__strings_gabc79e99ff19abbd7cfd18308c5f85d47}
+duplicate a string into memory allocated out of a pool 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate out of \\
+\hline
+{\em s} & The string to duplicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new string or N\+U\+LL if s == N\+U\+LL 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+pstrmemdup@{apr\+\_\+pstrmemdup}}
+\index{apr\+\_\+pstrmemdup@{apr\+\_\+pstrmemdup}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pstrmemdup(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$s, apr\+\_\+size\+\_\+t n)}{apr_pstrmemdup(apr_pool_t *p, const char *s, apr_size_t n)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+pstrmemdup (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{s, }
+\item[{apr\+\_\+size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga0eae1185559578c0f9792413305eca25}{}\label{group__apr__strings_ga0eae1185559578c0f9792413305eca25}
+Create a null-\/terminated string by making a copy of a sequence of characters and appending a null byte 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate out of \\
+\hline
+{\em s} & The block of characters to duplicate \\
+\hline
+{\em n} & The number of characters to duplicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new string or N\+U\+LL if s == N\+U\+LL 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+This is a faster alternative to apr\+\_\+pstrndup, for use when you know that the string being duplicated really has \textquotesingle{}n\textquotesingle{} or more characters. If the string might contain fewer characters, use apr\+\_\+pstrndup. 
+\end{DoxyRemark}
+\index{String routines@{String routines}!apr\+\_\+pstrndup@{apr\+\_\+pstrndup}}
+\index{apr\+\_\+pstrndup@{apr\+\_\+pstrndup}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pstrndup(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$s, apr\+\_\+size\+\_\+t n)}{apr_pstrndup(apr_pool_t *p, const char *s, apr_size_t n)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+pstrndup (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{s, }
+\item[{apr\+\_\+size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_gad17053ffe6604d908ae7cac33543a6b4}{}\label{group__apr__strings_gad17053ffe6604d908ae7cac33543a6b4}
+Duplicate at most n characters of a string into memory allocated out of a pool; the new string will be N\+U\+L-\/terminated 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate out of \\
+\hline
+{\em s} & The string to duplicate \\
+\hline
+{\em n} & The maximum number of characters to duplicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new string or N\+U\+LL if s == N\+U\+LL 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The amount of memory allocated from the pool is the length of the returned string including the N\+UL terminator 
+\end{DoxyRemark}
+\index{String routines@{String routines}!apr\+\_\+pvsprintf@{apr\+\_\+pvsprintf}}
+\index{apr\+\_\+pvsprintf@{apr\+\_\+pvsprintf}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pvsprintf(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$fmt, va\+\_\+list ap)}{apr_pvsprintf(apr_pool_t *p, const char *fmt, va_list ap)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+pvsprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{fmt, }
+\item[{va\+\_\+list}]{ap}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga05248544edebc71070140d2ce5969c10}{}\label{group__apr__strings_ga05248544edebc71070140d2ce5969c10}
+printf-\/style style printing routine. The data is output to a string allocated from a pool 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate out of \\
+\hline
+{\em fmt} & The format of the string \\
+\hline
+{\em ap} & The arguments to use while printing the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new string 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+strfsize@{apr\+\_\+strfsize}}
+\index{apr\+\_\+strfsize@{apr\+\_\+strfsize}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+strfsize(apr\+\_\+off\+\_\+t size, char $\ast$buf)}{apr_strfsize(apr_off_t size, char *buf)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+strfsize (
+\begin{DoxyParamCaption}
+\item[{apr\+\_\+off\+\_\+t}]{size, }
+\item[{char $\ast$}]{buf}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_gaf66522fda6d2dfa540fdc58831405980}{}\label{group__apr__strings_gaf66522fda6d2dfa540fdc58831405980}
+Format a binary size (magnitiudes are 2$^\wedge$10 rather than 10$^\wedge$3) from an apr\+\_\+off\+\_\+t, as bytes, K, M, T, etc, to a four character compacted human readable string. 
+\begin{DoxyParams}{Parameters}
+{\em size} & The size to format \\
+\hline
+{\em buf} & The 5 byte text buffer (counting the trailing null) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The buf passed to \hyperlink{group__apr__strings_gaf66522fda6d2dfa540fdc58831405980}{apr\+\_\+strfsize()} 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+All negative sizes report \textquotesingle{} -\/ \textquotesingle{}, apr\+\_\+strfsize only formats positive values. 
+\end{DoxyRemark}
+\index{String routines@{String routines}!apr\+\_\+strnatcasecmp@{apr\+\_\+strnatcasecmp}}
+\index{apr\+\_\+strnatcasecmp@{apr\+\_\+strnatcasecmp}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+strnatcasecmp(char const $\ast$a, char const $\ast$b)}{apr_strnatcasecmp(char const *a, char const *b)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+strnatcasecmp (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{a, }
+\item[{char const $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga1708d51c4989934fec663b23366430f3}{}\label{group__apr__strings_ga1708d51c4989934fec663b23366430f3}
+Do a natural order comparison of two strings ignoring the case of the strings. 
+\begin{DoxyParams}{Parameters}
+{\em a} & The first string to compare \\
+\hline
+{\em b} & The second string to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Either $<$0, 0, or $>$0. If the first string is less than the second this returns $<$0, if they are equivalent it returns 0, and if the first string is greater than second string it retuns $>$0. 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+strnatcmp@{apr\+\_\+strnatcmp}}
+\index{apr\+\_\+strnatcmp@{apr\+\_\+strnatcmp}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+strnatcmp(char const $\ast$a, char const $\ast$b)}{apr_strnatcmp(char const *a, char const *b)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+strnatcmp (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{a, }
+\item[{char const $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_gabe7e226c26e1535d787a7836b9c8d0a1}{}\label{group__apr__strings_gabe7e226c26e1535d787a7836b9c8d0a1}
+Do a natural order comparison of two strings. 
+\begin{DoxyParams}{Parameters}
+{\em a} & The first string to compare \\
+\hline
+{\em b} & The second string to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Either $<$0, 0, or $>$0. If the first string is less than the second this returns $<$0, if they are equivalent it returns 0, and if the first string is greater than second string it retuns $>$0. 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+strtoff@{apr\+\_\+strtoff}}
+\index{apr\+\_\+strtoff@{apr\+\_\+strtoff}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+strtoff(apr\+\_\+off\+\_\+t $\ast$offset, const char $\ast$buf, char $\ast$$\ast$end, int base)}{apr_strtoff(apr_off_t *offset, const char *buf, char **end, int base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+strtoff (
+\begin{DoxyParamCaption}
+\item[{apr\+\_\+off\+\_\+t $\ast$}]{offset, }
+\item[{const char $\ast$}]{buf, }
+\item[{char $\ast$$\ast$}]{end, }
+\item[{int}]{base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga1583688e0777398174f62e46a522ae8f}{}\label{group__apr__strings_ga1583688e0777398174f62e46a522ae8f}
+Convert a numeric string into an apr\+\_\+off\+\_\+t numeric value. 
+\begin{DoxyParams}{Parameters}
+{\em offset} & The value of the parsed string. \\
+\hline
+{\em buf} & The string to parse. It may contain optional whitespace, followed by an optional \textquotesingle{}+\textquotesingle{} (positive, default) or \textquotesingle{}-\/\textquotesingle{} (negative) character, followed by an optional \textquotesingle{}0x\textquotesingle{} prefix if base is 0 or 16, followed by numeric digits appropriate for base. \\
+\hline
+{\em end} & A pointer to the end of the valid character in buf. If not N\+U\+LL, it is set to the first invalid character in buf. \\
+\hline
+{\em base} & A numeric base in the range between 2 and 36 inclusive, or 0. If base is zero, buf will be treated as base ten unless its digits are prefixed with \textquotesingle{}0x\textquotesingle{}, in which case it will be treated as base 16. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000005}{Bug}]$\ast$end breaks type safety; where $\ast$buf is const, $\ast$end needs to be declared as const in A\+PR 2.\+0 \end{DoxyRefDesc}
+\index{String routines@{String routines}!apr\+\_\+strtoi64@{apr\+\_\+strtoi64}}
+\index{apr\+\_\+strtoi64@{apr\+\_\+strtoi64}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+strtoi64(const char $\ast$buf, char $\ast$$\ast$end, int base)}{apr_strtoi64(const char *buf, char **end, int base)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int64\+\_\+t apr\+\_\+strtoi64 (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buf, }
+\item[{char $\ast$$\ast$}]{end, }
+\item[{int}]{base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga1da34829609e8976f498b235afd6cbe4}{}\label{group__apr__strings_ga1da34829609e8976f498b235afd6cbe4}
+parse a numeric string into a 64-\/bit numeric value 
+\begin{DoxyParams}{Parameters}
+{\em buf} & The string to parse. It may contain optional whitespace, followed by an optional \textquotesingle{}+\textquotesingle{} (positive, default) or \textquotesingle{}-\/\textquotesingle{} (negative) character, followed by an optional \textquotesingle{}0x\textquotesingle{} prefix if base is 0 or 16, followed by numeric digits appropriate for base. \\
+\hline
+{\em end} & A pointer to the end of the valid character in buf. If not N\+U\+LL, it is set to the first invalid character in buf. \\
+\hline
+{\em base} & A numeric base in the range between 2 and 36 inclusive, or 0. If base is zero, buf will be treated as base ten unless its digits are prefixed with \textquotesingle{}0x\textquotesingle{}, in which case it will be treated as base 16. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The numeric value of the string. On overflow, errno is set to E\+R\+A\+N\+GE. On success, errno is set to 0. 
+\end{DoxyReturn}
+\index{String routines@{String routines}!apr\+\_\+strtok@{apr\+\_\+strtok}}
+\index{apr\+\_\+strtok@{apr\+\_\+strtok}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+strtok(char $\ast$str, const char $\ast$sep, char $\ast$$\ast$last)}{apr_strtok(char *str, const char *sep, char **last)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+strtok (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{const char $\ast$}]{sep, }
+\item[{char $\ast$$\ast$}]{last}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga1cf7fcb5843707ece733e27aad85c516}{}\label{group__apr__strings_ga1cf7fcb5843707ece733e27aad85c516}
+Split a string into separate null-\/terminated tokens. The tokens are delimited in the string by one or more characters from the sep argument. 
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to separate; this should be specified on the first call to \hyperlink{group__apr__strings_ga1cf7fcb5843707ece733e27aad85c516}{apr\+\_\+strtok()} for a given string, and N\+U\+LL on subsequent calls. \\
+\hline
+{\em sep} & The set of delimiters \\
+\hline
+{\em last} & State saved by \hyperlink{group__apr__strings_ga1cf7fcb5843707ece733e27aad85c516}{apr\+\_\+strtok()} between calls. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The next token from the string 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+the \textquotesingle{}last\textquotesingle{} state points to the trailing N\+UL char of the final token, otherwise it points to the character following the current token (all successive or empty occurances of sep are skiped on the subsequent call to apr\+\_\+strtok). Therefore it is possible to avoid a strlen() determination, with the following logic; toklen = last -\/ retval; if ($\ast$last) --toklen; 
+\end{DoxyNote}
+\index{String routines@{String routines}!apr\+\_\+tokenize\+\_\+to\+\_\+argv@{apr\+\_\+tokenize\+\_\+to\+\_\+argv}}
+\index{apr\+\_\+tokenize\+\_\+to\+\_\+argv@{apr\+\_\+tokenize\+\_\+to\+\_\+argv}!String routines@{String routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+tokenize\+\_\+to\+\_\+argv(const char $\ast$arg\+\_\+str, char $\ast$$\ast$$\ast$argv\+\_\+out, apr\+\_\+pool\+\_\+t $\ast$token\+\_\+context)}{apr_tokenize_to_argv(const char *arg_str, char ***argv_out, apr_pool_t *token_context)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+tokenize\+\_\+to\+\_\+argv (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{arg\+\_\+str, }
+\item[{char $\ast$$\ast$$\ast$}]{argv\+\_\+out, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{token\+\_\+context}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__strings_ga5213cee7e8ba799df9dc2e57f71cd4dd}{}\label{group__apr__strings_ga5213cee7e8ba799df9dc2e57f71cd4dd}
+Convert the arguments to a program from one string to an array of strings terminated by a N\+U\+LL pointer 
+\begin{DoxyParams}{Parameters}
+{\em arg\+\_\+str} & The arguments to convert \\
+\hline
+{\em argv\+\_\+out} & Output location. This is a pointer to an array of strings. \\
+\hline
+{\em token\+\_\+context} & Pool to use. \\
+\hline
+\end{DoxyParams}

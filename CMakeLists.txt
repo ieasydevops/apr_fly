@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.6)
+project(apr_fly)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DLINUX -ggdb -pg ")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DLINUX -ggdb  -pg")
+add_subdirectory(src/common)
+add_subdirectory(src/examples/producer_comsumer)

@@ -1,0 +1,220 @@
+\hypertarget{group__apr__user}{}\section{User and Group ID Services}
+\label{group__apr__user}\index{User and Group I\+D Services@{User and Group I\+D Services}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__user_gafc0e18b67f8e3471848893cc4a052809}{apr\+\_\+uid\+\_\+compare}(left,  right)~(((left) == (right)) ? \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS} \+: \hyperlink{group___a_p_r___error_ga31e65a44daba96aa6d943529e94498e7}{A\+P\+R\+\_\+\+E\+M\+I\+S\+M\+A\+T\+CH})
+\item 
+\#define \hyperlink{group__apr__user_gaa87aee2f533bed9dac33613fcf398713}{apr\+\_\+gid\+\_\+compare}(left,  right)~(((left) == (right)) ? \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS} \+: \hyperlink{group___a_p_r___error_ga31e65a44daba96aa6d943529e94498e7}{A\+P\+R\+\_\+\+E\+M\+I\+S\+M\+A\+T\+CH})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uid\+\_\+t \hyperlink{group__apr__user_gad1aa508f584bc230acf4f68ba4fc4de7}{apr\+\_\+uid\+\_\+t}
+\item 
+typedef gid\+\_\+t \hyperlink{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{apr\+\_\+gid\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_ga6583c5814fcf3924a2e391dac126f8a9}{apr\+\_\+uid\+\_\+current} (\hyperlink{group__apr__user_gad1aa508f584bc230acf4f68ba4fc4de7}{apr\+\_\+uid\+\_\+t} $\ast$userid, \hyperlink{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{apr\+\_\+gid\+\_\+t} $\ast$groupid, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_gad56be7519e060a3c6698657f51ab6bc8}{apr\+\_\+uid\+\_\+name\+\_\+get} (char $\ast$$\ast$username, \hyperlink{group__apr__user_gad1aa508f584bc230acf4f68ba4fc4de7}{apr\+\_\+uid\+\_\+t} userid, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_ga4b82187f32db9350f2e02165bbce965b}{apr\+\_\+uid\+\_\+get} (\hyperlink{group__apr__user_gad1aa508f584bc230acf4f68ba4fc4de7}{apr\+\_\+uid\+\_\+t} $\ast$userid, \hyperlink{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{apr\+\_\+gid\+\_\+t} $\ast$groupid, const char $\ast$username, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_ga0ad8087cf1c6257a286cf5215da8107e}{apr\+\_\+uid\+\_\+homepath\+\_\+get} (char $\ast$$\ast$dirname, const char $\ast$username, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_gadda2c777f2e8d61c02be34305720e316}{apr\+\_\+gid\+\_\+name\+\_\+get} (char $\ast$$\ast$groupname, \hyperlink{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{apr\+\_\+gid\+\_\+t} groupid, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_gac65178a647d34387781dc8d7ade3cefc}{apr\+\_\+gid\+\_\+get} (\hyperlink{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{apr\+\_\+gid\+\_\+t} $\ast$groupid, const char $\ast$groupname, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{User and Group I\+D Services@{User and Group I\+D Services}!apr\+\_\+gid\+\_\+compare@{apr\+\_\+gid\+\_\+compare}}
+\index{apr\+\_\+gid\+\_\+compare@{apr\+\_\+gid\+\_\+compare}!User and Group I\+D Services@{User and Group I\+D Services}}
+\subsubsection[{\texorpdfstring{apr\+\_\+gid\+\_\+compare}{apr_gid_compare}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+gid\+\_\+compare(
+\begin{DoxyParamCaption}
+\item[{}]{left, }
+\item[{}]{right}
+\end{DoxyParamCaption}
+)~(((left) == (right)) ? {\bf A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS} \+: {\bf A\+P\+R\+\_\+\+E\+M\+I\+S\+M\+A\+T\+CH})}\hypertarget{group__apr__user_gaa87aee2f533bed9dac33613fcf398713}{}\label{group__apr__user_gaa87aee2f533bed9dac33613fcf398713}
+Compare two group identifiers for equality. 
+\begin{DoxyParams}{Parameters}
+{\em left} & One gid to test \\
+\hline
+{\em right} & Another gid to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS if the apr\+\_\+gid\+\_\+t structures identify the same group, A\+P\+R\+\_\+\+E\+M\+I\+S\+M\+A\+T\+CH if not, A\+P\+R\+\_\+\+B\+A\+D\+A\+RG if an apr\+\_\+gid\+\_\+t is invalid. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+This function is available only if A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+U\+S\+ER is defined. 
+\end{DoxyRemark}
+\index{User and Group I\+D Services@{User and Group I\+D Services}!apr\+\_\+uid\+\_\+compare@{apr\+\_\+uid\+\_\+compare}}
+\index{apr\+\_\+uid\+\_\+compare@{apr\+\_\+uid\+\_\+compare}!User and Group I\+D Services@{User and Group I\+D Services}}
+\subsubsection[{\texorpdfstring{apr\+\_\+uid\+\_\+compare}{apr_uid_compare}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+uid\+\_\+compare(
+\begin{DoxyParamCaption}
+\item[{}]{left, }
+\item[{}]{right}
+\end{DoxyParamCaption}
+)~(((left) == (right)) ? {\bf A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS} \+: {\bf A\+P\+R\+\_\+\+E\+M\+I\+S\+M\+A\+T\+CH})}\hypertarget{group__apr__user_gafc0e18b67f8e3471848893cc4a052809}{}\label{group__apr__user_gafc0e18b67f8e3471848893cc4a052809}
+Compare two user identifiers for equality. 
+\begin{DoxyParams}{Parameters}
+{\em left} & One uid to test \\
+\hline
+{\em right} & Another uid to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS if the apr\+\_\+uid\+\_\+t structures identify the same user, A\+P\+R\+\_\+\+E\+M\+I\+S\+M\+A\+T\+CH if not, A\+P\+R\+\_\+\+B\+A\+D\+A\+RG if an apr\+\_\+uid\+\_\+t is invalid. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+This function is available only if A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+U\+S\+ER is defined. 
+\end{DoxyRemark}
+
+
+\subsection{Typedef Documentation}
+\index{User and Group I\+D Services@{User and Group I\+D Services}!apr\+\_\+gid\+\_\+t@{apr\+\_\+gid\+\_\+t}}
+\index{apr\+\_\+gid\+\_\+t@{apr\+\_\+gid\+\_\+t}!User and Group I\+D Services@{User and Group I\+D Services}}
+\subsubsection[{\texorpdfstring{apr\+\_\+gid\+\_\+t}{apr_gid_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef gid\+\_\+t {\bf apr\+\_\+gid\+\_\+t}}\hypertarget{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{}\label{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}
+Structure for determining group ownership. \index{User and Group I\+D Services@{User and Group I\+D Services}!apr\+\_\+uid\+\_\+t@{apr\+\_\+uid\+\_\+t}}
+\index{apr\+\_\+uid\+\_\+t@{apr\+\_\+uid\+\_\+t}!User and Group I\+D Services@{User and Group I\+D Services}}
+\subsubsection[{\texorpdfstring{apr\+\_\+uid\+\_\+t}{apr_uid_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef uid\+\_\+t {\bf apr\+\_\+uid\+\_\+t}}\hypertarget{group__apr__user_gad1aa508f584bc230acf4f68ba4fc4de7}{}\label{group__apr__user_gad1aa508f584bc230acf4f68ba4fc4de7}
+Structure for determining user ownership. 
+
+\subsection{Function Documentation}
+\index{User and Group I\+D Services@{User and Group I\+D Services}!apr\+\_\+gid\+\_\+get@{apr\+\_\+gid\+\_\+get}}
+\index{apr\+\_\+gid\+\_\+get@{apr\+\_\+gid\+\_\+get}!User and Group I\+D Services@{User and Group I\+D Services}}
+\subsubsection[{\texorpdfstring{apr\+\_\+gid\+\_\+get(apr\+\_\+gid\+\_\+t $\ast$groupid, const char $\ast$groupname, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_gid_get(apr_gid_t *groupid, const char *groupname, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+gid\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+gid\+\_\+t} $\ast$}]{groupid, }
+\item[{const char $\ast$}]{groupname, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__user_gac65178a647d34387781dc8d7ade3cefc}{}\label{group__apr__user_gac65178a647d34387781dc8d7ade3cefc}
+Get the groupid for a specified group name 
+\begin{DoxyParams}{Parameters}
+{\em groupid} & Pointer to the group id (on output) \\
+\hline
+{\em groupname} & The group name to look up \\
+\hline
+{\em p} & The pool from which to allocate the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function is available only if A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+U\+S\+ER is defined. 
+\end{DoxyRemark}
+\index{User and Group I\+D Services@{User and Group I\+D Services}!apr\+\_\+gid\+\_\+name\+\_\+get@{apr\+\_\+gid\+\_\+name\+\_\+get}}
+\index{apr\+\_\+gid\+\_\+name\+\_\+get@{apr\+\_\+gid\+\_\+name\+\_\+get}!User and Group I\+D Services@{User and Group I\+D Services}}
+\subsubsection[{\texorpdfstring{apr\+\_\+gid\+\_\+name\+\_\+get(char $\ast$$\ast$groupname, apr\+\_\+gid\+\_\+t groupid, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_gid_name_get(char **groupname, apr_gid_t groupid, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+gid\+\_\+name\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{groupname, }
+\item[{{\bf apr\+\_\+gid\+\_\+t}}]{groupid, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__user_gadda2c777f2e8d61c02be34305720e316}{}\label{group__apr__user_gadda2c777f2e8d61c02be34305720e316}
+Get the group name for a specified groupid 
+\begin{DoxyParams}{Parameters}
+{\em groupname} & Pointer to new string containing group name (on output) \\
+\hline
+{\em groupid} & The groupid \\
+\hline
+{\em p} & The pool from which to allocate the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function is available only if A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+U\+S\+ER is defined. 
+\end{DoxyRemark}
+\index{User and Group I\+D Services@{User and Group I\+D Services}!apr\+\_\+uid\+\_\+current@{apr\+\_\+uid\+\_\+current}}
+\index{apr\+\_\+uid\+\_\+current@{apr\+\_\+uid\+\_\+current}!User and Group I\+D Services@{User and Group I\+D Services}}
+\subsubsection[{\texorpdfstring{apr\+\_\+uid\+\_\+current(apr\+\_\+uid\+\_\+t $\ast$userid, apr\+\_\+gid\+\_\+t $\ast$groupid, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_uid_current(apr_uid_t *userid, apr_gid_t *groupid, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+uid\+\_\+current (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+uid\+\_\+t} $\ast$}]{userid, }
+\item[{{\bf apr\+\_\+gid\+\_\+t} $\ast$}]{groupid, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__user_ga6583c5814fcf3924a2e391dac126f8a9}{}\label{group__apr__user_ga6583c5814fcf3924a2e391dac126f8a9}
+Get the userid (and groupid) of the calling process 
+\begin{DoxyParams}{Parameters}
+{\em userid} & Returns the user id \\
+\hline
+{\em groupid} & Returns the user\textquotesingle{}s group id \\
+\hline
+{\em p} & The pool from which to allocate working space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function is available only if A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+U\+S\+ER is defined. 
+\end{DoxyRemark}
+\index{User and Group I\+D Services@{User and Group I\+D Services}!apr\+\_\+uid\+\_\+get@{apr\+\_\+uid\+\_\+get}}
+\index{apr\+\_\+uid\+\_\+get@{apr\+\_\+uid\+\_\+get}!User and Group I\+D Services@{User and Group I\+D Services}}
+\subsubsection[{\texorpdfstring{apr\+\_\+uid\+\_\+get(apr\+\_\+uid\+\_\+t $\ast$userid, apr\+\_\+gid\+\_\+t $\ast$groupid, const char $\ast$username, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_uid_get(apr_uid_t *userid, apr_gid_t *groupid, const char *username, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+uid\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+uid\+\_\+t} $\ast$}]{userid, }
+\item[{{\bf apr\+\_\+gid\+\_\+t} $\ast$}]{groupid, }
+\item[{const char $\ast$}]{username, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__user_ga4b82187f32db9350f2e02165bbce965b}{}\label{group__apr__user_ga4b82187f32db9350f2e02165bbce965b}
+Get the userid (and groupid) for the specified username 
+\begin{DoxyParams}{Parameters}
+{\em userid} & Returns the user id \\
+\hline
+{\em groupid} & Returns the user\textquotesingle{}s group id \\
+\hline
+{\em username} & The username to look up \\
+\hline
+{\em p} & The pool from which to allocate working space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function is available only if A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+U\+S\+ER is defined. 
+\end{DoxyRemark}
+\index{User and Group I\+D Services@{User and Group I\+D Services}!apr\+\_\+uid\+\_\+homepath\+\_\+get@{apr\+\_\+uid\+\_\+homepath\+\_\+get}}
+\index{apr\+\_\+uid\+\_\+homepath\+\_\+get@{apr\+\_\+uid\+\_\+homepath\+\_\+get}!User and Group I\+D Services@{User and Group I\+D Services}}
+\subsubsection[{\texorpdfstring{apr\+\_\+uid\+\_\+homepath\+\_\+get(char $\ast$$\ast$dirname, const char $\ast$username, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_uid_homepath_get(char **dirname, const char *username, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+uid\+\_\+homepath\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{dirname, }
+\item[{const char $\ast$}]{username, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__user_ga0ad8087cf1c6257a286cf5215da8107e}{}\label{group__apr__user_ga0ad8087cf1c6257a286cf5215da8107e}
+Get the home directory for the named user 
+\begin{DoxyParams}{Parameters}
+{\em dirname} & Pointer to new string containing directory name (on output) \\
+\hline
+{\em username} & The named user \\
+\hline
+{\em p} & The pool from which to allocate the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function is available only if A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+U\+S\+ER is defined. 
+\end{DoxyRemark}
+\index{User and Group I\+D Services@{User and Group I\+D Services}!apr\+\_\+uid\+\_\+name\+\_\+get@{apr\+\_\+uid\+\_\+name\+\_\+get}}
+\index{apr\+\_\+uid\+\_\+name\+\_\+get@{apr\+\_\+uid\+\_\+name\+\_\+get}!User and Group I\+D Services@{User and Group I\+D Services}}
+\subsubsection[{\texorpdfstring{apr\+\_\+uid\+\_\+name\+\_\+get(char $\ast$$\ast$username, apr\+\_\+uid\+\_\+t userid, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_uid_name_get(char **username, apr_uid_t userid, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+uid\+\_\+name\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{username, }
+\item[{{\bf apr\+\_\+uid\+\_\+t}}]{userid, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__user_gad56be7519e060a3c6698657f51ab6bc8}{}\label{group__apr__user_gad56be7519e060a3c6698657f51ab6bc8}
+Get the user name for a specified userid 
+\begin{DoxyParams}{Parameters}
+{\em username} & Pointer to new string containing user name (on output) \\
+\hline
+{\em userid} & The userid \\
+\hline
+{\em p} & The pool from which to allocate the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function is available only if A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+U\+S\+ER is defined. 
+\end{DoxyRemark}

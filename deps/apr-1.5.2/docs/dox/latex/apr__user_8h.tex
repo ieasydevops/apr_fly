@@ -1,0 +1,44 @@
+\hypertarget{apr__user_8h}{}\section{apr\+\_\+user.\+h File Reference}
+\label{apr__user_8h}\index{apr\+\_\+user.\+h@{apr\+\_\+user.\+h}}
+
+
+A\+PR User ID Services.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__user_gafc0e18b67f8e3471848893cc4a052809}{apr\+\_\+uid\+\_\+compare}(left,  right)~(((left) == (right)) ? \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS} \+: \hyperlink{group___a_p_r___error_ga31e65a44daba96aa6d943529e94498e7}{A\+P\+R\+\_\+\+E\+M\+I\+S\+M\+A\+T\+CH})
+\item 
+\#define \hyperlink{group__apr__user_gaa87aee2f533bed9dac33613fcf398713}{apr\+\_\+gid\+\_\+compare}(left,  right)~(((left) == (right)) ? \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS} \+: \hyperlink{group___a_p_r___error_ga31e65a44daba96aa6d943529e94498e7}{A\+P\+R\+\_\+\+E\+M\+I\+S\+M\+A\+T\+CH})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uid\+\_\+t \hyperlink{group__apr__user_gad1aa508f584bc230acf4f68ba4fc4de7}{apr\+\_\+uid\+\_\+t}
+\item 
+typedef gid\+\_\+t \hyperlink{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{apr\+\_\+gid\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_ga6583c5814fcf3924a2e391dac126f8a9}{apr\+\_\+uid\+\_\+current} (\hyperlink{group__apr__user_gad1aa508f584bc230acf4f68ba4fc4de7}{apr\+\_\+uid\+\_\+t} $\ast$userid, \hyperlink{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{apr\+\_\+gid\+\_\+t} $\ast$groupid, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_gad56be7519e060a3c6698657f51ab6bc8}{apr\+\_\+uid\+\_\+name\+\_\+get} (char $\ast$$\ast$username, \hyperlink{group__apr__user_gad1aa508f584bc230acf4f68ba4fc4de7}{apr\+\_\+uid\+\_\+t} userid, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_ga4b82187f32db9350f2e02165bbce965b}{apr\+\_\+uid\+\_\+get} (\hyperlink{group__apr__user_gad1aa508f584bc230acf4f68ba4fc4de7}{apr\+\_\+uid\+\_\+t} $\ast$userid, \hyperlink{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{apr\+\_\+gid\+\_\+t} $\ast$groupid, const char $\ast$username, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_ga0ad8087cf1c6257a286cf5215da8107e}{apr\+\_\+uid\+\_\+homepath\+\_\+get} (char $\ast$$\ast$dirname, const char $\ast$username, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_gadda2c777f2e8d61c02be34305720e316}{apr\+\_\+gid\+\_\+name\+\_\+get} (char $\ast$$\ast$groupname, \hyperlink{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{apr\+\_\+gid\+\_\+t} groupid, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__user_gac65178a647d34387781dc8d7ade3cefc}{apr\+\_\+gid\+\_\+get} (\hyperlink{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{apr\+\_\+gid\+\_\+t} $\ast$groupid, const char $\ast$groupname, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR User ID Services. 
+

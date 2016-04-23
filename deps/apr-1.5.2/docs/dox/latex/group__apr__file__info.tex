@@ -1,0 +1,86 @@
+\hypertarget{group__apr__file__info}{}\section{File Information}
+\label{group__apr__file__info}\index{File Information@{File Information}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__file__permissions}{File Permissions flags}
+\item 
+\hyperlink{group__apr__file__stat}{Stat Functions}
+\item 
+\hyperlink{group__apr__dir}{Directory Manipulation Functions}
+\item 
+\hyperlink{group__apr__filepath}{Filepath Manipulation Functions}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}{apr\+\_\+dir\+\_\+t} \hyperlink{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}{apr\+\_\+dir\+\_\+t}
+\item 
+typedef apr\+\_\+int32\+\_\+t \hyperlink{group__apr__file__info_ga3af19c4c47007169064a70f9351bc7d8}{apr\+\_\+fileperms\+\_\+t}
+\item 
+typedef dev\+\_\+t \hyperlink{group__apr__file__info_gae2c25c4b679613081599f776efa96c4a}{apr\+\_\+dev\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__apr__file__info_gae3f0ce3014337a52b39852f8bf81ca7c}{apr\+\_\+filetype\+\_\+e} \{ \\*
+\hyperlink{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cae5877c29ba5fd483edbde0c51c0ac5e9}{A\+P\+R\+\_\+\+N\+O\+F\+I\+LE} = 0, 
+\hyperlink{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca9a2849ad21618c937683c1ffe13a6257}{A\+P\+R\+\_\+\+R\+EG}, 
+\hyperlink{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cae2ee810fa994ae64b8fcc6b68d3ae540}{A\+P\+R\+\_\+\+D\+IR}, 
+\hyperlink{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cadb769ffbe8659cbecf7ebf376d098d37}{A\+P\+R\+\_\+\+C\+HR}, 
+\\*
+\hyperlink{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca20ea6a09a69785a7cd19fd05243c1c8d}{A\+P\+R\+\_\+\+B\+LK}, 
+\hyperlink{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca247719668cd02286a6a0ed767c30ce77}{A\+P\+R\+\_\+\+P\+I\+PE}, 
+\hyperlink{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca2b55a6db64d814bf08d5a56b026a8176}{A\+P\+R\+\_\+\+L\+NK}, 
+\hyperlink{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cadd5d86c1e616fe159a7ec04e0ddc70db}{A\+P\+R\+\_\+\+S\+O\+CK}, 
+\\*
+\hyperlink{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca3347d2110d62ce464ddf1ae38759e6b0}{A\+P\+R\+\_\+\+U\+N\+K\+F\+I\+LE} = 127
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\index{File Information@{File Information}!apr\+\_\+dev\+\_\+t@{apr\+\_\+dev\+\_\+t}}
+\index{apr\+\_\+dev\+\_\+t@{apr\+\_\+dev\+\_\+t}!File Information@{File Information}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dev\+\_\+t}{apr_dev_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef dev\+\_\+t {\bf apr\+\_\+dev\+\_\+t}}\hypertarget{group__apr__file__info_gae2c25c4b679613081599f776efa96c4a}{}\label{group__apr__file__info_gae2c25c4b679613081599f776efa96c4a}
+Structure for determining the device the file is on. \index{File Information@{File Information}!apr\+\_\+dir\+\_\+t@{apr\+\_\+dir\+\_\+t}}
+\index{apr\+\_\+dir\+\_\+t@{apr\+\_\+dir\+\_\+t}!File Information@{File Information}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dir\+\_\+t}{apr_dir_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+dir\+\_\+t} {\bf apr\+\_\+dir\+\_\+t}}\hypertarget{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}{}\label{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}
+Structure for referencing directories. \index{File Information@{File Information}!apr\+\_\+fileperms\+\_\+t@{apr\+\_\+fileperms\+\_\+t}}
+\index{apr\+\_\+fileperms\+\_\+t@{apr\+\_\+fileperms\+\_\+t}!File Information@{File Information}}
+\subsubsection[{\texorpdfstring{apr\+\_\+fileperms\+\_\+t}{apr_fileperms_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef apr\+\_\+int32\+\_\+t {\bf apr\+\_\+fileperms\+\_\+t}}\hypertarget{group__apr__file__info_ga3af19c4c47007169064a70f9351bc7d8}{}\label{group__apr__file__info_ga3af19c4c47007169064a70f9351bc7d8}
+Structure for determining file permissions. 
+
+\subsection{Enumeration Type Documentation}
+\index{File Information@{File Information}!apr\+\_\+filetype\+\_\+e@{apr\+\_\+filetype\+\_\+e}}
+\index{apr\+\_\+filetype\+\_\+e@{apr\+\_\+filetype\+\_\+e}!File Information@{File Information}}
+\subsubsection[{\texorpdfstring{apr\+\_\+filetype\+\_\+e}{apr_filetype_e}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\+\_\+filetype\+\_\+e}}\hypertarget{group__apr__file__info_gae3f0ce3014337a52b39852f8bf81ca7c}{}\label{group__apr__file__info_gae3f0ce3014337a52b39852f8bf81ca7c}
+apr\+\_\+filetype\+\_\+e values for the filetype member of the apr\+\_\+file\+\_\+info\+\_\+t structure \begin{DoxyWarning}{Warning}
+\+: Not all of the filetypes below can be determined. For example, a given platform might not correctly report a socket descriptor as A\+P\+R\+\_\+\+S\+O\+CK if that type isn\textquotesingle{}t well-\/identified on that platform. In such cases where a filetype exists but cannot be described by the recognized flags below, the filetype will be A\+P\+R\+\_\+\+U\+N\+K\+F\+I\+LE. If the filetype member is not determined, the type will be A\+P\+R\+\_\+\+N\+O\+F\+I\+LE. 
+\end{DoxyWarning}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+P\+R\+\_\+\+N\+O\+F\+I\+LE@{A\+P\+R\+\_\+\+N\+O\+F\+I\+LE}!File Information@{File Information}}\index{File Information@{File Information}!A\+P\+R\+\_\+\+N\+O\+F\+I\+LE@{A\+P\+R\+\_\+\+N\+O\+F\+I\+LE}}\item[{\em 
+A\+P\+R\+\_\+\+N\+O\+F\+I\+LE\hypertarget{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cae5877c29ba5fd483edbde0c51c0ac5e9}{}\label{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cae5877c29ba5fd483edbde0c51c0ac5e9}
+}]no file type determined \index{A\+P\+R\+\_\+\+R\+EG@{A\+P\+R\+\_\+\+R\+EG}!File Information@{File Information}}\index{File Information@{File Information}!A\+P\+R\+\_\+\+R\+EG@{A\+P\+R\+\_\+\+R\+EG}}\item[{\em 
+A\+P\+R\+\_\+\+R\+EG\hypertarget{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca9a2849ad21618c937683c1ffe13a6257}{}\label{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca9a2849ad21618c937683c1ffe13a6257}
+}]a regular file \index{A\+P\+R\+\_\+\+D\+IR@{A\+P\+R\+\_\+\+D\+IR}!File Information@{File Information}}\index{File Information@{File Information}!A\+P\+R\+\_\+\+D\+IR@{A\+P\+R\+\_\+\+D\+IR}}\item[{\em 
+A\+P\+R\+\_\+\+D\+IR\hypertarget{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cae2ee810fa994ae64b8fcc6b68d3ae540}{}\label{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cae2ee810fa994ae64b8fcc6b68d3ae540}
+}]a directory \index{A\+P\+R\+\_\+\+C\+HR@{A\+P\+R\+\_\+\+C\+HR}!File Information@{File Information}}\index{File Information@{File Information}!A\+P\+R\+\_\+\+C\+HR@{A\+P\+R\+\_\+\+C\+HR}}\item[{\em 
+A\+P\+R\+\_\+\+C\+HR\hypertarget{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cadb769ffbe8659cbecf7ebf376d098d37}{}\label{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cadb769ffbe8659cbecf7ebf376d098d37}
+}]a character device \index{A\+P\+R\+\_\+\+B\+LK@{A\+P\+R\+\_\+\+B\+LK}!File Information@{File Information}}\index{File Information@{File Information}!A\+P\+R\+\_\+\+B\+LK@{A\+P\+R\+\_\+\+B\+LK}}\item[{\em 
+A\+P\+R\+\_\+\+B\+LK\hypertarget{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca20ea6a09a69785a7cd19fd05243c1c8d}{}\label{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca20ea6a09a69785a7cd19fd05243c1c8d}
+}]a block device \index{A\+P\+R\+\_\+\+P\+I\+PE@{A\+P\+R\+\_\+\+P\+I\+PE}!File Information@{File Information}}\index{File Information@{File Information}!A\+P\+R\+\_\+\+P\+I\+PE@{A\+P\+R\+\_\+\+P\+I\+PE}}\item[{\em 
+A\+P\+R\+\_\+\+P\+I\+PE\hypertarget{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca247719668cd02286a6a0ed767c30ce77}{}\label{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca247719668cd02286a6a0ed767c30ce77}
+}]a F\+I\+FO / pipe \index{A\+P\+R\+\_\+\+L\+NK@{A\+P\+R\+\_\+\+L\+NK}!File Information@{File Information}}\index{File Information@{File Information}!A\+P\+R\+\_\+\+L\+NK@{A\+P\+R\+\_\+\+L\+NK}}\item[{\em 
+A\+P\+R\+\_\+\+L\+NK\hypertarget{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca2b55a6db64d814bf08d5a56b026a8176}{}\label{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca2b55a6db64d814bf08d5a56b026a8176}
+}]a symbolic link \index{A\+P\+R\+\_\+\+S\+O\+CK@{A\+P\+R\+\_\+\+S\+O\+CK}!File Information@{File Information}}\index{File Information@{File Information}!A\+P\+R\+\_\+\+S\+O\+CK@{A\+P\+R\+\_\+\+S\+O\+CK}}\item[{\em 
+A\+P\+R\+\_\+\+S\+O\+CK\hypertarget{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cadd5d86c1e616fe159a7ec04e0ddc70db}{}\label{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7cadd5d86c1e616fe159a7ec04e0ddc70db}
+}]a \mbox{[}unix domain\mbox{]} socket \index{A\+P\+R\+\_\+\+U\+N\+K\+F\+I\+LE@{A\+P\+R\+\_\+\+U\+N\+K\+F\+I\+LE}!File Information@{File Information}}\index{File Information@{File Information}!A\+P\+R\+\_\+\+U\+N\+K\+F\+I\+LE@{A\+P\+R\+\_\+\+U\+N\+K\+F\+I\+LE}}\item[{\em 
+A\+P\+R\+\_\+\+U\+N\+K\+F\+I\+LE\hypertarget{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca3347d2110d62ce464ddf1ae38759e6b0}{}\label{group__apr__file__info_ggae3f0ce3014337a52b39852f8bf81ca7ca3347d2110d62ce464ddf1ae38759e6b0}
+}]a file of some other unknown type \end{description}
+\end{Desc}

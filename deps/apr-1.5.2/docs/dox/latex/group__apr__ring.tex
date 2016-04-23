@@ -1,0 +1,784 @@
+\hypertarget{group__apr__ring}{}\section{Ring Macro Implementations}
+\label{group__apr__ring}\index{Ring Macro Implementations@{Ring Macro Implementations}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__ring_ga095edad4bcb6975014ed9584930f7819}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY}(elem)
+\item 
+\#define \hyperlink{group__apr__ring_ga2953b8d4034077c4020616282e6c0b67}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+H\+E\+AD}(head,  elem)
+\item 
+\#define \hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+E\+N\+T\+I\+N\+EL}(hp,  elem,  link)~(struct elem $\ast$)((char $\ast$)(\&(hp)-\/$>$next) -\/ \hyperlink{group__apr__general_gac16b1187b6ea63706c5dd48c88323dec}{A\+P\+R\+\_\+\+O\+F\+F\+S\+E\+T\+OF}(struct elem, link))
+\item 
+\#define \hyperlink{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+I\+R\+ST}(hp)~(hp)-\/$>$next
+\item 
+\#define \hyperlink{group__apr__ring_ga8b927069ba9dc13defaf45a87267b5d3}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+L\+A\+ST}(hp)~(hp)-\/$>$prev
+\item 
+\#define \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+N\+E\+XT}(ep,  link)~(ep)-\/$>$link.\+next
+\item 
+\#define \hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+EV}(ep,  link)~(ep)-\/$>$link.\+prev
+\item 
+\#define \hyperlink{group__apr__ring_ga245e1a73b162a4a68ebd54c84683729d}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+IT}(hp,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga9b64ad6eebea19f896d2aa90172b6b9a}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+M\+P\+TY}(hp,  elem,  link)~(\hyperlink{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+I\+R\+ST}((hp)) == \hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+E\+N\+T\+I\+N\+EL}((hp), elem, link))
+\item 
+\#define \hyperlink{group__apr__ring_gae5048ecda4b26b012ee93c2c830058cb}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+L\+E\+M\+\_\+\+I\+N\+IT}(ep,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga438e7369e650ee07ac98ed0731589750}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+B\+E\+F\+O\+RE}(lep,  ep1,  epN,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga53e6564eba59d7e734a0ce03cb418a42}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+A\+F\+T\+ER}(lep,  ep1,  epN,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga76f9a04f932b3377073fa4e30d745564}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+B\+E\+F\+O\+RE}(lep,  nep,  link)~\hyperlink{group__apr__ring_ga438e7369e650ee07ac98ed0731589750}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+B\+E\+F\+O\+RE}((lep), (nep), (nep), link)
+\item 
+\#define \hyperlink{group__apr__ring_ga40453637d00c853f3a212a30c1f2cb41}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+F\+T\+ER}(lep,  nep,  link)~\hyperlink{group__apr__ring_ga53e6564eba59d7e734a0ce03cb418a42}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+A\+F\+T\+ER}((lep), (nep), (nep), link)
+\item 
+\#define \hyperlink{group__apr__ring_ga592e71a7cf219fc70f4fc47c60ef4c64}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD}(hp,  ep1,  epN,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga51e02e214fb6e218f45ff23cbd1f7abc}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL}(hp,  ep1,  epN,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_gad59352546dc9253c0057ad43cf728a63}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+H\+E\+AD}(hp,  nep,  elem,  link)~\hyperlink{group__apr__ring_ga592e71a7cf219fc70f4fc47c60ef4c64}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD}((hp), (nep), (nep), elem, link)
+\item 
+\#define \hyperlink{group__apr__ring_ga235311035184125d72ce0689c9949a3e}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+T\+A\+IL}(hp,  nep,  elem,  link)~\hyperlink{group__apr__ring_ga51e02e214fb6e218f45ff23cbd1f7abc}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL}((hp), (nep), (nep), elem, link)
+\item 
+\#define \hyperlink{group__apr__ring_ga34ee7a0d6daa61117006bb74498ff5aa}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+O\+N\+C\+AT}(h1,  h2,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga4d5aaa9b6f02f96f98f234a0a428474d}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+E\+P\+E\+ND}(h1,  h2,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga1d725b0a9ea7ff88f771e37ec130c13b}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+U\+N\+S\+P\+L\+I\+CE}(ep1,  epN,  link)
+\item 
+\#define \hyperlink{group__apr__ring_gaab4a57544bdb660ec1e306137387d9d7}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+R\+E\+M\+O\+VE}(ep,  link)~\hyperlink{group__apr__ring_ga1d725b0a9ea7ff88f771e37ec130c13b}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+U\+N\+S\+P\+L\+I\+CE}((ep), (ep), link)
+\item 
+\#define \hyperlink{group__apr__ring_gab5ac1b1fc25a0764f6c6fafdb1217fea}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+CH}(ep,  head,  elem,  link)                                                
+\item 
+\#define \hyperlink{group__apr__ring_gaed113ac9476193c638dd3e32b158e181}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+C\+H\+\_\+\+S\+A\+FE}(ep1,  ep2,  head,  elem,  link)                          
+\item 
+\#define \hyperlink{group__apr__ring_ga33c7cfbea7c688c7bd0a3d36609f318b}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+NE}(msg,  ptr)
+\item 
+\#define \hyperlink{group__apr__ring_ga97bb4dcc313145496e6b05855f9c6e2b}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+CK}(hp,  elem,  link,  msg)
+\item 
+\#define \hyperlink{group__apr__ring_ga6b0f2091527ee9c7a1511cb6f172a0a7}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY}(hp,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga5500df0e96dea1a3258f1e92b28fea0a}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+EM}(ep,  elem,  link,  msg)
+\item 
+\#define \hyperlink{group__apr__ring_gab7070ae5cf69bf16178a0e0e397c5b38}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+E\+M\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY}(ep,  elem,  link)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A ring is a kind of doubly-\/linked list that can be manipulated without knowing where its head is. 
+
+\subsection{Macro Definition Documentation}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+CK@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+CK}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+CK@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+CK}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+CK}{APR_RING_CHECK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+CK(
+\begin{DoxyParamCaption}
+\item[{}]{hp, }
+\item[{}]{elem, }
+\item[{}]{link, }
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga97bb4dcc313145496e6b05855f9c6e2b}{}\label{group__apr__ring_ga97bb4dcc313145496e6b05855f9c6e2b}
+Dump all ring pointers to S\+T\+D\+E\+RR, starting with the head and looping all the way around the ring back to the head. Aborts if an inconsistency is found. (This is a no-\/op unless A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+B\+UG is defined.) 
+\begin{DoxyParams}{Parameters}
+{\em hp} & Head of the ring \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+{\em msg} & Descriptive message \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY}{APR_RING_CHECK_CONSISTENCY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY(
+\begin{DoxyParamCaption}
+\item[{}]{hp, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga6b0f2091527ee9c7a1511cb6f172a0a7}{}\label{group__apr__ring_ga6b0f2091527ee9c7a1511cb6f172a0a7}
+Loops around a ring and checks all the pointers for consistency. Pops an assertion if any inconsistency is found. Same idea as \hyperlink{group__apr__ring_ga97bb4dcc313145496e6b05855f9c6e2b}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K()} except that it\textquotesingle{}s silent if all is well. (This is a no-\/op unless A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+B\+UG is defined.) 
+\begin{DoxyParams}{Parameters}
+{\em hp} & Head of the ring \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+EM@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+EM}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+EM@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+EM}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+EM}{APR_RING_CHECK_ELEM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+EM(
+\begin{DoxyParamCaption}
+\item[{}]{ep, }
+\item[{}]{elem, }
+\item[{}]{link, }
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga5500df0e96dea1a3258f1e92b28fea0a}{}\label{group__apr__ring_ga5500df0e96dea1a3258f1e92b28fea0a}
+Dump all ring pointers to S\+T\+D\+E\+RR, starting with the given element and looping all the way around the ring back to that element. Aborts if an inconsistency is found. (This is a no-\/op unless A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+B\+UG is defined.) 
+\begin{DoxyParams}{Parameters}
+{\em ep} & The element \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+{\em msg} & Descriptive message \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+E\+M\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+E\+M\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+E\+M\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+E\+M\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+E\+M\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY}{APR_RING_CHECK_ELEM_CONSISTENCY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+E\+M\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY(
+\begin{DoxyParamCaption}
+\item[{}]{ep, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_gab7070ae5cf69bf16178a0e0e397c5b38}{}\label{group__apr__ring_gab7070ae5cf69bf16178a0e0e397c5b38}
+Loops around a ring, starting with the given element, and checks all the pointers for consistency. Pops an assertion if any inconsistency is found. Same idea as \hyperlink{group__apr__ring_ga5500df0e96dea1a3258f1e92b28fea0a}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+E\+M()} except that it\textquotesingle{}s silent if all is well. (This is a no-\/op unless A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+B\+UG is defined.) 
+\begin{DoxyParams}{Parameters}
+{\em ep} & The element \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+NE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+NE}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+NE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+NE}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+NE}{APR_RING_CHECK_ONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+NE(
+\begin{DoxyParamCaption}
+\item[{}]{msg, }
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga33c7cfbea7c688c7bd0a3d36609f318b}{}\label{group__apr__ring_ga33c7cfbea7c688c7bd0a3d36609f318b}
+Print a single pointer value to S\+T\+D\+E\+RR (This is a no-\/op unless A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+B\+UG is defined.) 
+\begin{DoxyParams}{Parameters}
+{\em msg} & Descriptive message \\
+\hline
+{\em ptr} & Pointer value to print \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+O\+N\+C\+AT@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+O\+N\+C\+AT}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+O\+N\+C\+AT@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+O\+N\+C\+AT}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+O\+N\+C\+AT}{APR_RING_CONCAT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+O\+N\+C\+AT(
+\begin{DoxyParamCaption}
+\item[{}]{h1, }
+\item[{}]{h2, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga34ee7a0d6daa61117006bb74498ff5aa}{}\label{group__apr__ring_ga34ee7a0d6daa61117006bb74498ff5aa}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{            \(\backslash\)
+    if (!\hyperlink{group__apr__ring_ga9b64ad6eebea19f896d2aa90172b6b9a}{APR\_RING\_EMPTY}((h2), elem, link)) \{          \(\backslash\)
+        APR\_RING\_SPLICE\_BEFORE(\hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{APR\_RING\_SENTINEL}((h1), elem, link),    \(\backslash\)
+                  \hyperlink{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}{APR\_RING\_FIRST}((h2)),           \(\backslash\)
+                  \hyperlink{group__apr__ring_ga8b927069ba9dc13defaf45a87267b5d3}{APR\_RING\_LAST}((h2)), link);      \(\backslash\)
+        APR\_RING\_INIT((h2), elem, link);                \(\backslash\)
+    \}                               \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Concatenate ring h2 onto the end of ring h1, leaving h2 empty. 
+\begin{DoxyParams}{Parameters}
+{\em h1} & Head of the ring to concatenate onto \\
+\hline
+{\em h2} & Head of the ring to concatenate \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+L\+E\+M\+\_\+\+I\+N\+IT@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+L\+E\+M\+\_\+\+I\+N\+IT}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+L\+E\+M\+\_\+\+I\+N\+IT@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+L\+E\+M\+\_\+\+I\+N\+IT}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+L\+E\+M\+\_\+\+I\+N\+IT}{APR_RING_ELEM_INIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+L\+E\+M\+\_\+\+I\+N\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{ep, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_gae5048ecda4b26b012ee93c2c830058cb}{}\label{group__apr__ring_gae5048ecda4b26b012ee93c2c830058cb}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{\(\backslash\)}
+\hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{    APR\_RING\_NEXT}((ep), link) = (ep);             \hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{\(\backslash\)}
+\hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{    APR\_RING\_PREV}((ep), link) = (ep);             \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Initialize a singleton element 
+\begin{DoxyParams}{Parameters}
+{\em ep} & The element \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+M\+P\+TY@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+M\+P\+TY}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+M\+P\+TY@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+M\+P\+TY}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+M\+P\+TY}{APR_RING_EMPTY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+M\+P\+TY(
+\begin{DoxyParamCaption}
+\item[{}]{hp, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)~({\bf A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+I\+R\+ST}((hp)) == {\bf A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+E\+N\+T\+I\+N\+EL}((hp), elem, link))}\hypertarget{group__apr__ring_ga9b64ad6eebea19f896d2aa90172b6b9a}{}\label{group__apr__ring_ga9b64ad6eebea19f896d2aa90172b6b9a}
+Determine if a ring is empty 
+\begin{DoxyParams}{Parameters}
+{\em hp} & The head of the ring \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY}{APR_RING_ENTRY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY(
+\begin{DoxyParamCaption}
+\item[{}]{elem}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga095edad4bcb6975014ed9584930f7819}{}\label{group__apr__ring_ga095edad4bcb6975014ed9584930f7819}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }\{                                \(\backslash\)
+    struct elem * \textcolor{keyword}{volatile} next;                    \(\backslash\)
+    struct elem * \textcolor{keyword}{volatile} prev;                    \(\backslash\)
+    \}
+\end{DoxyCode}
+The Ring Element
+
+A ring element struct is linked to the other elements in the ring through its ring entry field, e.\+g. 
+\begin{DoxyPre}
+     struct my\_element\_t \{
+         \hyperlink{group__apr__ring_ga095edad4bcb6975014ed9584930f7819}{APR\_RING\_ENTRY(my\_element\_t)} link;
+         int foo;
+         char *bar;
+     \};
+\end{DoxyPre}
+
+
+An element struct may be put on more than one ring if it has more than one A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY field. Each A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY has a corresponding A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+H\+E\+AD declaration.
+
+\begin{DoxyWarning}{Warning}
+For strict C standards compliance you should put the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY first in the element struct unless the head is always part of a larger object with enough earlier fields to accommodate the offsetof() used to compute the ring sentinel below. You can usually ignore this caveat. 
+\end{DoxyWarning}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+I\+R\+ST@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+I\+R\+ST}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+I\+R\+ST@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+I\+R\+ST}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+I\+R\+ST}{APR_RING_FIRST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+I\+R\+ST(
+\begin{DoxyParamCaption}
+\item[{}]{hp}
+\end{DoxyParamCaption}
+)~(hp)-\/$>$next}\hypertarget{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}{}\label{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}
+The first element of the ring 
+\begin{DoxyParams}{Parameters}
+{\em hp} & The head of the ring \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+CH@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+CH}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+CH@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+CH}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+CH}{APR_RING_FOREACH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+CH(
+\begin{DoxyParamCaption}
+\item[{}]{ep, }
+\item[{}]{head, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_gab5ac1b1fc25a0764f6c6fafdb1217fea}{}\label{group__apr__ring_gab5ac1b1fc25a0764f6c6fafdb1217fea}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for} (ep = \hyperlink{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}{APR\_RING\_FIRST}(head);                                     \(\backslash\)
+         ep != \hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{APR\_RING\_SENTINEL}(head, elem, link);                     \(\backslash\)
+         ep = \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{APR\_RING\_NEXT}(ep, link))
+\end{DoxyCode}
+Iterate over a ring 
+\begin{DoxyParams}{Parameters}
+{\em ep} & The current element \\
+\hline
+{\em head} & The head of the ring \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+C\+H\+\_\+\+S\+A\+FE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+C\+H\+\_\+\+S\+A\+FE}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+C\+H\+\_\+\+S\+A\+FE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+C\+H\+\_\+\+S\+A\+FE}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+C\+H\+\_\+\+S\+A\+FE}{APR_RING_FOREACH_SAFE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+C\+H\+\_\+\+S\+A\+FE(
+\begin{DoxyParamCaption}
+\item[{}]{ep1, }
+\item[{}]{ep2, }
+\item[{}]{head, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_gaed113ac9476193c638dd3e32b158e181}{}\label{group__apr__ring_gaed113ac9476193c638dd3e32b158e181}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for} (ep1 = \hyperlink{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}{APR\_RING\_FIRST}(head), ep2 = \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{APR\_RING\_NEXT}(ep1, link);    \(\backslash\)
+         ep1 != \hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{APR\_RING\_SENTINEL}(head, elem, link);                    \(\backslash\)
+         ep1 = ep2, ep2 = \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{APR\_RING\_NEXT}(ep1, link))
+\end{DoxyCode}
+Iterate over a ring safe against removal of the current element 
+\begin{DoxyParams}{Parameters}
+{\em ep1} & The current element \\
+\hline
+{\em ep2} & Iteration cursor \\
+\hline
+{\em head} & The head of the ring \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+H\+E\+AD@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+H\+E\+AD}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+H\+E\+AD@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+H\+E\+AD}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+H\+E\+AD}{APR_RING_HEAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+H\+E\+AD(
+\begin{DoxyParamCaption}
+\item[{}]{head, }
+\item[{}]{elem}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga2953b8d4034077c4020616282e6c0b67}{}\label{group__apr__ring_ga2953b8d4034077c4020616282e6c0b67}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }head \{                           \(\backslash\)
+    struct elem * \textcolor{keyword}{volatile} next;                    \(\backslash\)
+    struct elem * \textcolor{keyword}{volatile} prev;                    \(\backslash\)
+    \}
+\end{DoxyCode}
+The Ring Head
+
+Each ring is managed via its head, which is a struct declared like this\+: 
+\begin{DoxyPre}
+     \hyperlink{group__apr__ring_ga2953b8d4034077c4020616282e6c0b67}{APR\_RING\_HEAD(my\_ring\_t, my\_element\_t)};
+     struct my\_ring\_t ring, *ringp;
+\end{DoxyPre}
+
+
+This struct looks just like the element link struct so that we can be sure that the typecasting games will work as expected.
+
+The first element in the ring is next after the head, and the last element is just before the head. \index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+IT@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+IT}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+IT@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+IT}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+IT}{APR_RING_INIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{hp, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga245e1a73b162a4a68ebd54c84683729d}{}\label{group__apr__ring_ga245e1a73b162a4a68ebd54c84683729d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                \hyperlink{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}{\(\backslash\)}
+\hyperlink{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}{    APR\_RING\_FIRST}((hp)) = \hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{APR\_RING\_SENTINEL}((hp), elem, link); 
+      \hyperlink{group__apr__ring_ga8b927069ba9dc13defaf45a87267b5d3}{\(\backslash\)}
+\hyperlink{group__apr__ring_ga8b927069ba9dc13defaf45a87267b5d3}{    APR\_RING\_LAST}((hp))  = \hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{APR\_RING\_SENTINEL}((hp), elem, link);  \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Initialize a ring 
+\begin{DoxyParams}{Parameters}
+{\em hp} & The head of the ring \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+F\+T\+ER@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+F\+T\+ER}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+F\+T\+ER@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+F\+T\+ER}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+F\+T\+ER}{APR_RING_INSERT_AFTER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+F\+T\+ER(
+\begin{DoxyParamCaption}
+\item[{}]{lep, }
+\item[{}]{nep, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)~{\bf A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+A\+F\+T\+ER}((lep), (nep), (nep), link)}\hypertarget{group__apr__ring_ga40453637d00c853f3a212a30c1f2cb41}{}\label{group__apr__ring_ga40453637d00c853f3a212a30c1f2cb41}
+Insert the element nep into the ring after element lep (..lep.. becomes ..lep..nep..) \begin{DoxyWarning}{Warning}
+This doesn\textquotesingle{}t work for inserting after the last element or on empty rings... see A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+T\+A\+IL for one that does 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em lep} & Element in the ring to insert after \\
+\hline
+{\em nep} & Element to insert \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+B\+E\+F\+O\+RE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+B\+E\+F\+O\+RE}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+B\+E\+F\+O\+RE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+B\+E\+F\+O\+RE}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+B\+E\+F\+O\+RE}{APR_RING_INSERT_BEFORE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+B\+E\+F\+O\+RE(
+\begin{DoxyParamCaption}
+\item[{}]{lep, }
+\item[{}]{nep, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)~{\bf A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+B\+E\+F\+O\+RE}((lep), (nep), (nep), link)}\hypertarget{group__apr__ring_ga76f9a04f932b3377073fa4e30d745564}{}\label{group__apr__ring_ga76f9a04f932b3377073fa4e30d745564}
+Insert the element nep into the ring before element lep (..lep.. becomes ..nep..lep..) \begin{DoxyWarning}{Warning}
+This doesn\textquotesingle{}t work for inserting before the first element or on empty rings... see A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+H\+E\+AD for one that does 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em lep} & Element in the ring to insert before \\
+\hline
+{\em nep} & Element to insert \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+H\+E\+AD@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+H\+E\+AD}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+H\+E\+AD@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+H\+E\+AD}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+H\+E\+AD}{APR_RING_INSERT_HEAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+H\+E\+AD(
+\begin{DoxyParamCaption}
+\item[{}]{hp, }
+\item[{}]{nep, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)~{\bf A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD}((hp), (nep), (nep), elem, link)}\hypertarget{group__apr__ring_gad59352546dc9253c0057ad43cf728a63}{}\label{group__apr__ring_gad59352546dc9253c0057ad43cf728a63}
+Insert the element nep into the ring before the first element (..hp.. becomes ..hp..nep..) 
+\begin{DoxyParams}{Parameters}
+{\em hp} & Head of the ring \\
+\hline
+{\em nep} & Element to insert \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+T\+A\+IL@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+T\+A\+IL}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+T\+A\+IL@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+T\+A\+IL}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+T\+A\+IL}{APR_RING_INSERT_TAIL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+T\+A\+IL(
+\begin{DoxyParamCaption}
+\item[{}]{hp, }
+\item[{}]{nep, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)~{\bf A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL}((hp), (nep), (nep), elem, link)}\hypertarget{group__apr__ring_ga235311035184125d72ce0689c9949a3e}{}\label{group__apr__ring_ga235311035184125d72ce0689c9949a3e}
+Insert the element nep into the ring after the last element (..hp.. becomes ..nep..hp..) 
+\begin{DoxyParams}{Parameters}
+{\em hp} & Head of the ring \\
+\hline
+{\em nep} & Element to insert \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+L\+A\+ST@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+L\+A\+ST}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+L\+A\+ST@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+L\+A\+ST}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+L\+A\+ST}{APR_RING_LAST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+L\+A\+ST(
+\begin{DoxyParamCaption}
+\item[{}]{hp}
+\end{DoxyParamCaption}
+)~(hp)-\/$>$prev}\hypertarget{group__apr__ring_ga8b927069ba9dc13defaf45a87267b5d3}{}\label{group__apr__ring_ga8b927069ba9dc13defaf45a87267b5d3}
+The last element of the ring 
+\begin{DoxyParams}{Parameters}
+{\em hp} & The head of the ring \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+N\+E\+XT@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+N\+E\+XT}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+N\+E\+XT@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+N\+E\+XT}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+N\+E\+XT}{APR_RING_NEXT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+N\+E\+XT(
+\begin{DoxyParamCaption}
+\item[{}]{ep, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)~(ep)-\/$>$link.\+next}\hypertarget{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{}\label{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}
+The next element in the ring 
+\begin{DoxyParams}{Parameters}
+{\em ep} & The current element \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+E\+P\+E\+ND@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+E\+P\+E\+ND}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+E\+P\+E\+ND@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+E\+P\+E\+ND}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+E\+P\+E\+ND}{APR_RING_PREPEND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+E\+P\+E\+ND(
+\begin{DoxyParamCaption}
+\item[{}]{h1, }
+\item[{}]{h2, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga4d5aaa9b6f02f96f98f234a0a428474d}{}\label{group__apr__ring_ga4d5aaa9b6f02f96f98f234a0a428474d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{            \(\backslash\)
+    if (!\hyperlink{group__apr__ring_ga9b64ad6eebea19f896d2aa90172b6b9a}{APR\_RING\_EMPTY}((h2), elem, link)) \{          \(\backslash\)
+        APR\_RING\_SPLICE\_AFTER(\hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{APR\_RING\_SENTINEL}((h1), elem, link), \(\backslash\)
+                  \hyperlink{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}{APR\_RING\_FIRST}((h2)),           \(\backslash\)
+                  \hyperlink{group__apr__ring_ga8b927069ba9dc13defaf45a87267b5d3}{APR\_RING\_LAST}((h2)), link);      \(\backslash\)
+        APR\_RING\_INIT((h2), elem, link);                \(\backslash\)
+    \}                               \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Prepend ring h2 onto the beginning of ring h1, leaving h2 empty. 
+\begin{DoxyParams}{Parameters}
+{\em h1} & Head of the ring to prepend onto \\
+\hline
+{\em h2} & Head of the ring to prepend \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+EV@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+EV}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+EV@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+EV}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+EV}{APR_RING_PREV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+EV(
+\begin{DoxyParamCaption}
+\item[{}]{ep, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)~(ep)-\/$>$link.\+prev}\hypertarget{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{}\label{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}
+The previous element in the ring 
+\begin{DoxyParams}{Parameters}
+{\em ep} & The current element \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+R\+E\+M\+O\+VE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+R\+E\+M\+O\+VE}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+R\+E\+M\+O\+VE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+R\+E\+M\+O\+VE}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+R\+E\+M\+O\+VE}{APR_RING_REMOVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+R\+E\+M\+O\+VE(
+\begin{DoxyParamCaption}
+\item[{}]{ep, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)~{\bf A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+U\+N\+S\+P\+L\+I\+CE}((ep), (ep), link)}\hypertarget{group__apr__ring_gaab4a57544bdb660ec1e306137387d9d7}{}\label{group__apr__ring_gaab4a57544bdb660ec1e306137387d9d7}
+Remove a single element from a ring \begin{DoxyWarning}{Warning}
+The unspliced element is left with dangling pointers at either end 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em ep} & Element to remove \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+E\+N\+T\+I\+N\+EL@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+E\+N\+T\+I\+N\+EL}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+E\+N\+T\+I\+N\+EL@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+E\+N\+T\+I\+N\+EL}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+E\+N\+T\+I\+N\+EL}{APR_RING_SENTINEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+E\+N\+T\+I\+N\+EL(
+\begin{DoxyParamCaption}
+\item[{}]{hp, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)~(struct elem $\ast$)((char $\ast$)(\&(hp)-\/$>$next) -\/ {\bf A\+P\+R\+\_\+\+O\+F\+F\+S\+E\+T\+OF}(struct elem, link))}\hypertarget{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{}\label{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}
+The Ring Sentinel
+
+This is the magic pointer value that occurs before the first and after the last elements in the ring, computed from the address of the ring\textquotesingle{}s head. The head itself isn\textquotesingle{}t an element, but in order to get rid of all the special cases when dealing with the ends of the ring, we play typecasting games to make it look like one.
+
+Here is a diagram to illustrate the arrangements of the next and prev pointers of each element in a single ring. Note that they point to the start of each element, not to the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY structure.
+
+
+\begin{DoxyPre}
+    +->+------+<-+  +->+------+<-+  +->+------+<-+
+    |  |struct|  |  |  |struct|  |  |  |struct|  |
+   /   | elem |   \textbackslash{}/   | elem |   \textbackslash{}/   | elem |  \textbackslash{}
+...    |      |   /\textbackslash{}   |      |   /\textbackslash{}   |      |   ...
+       +------+  |  |  +------+  |  |  +------+
+  ...--|prev  |  |  +--|ring  |  |  +--|prev  |
+       |  next|--+     | entry|--+     |  next|--...
+       +------+        +------+        +------+
+       | etc. |        | etc. |        | etc. |
+       :      :        :      :        :      :
+\end{DoxyPre}
+
+
+The A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+H\+E\+AD is nothing but a bare A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY. The prev and next pointers in the first and last elements don\textquotesingle{}t actually point to the head, they point to a phantom place called the sentinel. Its value is such that last-\/$>$next-\/$>$next == first because the offset from the sentinel to the head\textquotesingle{}s next pointer is the same as the offset from the start of an element to its next pointer. This also works in the opposite direction.
+
+
+\begin{DoxyPre}
+       last                            first
+    +->+------+<-+  +->sentinel<-+  +->+------+<-+
+    |  |struct|  |  |            |  |  |struct|  |
+   /   | elem |   \textbackslash{}/              \textbackslash{}/   | elem |  \textbackslash{}
+...    |      |   /\textbackslash{}              /\textbackslash{}   |      |   ...
+       +------+  |  |  +------+  |  |  +------+
+  ...--|prev  |  |  +--|ring  |  |  +--|prev  |
+       |  next|--+     |  head|--+     |  next|--...
+       +------+        +------+        +------+
+       | etc. |                        | etc. |
+       :      :                        :      :
+\end{DoxyPre}
+
+
+Note that the offset mentioned above is different for each kind of ring that the element may be on, and each kind of ring has a unique name for its A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in each element, and has its own type for its A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+H\+E\+AD.
+
+Note also that if the offset is non-\/zero (which is required if an element has more than one A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY), the unreality of the sentinel may have bad implications on very perverse implementations of C -- see the warning in A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hp} & The head of the ring \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+A\+F\+T\+ER@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+A\+F\+T\+ER}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+A\+F\+T\+ER@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+A\+F\+T\+ER}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+A\+F\+T\+ER}{APR_RING_SPLICE_AFTER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+A\+F\+T\+ER(
+\begin{DoxyParamCaption}
+\item[{}]{lep, }
+\item[{}]{ep1, }
+\item[{}]{epN, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga53e6564eba59d7e734a0ce03cb418a42}{}\label{group__apr__ring_ga53e6564eba59d7e734a0ce03cb418a42}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{            \hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{\(\backslash\)}
+\hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{    APR\_RING\_PREV}((ep1), link) = (lep);               \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{\(\backslash\)}
+\hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{    APR\_RING\_NEXT}((epN), link) = \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{APR\_RING\_NEXT}((lep), link); 
+      \hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{\(\backslash\)}
+\hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{    APR\_RING\_PREV}(\hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{APR\_RING\_NEXT}((lep), link), link) = (epN); 
+      \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{\(\backslash\)}
+\hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{    APR\_RING\_NEXT}((lep), link) = (ep1);               \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Splice the sequence ep1..epN into the ring after element lep (..lep.. becomes ..lep..ep1..epN..) \begin{DoxyWarning}{Warning}
+This doesn\textquotesingle{}t work for splicing after the last element or on empty rings... see A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL for one that does 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em lep} & Element in the ring to splice after \\
+\hline
+{\em ep1} & First element in the sequence to splice in \\
+\hline
+{\em epN} & Last element in the sequence to splice in \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+B\+E\+F\+O\+RE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+B\+E\+F\+O\+RE}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+B\+E\+F\+O\+RE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+B\+E\+F\+O\+RE}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+B\+E\+F\+O\+RE}{APR_RING_SPLICE_BEFORE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+B\+E\+F\+O\+RE(
+\begin{DoxyParamCaption}
+\item[{}]{lep, }
+\item[{}]{ep1, }
+\item[{}]{epN, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga438e7369e650ee07ac98ed0731589750}{}\label{group__apr__ring_ga438e7369e650ee07ac98ed0731589750}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{        \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{\(\backslash\)}
+\hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{    APR\_RING\_NEXT}((epN), link) = (lep);               \hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{\(\backslash\)}
+\hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{    APR\_RING\_PREV}((ep1), link) = \hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{APR\_RING\_PREV}((lep), link); 
+      \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{\(\backslash\)}
+\hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{    APR\_RING\_NEXT}(\hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{APR\_RING\_PREV}((lep), link), link) = (ep1); 
+      \hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{\(\backslash\)}
+\hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{    APR\_RING\_PREV}((lep), link) = (epN);               \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Splice the sequence ep1..epN into the ring before element lep (..lep.. becomes ..ep1..epN..lep..) \begin{DoxyWarning}{Warning}
+This doesn\textquotesingle{}t work for splicing before the first element or on empty rings... see A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD for one that does 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em lep} & Element in the ring to splice before \\
+\hline
+{\em ep1} & First element in the sequence to splice in \\
+\hline
+{\em epN} & Last element in the sequence to splice in \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD}{APR_RING_SPLICE_HEAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD(
+\begin{DoxyParamCaption}
+\item[{}]{hp, }
+\item[{}]{ep1, }
+\item[{}]{epN, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga592e71a7cf219fc70f4fc47c60ef4c64}{}\label{group__apr__ring_ga592e71a7cf219fc70f4fc47c60ef4c64}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{group__apr__ring_ga53e6564eba59d7e734a0ce03cb418a42}{APR\_RING\_SPLICE\_AFTER}(\hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{APR\_RING\_SENTINEL}((hp), elem, link),    \(\backslash\)
+                 (ep1), (epN), link)
+\end{DoxyCode}
+Splice the sequence ep1..epN into the ring before the first element (..hp.. becomes ..hp..ep1..epN..) 
+\begin{DoxyParams}{Parameters}
+{\em hp} & Head of the ring \\
+\hline
+{\em ep1} & First element in the sequence to splice in \\
+\hline
+{\em epN} & Last element in the sequence to splice in \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL}{APR_RING_SPLICE_TAIL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL(
+\begin{DoxyParamCaption}
+\item[{}]{hp, }
+\item[{}]{ep1, }
+\item[{}]{epN, }
+\item[{}]{elem, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga51e02e214fb6e218f45ff23cbd1f7abc}{}\label{group__apr__ring_ga51e02e214fb6e218f45ff23cbd1f7abc}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{group__apr__ring_ga438e7369e650ee07ac98ed0731589750}{APR\_RING\_SPLICE\_BEFORE}(\hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{APR\_RING\_SENTINEL}((hp), elem, link),  \(\backslash\)
+                 (ep1), (epN), link)
+\end{DoxyCode}
+Splice the sequence ep1..epN into the ring after the last element (..hp.. becomes ..ep1..epN..hp..) 
+\begin{DoxyParams}{Parameters}
+{\em hp} & Head of the ring \\
+\hline
+{\em ep1} & First element in the sequence to splice in \\
+\hline
+{\em epN} & Last element in the sequence to splice in \\
+\hline
+{\em elem} & The name of the element struct \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}
+\index{Ring Macro Implementations@{Ring Macro Implementations}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+U\+N\+S\+P\+L\+I\+CE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+U\+N\+S\+P\+L\+I\+CE}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+U\+N\+S\+P\+L\+I\+CE@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+U\+N\+S\+P\+L\+I\+CE}!Ring Macro Implementations@{Ring Macro Implementations}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+U\+N\+S\+P\+L\+I\+CE}{APR_RING_UNSPLICE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+U\+N\+S\+P\+L\+I\+CE(
+\begin{DoxyParamCaption}
+\item[{}]{ep1, }
+\item[{}]{epN, }
+\item[{}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__ring_ga1d725b0a9ea7ff88f771e37ec130c13b}{}\label{group__apr__ring_ga1d725b0a9ea7ff88f771e37ec130c13b}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{\(\backslash\)}
+\hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{    APR\_RING\_NEXT}(\hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{APR\_RING\_PREV}((ep1), link), link) =        \(\backslash\)
+             APR\_RING\_NEXT((epN), link);            \hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{\(\backslash\)}
+\hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{    APR\_RING\_PREV}(\hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{APR\_RING\_NEXT}((epN), link), link) =        \(\backslash\)
+             APR\_RING\_PREV((ep1), link);            \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Unsplice a sequence of elements from a ring \begin{DoxyWarning}{Warning}
+The unspliced sequence is left with dangling pointers at either end 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em ep1} & First element in the sequence to unsplice \\
+\hline
+{\em epN} & Last element in the sequence to unsplice \\
+\hline
+{\em link} & The name of the A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY in the element struct \\
+\hline
+\end{DoxyParams}

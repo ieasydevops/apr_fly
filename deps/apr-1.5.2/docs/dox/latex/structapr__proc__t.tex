@@ -1,0 +1,58 @@
+\hypertarget{structapr__proc__t}{}\section{apr\+\_\+proc\+\_\+t Struct Reference}
+\label{structapr__proc__t}\index{apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}}
+
+
+{\ttfamily \#include $<$apr\+\_\+thread\+\_\+proc.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+pid\+\_\+t \hyperlink{structapr__proc__t_a8a8ee4b234156485a72497023e7482e5}{pid}
+\item 
+\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$ \hyperlink{structapr__proc__t_a914bda8939f9d17c9e2f238683fb994b}{in}
+\item 
+\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$ \hyperlink{structapr__proc__t_acb7d7c5226217946d761f0e90ff70d24}{out}
+\item 
+\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$ \hyperlink{structapr__proc__t_ad087f812b5c69ce937db4cf6e8cd5a0b}{err}
+\item 
+char $\ast$ \hyperlink{structapr__proc__t_a72ed1c58c3f08ffa7202fa80e870cd54}{invoked}
+\item 
+H\+A\+N\+D\+LE \hyperlink{structapr__proc__t_aa1f17cce2b442d92893b9c63053b6771}{hproc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The A\+PR process type 
+
+\subsection{Field Documentation}
+\index{apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}!err@{err}}
+\index{err@{err}!apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}}
+\subsubsection[{\texorpdfstring{err}{err}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+file\+\_\+t}$\ast$ apr\+\_\+proc\+\_\+t\+::err}\hypertarget{structapr__proc__t_ad087f812b5c69ce937db4cf6e8cd5a0b}{}\label{structapr__proc__t_ad087f812b5c69ce937db4cf6e8cd5a0b}
+Parent\textquotesingle{}s side of pipe to child\textquotesingle{}s stdouterr \index{apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}!hproc@{hproc}}
+\index{hproc@{hproc}!apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}}
+\subsubsection[{\texorpdfstring{hproc}{hproc}}]{\setlength{\rightskip}{0pt plus 5cm}H\+A\+N\+D\+LE apr\+\_\+proc\+\_\+t\+::hproc}\hypertarget{structapr__proc__t_aa1f17cce2b442d92893b9c63053b6771}{}\label{structapr__proc__t_aa1f17cce2b442d92893b9c63053b6771}
+(Win32 only) Creator\textquotesingle{}s handle granting access to the process \begin{DoxyRemark}{Remarks}
+This handle is closed and reset to N\+U\+LL in every case corresponding to a waitpid() on Unix which returns the exit status. Therefore Win32 correspond\textquotesingle{}s to Unix\textquotesingle{}s zombie reaping characteristics and avoids potential handle leaks. 
+\end{DoxyRemark}
+\index{apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}!in@{in}}
+\index{in@{in}!apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}}
+\subsubsection[{\texorpdfstring{in}{in}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+file\+\_\+t}$\ast$ apr\+\_\+proc\+\_\+t\+::in}\hypertarget{structapr__proc__t_a914bda8939f9d17c9e2f238683fb994b}{}\label{structapr__proc__t_a914bda8939f9d17c9e2f238683fb994b}
+Parent\textquotesingle{}s side of pipe to child\textquotesingle{}s stdin \index{apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}!invoked@{invoked}}
+\index{invoked@{invoked}!apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}}
+\subsubsection[{\texorpdfstring{invoked}{invoked}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+proc\+\_\+t\+::invoked}\hypertarget{structapr__proc__t_a72ed1c58c3f08ffa7202fa80e870cd54}{}\label{structapr__proc__t_a72ed1c58c3f08ffa7202fa80e870cd54}
+Diagnositics/debugging string of the command invoked for this process \mbox{[}only present if A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+P\+R\+O\+C\+\_\+\+I\+N\+V\+O\+K\+ED is true\mbox{]} \begin{DoxyRemark}{Remarks}
+Only enabled on Win32 by default. 
+\end{DoxyRemark}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000011}{Bug}]This should either always or never be present in release builds -\/ since it breaks binary compatibility. We may enable it always in A\+PR 1.\+0 yet leave it undefined in most cases. \end{DoxyRefDesc}
+\index{apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}!out@{out}}
+\index{out@{out}!apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}}
+\subsubsection[{\texorpdfstring{out}{out}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+file\+\_\+t}$\ast$ apr\+\_\+proc\+\_\+t\+::out}\hypertarget{structapr__proc__t_acb7d7c5226217946d761f0e90ff70d24}{}\label{structapr__proc__t_acb7d7c5226217946d761f0e90ff70d24}
+Parent\textquotesingle{}s side of pipe to child\textquotesingle{}s stdout \index{apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}!pid@{pid}}
+\index{pid@{pid}!apr\+\_\+proc\+\_\+t@{apr\+\_\+proc\+\_\+t}}
+\subsubsection[{\texorpdfstring{pid}{pid}}]{\setlength{\rightskip}{0pt plus 5cm}pid\+\_\+t apr\+\_\+proc\+\_\+t\+::pid}\hypertarget{structapr__proc__t_a8a8ee4b234156485a72497023e7482e5}{}\label{structapr__proc__t_a8a8ee4b234156485a72497023e7482e5}
+The process ID 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{apr__thread__proc_8h}{apr\+\_\+thread\+\_\+proc.\+h}\end{DoxyCompactItemize}

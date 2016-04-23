@@ -1,0 +1,340 @@
+\hypertarget{apr_8h}{}\section{apr.\+h File Reference}
+\label{apr_8h}\index{apr.\+h@{apr.\+h}}
+
+
+A\+PR Platform Definitions.  
+
+
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$sys/wait.\+h$>$}\\*
+{\ttfamily \#include $<$limits.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+I\+N\+L\+I\+NE}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+I\+N\+L\+I\+NE}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+A\+R\+P\+A\+\_\+\+I\+N\+E\+T\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+C\+O\+N\+I\+O\+\_\+H}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+C\+R\+Y\+P\+T\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+C\+T\+Y\+P\+E\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+E\+R\+R\+N\+O\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+F\+C\+N\+T\+L\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+I\+O\+\_\+H}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+N\+E\+T\+D\+B\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+N\+E\+T\+I\+N\+E\+T\+\_\+\+I\+N\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+N\+E\+T\+I\+N\+E\+T\+\_\+\+S\+C\+T\+P\+\_\+H}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+N\+E\+T\+I\+N\+E\+T\+\_\+\+S\+C\+T\+P\+\_\+\+U\+I\+O\+\_\+H}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+N\+E\+T\+I\+N\+E\+T\+\_\+\+T\+C\+P\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+P\+R\+O\+C\+E\+S\+S\+\_\+H}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+P\+T\+H\+R\+E\+A\+D\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+D\+A\+R\+G\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+D\+I\+O\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+D\+L\+I\+B\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+R\+I\+N\+G\+S\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+Y\+S\+\_\+\+I\+O\+C\+T\+L\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+Y\+S\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+Y\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+Y\+S\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+Y\+S\+\_\+\+S\+O\+C\+K\+I\+O\+\_\+H}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+Y\+S\+\_\+\+S\+Y\+S\+L\+I\+M\+I\+T\+S\+\_\+H}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+Y\+S\+\_\+\+T\+Y\+P\+E\+S\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+Y\+S\+\_\+\+U\+I\+O\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+Y\+S\+\_\+\+U\+N\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+Y\+S\+\_\+\+W\+A\+I\+T\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+T\+I\+M\+E\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+U\+N\+I\+S\+T\+D\+\_\+H}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+H}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+W\+I\+N\+S\+O\+C\+K2\+\_\+H}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+M\+M\+A\+P\+\_\+\+T\+MP}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+M\+M\+A\+P\+\_\+\+S\+HM}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+M\+M\+A\+P\+\_\+\+Z\+E\+RO}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+S\+H\+M\+G\+E\+T\+\_\+\+A\+N\+ON}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+S\+H\+M\+G\+ET}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+M\+M\+A\+P\+\_\+\+A\+N\+ON}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+B\+E\+OS}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+M\+M\+A\+P\+\_\+\+T\+MP}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+M\+M\+A\+P\+\_\+\+S\+HM}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+M\+M\+A\+P\+\_\+\+Z\+E\+RO}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+S\+H\+M\+G\+E\+T\+\_\+\+A\+N\+ON}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+S\+H\+M\+G\+ET}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+M\+M\+A\+P\+\_\+\+A\+N\+ON}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+S\+H\+M\+E\+M\+\_\+\+B\+E\+OS}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+S\+Y\+S\+V\+S\+E\+M\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+P\+O\+S\+I\+X\+S\+E\+M\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+F\+C\+N\+T\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+P\+R\+O\+C\+\_\+\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+S\+E\+\_\+\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+S\+Y\+S\+V\+S\+E\+M\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+P\+O\+S\+I\+X\+S\+E\+M\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+F\+C\+N\+T\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+P\+R\+O\+C\+\_\+\+P\+T\+H\+R\+E\+A\+D\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+P\+R\+O\+C\+E\+S\+S\+\_\+\+L\+O\+C\+K\+\_\+\+I\+S\+\_\+\+G\+L\+O\+B\+AL}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+C\+O\+R\+K\+A\+B\+L\+E\+\_\+\+T\+CP}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+G\+E\+T\+R\+L\+I\+M\+IT}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+I\+N\+\_\+\+A\+D\+DR}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+I\+N\+E\+T\+\_\+\+A\+D\+DR}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+I\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+RK}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+I\+P\+V6}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+M\+E\+M\+M\+O\+VE}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+E\+T\+R\+L\+I\+M\+IT}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+I\+G\+A\+C\+T\+I\+ON}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+I\+G\+S\+U\+S\+P\+E\+ND}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+I\+G\+W\+A\+IT}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+A\+\_\+\+S\+T\+O\+R\+A\+GE}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+R\+C\+A\+S\+E\+C\+MP}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+R\+D\+UP}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+R\+I\+C\+MP}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+R\+N\+C\+A\+S\+E\+C\+MP}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+R\+N\+I\+C\+MP}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+R\+S\+TR}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+M\+E\+M\+C\+HR}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+R\+L\+I\+M\+IT}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+U\+N\+I\+O\+N\+\_\+\+S\+E\+M\+UN}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+S\+C\+TP}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+I\+O\+V\+EC}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+M\+E\+M\+O\+RY}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+T\+H\+R\+E\+A\+DS}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+S\+E\+N\+D\+F\+I\+LE}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+M\+M\+AP}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+F\+O\+RK}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+R\+A\+N\+D\+OM}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+O\+T\+H\+E\+R\+\_\+\+C\+H\+I\+LD}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+D\+SO}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+S\+O\+\_\+\+A\+C\+C\+E\+P\+T\+F\+I\+L\+T\+ER}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+FS}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+P\+R\+O\+C\+\_\+\+I\+N\+V\+O\+K\+ED}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+U\+S\+ER}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+L\+A\+R\+G\+E\+\_\+\+F\+I\+L\+ES}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+X\+T\+H\+R\+E\+A\+D\+\_\+\+F\+I\+L\+ES}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+H\+A\+S\+\_\+\+O\+S\+\_\+\+U\+U\+ID}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+P\+R\+O\+C\+A\+T\+T\+R\+\_\+\+U\+S\+E\+R\+\_\+\+S\+E\+T\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+S\+\_\+\+P\+A\+S\+S\+W\+O\+RD}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+F\+I\+L\+E\+S\+\_\+\+A\+S\+\_\+\+S\+O\+C\+K\+E\+TS}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+E\+B\+C\+D\+IC}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+T\+C\+P\+\_\+\+N\+O\+P\+U\+S\+H\+\_\+\+F\+L\+AG}~T\+C\+P\+\_\+\+C\+O\+RK
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+T\+C\+P\+\_\+\+N\+O\+D\+E\+L\+A\+Y\+\_\+\+I\+N\+H\+E\+R\+I\+T\+ED}~1
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+O\+\_\+\+N\+O\+N\+B\+L\+O\+C\+K\+\_\+\+I\+N\+H\+E\+R\+I\+T\+ED}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+S\+I\+Z\+E\+O\+F\+\_\+\+V\+O\+I\+DP}~8
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+I\+S\+\_\+\+B\+I\+G\+E\+N\+D\+I\+AN}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+I\+N\+T64\+\_\+C}(val)~I\+N\+T64\+\_\+C(val)
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+I\+N\+T64\+\_\+C}(val)~U\+I\+N\+T64\+\_\+C(val)
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+I\+N\+T16\+\_\+\+M\+IN}~(-\/0x7fff -\/ 1)
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+I\+N\+T16\+\_\+\+M\+AX}~(0x7fff)
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+I\+N\+T16\+\_\+\+M\+AX}~(0xffff)
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+I\+N\+T32\+\_\+\+M\+IN}~(-\/0x7fffffff -\/ 1)
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+I\+N\+T32\+\_\+\+M\+AX}~0x7fffffff
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+I\+N\+T32\+\_\+\+M\+AX}~(0xffffffff\+U)
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+I\+N\+T64\+\_\+\+M\+IN}~(A\+P\+R\+\_\+\+I\+N\+T64\+\_\+C(-\/0x7fffffffffffffff) -\/ 1)
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+I\+N\+T64\+\_\+\+M\+AX}~A\+P\+R\+\_\+\+I\+N\+T64\+\_\+C(0x7fffffffffffffff)
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+I\+N\+T64\+\_\+\+M\+AX}~A\+P\+R\+\_\+\+U\+I\+N\+T64\+\_\+C(0xffffffffffffffff)
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+AX}~($\sim$((apr\+\_\+size\+\_\+t)0))
+\item 
+\#define \hyperlink{group__apr__platform_gaa046c9c51a1af394db3a34dec1972630}{A\+P\+R\+\_\+\+B\+E\+G\+I\+N\+\_\+\+D\+E\+C\+LS}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+E\+N\+D\+\_\+\+D\+E\+C\+LS}
+\item 
+\#define \hyperlink{group__apr__platform_gade8f829f9bd98fd4386894acf72edd7c}{A\+P\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+F\+U\+NC}
+\item 
+\#define \hyperlink{group__apr__platform_ga51bb2fd47cdff20cd9cb91d82e9b0efa}{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE}(type)                    ~type
+\item 
+\#define \hyperlink{group__apr__platform_gae3c44c6cd5ce0c984cd60de588506872}{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+N\+O\+N\+S\+TD}(type)      ~type
+\item 
+\#define \hyperlink{group__apr__platform_ga16a1a3d65c57ce052fffb63190b1cadc}{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+A\+TA}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+S\+S\+I\+Z\+E\+\_\+\+T\+\_\+\+F\+MT}~\char`\"{}ld\char`\"{}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+T\+\_\+\+F\+MT}~\char`\"{}lu\char`\"{}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+O\+F\+F\+\_\+\+T\+\_\+\+F\+MT}~\char`\"{}ld\char`\"{}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+P\+I\+D\+\_\+\+T\+\_\+\+F\+MT}~\char`\"{}d\char`\"{}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+I\+N\+T64\+\_\+\+T\+\_\+\+F\+MT}~\char`\"{}ld\char`\"{}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+I\+N\+T64\+\_\+\+T\+\_\+\+F\+MT}~\char`\"{}lu\char`\"{}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+U\+I\+N\+T64\+\_\+\+T\+\_\+\+H\+E\+X\+\_\+\+F\+MT}~\char`\"{}lx\char`\"{}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+S\+\_\+\+G\+L\+O\+B\+AL}~0
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+E\+O\+L\+\_\+\+S\+TR}~\char`\"{}\textbackslash{}n\char`\"{}
+\item 
+\#define {\bfseries apr\+\_\+wait\+\_\+t}~union wait
+\item 
+\#define {\bfseries W\+E\+X\+I\+T\+S\+T\+A\+T\+US}(status)    ~(int)((status).w\+\_\+retcode)
+\item 
+\#define {\bfseries W\+T\+E\+R\+M\+S\+IG}(status)          ~(int)((status).w\+\_\+termsig)
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+D\+S\+O\+P\+A\+TH}~\char`\"{}L\+D\+\_\+\+L\+I\+B\+R\+A\+R\+Y\+\_\+\+P\+A\+TH\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char {\bfseries apr\+\_\+byte\+\_\+t}
+\item 
+typedef short {\bfseries apr\+\_\+int16\+\_\+t}
+\item 
+typedef unsigned short {\bfseries apr\+\_\+uint16\+\_\+t}
+\item 
+typedef int {\bfseries apr\+\_\+int32\+\_\+t}
+\item 
+typedef unsigned int {\bfseries apr\+\_\+uint32\+\_\+t}
+\item 
+typedef long {\bfseries apr\+\_\+int64\+\_\+t}
+\item 
+typedef unsigned long {\bfseries apr\+\_\+uint64\+\_\+t}
+\item 
+typedef size\+\_\+t {\bfseries apr\+\_\+size\+\_\+t}
+\item 
+typedef ssize\+\_\+t {\bfseries apr\+\_\+ssize\+\_\+t}
+\item 
+typedef off\+\_\+t {\bfseries apr\+\_\+off\+\_\+t}
+\item 
+typedef socklen\+\_\+t {\bfseries apr\+\_\+socklen\+\_\+t}
+\item 
+typedef ino\+\_\+t {\bfseries apr\+\_\+ino\+\_\+t}
+\item 
+typedef apr\+\_\+uint64\+\_\+t {\bfseries apr\+\_\+uintptr\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Platform Definitions. 
+
+\begin{DoxyRemark}{Remarks}
+This is a generated header generated from include/apr.\+h.\+in by ./configure, or copied from include/apr.\+hw or include/apr.\+hnw for Win32 or Netware by those build environments, respectively. 
+\end{DoxyRemark}

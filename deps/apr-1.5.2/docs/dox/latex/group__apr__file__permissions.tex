@@ -1,0 +1,221 @@
+\hypertarget{group__apr__file__permissions}{}\section{File Permissions flags}
+\label{group__apr__file__permissions}\index{File Permissions flags@{File Permissions flags}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga67caebf5bbe4f3f4b6252a75e5ce066f}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+S\+E\+T\+ID}~0x8000
+\item 
+\#define \hyperlink{group__apr__file__permissions_gaab6c4c2e7b95f4345c248c27b3f1a655}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+R\+E\+AD}~0x0400
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga50b985779b15fbfdae0758e98ffb92af}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+W\+R\+I\+TE}~0x0200
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga156e1374a4ef30e745340d8c20b36d03}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+E\+X\+E\+C\+U\+TE}~0x0100
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga5fcf6746afdd4e9b8be6ceab6892a3f5}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+S\+E\+T\+ID}~0x4000
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga5ad9b67b8008db3ffc56c3c2a65aa192}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+R\+E\+AD}~0x0040
+\item 
+\#define \hyperlink{group__apr__file__permissions_gacecdc9f88b04c768150418688b786500}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+W\+R\+I\+TE}~0x0020
+\item 
+\#define \hyperlink{group__apr__file__permissions_gab627bef3f9ceb84bbf00906eaeb12184}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+E\+X\+E\+C\+U\+TE}~0x0010
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga989dbea02f779a5f20a643d7e4ee9952}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+S\+T\+I\+C\+KY}~0x2000
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga194718630250b0f0dd4be38c86dac717}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+R\+E\+AD}~0x0004
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga51692a9828f5b6288d89495378944260}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+W\+R\+I\+TE}~0x0002
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga760d69c09b38ddf1e0aff09362d8ce11}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+E\+X\+E\+C\+U\+TE}~0x0001
+\item 
+\#define \hyperlink{group__apr__file__permissions_gad3c65a67ee6eb12ecc6a33857397900b}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT}~0x0\+F\+FF
+\item 
+\#define \hyperlink{group__apr__file__permissions_gac08d4e868c7c9532f7c97c70556663dc}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS}~0x1000
+\item 
+\#define \hyperlink{group__apr__file__permissions_gafae6b531c08999345536cae5654d0d03}{A\+P\+R\+\_\+\+U\+S\+E\+T\+ID}~\hyperlink{group__apr__file__permissions_ga67caebf5bbe4f3f4b6252a75e5ce066f}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+S\+E\+T\+ID}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga51dc87ecd94c98e97694e68d5d9620a0}{A\+P\+R\+\_\+\+U\+R\+E\+AD}~\hyperlink{group__apr__file__permissions_gaab6c4c2e7b95f4345c248c27b3f1a655}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+R\+E\+AD}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga4faa7fdfa3bcda569dd1e23ae002c5e5}{A\+P\+R\+\_\+\+U\+W\+R\+I\+TE}~\hyperlink{group__apr__file__permissions_ga50b985779b15fbfdae0758e98ffb92af}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+W\+R\+I\+TE}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga4c08d7e798ab4022e31ed70f06f202b5}{A\+P\+R\+\_\+\+U\+E\+X\+E\+C\+U\+TE}~\hyperlink{group__apr__file__permissions_ga156e1374a4ef30e745340d8c20b36d03}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+E\+X\+E\+C\+U\+TE}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga4e4e9bb05f2bb156b174461551c9c329}{A\+P\+R\+\_\+\+G\+S\+E\+T\+ID}~\hyperlink{group__apr__file__permissions_ga5fcf6746afdd4e9b8be6ceab6892a3f5}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+S\+E\+T\+ID}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga1bd0305f31cb3bb20a8f9db898b96eb1}{A\+P\+R\+\_\+\+G\+R\+E\+AD}~\hyperlink{group__apr__file__permissions_ga5ad9b67b8008db3ffc56c3c2a65aa192}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+R\+E\+AD}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga794c425b459aa46939f6febabbe9daef}{A\+P\+R\+\_\+\+G\+W\+R\+I\+TE}~\hyperlink{group__apr__file__permissions_gacecdc9f88b04c768150418688b786500}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+W\+R\+I\+TE}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga79ce615a96a407d6c53325a2f8cdee3d}{A\+P\+R\+\_\+\+G\+E\+X\+E\+C\+U\+TE}~\hyperlink{group__apr__file__permissions_gab627bef3f9ceb84bbf00906eaeb12184}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+E\+X\+E\+C\+U\+TE}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga824d6685d59e3efddb6ee7fdbee69c13}{A\+P\+R\+\_\+\+W\+S\+T\+I\+C\+KY}~\hyperlink{group__apr__file__permissions_ga989dbea02f779a5f20a643d7e4ee9952}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+S\+T\+I\+C\+KY}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga5c987d2b1ace95b4ffa7c5a322721aad}{A\+P\+R\+\_\+\+W\+R\+E\+AD}~\hyperlink{group__apr__file__permissions_ga194718630250b0f0dd4be38c86dac717}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+R\+E\+AD}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga7aac61689e9aaa93176bdb4911f56863}{A\+P\+R\+\_\+\+W\+W\+R\+I\+TE}~\hyperlink{group__apr__file__permissions_ga51692a9828f5b6288d89495378944260}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+W\+R\+I\+TE}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga7bf4afea195c62f41aad1d3e94dcdac6}{A\+P\+R\+\_\+\+W\+E\+X\+E\+C\+U\+TE}~\hyperlink{group__apr__file__permissions_ga760d69c09b38ddf1e0aff09362d8ce11}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+E\+X\+E\+C\+U\+TE}
+\item 
+\#define \hyperlink{group__apr__file__permissions_ga8552adb50d545d5fc7faeabb4f4a388f}{A\+P\+R\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT}~\hyperlink{group__apr__file__permissions_gad3c65a67ee6eb12ecc6a33857397900b}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT}
+\item 
+\#define \hyperlink{group__apr__file__permissions_gaa72c8bc4ab1bd5615bee4333d23dc16b}{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS}~\hyperlink{group__apr__file__permissions_gac08d4e868c7c9532f7c97c70556663dc}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS@{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS@{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS}{APR_FILE_SOURCE_PERMS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS}}\hypertarget{group__apr__file__permissions_gaa72c8bc4ab1bd5615bee4333d23dc16b}{}\label{group__apr__file__permissions_gaa72c8bc4ab1bd5615bee4333d23dc16b}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000016}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_gac08d4e868c7c9532f7c97c70556663dc}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS}{APR_FPROT_FILE_SOURCE_PERMS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS~0x1000}\hypertarget{group__apr__file__permissions_gac08d4e868c7c9532f7c97c70556663dc}{}\label{group__apr__file__permissions_gac08d4e868c7c9532f7c97c70556663dc}
+Copy source file\textquotesingle{}s permissions \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+E\+X\+E\+C\+U\+TE}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+E\+X\+E\+C\+U\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+E\+X\+E\+C\+U\+TE}{APR_FPROT_GEXECUTE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+E\+X\+E\+C\+U\+TE~0x0010}\hypertarget{group__apr__file__permissions_gab627bef3f9ceb84bbf00906eaeb12184}{}\label{group__apr__file__permissions_gab627bef3f9ceb84bbf00906eaeb12184}
+Execute by group \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+R\+E\+AD@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+R\+E\+AD}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+R\+E\+AD@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+R\+E\+AD}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+R\+E\+AD}{APR_FPROT_GREAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+R\+E\+AD~0x0040}\hypertarget{group__apr__file__permissions_ga5ad9b67b8008db3ffc56c3c2a65aa192}{}\label{group__apr__file__permissions_ga5ad9b67b8008db3ffc56c3c2a65aa192}
+Read by group \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+S\+E\+T\+ID@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+S\+E\+T\+ID}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+S\+E\+T\+ID@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+S\+E\+T\+ID}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+S\+E\+T\+ID}{APR_FPROT_GSETID}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+S\+E\+T\+ID~0x4000}\hypertarget{group__apr__file__permissions_ga5fcf6746afdd4e9b8be6ceab6892a3f5}{}\label{group__apr__file__permissions_ga5fcf6746afdd4e9b8be6ceab6892a3f5}
+Set group id \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+W\+R\+I\+TE}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+W\+R\+I\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+W\+R\+I\+TE}{APR_FPROT_GWRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+W\+R\+I\+TE~0x0020}\hypertarget{group__apr__file__permissions_gacecdc9f88b04c768150418688b786500}{}\label{group__apr__file__permissions_gacecdc9f88b04c768150418688b786500}
+Write by group \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT}{APR_FPROT_OS_DEFAULT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT~0x0\+F\+FF}\hypertarget{group__apr__file__permissions_gad3c65a67ee6eb12ecc6a33857397900b}{}\label{group__apr__file__permissions_gad3c65a67ee6eb12ecc6a33857397900b}
+use OS\textquotesingle{}s default permissions \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+E\+X\+E\+C\+U\+TE}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+E\+X\+E\+C\+U\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+E\+X\+E\+C\+U\+TE}{APR_FPROT_UEXECUTE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+E\+X\+E\+C\+U\+TE~0x0100}\hypertarget{group__apr__file__permissions_ga156e1374a4ef30e745340d8c20b36d03}{}\label{group__apr__file__permissions_ga156e1374a4ef30e745340d8c20b36d03}
+Execute by user \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+R\+E\+AD@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+R\+E\+AD}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+R\+E\+AD@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+R\+E\+AD}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+R\+E\+AD}{APR_FPROT_UREAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+R\+E\+AD~0x0400}\hypertarget{group__apr__file__permissions_gaab6c4c2e7b95f4345c248c27b3f1a655}{}\label{group__apr__file__permissions_gaab6c4c2e7b95f4345c248c27b3f1a655}
+Read by user \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+S\+E\+T\+ID@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+S\+E\+T\+ID}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+S\+E\+T\+ID@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+S\+E\+T\+ID}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+S\+E\+T\+ID}{APR_FPROT_USETID}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+S\+E\+T\+ID~0x8000}\hypertarget{group__apr__file__permissions_ga67caebf5bbe4f3f4b6252a75e5ce066f}{}\label{group__apr__file__permissions_ga67caebf5bbe4f3f4b6252a75e5ce066f}
+Set user id \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+W\+R\+I\+TE}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+W\+R\+I\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+W\+R\+I\+TE}{APR_FPROT_UWRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+W\+R\+I\+TE~0x0200}\hypertarget{group__apr__file__permissions_ga50b985779b15fbfdae0758e98ffb92af}{}\label{group__apr__file__permissions_ga50b985779b15fbfdae0758e98ffb92af}
+Write by user \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+E\+X\+E\+C\+U\+TE}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+E\+X\+E\+C\+U\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+E\+X\+E\+C\+U\+TE}{APR_FPROT_WEXECUTE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+E\+X\+E\+C\+U\+TE~0x0001}\hypertarget{group__apr__file__permissions_ga760d69c09b38ddf1e0aff09362d8ce11}{}\label{group__apr__file__permissions_ga760d69c09b38ddf1e0aff09362d8ce11}
+Execute by others \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+R\+E\+AD@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+R\+E\+AD}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+R\+E\+AD@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+R\+E\+AD}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+R\+E\+AD}{APR_FPROT_WREAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+R\+E\+AD~0x0004}\hypertarget{group__apr__file__permissions_ga194718630250b0f0dd4be38c86dac717}{}\label{group__apr__file__permissions_ga194718630250b0f0dd4be38c86dac717}
+Read by others \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+S\+T\+I\+C\+KY@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+S\+T\+I\+C\+KY}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+S\+T\+I\+C\+KY@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+S\+T\+I\+C\+KY}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+S\+T\+I\+C\+KY}{APR_FPROT_WSTICKY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+S\+T\+I\+C\+KY~0x2000}\hypertarget{group__apr__file__permissions_ga989dbea02f779a5f20a643d7e4ee9952}{}\label{group__apr__file__permissions_ga989dbea02f779a5f20a643d7e4ee9952}
+Sticky bit \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+W\+R\+I\+TE}}
+\index{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+W\+R\+I\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+W\+R\+I\+TE}{APR_FPROT_WWRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+W\+R\+I\+TE~0x0002}\hypertarget{group__apr__file__permissions_ga51692a9828f5b6288d89495378944260}{}\label{group__apr__file__permissions_ga51692a9828f5b6288d89495378944260}
+Write by others \index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+G\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+G\+E\+X\+E\+C\+U\+TE}}
+\index{A\+P\+R\+\_\+\+G\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+G\+E\+X\+E\+C\+U\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+G\+E\+X\+E\+C\+U\+TE}{APR_GEXECUTE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+G\+E\+X\+E\+C\+U\+TE~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+E\+X\+E\+C\+U\+TE}}\hypertarget{group__apr__file__permissions_ga79ce615a96a407d6c53325a2f8cdee3d}{}\label{group__apr__file__permissions_ga79ce615a96a407d6c53325a2f8cdee3d}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000010}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_gab627bef3f9ceb84bbf00906eaeb12184}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+E\+X\+E\+C\+U\+TE} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+G\+R\+E\+AD@{A\+P\+R\+\_\+\+G\+R\+E\+AD}}
+\index{A\+P\+R\+\_\+\+G\+R\+E\+AD@{A\+P\+R\+\_\+\+G\+R\+E\+AD}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+G\+R\+E\+AD}{APR_GREAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+G\+R\+E\+AD~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+R\+E\+AD}}\hypertarget{group__apr__file__permissions_ga1bd0305f31cb3bb20a8f9db898b96eb1}{}\label{group__apr__file__permissions_ga1bd0305f31cb3bb20a8f9db898b96eb1}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000008}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_ga5ad9b67b8008db3ffc56c3c2a65aa192}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+R\+E\+AD} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+G\+S\+E\+T\+ID@{A\+P\+R\+\_\+\+G\+S\+E\+T\+ID}}
+\index{A\+P\+R\+\_\+\+G\+S\+E\+T\+ID@{A\+P\+R\+\_\+\+G\+S\+E\+T\+ID}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+G\+S\+E\+T\+ID}{APR_GSETID}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+G\+S\+E\+T\+ID~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+S\+E\+T\+ID}}\hypertarget{group__apr__file__permissions_ga4e4e9bb05f2bb156b174461551c9c329}{}\label{group__apr__file__permissions_ga4e4e9bb05f2bb156b174461551c9c329}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000007}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_ga5fcf6746afdd4e9b8be6ceab6892a3f5}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+S\+E\+T\+ID} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+G\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+G\+W\+R\+I\+TE}}
+\index{A\+P\+R\+\_\+\+G\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+G\+W\+R\+I\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+G\+W\+R\+I\+TE}{APR_GWRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+G\+W\+R\+I\+TE~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+W\+R\+I\+TE}}\hypertarget{group__apr__file__permissions_ga794c425b459aa46939f6febabbe9daef}{}\label{group__apr__file__permissions_ga794c425b459aa46939f6febabbe9daef}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000009}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_gacecdc9f88b04c768150418688b786500}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+G\+W\+R\+I\+TE} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT@{A\+P\+R\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{A\+P\+R\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT@{A\+P\+R\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT}{APR_OS_DEFAULT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT}}\hypertarget{group__apr__file__permissions_ga8552adb50d545d5fc7faeabb4f4a388f}{}\label{group__apr__file__permissions_ga8552adb50d545d5fc7faeabb4f4a388f}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000015}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_gad3c65a67ee6eb12ecc6a33857397900b}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+U\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+U\+E\+X\+E\+C\+U\+TE}}
+\index{A\+P\+R\+\_\+\+U\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+U\+E\+X\+E\+C\+U\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+U\+E\+X\+E\+C\+U\+TE}{APR_UEXECUTE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+U\+E\+X\+E\+C\+U\+TE~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+E\+X\+E\+C\+U\+TE}}\hypertarget{group__apr__file__permissions_ga4c08d7e798ab4022e31ed70f06f202b5}{}\label{group__apr__file__permissions_ga4c08d7e798ab4022e31ed70f06f202b5}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000006}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_ga156e1374a4ef30e745340d8c20b36d03}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+E\+X\+E\+C\+U\+TE} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+U\+R\+E\+AD@{A\+P\+R\+\_\+\+U\+R\+E\+AD}}
+\index{A\+P\+R\+\_\+\+U\+R\+E\+AD@{A\+P\+R\+\_\+\+U\+R\+E\+AD}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+U\+R\+E\+AD}{APR_UREAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+U\+R\+E\+AD~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+R\+E\+AD}}\hypertarget{group__apr__file__permissions_ga51dc87ecd94c98e97694e68d5d9620a0}{}\label{group__apr__file__permissions_ga51dc87ecd94c98e97694e68d5d9620a0}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000004}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_gaab6c4c2e7b95f4345c248c27b3f1a655}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+R\+E\+AD} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+U\+S\+E\+T\+ID@{A\+P\+R\+\_\+\+U\+S\+E\+T\+ID}}
+\index{A\+P\+R\+\_\+\+U\+S\+E\+T\+ID@{A\+P\+R\+\_\+\+U\+S\+E\+T\+ID}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+U\+S\+E\+T\+ID}{APR_USETID}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+U\+S\+E\+T\+ID~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+S\+E\+T\+ID}}\hypertarget{group__apr__file__permissions_gafae6b531c08999345536cae5654d0d03}{}\label{group__apr__file__permissions_gafae6b531c08999345536cae5654d0d03}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000003}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_ga67caebf5bbe4f3f4b6252a75e5ce066f}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+S\+E\+T\+ID} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+U\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+U\+W\+R\+I\+TE}}
+\index{A\+P\+R\+\_\+\+U\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+U\+W\+R\+I\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+U\+W\+R\+I\+TE}{APR_UWRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+U\+W\+R\+I\+TE~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+W\+R\+I\+TE}}\hypertarget{group__apr__file__permissions_ga4faa7fdfa3bcda569dd1e23ae002c5e5}{}\label{group__apr__file__permissions_ga4faa7fdfa3bcda569dd1e23ae002c5e5}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000005}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_ga50b985779b15fbfdae0758e98ffb92af}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+U\+W\+R\+I\+TE} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+W\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+W\+E\+X\+E\+C\+U\+TE}}
+\index{A\+P\+R\+\_\+\+W\+E\+X\+E\+C\+U\+TE@{A\+P\+R\+\_\+\+W\+E\+X\+E\+C\+U\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+W\+E\+X\+E\+C\+U\+TE}{APR_WEXECUTE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+W\+E\+X\+E\+C\+U\+TE~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+E\+X\+E\+C\+U\+TE}}\hypertarget{group__apr__file__permissions_ga7bf4afea195c62f41aad1d3e94dcdac6}{}\label{group__apr__file__permissions_ga7bf4afea195c62f41aad1d3e94dcdac6}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000014}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_ga760d69c09b38ddf1e0aff09362d8ce11}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+E\+X\+E\+C\+U\+TE} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+W\+R\+E\+AD@{A\+P\+R\+\_\+\+W\+R\+E\+AD}}
+\index{A\+P\+R\+\_\+\+W\+R\+E\+AD@{A\+P\+R\+\_\+\+W\+R\+E\+AD}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+W\+R\+E\+AD}{APR_WREAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+W\+R\+E\+AD~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+R\+E\+AD}}\hypertarget{group__apr__file__permissions_ga5c987d2b1ace95b4ffa7c5a322721aad}{}\label{group__apr__file__permissions_ga5c987d2b1ace95b4ffa7c5a322721aad}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000012}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_ga194718630250b0f0dd4be38c86dac717}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+R\+E\+AD} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+W\+S\+T\+I\+C\+KY@{A\+P\+R\+\_\+\+W\+S\+T\+I\+C\+KY}}
+\index{A\+P\+R\+\_\+\+W\+S\+T\+I\+C\+KY@{A\+P\+R\+\_\+\+W\+S\+T\+I\+C\+KY}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+W\+S\+T\+I\+C\+KY}{APR_WSTICKY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+W\+S\+T\+I\+C\+KY~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+S\+T\+I\+C\+KY}}\hypertarget{group__apr__file__permissions_ga824d6685d59e3efddb6ee7fdbee69c13}{}\label{group__apr__file__permissions_ga824d6685d59e3efddb6ee7fdbee69c13}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000011}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_ga989dbea02f779a5f20a643d7e4ee9952}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+S\+T\+I\+C\+KY} 
+\end{DoxySeeAlso}
+\index{File Permissions flags@{File Permissions flags}!A\+P\+R\+\_\+\+W\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+W\+W\+R\+I\+TE}}
+\index{A\+P\+R\+\_\+\+W\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+W\+W\+R\+I\+TE}!File Permissions flags@{File Permissions flags}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+W\+W\+R\+I\+TE}{APR_WWRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+W\+W\+R\+I\+TE~{\bf A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+W\+R\+I\+TE}}\hypertarget{group__apr__file__permissions_ga7aac61689e9aaa93176bdb4911f56863}{}\label{group__apr__file__permissions_ga7aac61689e9aaa93176bdb4911f56863}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000013}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__permissions_ga51692a9828f5b6288d89495378944260}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+W\+W\+R\+I\+TE} 
+\end{DoxySeeAlso}

@@ -1,0 +1,246 @@
+\hypertarget{group__apr__file__open__flags}{}\section{File Open Flags/\+Routines}
+\label{group__apr__file__open__flags}\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD}~0x00001
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE}~0x00002
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE}~0x00004
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga45f353db9b71d4760a3f35cf3781cfc8}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+A\+P\+P\+E\+ND}~0x00008
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga09b05a5bd5db534b93794f7657bcb146}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+T\+R\+U\+N\+C\+A\+TE}~0x00010
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gacb20b3028864f34cb26314fe2cacc3fa}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+I\+N\+A\+RY}~0x00020
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL}~0x00040
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED}~0x00080
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE}~0x00100
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD}~0x00200
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK}~0x00400
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga3fc9b5a7791d9f462997cd29de67eb80}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP}~0x00800
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED}~0x01000
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}~0x04000
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga0d155e9bb7fbf1a5cd4e84b5ede059f4}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+P\+A\+R\+SE}~0x08000
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga31e4d14068147e43e1778bcf975dda62}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+N\+B\+L\+O\+CK}~0x40000
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga0021db78d799d1c8825b701c7efee483}{A\+P\+R\+\_\+\+R\+E\+AD}~\hyperlink{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga3e427e53aceb1ccdb078d9a03cd63d01}{A\+P\+R\+\_\+\+W\+R\+I\+TE}~\hyperlink{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gac210e96bc821dbaa83c326e775dad028}{A\+P\+R\+\_\+\+C\+R\+E\+A\+TE}~\hyperlink{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga26d3de2bae5c90e5124869f56c141c2e}{A\+P\+R\+\_\+\+A\+P\+P\+E\+ND}~\hyperlink{group__apr__file__open__flags_ga45f353db9b71d4760a3f35cf3781cfc8}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+A\+P\+P\+E\+ND}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaa8898fdebd69d3a64286731b713a6dc9}{A\+P\+R\+\_\+\+T\+R\+U\+N\+C\+A\+TE}~\hyperlink{group__apr__file__open__flags_ga09b05a5bd5db534b93794f7657bcb146}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+T\+R\+U\+N\+C\+A\+TE}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga0e7556bac0cc0d1dafdf38952a4e4015}{A\+P\+R\+\_\+\+B\+I\+N\+A\+RY}~\hyperlink{group__apr__file__open__flags_gacb20b3028864f34cb26314fe2cacc3fa}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+I\+N\+A\+RY}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga209c26b2b903cc23417f6781d4edf891}{A\+P\+R\+\_\+\+E\+X\+CL}~\hyperlink{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga6edc818199e8b90e3dabf97c42a27158}{A\+P\+R\+\_\+\+B\+U\+F\+F\+E\+R\+ED}~\hyperlink{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaebc7f034a72dffe64858b1b9451994ff}{A\+P\+R\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE}~\hyperlink{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaa9120c0e395d8a0e640b5eafa8f11cce}{A\+P\+R\+\_\+\+X\+T\+H\+R\+E\+AD}~\hyperlink{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga41277154f4f754a22287ed90e9466811}{A\+P\+R\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK}~\hyperlink{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga3ef1061dbb3adf595701bd12edb062f9}{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP}~\hyperlink{group__apr__file__open__flags_ga3fc9b5a7791d9f462997cd29de67eb80}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga17e216aadb23254580258889e10c53f3}{A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED}~\hyperlink{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaafa04fd4ec71910a5d7af1c7f5596bad}{A\+P\+R\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}~\hyperlink{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+A\+P\+P\+E\+ND@{A\+P\+R\+\_\+\+A\+P\+P\+E\+ND}}
+\index{A\+P\+R\+\_\+\+A\+P\+P\+E\+ND@{A\+P\+R\+\_\+\+A\+P\+P\+E\+ND}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+A\+P\+P\+E\+ND}{APR_APPEND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+A\+P\+P\+E\+ND~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+A\+P\+P\+E\+ND}}\hypertarget{group__apr__file__open__flags_ga26d3de2bae5c90e5124869f56c141c2e}{}\label{group__apr__file__open__flags_ga26d3de2bae5c90e5124869f56c141c2e}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000020}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_ga45f353db9b71d4760a3f35cf3781cfc8}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+A\+P\+P\+E\+ND} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+B\+I\+N\+A\+RY@{A\+P\+R\+\_\+\+B\+I\+N\+A\+RY}}
+\index{A\+P\+R\+\_\+\+B\+I\+N\+A\+RY@{A\+P\+R\+\_\+\+B\+I\+N\+A\+RY}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+B\+I\+N\+A\+RY}{APR_BINARY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+B\+I\+N\+A\+RY~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+I\+N\+A\+RY}}\hypertarget{group__apr__file__open__flags_ga0e7556bac0cc0d1dafdf38952a4e4015}{}\label{group__apr__file__open__flags_ga0e7556bac0cc0d1dafdf38952a4e4015}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000022}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_gacb20b3028864f34cb26314fe2cacc3fa}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+I\+N\+A\+RY} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+B\+U\+F\+F\+E\+R\+ED@{A\+P\+R\+\_\+\+B\+U\+F\+F\+E\+R\+ED}}
+\index{A\+P\+R\+\_\+\+B\+U\+F\+F\+E\+R\+ED@{A\+P\+R\+\_\+\+B\+U\+F\+F\+E\+R\+ED}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+B\+U\+F\+F\+E\+R\+ED}{APR_BUFFERED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+B\+U\+F\+F\+E\+R\+ED~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED}}\hypertarget{group__apr__file__open__flags_ga6edc818199e8b90e3dabf97c42a27158}{}\label{group__apr__file__open__flags_ga6edc818199e8b90e3dabf97c42a27158}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000024}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+C\+R\+E\+A\+TE@{A\+P\+R\+\_\+\+C\+R\+E\+A\+TE}}
+\index{A\+P\+R\+\_\+\+C\+R\+E\+A\+TE@{A\+P\+R\+\_\+\+C\+R\+E\+A\+TE}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+C\+R\+E\+A\+TE}{APR_CREATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+C\+R\+E\+A\+TE~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE}}\hypertarget{group__apr__file__open__flags_gac210e96bc821dbaa83c326e775dad028}{}\label{group__apr__file__open__flags_gac210e96bc821dbaa83c326e775dad028}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000019}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE@{A\+P\+R\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE}}
+\index{A\+P\+R\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE@{A\+P\+R\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE}{APR_DELONCLOSE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE}}\hypertarget{group__apr__file__open__flags_gaebc7f034a72dffe64858b1b9451994ff}{}\label{group__apr__file__open__flags_gaebc7f034a72dffe64858b1b9451994ff}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000025}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+E\+X\+CL@{A\+P\+R\+\_\+\+E\+X\+CL}}
+\index{A\+P\+R\+\_\+\+E\+X\+CL@{A\+P\+R\+\_\+\+E\+X\+CL}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+E\+X\+CL}{APR_EXCL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+E\+X\+CL~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL}}\hypertarget{group__apr__file__open__flags_ga209c26b2b903cc23417f6781d4edf891}{}\label{group__apr__file__open__flags_ga209c26b2b903cc23417f6781d4edf891}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000023}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP@{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP@{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP}{APR_FILE_NOCLEANUP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP}}\hypertarget{group__apr__file__open__flags_ga3ef1061dbb3adf595701bd12edb062f9}{}\label{group__apr__file__open__flags_ga3ef1061dbb3adf595701bd12edb062f9}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000028}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_ga3fc9b5a7791d9f462997cd29de67eb80}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+A\+P\+P\+E\+ND@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+A\+P\+P\+E\+ND}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+A\+P\+P\+E\+ND@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+A\+P\+P\+E\+ND}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+A\+P\+P\+E\+ND}{APR_FOPEN_APPEND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+A\+P\+P\+E\+ND~0x00008}\hypertarget{group__apr__file__open__flags_ga45f353db9b71d4760a3f35cf3781cfc8}{}\label{group__apr__file__open__flags_ga45f353db9b71d4760a3f35cf3781cfc8}
+Append to the end of the file \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+I\+N\+A\+RY@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+I\+N\+A\+RY}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+I\+N\+A\+RY@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+I\+N\+A\+RY}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+I\+N\+A\+RY}{APR_FOPEN_BINARY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+I\+N\+A\+RY~0x00020}\hypertarget{group__apr__file__open__flags_gacb20b3028864f34cb26314fe2cacc3fa}{}\label{group__apr__file__open__flags_gacb20b3028864f34cb26314fe2cacc3fa}
+Open the file in binary mode (This flag is ignored on U\+N\+IX because it has no meaning) \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED}{APR_FOPEN_BUFFERED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED~0x00080}\hypertarget{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{}\label{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}
+Open the file for buffered I/O \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE}{APR_FOPEN_CREATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE~0x00004}\hypertarget{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{}\label{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}
+Create the file if not there \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE}{APR_FOPEN_DELONCLOSE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE~0x00100}\hypertarget{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}{}\label{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}
+Delete the file after close \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL}{APR_FOPEN_EXCL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL~0x00040}\hypertarget{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{}\label{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}
+Open should fail if \hyperlink{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE} and file exists. \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}{APR_FOPEN_LARGEFILE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE~0x04000}\hypertarget{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{}\label{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}
+Platform dependent flag to enable large file support, see W\+A\+R\+N\+I\+NG below
+
+\begin{DoxyWarning}{Warning}
+A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE flag only has effect on some platforms where sizeof(apr\+\_\+off\+\_\+t) == 4. Where implemented, it allows opening and writing to a file which exceeds the size which can be represented by apr\+\_\+off\+\_\+t (2 gigabytes). When a file\textquotesingle{}s size does exceed 2\+Gb, \hyperlink{group__apr__file__io_ga39be7fe05d0dda4a28f4358b61a44ac8}{apr\+\_\+file\+\_\+info\+\_\+get()} will fail with an error on the descriptor, likewise \hyperlink{group__apr__file__stat_gafb0f4a4fa4545c155e20ddd8f2001c1a}{apr\+\_\+stat()}/apr\+\_\+lstat() will fail on the filename. \hyperlink{group__apr__dir_ga3e4ee253e0c712160bee10bfb9c8e4a8}{apr\+\_\+dir\+\_\+read()} will fail with \hyperlink{group___a_p_r___error_ga64dff43b83bcefd3f3c751be6b864ca1}{A\+P\+R\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE} on a directory entry for a large file depending on the particular A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+$\ast$ flags. Generally, it is not recommended to use this flag. 
+\end{DoxyWarning}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP}{APR_FOPEN_NOCLEANUP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP~0x00800}\hypertarget{group__apr__file__open__flags_ga3fc9b5a7791d9f462997cd29de67eb80}{}\label{group__apr__file__open__flags_ga3fc9b5a7791d9f462997cd29de67eb80}
+Do not register a cleanup when the file is opened. The apr\+\_\+os\+\_\+file\+\_\+t handle in apr\+\_\+file\+\_\+t will not be closed when the pool is destroyed. \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+N\+B\+L\+O\+CK@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+N\+B\+L\+O\+CK}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+N\+B\+L\+O\+CK@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+N\+B\+L\+O\+CK}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+N\+B\+L\+O\+CK}{APR_FOPEN_NONBLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+N\+B\+L\+O\+CK~0x40000}\hypertarget{group__apr__file__open__flags_ga31e4d14068147e43e1778bcf975dda62}{}\label{group__apr__file__open__flags_ga31e4d14068147e43e1778bcf975dda62}
+Platform dependent flag to enable non blocking file io
+
+\begin{DoxyWarning}{Warning}
+A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+N\+B\+L\+O\+CK is not implemented on all platforms. Callers should be prepared for it to fail with \hyperlink{group___a_p_r___error_ga939ddb834a30bc9a5a0a329b13000161}{A\+P\+R\+\_\+\+E\+N\+O\+T\+I\+M\+PL}. 
+\end{DoxyWarning}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD}{APR_FOPEN_READ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD~0x00001}\hypertarget{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}{}\label{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}
+Open the file for reading \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED}{APR_FOPEN_SENDFILE_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED~0x01000}\hypertarget{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{}\label{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}
+Advisory flag that this file should support apr\+\_\+socket\+\_\+sendfile operation \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK}{APR_FOPEN_SHARELOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK~0x00400}\hypertarget{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{}\label{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}
+Platform dependent support for higher level locked read/write access to support writes across process/machines \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+P\+A\+R\+SE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+P\+A\+R\+SE}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+P\+A\+R\+SE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+P\+A\+R\+SE}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+P\+A\+R\+SE}{APR_FOPEN_SPARSE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+P\+A\+R\+SE~0x08000}\hypertarget{group__apr__file__open__flags_ga0d155e9bb7fbf1a5cd4e84b5ede059f4}{}\label{group__apr__file__open__flags_ga0d155e9bb7fbf1a5cd4e84b5ede059f4}
+Platform dependent flag to enable sparse file support, see W\+A\+R\+N\+I\+NG below
+
+\begin{DoxyWarning}{Warning}
+A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+P\+A\+R\+SE may, depending on platform, convert a normal file to a sparse file. Some applications may be unable to decipher a sparse file, so it\textquotesingle{}s critical that the sparse file flag should only be used for files accessed only by A\+PR or other applications known to be able to decipher them. A\+PR does not guarantee that it will compress the file into sparse segments if it was previously created and written without the sparse flag. On platforms which do not understand, or on file systems which cannot handle sparse files, the flag is ignored by \hyperlink{group__apr__file__io_gabda14cbf242fb4fe99055434213e5446}{apr\+\_\+file\+\_\+open()}. 
+\end{DoxyWarning}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+T\+R\+U\+N\+C\+A\+TE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+T\+R\+U\+N\+C\+A\+TE}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+T\+R\+U\+N\+C\+A\+TE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+T\+R\+U\+N\+C\+A\+TE}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+T\+R\+U\+N\+C\+A\+TE}{APR_FOPEN_TRUNCATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+T\+R\+U\+N\+C\+A\+TE~0x00010}\hypertarget{group__apr__file__open__flags_ga09b05a5bd5db534b93794f7657bcb146}{}\label{group__apr__file__open__flags_ga09b05a5bd5db534b93794f7657bcb146}
+Open the file and truncate to 0 length \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE}{APR_FOPEN_WRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE~0x00002}\hypertarget{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{}\label{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}
+Open the file for writing \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD}}
+\index{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD@{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD}{APR_FOPEN_XTHREAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD~0x00200}\hypertarget{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{}\label{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}
+Platform dependent tag to open the file for use across multiple threads \index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE@{A\+P\+R\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}}
+\index{A\+P\+R\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE@{A\+P\+R\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}{APR_LARGEFILE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}}\hypertarget{group__apr__file__open__flags_gaafa04fd4ec71910a5d7af1c7f5596bad}{}\label{group__apr__file__open__flags_gaafa04fd4ec71910a5d7af1c7f5596bad}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000030}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+R\+E\+AD@{A\+P\+R\+\_\+\+R\+E\+AD}}
+\index{A\+P\+R\+\_\+\+R\+E\+AD@{A\+P\+R\+\_\+\+R\+E\+AD}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+R\+E\+AD}{APR_READ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+R\+E\+AD~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD}}\hypertarget{group__apr__file__open__flags_ga0021db78d799d1c8825b701c7efee483}{}\label{group__apr__file__open__flags_ga0021db78d799d1c8825b701c7efee483}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000017}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED@{A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED@{A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED}{APR_SENDFILE_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED}}\hypertarget{group__apr__file__open__flags_ga17e216aadb23254580258889e10c53f3}{}\label{group__apr__file__open__flags_ga17e216aadb23254580258889e10c53f3}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000029}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK@{A\+P\+R\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK}}
+\index{A\+P\+R\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK@{A\+P\+R\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK}{APR_SHARELOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK}}\hypertarget{group__apr__file__open__flags_ga41277154f4f754a22287ed90e9466811}{}\label{group__apr__file__open__flags_ga41277154f4f754a22287ed90e9466811}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000027}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+T\+R\+U\+N\+C\+A\+TE@{A\+P\+R\+\_\+\+T\+R\+U\+N\+C\+A\+TE}}
+\index{A\+P\+R\+\_\+\+T\+R\+U\+N\+C\+A\+TE@{A\+P\+R\+\_\+\+T\+R\+U\+N\+C\+A\+TE}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+T\+R\+U\+N\+C\+A\+TE}{APR_TRUNCATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+T\+R\+U\+N\+C\+A\+TE~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+T\+R\+U\+N\+C\+A\+TE}}\hypertarget{group__apr__file__open__flags_gaa8898fdebd69d3a64286731b713a6dc9}{}\label{group__apr__file__open__flags_gaa8898fdebd69d3a64286731b713a6dc9}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000021}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_ga09b05a5bd5db534b93794f7657bcb146}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+T\+R\+U\+N\+C\+A\+TE} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+W\+R\+I\+TE}}
+\index{A\+P\+R\+\_\+\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+W\+R\+I\+TE}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+W\+R\+I\+TE}{APR_WRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+W\+R\+I\+TE~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE}}\hypertarget{group__apr__file__open__flags_ga3e427e53aceb1ccdb078d9a03cd63d01}{}\label{group__apr__file__open__flags_ga3e427e53aceb1ccdb078d9a03cd63d01}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000018}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE} 
+\end{DoxySeeAlso}
+\index{File Open Flags/\+Routines@{File Open Flags/\+Routines}!A\+P\+R\+\_\+\+X\+T\+H\+R\+E\+AD@{A\+P\+R\+\_\+\+X\+T\+H\+R\+E\+AD}}
+\index{A\+P\+R\+\_\+\+X\+T\+H\+R\+E\+AD@{A\+P\+R\+\_\+\+X\+T\+H\+R\+E\+AD}!File Open Flags/\+Routines@{File Open Flags/\+Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+X\+T\+H\+R\+E\+AD}{APR_XTHREAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+X\+T\+H\+R\+E\+AD~{\bf A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD}}\hypertarget{group__apr__file__open__flags_gaa9120c0e395d8a0e640b5eafa8f11cce}{}\label{group__apr__file__open__flags_gaa9120c0e395d8a0e640b5eafa8f11cce}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000026}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD} 
+\end{DoxySeeAlso}

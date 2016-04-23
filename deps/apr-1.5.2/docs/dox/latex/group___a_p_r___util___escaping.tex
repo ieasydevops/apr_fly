@@ -1,0 +1,558 @@
+\hypertarget{group___a_p_r___util___escaping}{}\section{Escape functions}
+\label{group___a_p_r___util___escaping}\index{Escape functions@{Escape functions}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___escaping_ga793ae1b187ce490c65eeee2eb59d2831}{A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG}~(-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_gafdfca9adc06570fa6efd802e24dce6d1}{apr\+\_\+escape\+\_\+shell} (char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_ga81e97334f8033bfbc3acd5e15262323e}{apr\+\_\+pescape\+\_\+shell} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga9a6b08630ef5a605def1dfa4a54b026f}{apr\+\_\+unescape\+\_\+url} (char $\ast$escaped, const char $\ast$url, apr\+\_\+ssize\+\_\+t slen, const char $\ast$forbid, const char $\ast$reserved, int plus, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_gac713d5687a00134cef5c795dbf4e6dbe}{apr\+\_\+punescape\+\_\+url} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$url, const char $\ast$forbid, const char $\ast$reserved, int plus)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga2fba5a28f4924f00f1ba9a56bc87f651}{apr\+\_\+escape\+\_\+path\+\_\+segment} (char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_ga36bd45eb1f919fe61f04f5e9087c6242}{apr\+\_\+pescape\+\_\+path\+\_\+segment} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_gae67859a1d260f354c16e939d24d67058}{apr\+\_\+escape\+\_\+path} (char $\ast$escaped, const char $\ast$path, apr\+\_\+ssize\+\_\+t slen, int partial, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_gacd4fc208448eb07af16350802077783a}{apr\+\_\+pescape\+\_\+path} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str, int partial)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga0a2cb4e99758afd5bed8fd62df05e16f}{apr\+\_\+escape\+\_\+urlencoded} (char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_ga9caffb30731e3a07a8e23fa6464d35b5}{apr\+\_\+pescape\+\_\+urlencoded} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga6973ca9a596c8fc9fc34eab647cff11c}{apr\+\_\+escape\+\_\+entity} (char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, int toasc, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_gad99b0f505645b63b5f552f5d35f174af}{apr\+\_\+pescape\+\_\+entity} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str, int toasc)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga9b835b2da5bf35c33f6c69e8e3100c99}{apr\+\_\+unescape\+\_\+entity} (char $\ast$unescaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_gabaaeff6e19e92cf1f138b21e87889e05}{apr\+\_\+punescape\+\_\+entity} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga4ebbadaffa33c6aa34e92108c45cd38e}{apr\+\_\+escape\+\_\+echo} (char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, int quote, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_ga1265c454e145b9fca52d2feafacd4a02}{apr\+\_\+pescape\+\_\+echo} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str, int quote)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_gac87b3c2f42fb60f6ea4d8321e60ce69e}{apr\+\_\+escape\+\_\+hex} (char $\ast$dest, const void $\ast$src, apr\+\_\+size\+\_\+t srclen, int colon, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_ga2a12cd35230cc148da52ea983da4b211}{apr\+\_\+pescape\+\_\+hex} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$src, apr\+\_\+size\+\_\+t slen, int colon)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga98c3558219d7ce3dd29420c0124ddd73}{apr\+\_\+unescape\+\_\+hex} (void $\ast$dest, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, int colon, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const void $\ast$ \hyperlink{group___a_p_r___util___escaping_ga8cba37bcacb5e1c9440f2b35d44afc49}{apr\+\_\+punescape\+\_\+hex} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str, int colon, apr\+\_\+size\+\_\+t $\ast$len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Escape functions@{Escape functions}!A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG@{A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG}}
+\index{A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG@{A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG}{APR_ESCAPE_STRING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG~(-\/1)}\hypertarget{group___a_p_r___util___escaping_ga793ae1b187ce490c65eeee2eb59d2831}{}\label{group___a_p_r___util___escaping_ga793ae1b187ce490c65eeee2eb59d2831}
+When passing a string to one of the escape functions, this value can be passed to indicate a string-\/valued key, and have the length computed automatically. 
+
+\subsection{Function Documentation}
+\index{Escape functions@{Escape functions}!apr\+\_\+escape\+\_\+echo@{apr\+\_\+escape\+\_\+echo}}
+\index{apr\+\_\+escape\+\_\+echo@{apr\+\_\+escape\+\_\+echo}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+escape\+\_\+echo(char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, int quote, apr\+\_\+size\+\_\+t $\ast$len)}{apr_escape_echo(char *escaped, const char *str, apr_ssize_t slen, int quote, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+escape\+\_\+echo (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{escaped, }
+\item[{const char $\ast$}]{str, }
+\item[{apr\+\_\+ssize\+\_\+t}]{slen, }
+\item[{int}]{quote, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga4ebbadaffa33c6aa34e92108c45cd38e}{}\label{group___a_p_r___util___escaping_ga4ebbadaffa33c6aa34e92108c45cd38e}
+Escape control characters in a string, as performed by the shell\textquotesingle{}s \textquotesingle{}echo\textquotesingle{} command. Characters are replaced as follows\+: \textbackslash{}a alert (bell), \textbackslash{}b backspace, \textbackslash{}f form feed, \textbackslash{}n new line, \textbackslash{}r carriage return, \textbackslash{}t horizontal tab, \textbackslash{}v vertical tab, \textbackslash{} backslash.
+
+Any non ascii character will be encoded as \textquotesingle{}\textbackslash{}x\+HH\textquotesingle{}, where HH is the hex code of the character.
+
+If quote is not zero, the double quote character will also be escaped. 
+\begin{DoxyParams}{Parameters}
+{\em escaped} & Optional buffer to write the encoded string, can be N\+U\+LL \\
+\hline
+{\em str} & The original string \\
+\hline
+{\em slen} & The length of the original string, or A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG \\
+\hline
+{\em quote} & If non zero, encode double quotes \\
+\hline
+{\em len} & If present, returns the length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS, or A\+P\+R\+\_\+\+N\+O\+T\+F\+O\+U\+ND if no changes to the string were detected or the string was N\+U\+LL 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+escape\+\_\+entity@{apr\+\_\+escape\+\_\+entity}}
+\index{apr\+\_\+escape\+\_\+entity@{apr\+\_\+escape\+\_\+entity}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+escape\+\_\+entity(char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, int toasc, apr\+\_\+size\+\_\+t $\ast$len)}{apr_escape_entity(char *escaped, const char *str, apr_ssize_t slen, int toasc, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+escape\+\_\+entity (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{escaped, }
+\item[{const char $\ast$}]{str, }
+\item[{apr\+\_\+ssize\+\_\+t}]{slen, }
+\item[{int}]{toasc, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga6973ca9a596c8fc9fc34eab647cff11c}{}\label{group___a_p_r___util___escaping_ga6973ca9a596c8fc9fc34eab647cff11c}
+Apply entity encoding to a string. Characters are replaced as follows\+: \textquotesingle{}$<$\textquotesingle{} becomes \textquotesingle{}$<$\textquotesingle{}, \textquotesingle{}$>$\textquotesingle{} becomes \textquotesingle{}$>$\textquotesingle{}, \textquotesingle{}\&\textquotesingle{} becomes \textquotesingle{}\&\textquotesingle{}, the double quote becomes \textquotesingle{}"" and the single quote becomes \textquotesingle{}\textquotesingle{}\textquotesingle{}.
+
+If toasc is not zero, any non ascii character will be encoded as \textquotesingle{}\%\#ddd;\textquotesingle{}, where ddd is the decimal code of the character. 
+\begin{DoxyParams}{Parameters}
+{\em escaped} & Optional buffer to write the encoded string, can be N\+U\+LL \\
+\hline
+{\em str} & The original string \\
+\hline
+{\em slen} & The length of the original string, or A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG \\
+\hline
+{\em toasc} & If non zero, encode non ascii characters \\
+\hline
+{\em len} & If present, returns the length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS, or A\+P\+R\+\_\+\+N\+O\+T\+F\+O\+U\+ND if no changes to the string were detected or the string was N\+U\+LL 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+escape\+\_\+hex@{apr\+\_\+escape\+\_\+hex}}
+\index{apr\+\_\+escape\+\_\+hex@{apr\+\_\+escape\+\_\+hex}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+escape\+\_\+hex(char $\ast$dest, const void $\ast$src, apr\+\_\+size\+\_\+t srclen, int colon, apr\+\_\+size\+\_\+t $\ast$len)}{apr_escape_hex(char *dest, const void *src, apr_size_t srclen, int colon, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+escape\+\_\+hex (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{const void $\ast$}]{src, }
+\item[{apr\+\_\+size\+\_\+t}]{srclen, }
+\item[{int}]{colon, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_gac87b3c2f42fb60f6ea4d8321e60ce69e}{}\label{group___a_p_r___util___escaping_gac87b3c2f42fb60f6ea4d8321e60ce69e}
+Convert binary data to a hex encoding. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & The destination buffer, can be N\+U\+LL \\
+\hline
+{\em src} & The original buffer \\
+\hline
+{\em srclen} & The length of the original buffer \\
+\hline
+{\em colon} & If not zero, insert colon characters between hex digits. \\
+\hline
+{\em len} & If present, returns the length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS, or A\+P\+R\+\_\+\+N\+O\+T\+F\+O\+U\+ND if the string was N\+U\+LL 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+escape\+\_\+path@{apr\+\_\+escape\+\_\+path}}
+\index{apr\+\_\+escape\+\_\+path@{apr\+\_\+escape\+\_\+path}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+escape\+\_\+path(char $\ast$escaped, const char $\ast$path, apr\+\_\+ssize\+\_\+t slen, int partial, apr\+\_\+size\+\_\+t $\ast$len)}{apr_escape_path(char *escaped, const char *path, apr_ssize_t slen, int partial, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+escape\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{escaped, }
+\item[{const char $\ast$}]{path, }
+\item[{apr\+\_\+ssize\+\_\+t}]{slen, }
+\item[{int}]{partial, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_gae67859a1d260f354c16e939d24d67058}{}\label{group___a_p_r___util___escaping_gae67859a1d260f354c16e939d24d67058}
+Converts an OS path to a U\+RL, in an OS dependent way, as defined in R\+F\+C1808. In all cases if a \textquotesingle{}\+:\textquotesingle{} occurs before the first \textquotesingle{}/\textquotesingle{} in the U\+RL, the U\+RL should be prefixed with \char`\"{}./\char`\"{} (or the \textquotesingle{}\+:\textquotesingle{} escaped). In the case of Unix, this means leaving \textquotesingle{}/\textquotesingle{} alone, but otherwise doing what escape\+\_\+path\+\_\+segment() does. For efficiency reasons, we don\textquotesingle{}t use escape\+\_\+path\+\_\+segment(), which is provided for reference. Again, R\+FC 1808 is where this stuff is defined.
+
+If partial is set, os\+\_\+escape\+\_\+path() assumes that the path will be appended to something with a \textquotesingle{}/\textquotesingle{} in it (and thus does not prefix \char`\"{}./\char`\"{}). 
+\begin{DoxyParams}{Parameters}
+{\em escaped} & Optional buffer to write the encoded string, can be N\+U\+LL \\
+\hline
+{\em path} & The original string \\
+\hline
+{\em slen} & The length of the original string, or A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG \\
+\hline
+{\em partial} & If non zero, suppresses the prepending of \char`\"{}./\char`\"{} \\
+\hline
+{\em len} & If present, returns the length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS, or A\+P\+R\+\_\+\+N\+O\+T\+F\+O\+U\+ND if no changes to the string were detected or if the string was N\+U\+LL 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+escape\+\_\+path\+\_\+segment@{apr\+\_\+escape\+\_\+path\+\_\+segment}}
+\index{apr\+\_\+escape\+\_\+path\+\_\+segment@{apr\+\_\+escape\+\_\+path\+\_\+segment}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+escape\+\_\+path\+\_\+segment(char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)}{apr_escape_path_segment(char *escaped, const char *str, apr_ssize_t slen, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+escape\+\_\+path\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{escaped, }
+\item[{const char $\ast$}]{str, }
+\item[{apr\+\_\+ssize\+\_\+t}]{slen, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga2fba5a28f4924f00f1ba9a56bc87f651}{}\label{group___a_p_r___util___escaping_ga2fba5a28f4924f00f1ba9a56bc87f651}
+Escape a path segment, as defined in R\+F\+C1808. 
+\begin{DoxyParams}{Parameters}
+{\em escaped} & Optional buffer to write the encoded string, can be N\+U\+LL \\
+\hline
+{\em str} & The original string \\
+\hline
+{\em slen} & The length of the original string, or A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG \\
+\hline
+{\em len} & If present, returns the length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS, or A\+P\+R\+\_\+\+N\+O\+T\+F\+O\+U\+ND if no changes to the string were detected or the string was N\+U\+LL 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+escape\+\_\+shell@{apr\+\_\+escape\+\_\+shell}}
+\index{apr\+\_\+escape\+\_\+shell@{apr\+\_\+escape\+\_\+shell}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+escape\+\_\+shell(char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)}{apr_escape_shell(char *escaped, const char *str, apr_ssize_t slen, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+escape\+\_\+shell (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{escaped, }
+\item[{const char $\ast$}]{str, }
+\item[{apr\+\_\+ssize\+\_\+t}]{slen, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_gafdfca9adc06570fa6efd802e24dce6d1}{}\label{group___a_p_r___util___escaping_gafdfca9adc06570fa6efd802e24dce6d1}
+Perform shell escaping on the provided string.
+
+Shell escaping causes characters to be prefixed with a \textquotesingle{}\textbackslash{}\textquotesingle{} character. 
+\begin{DoxyParams}{Parameters}
+{\em escaped} & Optional buffer to write the encoded string, can be N\+U\+LL \\
+\hline
+{\em str} & The original string \\
+\hline
+{\em slen} & The length of the original string, or A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG \\
+\hline
+{\em len} & If present, returns the length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS, or A\+P\+R\+\_\+\+N\+O\+T\+F\+O\+U\+ND if no changes to the string were detected or the string was N\+U\+LL 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+escape\+\_\+urlencoded@{apr\+\_\+escape\+\_\+urlencoded}}
+\index{apr\+\_\+escape\+\_\+urlencoded@{apr\+\_\+escape\+\_\+urlencoded}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+escape\+\_\+urlencoded(char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)}{apr_escape_urlencoded(char *escaped, const char *str, apr_ssize_t slen, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+escape\+\_\+urlencoded (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{escaped, }
+\item[{const char $\ast$}]{str, }
+\item[{apr\+\_\+ssize\+\_\+t}]{slen, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga0a2cb4e99758afd5bed8fd62df05e16f}{}\label{group___a_p_r___util___escaping_ga0a2cb4e99758afd5bed8fd62df05e16f}
+Urlencode a string, as defined in \href{http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1}{\tt http\+://www.\+w3.\+org/\+T\+R/html401/interact/forms.\+html\#h-\/17.\+13.\+4.\+1}. 
+\begin{DoxyParams}{Parameters}
+{\em escaped} & Optional buffer to write the encoded string, can be N\+U\+LL \\
+\hline
+{\em str} & The original string \\
+\hline
+{\em slen} & The length of the original string, or A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG \\
+\hline
+{\em len} & If present, returns the length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS, or A\+P\+R\+\_\+\+N\+O\+T\+F\+O\+U\+ND if no changes to the string were detected or if the stirng was N\+U\+LL 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+pescape\+\_\+echo@{apr\+\_\+pescape\+\_\+echo}}
+\index{apr\+\_\+pescape\+\_\+echo@{apr\+\_\+pescape\+\_\+echo}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pescape\+\_\+echo(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$str, int quote)}{apr_pescape_echo(apr_pool_t *p, const char *str, int quote)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+pescape\+\_\+echo (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{str, }
+\item[{int}]{quote}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga1265c454e145b9fca52d2feafacd4a02}{}\label{group___a_p_r___util___escaping_ga1265c454e145b9fca52d2feafacd4a02}
+Escape control characters in a string, as performed by the shell\textquotesingle{}s \textquotesingle{}echo\textquotesingle{} command, and return the results from a pool. Characters are replaced as follows\+: \textbackslash{}a alert (bell), \textbackslash{}b backspace, \textbackslash{}f form feed, \textbackslash{}n new line, \textbackslash{}r carriage return, \textbackslash{}t horizontal tab, \textbackslash{}v vertical tab, \textbackslash{} backslash.
+
+Any non ascii character will be encoded as \textquotesingle{}\textbackslash{}x\+HH\textquotesingle{}, where HH is the hex code of the character.
+
+If quote is not zero, the double quote character will also be escaped. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to allocate from \\
+\hline
+{\em str} & The original string \\
+\hline
+{\em quote} & If non zero, encode double quotes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string allocated from the pool on success, the original string if no characters are encoded or the string is N\+U\+LL. 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+pescape\+\_\+entity@{apr\+\_\+pescape\+\_\+entity}}
+\index{apr\+\_\+pescape\+\_\+entity@{apr\+\_\+pescape\+\_\+entity}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pescape\+\_\+entity(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$str, int toasc)}{apr_pescape_entity(apr_pool_t *p, const char *str, int toasc)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+pescape\+\_\+entity (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{str, }
+\item[{int}]{toasc}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_gad99b0f505645b63b5f552f5d35f174af}{}\label{group___a_p_r___util___escaping_gad99b0f505645b63b5f552f5d35f174af}
+Apply entity encoding to a string, returning the result from a pool. Characters are replaced as follows\+: \textquotesingle{}$<$\textquotesingle{} becomes \textquotesingle{}$<$\textquotesingle{}, \textquotesingle{}$>$\textquotesingle{} becomes \textquotesingle{}$>$\textquotesingle{}, \textquotesingle{}\&\textquotesingle{} becomes \textquotesingle{}\&\textquotesingle{}, the double quote becomes \textquotesingle{}"" and the single quote becomes \textquotesingle{}\textquotesingle{}\textquotesingle{}. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to allocate from \\
+\hline
+{\em str} & The original string \\
+\hline
+{\em toasc} & If non zero, encode non ascii characters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string allocated from the pool on success, the original string if no characters are encoded or the string is N\+U\+LL. 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+pescape\+\_\+hex@{apr\+\_\+pescape\+\_\+hex}}
+\index{apr\+\_\+pescape\+\_\+hex@{apr\+\_\+pescape\+\_\+hex}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pescape\+\_\+hex(apr\+\_\+pool\+\_\+t $\ast$p, const void $\ast$src, apr\+\_\+size\+\_\+t slen, int colon)}{apr_pescape_hex(apr_pool_t *p, const void *src, apr_size_t slen, int colon)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+pescape\+\_\+hex (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const void $\ast$}]{src, }
+\item[{apr\+\_\+size\+\_\+t}]{slen, }
+\item[{int}]{colon}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga2a12cd35230cc148da52ea983da4b211}{}\label{group___a_p_r___util___escaping_ga2a12cd35230cc148da52ea983da4b211}
+Convert binary data to a hex encoding, and return the results from a pool. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to allocate from \\
+\hline
+{\em src} & The original buffer \\
+\hline
+{\em slen} & The length of the original buffer \\
+\hline
+{\em colon} & If not zero, insert colon characters between hex digits. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A zero padded buffer allocated from the pool on success, or N\+U\+LL if src was N\+U\+LL. 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+pescape\+\_\+path@{apr\+\_\+pescape\+\_\+path}}
+\index{apr\+\_\+pescape\+\_\+path@{apr\+\_\+pescape\+\_\+path}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pescape\+\_\+path(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$str, int partial)}{apr_pescape_path(apr_pool_t *p, const char *str, int partial)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+pescape\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{str, }
+\item[{int}]{partial}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_gacd4fc208448eb07af16350802077783a}{}\label{group___a_p_r___util___escaping_gacd4fc208448eb07af16350802077783a}
+Converts an OS path to a U\+RL, in an OS dependent way, as defined in R\+F\+C1808, returning the result from a pool.
+
+In all cases if a \textquotesingle{}\+:\textquotesingle{} occurs before the first \textquotesingle{}/\textquotesingle{} in the U\+RL, the U\+RL should be prefixed with \char`\"{}./\char`\"{} (or the \textquotesingle{}\+:\textquotesingle{} escaped). In the case of Unix, this means leaving \textquotesingle{}/\textquotesingle{} alone, but otherwise doing what escape\+\_\+path\+\_\+segment() does. For efficiency reasons, we don\textquotesingle{}t use escape\+\_\+path\+\_\+segment(), which is provided for reference. Again, R\+FC 1808 is where this stuff is defined.
+
+If partial is set, os\+\_\+escape\+\_\+path() assumes that the path will be appended to something with a \textquotesingle{}/\textquotesingle{} in it (and thus does not prefix \char`\"{}./\char`\"{}). 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to allocate from \\
+\hline
+{\em str} & The original string \\
+\hline
+{\em partial} & If non zero, suppresses the prepending of \char`\"{}./\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string allocated from the pool on success, the original string if no characters are encoded or if the string was N\+U\+LL. 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+pescape\+\_\+path\+\_\+segment@{apr\+\_\+pescape\+\_\+path\+\_\+segment}}
+\index{apr\+\_\+pescape\+\_\+path\+\_\+segment@{apr\+\_\+pescape\+\_\+path\+\_\+segment}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pescape\+\_\+path\+\_\+segment(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$str)}{apr_pescape_path_segment(apr_pool_t *p, const char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+pescape\+\_\+path\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga36bd45eb1f919fe61f04f5e9087c6242}{}\label{group___a_p_r___util___escaping_ga36bd45eb1f919fe61f04f5e9087c6242}
+Escape a path segment, as defined in R\+F\+C1808, returning the result from a pool. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to allocate from \\
+\hline
+{\em str} & String to be escaped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string allocated from the pool on success, the original string if no characters are encoded or the string is N\+U\+LL. 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+pescape\+\_\+shell@{apr\+\_\+pescape\+\_\+shell}}
+\index{apr\+\_\+pescape\+\_\+shell@{apr\+\_\+pescape\+\_\+shell}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pescape\+\_\+shell(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$str)}{apr_pescape_shell(apr_pool_t *p, const char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+pescape\+\_\+shell (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga81e97334f8033bfbc3acd5e15262323e}{}\label{group___a_p_r___util___escaping_ga81e97334f8033bfbc3acd5e15262323e}
+Perform shell escaping on the provided string, returning the result from the pool.
+
+Shell escaping causes characters to be prefixed with a \textquotesingle{}\textbackslash{}\textquotesingle{} character.
+
+If no characters were escaped, the original string is returned. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to allocate from \\
+\hline
+{\em str} & The original string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the encoded string, allocated from the pool, or the original string if no escaping took place or the string was N\+U\+LL. 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+pescape\+\_\+urlencoded@{apr\+\_\+pescape\+\_\+urlencoded}}
+\index{apr\+\_\+pescape\+\_\+urlencoded@{apr\+\_\+pescape\+\_\+urlencoded}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pescape\+\_\+urlencoded(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$str)}{apr_pescape_urlencoded(apr_pool_t *p, const char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+pescape\+\_\+urlencoded (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga9caffb30731e3a07a8e23fa6464d35b5}{}\label{group___a_p_r___util___escaping_ga9caffb30731e3a07a8e23fa6464d35b5}
+Urlencode a string, as defined in \href{http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1,}{\tt http\+://www.\+w3.\+org/\+T\+R/html401/interact/forms.\+html\#h-\/17.\+13.\+4.\+1,} returning the result from a pool. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to allocate from \\
+\hline
+{\em str} & String to be escaped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string allocated from the pool on success, the original string if no characters are encoded or if the string was N\+U\+LL. 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+punescape\+\_\+entity@{apr\+\_\+punescape\+\_\+entity}}
+\index{apr\+\_\+punescape\+\_\+entity@{apr\+\_\+punescape\+\_\+entity}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+punescape\+\_\+entity(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$str)}{apr_punescape_entity(apr_pool_t *p, const char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+punescape\+\_\+entity (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_gabaaeff6e19e92cf1f138b21e87889e05}{}\label{group___a_p_r___util___escaping_gabaaeff6e19e92cf1f138b21e87889e05}
+Decodes html entities or numeric character references in a string. If the string to be unescaped is syntactically incorrect, then the following fixups will be made\+: unknown entities will be left undecoded; references to unused numeric characters will be deleted. In particular, \&\#00; will not be decoded, but will be deleted. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to allocate from \\
+\hline
+{\em str} & The original string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string allocated from the pool on success, the original string if no characters are encoded or the string is N\+U\+LL. 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+punescape\+\_\+hex@{apr\+\_\+punescape\+\_\+hex}}
+\index{apr\+\_\+punescape\+\_\+hex@{apr\+\_\+punescape\+\_\+hex}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+punescape\+\_\+hex(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$str, int colon, apr\+\_\+size\+\_\+t $\ast$len)}{apr_punescape_hex(apr_pool_t *p, const char *str, int colon, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}const void$\ast$ apr\+\_\+punescape\+\_\+hex (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{str, }
+\item[{int}]{colon, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga8cba37bcacb5e1c9440f2b35d44afc49}{}\label{group___a_p_r___util___escaping_ga8cba37bcacb5e1c9440f2b35d44afc49}
+Convert hex encoding to binary data, and return the results from a pool. If the colon character appears between pairs of hex digits, it will be ignored. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to allocate from \\
+\hline
+{\em str} & The original string \\
+\hline
+{\em colon} & If not zero, ignore colon characters between hex digits. \\
+\hline
+{\em len} & If present, returns the length of the final buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A buffer allocated from the pool on success, or N\+U\+LL if src was N\+U\+LL, or a bad character was present. 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+punescape\+\_\+url@{apr\+\_\+punescape\+\_\+url}}
+\index{apr\+\_\+punescape\+\_\+url@{apr\+\_\+punescape\+\_\+url}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+punescape\+\_\+url(apr\+\_\+pool\+\_\+t $\ast$p, const char $\ast$url, const char $\ast$forbid, const char $\ast$reserved, int plus)}{apr_punescape_url(apr_pool_t *p, const char *url, const char *forbid, const char *reserved, int plus)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+punescape\+\_\+url (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const char $\ast$}]{url, }
+\item[{const char $\ast$}]{forbid, }
+\item[{const char $\ast$}]{reserved, }
+\item[{int}]{plus}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_gac713d5687a00134cef5c795dbf4e6dbe}{}\label{group___a_p_r___util___escaping_gac713d5687a00134cef5c795dbf4e6dbe}
+Unescapes a U\+RL, leaving reserved characters intact, returning the result from a pool. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to allocate from \\
+\hline
+{\em url} & String to be unescaped in place \\
+\hline
+{\em forbid} & Optional list of forbidden characters, in addition to 0x00 \\
+\hline
+{\em reserved} & Optional list of reserved characters that will be left unescaped \\
+\hline
+{\em plus} & If non zero, \textquotesingle{}+\textquotesingle{} is converted to \textquotesingle{} \textquotesingle{} as per application/x-\/www-\/form-\/urlencoded encoding \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string allocated from the pool on success, the original string if no characters are decoded, or N\+U\+LL if a bad escape sequence is found or if a character on the forbid list is found, or if the original string was N\+U\+LL. 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+unescape\+\_\+entity@{apr\+\_\+unescape\+\_\+entity}}
+\index{apr\+\_\+unescape\+\_\+entity@{apr\+\_\+unescape\+\_\+entity}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+unescape\+\_\+entity(char $\ast$unescaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)}{apr_unescape_entity(char *unescaped, const char *str, apr_ssize_t slen, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+unescape\+\_\+entity (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{unescaped, }
+\item[{const char $\ast$}]{str, }
+\item[{apr\+\_\+ssize\+\_\+t}]{slen, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga9b835b2da5bf35c33f6c69e8e3100c99}{}\label{group___a_p_r___util___escaping_ga9b835b2da5bf35c33f6c69e8e3100c99}
+Decodes html entities or numeric character references in a string. If the string to be unescaped is syntactically incorrect, then the following fixups will be made\+: unknown entities will be left undecoded; references to unused numeric characters will be deleted. In particular, \&\#00; will not be decoded, but will be deleted. 
+\begin{DoxyParams}{Parameters}
+{\em unescaped} & Optional buffer to write the encoded string, can be N\+U\+LL \\
+\hline
+{\em str} & The original string \\
+\hline
+{\em slen} & The length of the original string, or A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG \\
+\hline
+{\em len} & If present, returns the length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS, or A\+P\+R\+\_\+\+N\+O\+T\+F\+O\+U\+ND if no changes to the string were detected or the string was N\+U\+LL 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+unescape\+\_\+hex@{apr\+\_\+unescape\+\_\+hex}}
+\index{apr\+\_\+unescape\+\_\+hex@{apr\+\_\+unescape\+\_\+hex}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+unescape\+\_\+hex(void $\ast$dest, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, int colon, apr\+\_\+size\+\_\+t $\ast$len)}{apr_unescape_hex(void *dest, const char *str, apr_ssize_t slen, int colon, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+unescape\+\_\+hex (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{dest, }
+\item[{const char $\ast$}]{str, }
+\item[{apr\+\_\+ssize\+\_\+t}]{slen, }
+\item[{int}]{colon, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga98c3558219d7ce3dd29420c0124ddd73}{}\label{group___a_p_r___util___escaping_ga98c3558219d7ce3dd29420c0124ddd73}
+Convert hex encoded string to binary data. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & The destination buffer, can be N\+U\+LL \\
+\hline
+{\em str} & The original buffer \\
+\hline
+{\em slen} & The length of the original buffer \\
+\hline
+{\em colon} & If not zero, ignore colon characters between hex digits. \\
+\hline
+{\em len} & If present, returns the length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS, or A\+P\+R\+\_\+\+N\+O\+T\+F\+O\+U\+ND if the string was N\+U\+LL, or A\+P\+R\+\_\+\+B\+A\+D\+CH if a non hex character is present. 
+\end{DoxyReturn}
+\index{Escape functions@{Escape functions}!apr\+\_\+unescape\+\_\+url@{apr\+\_\+unescape\+\_\+url}}
+\index{apr\+\_\+unescape\+\_\+url@{apr\+\_\+unescape\+\_\+url}!Escape functions@{Escape functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+unescape\+\_\+url(char $\ast$escaped, const char $\ast$url, apr\+\_\+ssize\+\_\+t slen, const char $\ast$forbid, const char $\ast$reserved, int plus, apr\+\_\+size\+\_\+t $\ast$len)}{apr_unescape_url(char *escaped, const char *url, apr_ssize_t slen, const char *forbid, const char *reserved, int plus, apr_size_t *len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+unescape\+\_\+url (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{escaped, }
+\item[{const char $\ast$}]{url, }
+\item[{apr\+\_\+ssize\+\_\+t}]{slen, }
+\item[{const char $\ast$}]{forbid, }
+\item[{const char $\ast$}]{reserved, }
+\item[{int}]{plus, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___util___escaping_ga9a6b08630ef5a605def1dfa4a54b026f}{}\label{group___a_p_r___util___escaping_ga9a6b08630ef5a605def1dfa4a54b026f}
+Unescapes a U\+RL, leaving reserved characters intact. 
+\begin{DoxyParams}{Parameters}
+{\em escaped} & Optional buffer to write the encoded string, can be N\+U\+LL \\
+\hline
+{\em url} & String to be unescaped \\
+\hline
+{\em slen} & The length of the original url, or A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG \\
+\hline
+{\em forbid} & Optional list of forbidden characters, in addition to 0x00 \\
+\hline
+{\em reserved} & Optional list of reserved characters that will be left unescaped \\
+\hline
+{\em plus} & If non zero, \textquotesingle{}+\textquotesingle{} is converted to \textquotesingle{} \textquotesingle{} as per application/x-\/www-\/form-\/urlencoded encoding \\
+\hline
+{\em len} & If set, the length of the escaped string will be returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS on success, A\+P\+R\+\_\+\+N\+O\+T\+F\+O\+U\+ND if no characters are decoded or the string is N\+U\+LL, A\+P\+R\+\_\+\+E\+I\+N\+V\+AL if a bad escape sequence is found, A\+P\+R\+\_\+\+B\+A\+D\+CH if a character on the forbid list is found. 
+\end{DoxyReturn}

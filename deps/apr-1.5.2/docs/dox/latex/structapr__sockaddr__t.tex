@@ -1,0 +1,91 @@
+\hypertarget{structapr__sockaddr__t}{}\section{apr\+\_\+sockaddr\+\_\+t Struct Reference}
+\label{structapr__sockaddr__t}\index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+
+
+{\ttfamily \#include $<$apr\+\_\+network\+\_\+io.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{structapr__sockaddr__t_a5f2d72a6a181cf2f54ba7c922aa0dfab}{pool}
+\item 
+char $\ast$ \hyperlink{structapr__sockaddr__t_a8e675775b407f25674aaa938a40de9cd}{hostname}
+\item 
+char $\ast$ \hyperlink{structapr__sockaddr__t_a668335161a8347b9a34c600bff80b52f}{servname}
+\item 
+\hyperlink{group__apr__network__io_gaa670a71960f6eb4fe0d0de2a1e7aba03}{apr\+\_\+port\+\_\+t} \hyperlink{structapr__sockaddr__t_a174c19138de9c208f13ed71b5892e505}{port}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__sockaddr__t_ac17f6e803928cfc29069a6e62dcb3a52}{family}
+\item 
+apr\+\_\+socklen\+\_\+t \hyperlink{structapr__sockaddr__t_aef1d2a482f85eeab7b6bf0a7732a087a}{salen}
+\item 
+int \hyperlink{structapr__sockaddr__t_a81be21b2eb968b83ca36183213c99867}{ipaddr\+\_\+len}
+\item 
+int \hyperlink{structapr__sockaddr__t_a8f7cda5562e904a1398ed5a4a6f0a9d9}{addr\+\_\+str\+\_\+len}
+\item 
+void $\ast$ \hyperlink{structapr__sockaddr__t_a6e1b71121ada4047acde36c6777b5442}{ipaddr\+\_\+ptr}
+\item 
+\hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$ \hyperlink{structapr__sockaddr__t_a774835c6b8e3adf255b752e8b126c434}{next}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct sockaddr\_in \hyperlink{structapr__sockaddr__t_a7d5cf0290260c3c448360fc819b28714}{sin}\\
+\>struct sockaddr\_in6 \hyperlink{structapr__sockaddr__t_ab3a1f900d2a1e58d337a61d99e94d3f9}{sin6}\\
+\>struct sockaddr\_storage \hyperlink{structapr__sockaddr__t_ac823daa30be02ee1589b4b67615cef5f}{sas}\\
+\} \hyperlink{structapr__sockaddr__t_a3ca40eae640100e0f157e7c21b33a17d}{sa}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+P\+Rs socket address type, used to ensure protocol independence 
+
+\subsection{Field Documentation}
+\index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!addr\+\_\+str\+\_\+len@{addr\+\_\+str\+\_\+len}}
+\index{addr\+\_\+str\+\_\+len@{addr\+\_\+str\+\_\+len}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{addr\+\_\+str\+\_\+len}{addr_str_len}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+sockaddr\+\_\+t\+::addr\+\_\+str\+\_\+len}\hypertarget{structapr__sockaddr__t_a8f7cda5562e904a1398ed5a4a6f0a9d9}{}\label{structapr__sockaddr__t_a8f7cda5562e904a1398ed5a4a6f0a9d9}
+How big should the address buffer be? 16 for v4 or 46 for v6 used in inet\+\_\+ntop... \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!family@{family}}
+\index{family@{family}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{family}{family}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+sockaddr\+\_\+t\+::family}\hypertarget{structapr__sockaddr__t_ac17f6e803928cfc29069a6e62dcb3a52}{}\label{structapr__sockaddr__t_ac17f6e803928cfc29069a6e62dcb3a52}
+The family \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!hostname@{hostname}}
+\index{hostname@{hostname}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{hostname}{hostname}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+sockaddr\+\_\+t\+::hostname}\hypertarget{structapr__sockaddr__t_a8e675775b407f25674aaa938a40de9cd}{}\label{structapr__sockaddr__t_a8e675775b407f25674aaa938a40de9cd}
+The hostname \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!ipaddr\+\_\+len@{ipaddr\+\_\+len}}
+\index{ipaddr\+\_\+len@{ipaddr\+\_\+len}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{ipaddr\+\_\+len}{ipaddr_len}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+sockaddr\+\_\+t\+::ipaddr\+\_\+len}\hypertarget{structapr__sockaddr__t_a81be21b2eb968b83ca36183213c99867}{}\label{structapr__sockaddr__t_a81be21b2eb968b83ca36183213c99867}
+How big is the ip address structure we\textquotesingle{}re using? \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!ipaddr\+\_\+ptr@{ipaddr\+\_\+ptr}}
+\index{ipaddr\+\_\+ptr@{ipaddr\+\_\+ptr}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{ipaddr\+\_\+ptr}{ipaddr_ptr}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+sockaddr\+\_\+t\+::ipaddr\+\_\+ptr}\hypertarget{structapr__sockaddr__t_a6e1b71121ada4047acde36c6777b5442}{}\label{structapr__sockaddr__t_a6e1b71121ada4047acde36c6777b5442}
+This points to the IP address structure within the appropriate sockaddr structure. \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!next@{next}}
+\index{next@{next}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{next}{next}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+sockaddr\+\_\+t}$\ast$ apr\+\_\+sockaddr\+\_\+t\+::next}\hypertarget{structapr__sockaddr__t_a774835c6b8e3adf255b752e8b126c434}{}\label{structapr__sockaddr__t_a774835c6b8e3adf255b752e8b126c434}
+If multiple addresses were found by \hyperlink{group__apr__network__io_gaa2f399ca2b60b35c0abf7630298c6c9f}{apr\+\_\+sockaddr\+\_\+info\+\_\+get()}, this points to a representation of the next address. \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!pool@{pool}}
+\index{pool@{pool}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{pool}{pool}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+pool\+\_\+t}$\ast$ apr\+\_\+sockaddr\+\_\+t\+::pool}\hypertarget{structapr__sockaddr__t_a5f2d72a6a181cf2f54ba7c922aa0dfab}{}\label{structapr__sockaddr__t_a5f2d72a6a181cf2f54ba7c922aa0dfab}
+The pool to use... \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!port@{port}}
+\index{port@{port}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{port}{port}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+port\+\_\+t} apr\+\_\+sockaddr\+\_\+t\+::port}\hypertarget{structapr__sockaddr__t_a174c19138de9c208f13ed71b5892e505}{}\label{structapr__sockaddr__t_a174c19138de9c208f13ed71b5892e505}
+The numeric port \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!sa@{sa}}
+\index{sa@{sa}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{sa}{sa}}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   apr\+\_\+sockaddr\+\_\+t\+::sa}\hypertarget{structapr__sockaddr__t_a3ca40eae640100e0f157e7c21b33a17d}{}\label{structapr__sockaddr__t_a3ca40eae640100e0f157e7c21b33a17d}
+Union of either I\+Pv4 or I\+Pv6 sockaddr. \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!salen@{salen}}
+\index{salen@{salen}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{salen}{salen}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+socklen\+\_\+t apr\+\_\+sockaddr\+\_\+t\+::salen}\hypertarget{structapr__sockaddr__t_aef1d2a482f85eeab7b6bf0a7732a087a}{}\label{structapr__sockaddr__t_aef1d2a482f85eeab7b6bf0a7732a087a}
+How big is the sockaddr we\textquotesingle{}re using? \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!sas@{sas}}
+\index{sas@{sas}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{sas}{sas}}]{\setlength{\rightskip}{0pt plus 5cm}struct sockaddr\+\_\+storage apr\+\_\+sockaddr\+\_\+t\+::sas}\hypertarget{structapr__sockaddr__t_ac823daa30be02ee1589b4b67615cef5f}{}\label{structapr__sockaddr__t_ac823daa30be02ee1589b4b67615cef5f}
+Placeholder to ensure that the size of this union is not dependent on whether A\+P\+R\+\_\+\+H\+A\+V\+E\+\_\+\+I\+P\+V6 is defined. \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!servname@{servname}}
+\index{servname@{servname}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{servname}{servname}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+sockaddr\+\_\+t\+::servname}\hypertarget{structapr__sockaddr__t_a668335161a8347b9a34c600bff80b52f}{}\label{structapr__sockaddr__t_a668335161a8347b9a34c600bff80b52f}
+Either a string of the port number or the service name for the port \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!sin@{sin}}
+\index{sin@{sin}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{sin}{sin}}]{\setlength{\rightskip}{0pt plus 5cm}struct sockaddr\+\_\+in apr\+\_\+sockaddr\+\_\+t\+::sin}\hypertarget{structapr__sockaddr__t_a7d5cf0290260c3c448360fc819b28714}{}\label{structapr__sockaddr__t_a7d5cf0290260c3c448360fc819b28714}
+I\+Pv4 sockaddr structure \index{apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}!sin6@{sin6}}
+\index{sin6@{sin6}!apr\+\_\+sockaddr\+\_\+t@{apr\+\_\+sockaddr\+\_\+t}}
+\subsubsection[{\texorpdfstring{sin6}{sin6}}]{\setlength{\rightskip}{0pt plus 5cm}struct sockaddr\+\_\+in6 apr\+\_\+sockaddr\+\_\+t\+::sin6}\hypertarget{structapr__sockaddr__t_ab3a1f900d2a1e58d337a61d99e94d3f9}{}\label{structapr__sockaddr__t_ab3a1f900d2a1e58d337a61d99e94d3f9}
+I\+Pv6 sockaddr structure 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{apr__network__io_8h}{apr\+\_\+network\+\_\+io.\+h}\end{DoxyCompactItemize}

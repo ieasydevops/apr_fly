@@ -1,0 +1,62 @@
+\hypertarget{apr__escape_8h}{}\section{apr\+\_\+escape.\+h File Reference}
+\label{apr__escape_8h}\index{apr\+\_\+escape.\+h@{apr\+\_\+escape.\+h}}
+
+
+A\+P\+R-\/\+U\+T\+IL Escaping.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+general.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___escaping_ga793ae1b187ce490c65eeee2eb59d2831}{A\+P\+R\+\_\+\+E\+S\+C\+A\+P\+E\+\_\+\+S\+T\+R\+I\+NG}~(-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_gafdfca9adc06570fa6efd802e24dce6d1}{apr\+\_\+escape\+\_\+shell} (char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_ga81e97334f8033bfbc3acd5e15262323e}{apr\+\_\+pescape\+\_\+shell} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga9a6b08630ef5a605def1dfa4a54b026f}{apr\+\_\+unescape\+\_\+url} (char $\ast$escaped, const char $\ast$url, apr\+\_\+ssize\+\_\+t slen, const char $\ast$forbid, const char $\ast$reserved, int plus, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_gac713d5687a00134cef5c795dbf4e6dbe}{apr\+\_\+punescape\+\_\+url} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$url, const char $\ast$forbid, const char $\ast$reserved, int plus)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga2fba5a28f4924f00f1ba9a56bc87f651}{apr\+\_\+escape\+\_\+path\+\_\+segment} (char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_ga36bd45eb1f919fe61f04f5e9087c6242}{apr\+\_\+pescape\+\_\+path\+\_\+segment} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_gae67859a1d260f354c16e939d24d67058}{apr\+\_\+escape\+\_\+path} (char $\ast$escaped, const char $\ast$path, apr\+\_\+ssize\+\_\+t slen, int partial, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_gacd4fc208448eb07af16350802077783a}{apr\+\_\+pescape\+\_\+path} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str, int partial)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga0a2cb4e99758afd5bed8fd62df05e16f}{apr\+\_\+escape\+\_\+urlencoded} (char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_ga9caffb30731e3a07a8e23fa6464d35b5}{apr\+\_\+pescape\+\_\+urlencoded} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga6973ca9a596c8fc9fc34eab647cff11c}{apr\+\_\+escape\+\_\+entity} (char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, int toasc, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_gad99b0f505645b63b5f552f5d35f174af}{apr\+\_\+pescape\+\_\+entity} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str, int toasc)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga9b835b2da5bf35c33f6c69e8e3100c99}{apr\+\_\+unescape\+\_\+entity} (char $\ast$unescaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_gabaaeff6e19e92cf1f138b21e87889e05}{apr\+\_\+punescape\+\_\+entity} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga4ebbadaffa33c6aa34e92108c45cd38e}{apr\+\_\+escape\+\_\+echo} (char $\ast$escaped, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, int quote, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_ga1265c454e145b9fca52d2feafacd4a02}{apr\+\_\+pescape\+\_\+echo} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str, int quote)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_gac87b3c2f42fb60f6ea4d8321e60ce69e}{apr\+\_\+escape\+\_\+hex} (char $\ast$dest, const void $\ast$src, apr\+\_\+size\+\_\+t srclen, int colon, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___escaping_ga2a12cd35230cc148da52ea983da4b211}{apr\+\_\+pescape\+\_\+hex} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$src, apr\+\_\+size\+\_\+t slen, int colon)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___a_p_r___util___escaping_ga98c3558219d7ce3dd29420c0124ddd73}{apr\+\_\+unescape\+\_\+hex} (void $\ast$dest, const char $\ast$str, apr\+\_\+ssize\+\_\+t slen, int colon, apr\+\_\+size\+\_\+t $\ast$len)
+\item 
+const void $\ast$ \hyperlink{group___a_p_r___util___escaping_ga8cba37bcacb5e1c9440f2b35d44afc49}{apr\+\_\+punescape\+\_\+hex} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$str, int colon, apr\+\_\+size\+\_\+t $\ast$len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+P\+R-\/\+U\+T\+IL Escaping. 
+

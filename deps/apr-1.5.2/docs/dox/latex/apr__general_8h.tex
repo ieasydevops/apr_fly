@@ -1,0 +1,54 @@
+\hypertarget{apr__general_8h}{}\section{apr\+\_\+general.\+h File Reference}
+\label{apr__general_8h}\index{apr\+\_\+general.\+h@{apr\+\_\+general.\+h}}
+
+
+A\+PR Miscellaneous library routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__general_ga60fc208d93123acc7cf915a66e49e654}{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+B\+L\+A\+NK}~\textquotesingle{}\textbackslash{}040\textquotesingle{}
+\item 
+\#define \hyperlink{group__apr__general_ga91c14ef7f03e82c07f4d3d56f63f8b6a}{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+CR}~\textquotesingle{}\textbackslash{}015\textquotesingle{}
+\item 
+\#define \hyperlink{group__apr__general_ga9e76601cef56a7a5b25f73fe6d57d7d9}{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+LF}~\textquotesingle{}\textbackslash{}012\textquotesingle{}
+\item 
+\#define \hyperlink{group__apr__general_gac7162c0b5d026a0717aaa98bf581349d}{A\+P\+R\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+AB}~\textquotesingle{}\textbackslash{}011\textquotesingle{}
+\item 
+\#define \hyperlink{group__apr__general_ga41e537d6ad732766d12cd4eb61531678}{A\+P\+R\+\_\+\+O\+F\+F\+S\+ET}(p\+\_\+type,  field)~((long) (((char $\ast$) (\&(((p\+\_\+type)N\+U\+LL)-\/$>$field))) -\/ ((char $\ast$) N\+U\+LL)))
+\item 
+\#define \hyperlink{group__apr__general_gac16b1187b6ea63706c5dd48c88323dec}{A\+P\+R\+\_\+\+O\+F\+F\+S\+E\+T\+OF}(s\+\_\+type,  field)~\hyperlink{group__apr__general_ga41e537d6ad732766d12cd4eb61531678}{A\+P\+R\+\_\+\+O\+F\+F\+S\+ET}(s\+\_\+type$\ast$,field)
+\item 
+\#define \hyperlink{group__apr__general_ga3c4f50d14ebe7a6add282d879521d552}{A\+P\+R\+\_\+\+A\+L\+I\+GN}(size,  boundary)~(((size) + ((boundary) -\/ 1)) \& $\sim$((boundary) -\/ 1))
+\item 
+\#define \hyperlink{group__apr__general_gab484e98426221f3212fcb67af0467381}{A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT}(size)~\hyperlink{group__apr__general_ga3c4f50d14ebe7a6add282d879521d552}{A\+P\+R\+\_\+\+A\+L\+I\+GN}(size, 8)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{group__apr__general_gafe9e657d61b61d62ecba34299a82a7ea}{apr\+\_\+signum\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__library_ga4a91a6b9ff457ead13e670950127761a}{apr\+\_\+initialize} (void)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__library_gaa1c4fc2e1c814cc5d4cd3d8719288fc9}{apr\+\_\+app\+\_\+initialize} (int $\ast$argc, char const $\ast$const $\ast$$\ast$argv, char const $\ast$const $\ast$$\ast$env)
+\item 
+void \hyperlink{group__apr__library_ga8e96d45ee09fc7e7eb3646efef1424a3}{apr\+\_\+terminate} (void)
+\item 
+void \hyperlink{group__apr__library_ga18667a60ff34d6209e519b4a4ce8cad1}{apr\+\_\+terminate2} (void)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__random_ga564e4c380e820a9b0d9e877d4852a65e}{apr\+\_\+generate\+\_\+random\+\_\+bytes} (unsigned char $\ast$buf, apr\+\_\+size\+\_\+t length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Miscellaneous library routines. 
+
+This is collection of oddballs that didn\textquotesingle{}t fit anywhere else, and might move to more appropriate headers with the release of A\+PR 1.\+0. 

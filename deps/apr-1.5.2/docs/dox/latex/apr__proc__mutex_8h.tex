@@ -1,0 +1,58 @@
+\hypertarget{apr__proc__mutex_8h}{}\section{apr\+\_\+proc\+\_\+mutex.\+h File Reference}
+\label{apr__proc__mutex_8h}\index{apr\+\_\+proc\+\_\+mutex.\+h@{apr\+\_\+proc\+\_\+mutex.\+h}}
+
+
+A\+PR Process Locking Routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} \hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__apr__proc__mutex_ga75dd95a48a1e855a87b509b522746ed4}{apr\+\_\+lockmech\+\_\+e} \{ \\*
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4ad9dad69d83d1e112054ad21a7e4e16b3}{A\+P\+R\+\_\+\+L\+O\+C\+K\+\_\+\+F\+C\+N\+TL}, 
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a1d06f73a37dae31233299401c9594b41}{A\+P\+R\+\_\+\+L\+O\+C\+K\+\_\+\+F\+L\+O\+CK}, 
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a642536695bd4c233761a15d48b1d6487}{A\+P\+R\+\_\+\+L\+O\+C\+K\+\_\+\+S\+Y\+S\+V\+S\+EM}, 
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4abd5e7cca2c9f6023b541131f3841057a}{A\+P\+R\+\_\+\+L\+O\+C\+K\+\_\+\+P\+R\+O\+C\+\_\+\+P\+T\+H\+R\+E\+AD}, 
+\\*
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a6d65d9d745e13d8759bd8f1057f27041}{A\+P\+R\+\_\+\+L\+O\+C\+K\+\_\+\+P\+O\+S\+I\+X\+S\+EM}, 
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4ae91fb435c45216bcf84f506db99d0f19}{A\+P\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+E\+F\+A\+U\+LT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__proc__mutex_ga57a0ad8cc6209dcbc8cf7c4bdf4a2c22}{apr\+\_\+proc\+\_\+mutex\+\_\+create} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$$\ast$mutex, const char $\ast$fname, \hyperlink{group__apr__proc__mutex_ga75dd95a48a1e855a87b509b522746ed4}{apr\+\_\+lockmech\+\_\+e} mech, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__proc__mutex_ga52c440b92eda07dc9c851a4e98f2ac83}{apr\+\_\+proc\+\_\+mutex\+\_\+child\+\_\+init} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$$\ast$mutex, const char $\ast$fname, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__proc__mutex_ga9af7c9eabf4f99a5a33b41dc322af06f}{apr\+\_\+proc\+\_\+mutex\+\_\+lock} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__proc__mutex_ga7c41927ce5014374eb4fc66d410f9513}{apr\+\_\+proc\+\_\+mutex\+\_\+trylock} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__proc__mutex_ga4ecd9a73fbb0e6e6853e5d0769bbb183}{apr\+\_\+proc\+\_\+mutex\+\_\+unlock} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__proc__mutex_gaa692ccd799305e0166fb81f258870830}{apr\+\_\+proc\+\_\+mutex\+\_\+destroy} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__proc__mutex_ga71ec4d283f58e893322f44116e6f8ea2}{apr\+\_\+proc\+\_\+mutex\+\_\+cleanup} (void $\ast$mutex)
+\item 
+const char $\ast$ \hyperlink{group__apr__proc__mutex_gad4dcc5ec2a5a6ede7be178e13f56377a}{apr\+\_\+proc\+\_\+mutex\+\_\+lockfile} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+const char $\ast$ \hyperlink{group__apr__proc__mutex_ga3e5cf6b6fd0736502efd91312d50881c}{apr\+\_\+proc\+\_\+mutex\+\_\+name} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+const char $\ast$ \hyperlink{group__apr__proc__mutex_gaf4425adc130f83784c552b6bc1563036}{apr\+\_\+proc\+\_\+mutex\+\_\+defname} (void)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__proc__mutex_ga9d7eda31ec4ad2183ddfcbff2f07daf9}{apr\+\_\+proc\+\_\+mutex\+\_\+pool\+\_\+get} (const \hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$theproc\+\_\+mutex)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Process Locking Routines. 
+

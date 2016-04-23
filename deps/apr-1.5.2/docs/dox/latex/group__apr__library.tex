@@ -1,0 +1,70 @@
+\hypertarget{group__apr__library}{}\section{Library initialization and termination}
+\label{group__apr__library}\index{Library initialization and termination@{Library initialization and termination}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__library_ga4a91a6b9ff457ead13e670950127761a}{apr\+\_\+initialize} (void)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__library_gaa1c4fc2e1c814cc5d4cd3d8719288fc9}{apr\+\_\+app\+\_\+initialize} (int $\ast$argc, char const $\ast$const $\ast$$\ast$argv, char const $\ast$const $\ast$$\ast$env)
+\item 
+void \hyperlink{group__apr__library_ga8e96d45ee09fc7e7eb3646efef1424a3}{apr\+\_\+terminate} (void)
+\item 
+void \hyperlink{group__apr__library_ga18667a60ff34d6209e519b4a4ce8cad1}{apr\+\_\+terminate2} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+String and memory functions 
+
+\subsection{Function Documentation}
+\index{Library initialization and termination@{Library initialization and termination}!apr\+\_\+app\+\_\+initialize@{apr\+\_\+app\+\_\+initialize}}
+\index{apr\+\_\+app\+\_\+initialize@{apr\+\_\+app\+\_\+initialize}!Library initialization and termination@{Library initialization and termination}}
+\subsubsection[{\texorpdfstring{apr\+\_\+app\+\_\+initialize(int $\ast$argc, char const $\ast$const $\ast$$\ast$argv, char const $\ast$const $\ast$$\ast$env)}{apr_app_initialize(int *argc, char const *const **argv, char const *const **env)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+app\+\_\+initialize (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{argc, }
+\item[{char const $\ast$const $\ast$$\ast$}]{argv, }
+\item[{char const $\ast$const $\ast$$\ast$}]{env}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__library_gaa1c4fc2e1c814cc5d4cd3d8719288fc9}{}\label{group__apr__library_gaa1c4fc2e1c814cc5d4cd3d8719288fc9}
+Set up an application with normalized argc, argv (and optionally env) in order to deal with platform-\/specific oddities, such as Win32 services, code pages and signals. This must be the first function called for any A\+PR program. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Pointer to the argc that may be corrected \\
+\hline
+{\em argv} & Pointer to the argv that may be corrected \\
+\hline
+{\em env} & Pointer to the env that may be corrected, may be N\+U\+LL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+See apr\+\_\+initialize if this is a library consumer of apr. Otherwise, this call is identical to apr\+\_\+initialize, and must be closed with a call to apr\+\_\+terminate at the end of program execution. 
+\end{DoxyRemark}
+\index{Library initialization and termination@{Library initialization and termination}!apr\+\_\+initialize@{apr\+\_\+initialize}}
+\index{apr\+\_\+initialize@{apr\+\_\+initialize}!Library initialization and termination@{Library initialization and termination}}
+\subsubsection[{\texorpdfstring{apr\+\_\+initialize(void)}{apr_initialize(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__library_ga4a91a6b9ff457ead13e670950127761a}{}\label{group__apr__library_ga4a91a6b9ff457ead13e670950127761a}
+Setup any A\+PR internal data structures. This M\+U\+ST be the first function called for any A\+PR library. It is safe to call apr\+\_\+initialize several times as long as apr\+\_\+terminate is called the same number of times. \begin{DoxyRemark}{Remarks}
+See apr\+\_\+app\+\_\+initialize if this is an application, rather than a library consumer of apr. 
+\end{DoxyRemark}
+\index{Library initialization and termination@{Library initialization and termination}!apr\+\_\+terminate@{apr\+\_\+terminate}}
+\index{apr\+\_\+terminate@{apr\+\_\+terminate}!Library initialization and termination@{Library initialization and termination}}
+\subsubsection[{\texorpdfstring{apr\+\_\+terminate(void)}{apr_terminate(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+terminate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__library_ga8e96d45ee09fc7e7eb3646efef1424a3}{}\label{group__apr__library_ga8e96d45ee09fc7e7eb3646efef1424a3}
+Tear down any A\+PR internal data structures which aren\textquotesingle{}t torn down automatically. apr\+\_\+terminate must be called once for every call to \hyperlink{group__apr__library_ga4a91a6b9ff457ead13e670950127761a}{apr\+\_\+initialize()} or \hyperlink{group__apr__library_gaa1c4fc2e1c814cc5d4cd3d8719288fc9}{apr\+\_\+app\+\_\+initialize()}. \begin{DoxyRemark}{Remarks}
+An A\+PR program must call this function at termination once it has stopped using A\+PR services. The A\+PR developers suggest using atexit to ensure this is called. When using A\+PR from a language other than C that has problems with the calling convention, use \hyperlink{group__apr__library_ga18667a60ff34d6209e519b4a4ce8cad1}{apr\+\_\+terminate2()} instead. 
+\end{DoxyRemark}
+\index{Library initialization and termination@{Library initialization and termination}!apr\+\_\+terminate2@{apr\+\_\+terminate2}}
+\index{apr\+\_\+terminate2@{apr\+\_\+terminate2}!Library initialization and termination@{Library initialization and termination}}
+\subsubsection[{\texorpdfstring{apr\+\_\+terminate2(void)}{apr_terminate2(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+terminate2 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__library_ga18667a60ff34d6209e519b4a4ce8cad1}{}\label{group__apr__library_ga18667a60ff34d6209e519b4a4ce8cad1}
+Tear down any A\+PR internal data structures which aren\textquotesingle{}t torn down automatically, same as apr\+\_\+terminate \begin{DoxyRemark}{Remarks}
+An A\+PR program must call either the apr\+\_\+terminate or apr\+\_\+terminate2 function once it it has finished using A\+PR services. The A\+PR developers suggest using atexit(apr\+\_\+terminate) to ensure this is done. apr\+\_\+terminate2 exists to allow non-\/c language apps to tear down apr, while apr\+\_\+terminate is recommended from c language applications. 
+\end{DoxyRemark}

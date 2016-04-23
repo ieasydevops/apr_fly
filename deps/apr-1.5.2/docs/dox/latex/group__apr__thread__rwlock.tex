@@ -1,0 +1,135 @@
+\hypertarget{group__apr__thread__rwlock}{}\section{Reader/\+Writer Lock Routines}
+\label{group__apr__thread__rwlock}\index{Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} \hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_gadae9c87ad957112406b48947cb1f0e93}{apr\+\_\+thread\+\_\+rwlock\+\_\+create} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$$\ast$rwlock, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_gad44a106cd9a81eef362d31837ca7018f}{apr\+\_\+thread\+\_\+rwlock\+\_\+rdlock} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_ga2bbbc137f5c610e31bf87fd0a60c428e}{apr\+\_\+thread\+\_\+rwlock\+\_\+tryrdlock} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_ga91543c9f97a6a1265524a5a8f55fef31}{apr\+\_\+thread\+\_\+rwlock\+\_\+wrlock} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_ga54c04596f8a1f44630bdda5a25578d63}{apr\+\_\+thread\+\_\+rwlock\+\_\+trywrlock} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_gac7b31112d972abfcac30252e622eb040}{apr\+\_\+thread\+\_\+rwlock\+\_\+unlock} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__rwlock_ga136118166f50091fb30011d837a4cdcc}{apr\+\_\+thread\+\_\+rwlock\+\_\+destroy} (\hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$rwlock)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__thread__rwlock_ga3e78c5d8f2e7f4cdad46e912e68edd33}{apr\+\_\+thread\+\_\+rwlock\+\_\+pool\+\_\+get} (const \hyperlink{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$thethread\+\_\+rwlock)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\index{Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}!apr\+\_\+thread\+\_\+rwlock\+\_\+t@{apr\+\_\+thread\+\_\+rwlock\+\_\+t}}
+\index{apr\+\_\+thread\+\_\+rwlock\+\_\+t@{apr\+\_\+thread\+\_\+rwlock\+\_\+t}!Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+thread\+\_\+rwlock\+\_\+t}{apr_thread_rwlock_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+thread\+\_\+rwlock\+\_\+t} {\bf apr\+\_\+thread\+\_\+rwlock\+\_\+t}}\hypertarget{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}{}\label{group__apr__thread__rwlock_gaede9b908e3d9e6a8aed7bd10d0ae0498}
+Opaque read-\/write thread-\/safe lock. 
+
+\subsection{Function Documentation}
+\index{Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}!apr\+\_\+thread\+\_\+rwlock\+\_\+create@{apr\+\_\+thread\+\_\+rwlock\+\_\+create}}
+\index{apr\+\_\+thread\+\_\+rwlock\+\_\+create@{apr\+\_\+thread\+\_\+rwlock\+\_\+create}!Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+thread\+\_\+rwlock\+\_\+create(apr\+\_\+thread\+\_\+rwlock\+\_\+t $\ast$$\ast$rwlock, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_thread_rwlock_create(apr_thread_rwlock_t **rwlock, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+thread\+\_\+rwlock\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$$\ast$}]{rwlock, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__thread__rwlock_gadae9c87ad957112406b48947cb1f0e93}{}\label{group__apr__thread__rwlock_gadae9c87ad957112406b48947cb1f0e93}
+Note\+: The following operations have undefined results\+: unlocking a read-\/write lock which is not locked in the calling thread; write locking a read-\/write lock which is already locked by the calling thread; destroying a read-\/write lock more than once; clearing or destroying the pool from which a {\bfseries locked} read-\/write lock is allocated. Create and initialize a read-\/write lock that can be used to synchronize threads. 
+\begin{DoxyParams}{Parameters}
+{\em rwlock} & the memory address where the newly created readwrite lock will be stored. \\
+\hline
+{\em pool} & the pool from which to allocate the mutex. \\
+\hline
+\end{DoxyParams}
+\index{Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}!apr\+\_\+thread\+\_\+rwlock\+\_\+destroy@{apr\+\_\+thread\+\_\+rwlock\+\_\+destroy}}
+\index{apr\+\_\+thread\+\_\+rwlock\+\_\+destroy@{apr\+\_\+thread\+\_\+rwlock\+\_\+destroy}!Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+thread\+\_\+rwlock\+\_\+destroy(apr\+\_\+thread\+\_\+rwlock\+\_\+t $\ast$rwlock)}{apr_thread_rwlock_destroy(apr_thread_rwlock_t *rwlock)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+thread\+\_\+rwlock\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$}]{rwlock}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__thread__rwlock_ga136118166f50091fb30011d837a4cdcc}{}\label{group__apr__thread__rwlock_ga136118166f50091fb30011d837a4cdcc}
+Destroy the read-\/write lock and free the associated memory. 
+\begin{DoxyParams}{Parameters}
+{\em rwlock} & the rwlock to destroy. \\
+\hline
+\end{DoxyParams}
+\index{Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}!apr\+\_\+thread\+\_\+rwlock\+\_\+pool\+\_\+get@{apr\+\_\+thread\+\_\+rwlock\+\_\+pool\+\_\+get}}
+\index{apr\+\_\+thread\+\_\+rwlock\+\_\+pool\+\_\+get@{apr\+\_\+thread\+\_\+rwlock\+\_\+pool\+\_\+get}!Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+thread\+\_\+rwlock\+\_\+pool\+\_\+get(const apr\+\_\+thread\+\_\+rwlock\+\_\+t $\ast$thethread\+\_\+rwlock)}{apr_thread_rwlock_pool_get(const apr_thread_rwlock_t *thethread_rwlock)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+pool\+\_\+t}$\ast$ apr\+\_\+thread\+\_\+rwlock\+\_\+pool\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$}]{thethread\+\_\+rwlock}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__thread__rwlock_ga3e78c5d8f2e7f4cdad46e912e68edd33}{}\label{group__apr__thread__rwlock_ga3e78c5d8f2e7f4cdad46e912e68edd33}
+Get the pool used by this thread\+\_\+rwlock. \begin{DoxyReturn}{Returns}
+apr\+\_\+pool\+\_\+t the pool 
+\end{DoxyReturn}
+\index{Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}!apr\+\_\+thread\+\_\+rwlock\+\_\+rdlock@{apr\+\_\+thread\+\_\+rwlock\+\_\+rdlock}}
+\index{apr\+\_\+thread\+\_\+rwlock\+\_\+rdlock@{apr\+\_\+thread\+\_\+rwlock\+\_\+rdlock}!Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+thread\+\_\+rwlock\+\_\+rdlock(apr\+\_\+thread\+\_\+rwlock\+\_\+t $\ast$rwlock)}{apr_thread_rwlock_rdlock(apr_thread_rwlock_t *rwlock)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+thread\+\_\+rwlock\+\_\+rdlock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$}]{rwlock}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__thread__rwlock_gad44a106cd9a81eef362d31837ca7018f}{}\label{group__apr__thread__rwlock_gad44a106cd9a81eef362d31837ca7018f}
+Acquire a shared-\/read lock on the given read-\/write lock. This will allow multiple threads to enter the same critical section while they have acquired the read lock. 
+\begin{DoxyParams}{Parameters}
+{\em rwlock} & the read-\/write lock on which to acquire the shared read. \\
+\hline
+\end{DoxyParams}
+\index{Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}!apr\+\_\+thread\+\_\+rwlock\+\_\+tryrdlock@{apr\+\_\+thread\+\_\+rwlock\+\_\+tryrdlock}}
+\index{apr\+\_\+thread\+\_\+rwlock\+\_\+tryrdlock@{apr\+\_\+thread\+\_\+rwlock\+\_\+tryrdlock}!Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+thread\+\_\+rwlock\+\_\+tryrdlock(apr\+\_\+thread\+\_\+rwlock\+\_\+t $\ast$rwlock)}{apr_thread_rwlock_tryrdlock(apr_thread_rwlock_t *rwlock)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+thread\+\_\+rwlock\+\_\+tryrdlock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$}]{rwlock}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__thread__rwlock_ga2bbbc137f5c610e31bf87fd0a60c428e}{}\label{group__apr__thread__rwlock_ga2bbbc137f5c610e31bf87fd0a60c428e}
+Attempt to acquire the shared-\/read lock on the given read-\/write lock. This is the same as \hyperlink{group__apr__thread__rwlock_gad44a106cd9a81eef362d31837ca7018f}{apr\+\_\+thread\+\_\+rwlock\+\_\+rdlock()}, only that the function fails if there is another thread holding the write lock, or if there are any write threads blocking on the lock. If the function fails for this case, A\+P\+R\+\_\+\+E\+B\+U\+SY will be returned. Note\+: it is important that the \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gad9da6d9a8f37e1e296b3fc6e67e610e1}{A\+P\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+S\+\_\+\+E\+B\+U\+S\+Y(s)} macro be used to determine if the return value was A\+P\+R\+\_\+\+E\+B\+U\+SY, for portability reasons. 
+\begin{DoxyParams}{Parameters}
+{\em rwlock} & the rwlock on which to attempt the shared read. \\
+\hline
+\end{DoxyParams}
+\index{Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}!apr\+\_\+thread\+\_\+rwlock\+\_\+trywrlock@{apr\+\_\+thread\+\_\+rwlock\+\_\+trywrlock}}
+\index{apr\+\_\+thread\+\_\+rwlock\+\_\+trywrlock@{apr\+\_\+thread\+\_\+rwlock\+\_\+trywrlock}!Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+thread\+\_\+rwlock\+\_\+trywrlock(apr\+\_\+thread\+\_\+rwlock\+\_\+t $\ast$rwlock)}{apr_thread_rwlock_trywrlock(apr_thread_rwlock_t *rwlock)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+thread\+\_\+rwlock\+\_\+trywrlock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$}]{rwlock}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__thread__rwlock_ga54c04596f8a1f44630bdda5a25578d63}{}\label{group__apr__thread__rwlock_ga54c04596f8a1f44630bdda5a25578d63}
+Attempt to acquire the exclusive-\/write lock on the given read-\/write lock. This is the same as \hyperlink{group__apr__thread__rwlock_ga91543c9f97a6a1265524a5a8f55fef31}{apr\+\_\+thread\+\_\+rwlock\+\_\+wrlock()}, only that the function fails if there is any other thread holding the lock (for reading or writing), in which case the function will return A\+P\+R\+\_\+\+E\+B\+U\+SY. Note\+: it is important that the \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gad9da6d9a8f37e1e296b3fc6e67e610e1}{A\+P\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+S\+\_\+\+E\+B\+U\+S\+Y(s)} macro be used to determine if the return value was A\+P\+R\+\_\+\+E\+B\+U\+SY, for portability reasons. 
+\begin{DoxyParams}{Parameters}
+{\em rwlock} & the rwlock on which to attempt the exclusive write. \\
+\hline
+\end{DoxyParams}
+\index{Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}!apr\+\_\+thread\+\_\+rwlock\+\_\+unlock@{apr\+\_\+thread\+\_\+rwlock\+\_\+unlock}}
+\index{apr\+\_\+thread\+\_\+rwlock\+\_\+unlock@{apr\+\_\+thread\+\_\+rwlock\+\_\+unlock}!Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+thread\+\_\+rwlock\+\_\+unlock(apr\+\_\+thread\+\_\+rwlock\+\_\+t $\ast$rwlock)}{apr_thread_rwlock_unlock(apr_thread_rwlock_t *rwlock)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+thread\+\_\+rwlock\+\_\+unlock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$}]{rwlock}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__thread__rwlock_gac7b31112d972abfcac30252e622eb040}{}\label{group__apr__thread__rwlock_gac7b31112d972abfcac30252e622eb040}
+Release either the read or write lock currently held by the calling thread associated with the given read-\/write lock. 
+\begin{DoxyParams}{Parameters}
+{\em rwlock} & the read-\/write lock to be released (unlocked). \\
+\hline
+\end{DoxyParams}
+\index{Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}!apr\+\_\+thread\+\_\+rwlock\+\_\+wrlock@{apr\+\_\+thread\+\_\+rwlock\+\_\+wrlock}}
+\index{apr\+\_\+thread\+\_\+rwlock\+\_\+wrlock@{apr\+\_\+thread\+\_\+rwlock\+\_\+wrlock}!Reader/\+Writer Lock Routines@{Reader/\+Writer Lock Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+thread\+\_\+rwlock\+\_\+wrlock(apr\+\_\+thread\+\_\+rwlock\+\_\+t $\ast$rwlock)}{apr_thread_rwlock_wrlock(apr_thread_rwlock_t *rwlock)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+thread\+\_\+rwlock\+\_\+wrlock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+thread\+\_\+rwlock\+\_\+t} $\ast$}]{rwlock}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__thread__rwlock_ga91543c9f97a6a1265524a5a8f55fef31}{}\label{group__apr__thread__rwlock_ga91543c9f97a6a1265524a5a8f55fef31}
+Acquire an exclusive-\/write lock on the given read-\/write lock. This will allow only one single thread to enter the critical sections. If there are any threads currently holding the read-\/lock, this thread is put to sleep until it can have exclusive access to the lock. 
+\begin{DoxyParams}{Parameters}
+{\em rwlock} & the read-\/write lock on which to acquire the exclusive write. \\
+\hline
+\end{DoxyParams}

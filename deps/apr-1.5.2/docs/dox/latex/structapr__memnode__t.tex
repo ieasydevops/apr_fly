@@ -1,0 +1,53 @@
+\hypertarget{structapr__memnode__t}{}\section{apr\+\_\+memnode\+\_\+t Struct Reference}
+\label{structapr__memnode__t}\index{apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}}
+
+
+{\ttfamily \#include $<$apr\+\_\+allocator.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t} $\ast$ \hyperlink{structapr__memnode__t_a07dd84ca152164d6bc283dbce99f8f78}{next}
+\item 
+\hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t} $\ast$$\ast$ \hyperlink{structapr__memnode__t_ac68a939c0c3d48498ec0c0fde409c502}{ref}
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{structapr__memnode__t_a6188325f9e1cbcafcb0a65b7e41881a1}{index}
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{structapr__memnode__t_af63769f30f6eb9d72e4b24050bd7a9d9}{free\+\_\+index}
+\item 
+char $\ast$ \hyperlink{structapr__memnode__t_a863e7980225e46678881271c4c803e4c}{first\+\_\+avail}
+\item 
+char $\ast$ \hyperlink{structapr__memnode__t_a35c9bf71f1cc680929f857176b547a05}{endp}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+basic memory node structure \begin{DoxyNote}{Note}
+The next, ref and first\+\_\+avail fields are available for use by the caller of \hyperlink{group__apr__allocator_ga7452b0837c2148bd63109f89bbc0c3db}{apr\+\_\+allocator\+\_\+alloc()}, the remaining fields are read-\/only. The next field has to be used with caution and sensibly set when the memnode is passed back to \hyperlink{group__apr__allocator_ga124e48339838213fd5e160a4125cb7e8}{apr\+\_\+allocator\+\_\+free()}. See \hyperlink{group__apr__allocator_ga124e48339838213fd5e160a4125cb7e8}{apr\+\_\+allocator\+\_\+free()} for details. The ref and first\+\_\+avail fields will be properly restored by \hyperlink{group__apr__allocator_ga124e48339838213fd5e160a4125cb7e8}{apr\+\_\+allocator\+\_\+free()}. 
+\end{DoxyNote}
+
+
+\subsection{Field Documentation}
+\index{apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}!endp@{endp}}
+\index{endp@{endp}!apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}}
+\subsubsection[{\texorpdfstring{endp}{endp}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+memnode\+\_\+t\+::endp}\hypertarget{structapr__memnode__t_a35c9bf71f1cc680929f857176b547a05}{}\label{structapr__memnode__t_a35c9bf71f1cc680929f857176b547a05}
+pointer to end of free memory \index{apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}!first\+\_\+avail@{first\+\_\+avail}}
+\index{first\+\_\+avail@{first\+\_\+avail}!apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}}
+\subsubsection[{\texorpdfstring{first\+\_\+avail}{first_avail}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+memnode\+\_\+t\+::first\+\_\+avail}\hypertarget{structapr__memnode__t_a863e7980225e46678881271c4c803e4c}{}\label{structapr__memnode__t_a863e7980225e46678881271c4c803e4c}
+pointer to first free memory \index{apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}!free\+\_\+index@{free\+\_\+index}}
+\index{free\+\_\+index@{free\+\_\+index}!apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}}
+\subsubsection[{\texorpdfstring{free\+\_\+index}{free_index}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+uint32\+\_\+t apr\+\_\+memnode\+\_\+t\+::free\+\_\+index}\hypertarget{structapr__memnode__t_af63769f30f6eb9d72e4b24050bd7a9d9}{}\label{structapr__memnode__t_af63769f30f6eb9d72e4b24050bd7a9d9}
+how much free \index{apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}!index@{index}}
+\index{index@{index}!apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}}
+\subsubsection[{\texorpdfstring{index}{index}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+uint32\+\_\+t apr\+\_\+memnode\+\_\+t\+::index}\hypertarget{structapr__memnode__t_a6188325f9e1cbcafcb0a65b7e41881a1}{}\label{structapr__memnode__t_a6188325f9e1cbcafcb0a65b7e41881a1}
+size \index{apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}!next@{next}}
+\index{next@{next}!apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}}
+\subsubsection[{\texorpdfstring{next}{next}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+memnode\+\_\+t}$\ast$ apr\+\_\+memnode\+\_\+t\+::next}\hypertarget{structapr__memnode__t_a07dd84ca152164d6bc283dbce99f8f78}{}\label{structapr__memnode__t_a07dd84ca152164d6bc283dbce99f8f78}
+next memnode \index{apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}!ref@{ref}}
+\index{ref@{ref}!apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}}
+\subsubsection[{\texorpdfstring{ref}{ref}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+memnode\+\_\+t}$\ast$$\ast$ apr\+\_\+memnode\+\_\+t\+::ref}\hypertarget{structapr__memnode__t_ac68a939c0c3d48498ec0c0fde409c502}{}\label{structapr__memnode__t_ac68a939c0c3d48498ec0c0fde409c502}
+reference to self 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{apr__allocator_8h}{apr\+\_\+allocator.\+h}\end{DoxyCompactItemize}

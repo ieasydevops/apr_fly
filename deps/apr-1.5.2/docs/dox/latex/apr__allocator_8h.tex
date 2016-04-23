@@ -1,0 +1,66 @@
+\hypertarget{apr__allocator_8h}{}\section{apr\+\_\+allocator.\+h File Reference}
+\label{apr__allocator_8h}\index{apr\+\_\+allocator.\+h@{apr\+\_\+allocator.\+h}}
+
+
+A\+PR Internal Memory Allocation.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+want.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+thread\+\_\+mutex.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{apr__allocator_8h_a26faf43e3f61783d8b7aa928c0a41a11}{A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC}
+\item 
+\#define \hyperlink{group__apr__allocator_gaf382851817012929f4e2458b43f4482c}{A\+P\+R\+\_\+\+M\+E\+M\+N\+O\+D\+E\+\_\+\+T\+\_\+\+S\+I\+ZE}~\hyperlink{group__apr__general_gab484e98426221f3212fcb67af0467381}{A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT}(sizeof(\hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t}))
+\item 
+\#define \hyperlink{group__apr__allocator_ga54f32b19d8dad59bc6364a7a6b8ebec9}{A\+P\+R\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+E\+\_\+\+U\+N\+L\+I\+M\+I\+T\+ED}~0
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t} \hyperlink{group__apr__allocator_ga3b6437036dfcdffbf87ad4677c818211}{apr\+\_\+memnode\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__allocator_gaf834f409a34b7f8656c045cff02fd953}{apr\+\_\+allocator\+\_\+create} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$$\ast$allocator)
+\item 
+void \hyperlink{group__apr__allocator_ga704529f6b26279ad1c48d5e8372d859c}{apr\+\_\+allocator\+\_\+destroy} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\item 
+\hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t} $\ast$ \hyperlink{group__apr__allocator_ga7452b0837c2148bd63109f89bbc0c3db}{apr\+\_\+allocator\+\_\+alloc} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, apr\+\_\+size\+\_\+t size)
+\item 
+void \hyperlink{group__apr__allocator_ga124e48339838213fd5e160a4125cb7e8}{apr\+\_\+allocator\+\_\+free} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, \hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t} $\ast$memnode)
+\item 
+void \hyperlink{group__apr__allocator_gadf38bbec37c29c24388e95b1c9acad28}{apr\+\_\+allocator\+\_\+owner\+\_\+set} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__allocator_ga3cfe48c8717de6495480ce1479d262f1}{apr\+\_\+allocator\+\_\+owner\+\_\+get} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\item 
+void \hyperlink{group__apr__allocator_ga1d45cb6dbe69ba25dee0ec5f4e031d60}{apr\+\_\+allocator\+\_\+max\+\_\+free\+\_\+set} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, apr\+\_\+size\+\_\+t size)
+\item 
+void \hyperlink{group__apr__allocator_gab803d74f56683004f7ec384ced210dd5}{apr\+\_\+allocator\+\_\+mutex\+\_\+set} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, \hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$ \hyperlink{group__apr__allocator_ga38599aa9f1330846a2d2b25ec5c8d9c9}{apr\+\_\+allocator\+\_\+mutex\+\_\+get} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Internal Memory Allocation. 
+
+
+
+\subsection{Macro Definition Documentation}
+\index{apr\+\_\+allocator.\+h@{apr\+\_\+allocator.\+h}!A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC@{A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC}}
+\index{A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC@{A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC}!apr\+\_\+allocator.\+h@{apr\+\_\+allocator.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC}{APR_WANT_MEMFUNC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC}\hypertarget{apr__allocator_8h_a26faf43e3f61783d8b7aa928c0a41a11}{}\label{apr__allocator_8h_a26faf43e3f61783d8b7aa928c0a41a11}
+For no good reason? 

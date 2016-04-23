@@ -1,0 +1,33 @@
+\hypertarget{apr__dso_8h}{}\section{apr\+\_\+dso.\+h File Reference}
+\label{apr__dso_8h}\index{apr\+\_\+dso.\+h@{apr\+\_\+dso.\+h}}
+
+
+A\+PR Dynamic Object Handling Routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} \hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t}
+\item 
+typedef void $\ast$ \hyperlink{group__apr__dso_gaf1aa0a039e8003586cfdfbc4ac57e775}{apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__dso_gaedc8609c2bb76e5c43f2df2281a9d8b6}{apr\+\_\+dso\+\_\+load} (\hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$$\ast$res\+\_\+handle, const char $\ast$path, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ctx)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__dso_ga4c7b1b4e98a5d23c56182ece047fbb7b}{apr\+\_\+dso\+\_\+unload} (\hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$handle)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__dso_gae84cd7041976787d73a9558e3393b97c}{apr\+\_\+dso\+\_\+sym} (\hyperlink{group__apr__dso_gaf1aa0a039e8003586cfdfbc4ac57e775}{apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t} $\ast$ressym, \hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$handle, const char $\ast$symname)
+\item 
+const char $\ast$ \hyperlink{group__apr__dso_gafa34fc75e1e9b8856385d3b18cfac05c}{apr\+\_\+dso\+\_\+error} (\hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$dso, char $\ast$buf, apr\+\_\+size\+\_\+t bufsize)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Dynamic Object Handling Routines. 
+

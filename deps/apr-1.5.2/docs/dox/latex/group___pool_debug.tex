@@ -1,0 +1,92 @@
+\hypertarget{group___pool_debug}{}\section{Pool Debugging functions.}
+\label{group___pool_debug}\index{Pool Debugging functions.@{Pool Debugging functions.}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___pool_debug_gaecd956092f81c70117507ad8cbca8ea7}{apr\+\_\+pool\+\_\+join} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$sub)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group___pool_debug_ga0bc40d9069709020e3643492dae2ccb0}{apr\+\_\+pool\+\_\+find} (const void $\ast$mem)
+\item 
+apr\+\_\+size\+\_\+t \hyperlink{group___pool_debug_ga22462da23d70dfde389a370b131cd351}{apr\+\_\+pool\+\_\+num\+\_\+bytes} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, int recurse)
+\item 
+void \hyperlink{group___pool_debug_ga24f8f0287478fa71f77d0ce4ec035e4a}{apr\+\_\+pool\+\_\+lock} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool, int flag)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+pools have nested lifetimes -- sub\+\_\+pools are destroyed when the parent pool is cleared. We allow certain liberties with operations on things such as tables (and on other structures in a more general sense) where we allow the caller to insert values into a table which were not allocated from the table\textquotesingle{}s pool. The table\textquotesingle{}s data will remain valid as long as all the pools from which its values are allocated remain valid.
+
+For example, if B is a sub pool of A, and you build a table T in pool B, then it\textquotesingle{}s safe to insert data allocated in A or B into T (because B lives at most as long as A does, and T is destroyed when B is cleared/destroyed). On the other hand, if S is a table in pool A, it is safe to insert data allocated in A into S, but it is {\itshape not safe} to insert data allocated from B into S... because B can be cleared/destroyed before A is (which would leave dangling pointers in T\textquotesingle{}s data structures).
+
+In general we say that it is safe to insert data into a table T if the data is allocated in any ancestor of T\textquotesingle{}s pool. This is the basis on which the A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+B\+UG code works -- it tests these ancestor relationships for all data inserted into tables. A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+B\+UG also provides tools (apr\+\_\+pool\+\_\+find, and apr\+\_\+pool\+\_\+is\+\_\+ancestor) for other folks to implement similar restrictions for their own data structures.
+
+However, sometimes this ancestor requirement is inconvenient -- sometimes it\textquotesingle{}s necessary to create a sub pool where the sub pool is guaranteed to have the same lifetime as the parent pool. This is a guarantee implemented by the {\itshape caller}, not by the pool code. That is, the caller guarantees they won\textquotesingle{}t destroy the sub pool individually prior to destroying the parent pool.
+
+In this case the caller must call \hyperlink{group___pool_debug_gaecd956092f81c70117507ad8cbca8ea7}{apr\+\_\+pool\+\_\+join()} to indicate this guarantee to the A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+B\+UG code.
+
+These functions are only implemented when \#\+A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+B\+UG is set. 
+
+\subsection{Function Documentation}
+\index{Pool Debugging functions.@{Pool Debugging functions.}!apr\+\_\+pool\+\_\+find@{apr\+\_\+pool\+\_\+find}}
+\index{apr\+\_\+pool\+\_\+find@{apr\+\_\+pool\+\_\+find}!Pool Debugging functions.@{Pool Debugging functions.}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+find(const void $\ast$mem)}{apr_pool_find(const void *mem)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+pool\+\_\+t}$\ast$ apr\+\_\+pool\+\_\+find (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{mem}
+\end{DoxyParamCaption}
+)}\hypertarget{group___pool_debug_ga0bc40d9069709020e3643492dae2ccb0}{}\label{group___pool_debug_ga0bc40d9069709020e3643492dae2ccb0}
+Find a pool from something allocated in it. 
+\begin{DoxyParams}{Parameters}
+{\em mem} & The thing allocated in the pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pool it is allocated in 
+\end{DoxyReturn}
+\index{Pool Debugging functions.@{Pool Debugging functions.}!apr\+\_\+pool\+\_\+join@{apr\+\_\+pool\+\_\+join}}
+\index{apr\+\_\+pool\+\_\+join@{apr\+\_\+pool\+\_\+join}!Pool Debugging functions.@{Pool Debugging functions.}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+join(apr\+\_\+pool\+\_\+t $\ast$p, apr\+\_\+pool\+\_\+t $\ast$sub)}{apr_pool_join(apr_pool_t *p, apr_pool_t *sub)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+join (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{sub}
+\end{DoxyParamCaption}
+)}\hypertarget{group___pool_debug_gaecd956092f81c70117507ad8cbca8ea7}{}\label{group___pool_debug_gaecd956092f81c70117507ad8cbca8ea7}
+Guarantee that a subpool has the same lifetime as the parent. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The parent pool \\
+\hline
+{\em sub} & The subpool \\
+\hline
+\end{DoxyParams}
+\index{Pool Debugging functions.@{Pool Debugging functions.}!apr\+\_\+pool\+\_\+lock@{apr\+\_\+pool\+\_\+lock}}
+\index{apr\+\_\+pool\+\_\+lock@{apr\+\_\+pool\+\_\+lock}!Pool Debugging functions.@{Pool Debugging functions.}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+lock(apr\+\_\+pool\+\_\+t $\ast$pool, int flag)}{apr_pool_lock(apr_pool_t *pool, int flag)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+lock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{group___pool_debug_ga24f8f0287478fa71f77d0ce4ec035e4a}{}\label{group___pool_debug_ga24f8f0287478fa71f77d0ce4ec035e4a}
+Lock a pool 
+\begin{DoxyParams}{Parameters}
+{\em pool} & The pool to lock \\
+\hline
+{\em flag} & The flag \\
+\hline
+\end{DoxyParams}
+\index{Pool Debugging functions.@{Pool Debugging functions.}!apr\+\_\+pool\+\_\+num\+\_\+bytes@{apr\+\_\+pool\+\_\+num\+\_\+bytes}}
+\index{apr\+\_\+pool\+\_\+num\+\_\+bytes@{apr\+\_\+pool\+\_\+num\+\_\+bytes}!Pool Debugging functions.@{Pool Debugging functions.}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+num\+\_\+bytes(apr\+\_\+pool\+\_\+t $\ast$p, int recurse)}{apr_pool_num_bytes(apr_pool_t *p, int recurse)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+size\+\_\+t apr\+\_\+pool\+\_\+num\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{int}]{recurse}
+\end{DoxyParamCaption}
+)}\hypertarget{group___pool_debug_ga22462da23d70dfde389a370b131cd351}{}\label{group___pool_debug_ga22462da23d70dfde389a370b131cd351}
+Report the number of bytes currently in the pool 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to inspect \\
+\hline
+{\em recurse} & Recurse/include the subpools\textquotesingle{} sizes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes 
+\end{DoxyReturn}

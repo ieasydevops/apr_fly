@@ -1,0 +1,485 @@
+\hypertarget{group__apr__portabile}{}\section{Portability Routines}
+\label{group__apr__portabile}\index{Portability Routines@{Portability Routines}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__os__thread}{Thread portability Routines}
+\item 
+\hyperlink{group__apr__os__dso}{D\+S\+O (\+Dynamic Loading) Portability Routines}
+\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__os__proc__mutex__t}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}
+\item 
+struct \hyperlink{structapr__os__sock__info__t}{apr\+\_\+os\+\_\+sock\+\_\+info\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__portabile_gadd3a9818afc16248c3c30f22e19838dd}{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+t}~\hyperlink{structapr__os__proc__mutex__t}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}
+\item 
+\#define \hyperlink{group__apr__portabile_gae9be7821e8c021915c930fc83d6d4a73}{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+get}~\hyperlink{group__apr__portabile_ga2003a3142f05675696268053b2fddbe1}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+get}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}{apr\+\_\+os\+\_\+file\+\_\+t}
+\item 
+typedef D\+IR \hyperlink{group__apr__portabile_gacb790646cfc3da1b43a5f7c4bfaa3937}{apr\+\_\+os\+\_\+dir\+\_\+t}
+\item 
+typedef int \hyperlink{group__apr__portabile_ga2965cd2e48cb6513bc0ba05aa6083ed7}{apr\+\_\+os\+\_\+sock\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__os__proc__mutex__t}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t} \hyperlink{group__apr__portabile_ga107413a26e947456cabfcab99b8a7ade}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}
+\item 
+typedef pthread\+\_\+t \hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t}
+\item 
+typedef pthread\+\_\+key\+\_\+t \hyperlink{group__apr__portabile_ga0a228496d8a1a9b3be744ddb101a3e76}{apr\+\_\+os\+\_\+threadkey\+\_\+t}
+\item 
+typedef pid\+\_\+t \hyperlink{group__apr__portabile_ga2ce5962de629ee6528081813c6b60e2e}{apr\+\_\+os\+\_\+proc\+\_\+t}
+\item 
+typedef struct timeval \hyperlink{group__apr__portabile_ga6d27e476300cd1d3fda24e1ff0e358e1}{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t}
+\item 
+typedef struct tm \hyperlink{group__apr__portabile_ga0fa9349212690591b09a0cbea7b61bdd}{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t}
+\item 
+typedef void $\ast$ \hyperlink{group__apr__portabile_ga542684803ee8ab0abd69077697599ec0}{apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+t}
+\item 
+typedef void $\ast$ \hyperlink{group__apr__portabile_ga7af1085d6390fbd08d66482b8c17de51}{apr\+\_\+os\+\_\+shm\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__os__sock__info__t}{apr\+\_\+os\+\_\+sock\+\_\+info\+\_\+t} \hyperlink{group__apr__portabile_gaece2b8b41cbb949590896b47daaa9fd2}{apr\+\_\+os\+\_\+sock\+\_\+info\+\_\+t}\hypertarget{group__apr__portabile_gaece2b8b41cbb949590896b47daaa9fd2}{}\label{group__apr__portabile_gaece2b8b41cbb949590896b47daaa9fd2}
+
+\begin{DoxyCompactList}\small\item\em alias for local OS socket \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga1ff9a9a7313954fb6590f280d2c2e992}{apr\+\_\+os\+\_\+file\+\_\+get} (\hyperlink{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}{apr\+\_\+os\+\_\+file\+\_\+t} $\ast$thefile, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$file)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga99225bfab137069b9d5c5a72f863c577}{apr\+\_\+os\+\_\+dir\+\_\+get} (\hyperlink{group__apr__portabile_gacb790646cfc3da1b43a5f7c4bfaa3937}{apr\+\_\+os\+\_\+dir\+\_\+t} $\ast$$\ast$thedir, \hyperlink{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}{apr\+\_\+dir\+\_\+t} $\ast$dir)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga07ec79bbb5243596933cd2caf2d428df}{apr\+\_\+os\+\_\+sock\+\_\+get} (\hyperlink{group__apr__portabile_ga2965cd2e48cb6513bc0ba05aa6083ed7}{apr\+\_\+os\+\_\+sock\+\_\+t} $\ast$thesock, \hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga2003a3142f05675696268053b2fddbe1}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+get} (\hyperlink{structapr__os__proc__mutex__t}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$ospmutex, \hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$pmutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga903df49f8cd2bb7298cb1612ff6394df}{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+get} (\hyperlink{group__apr__portabile_ga0fa9349212690591b09a0cbea7b61bdd}{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t} $\ast$$\ast$ostime, \hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$aprtime)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga406db611360a70360bec953cd92d2df7}{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+get} (\hyperlink{group__apr__portabile_ga6d27e476300cd1d3fda24e1ff0e358e1}{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t} $\ast$$\ast$ostime, \hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} $\ast$aprtime)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga80ebb75a574f97363455dbab05e289d6}{apr\+\_\+os\+\_\+shm\+\_\+get} (\hyperlink{group__apr__portabile_ga7af1085d6390fbd08d66482b8c17de51}{apr\+\_\+os\+\_\+shm\+\_\+t} $\ast$osshm, \hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$shm)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga17a85a792b05506f293e7cf36f8754b7}{apr\+\_\+os\+\_\+file\+\_\+put} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$file, \hyperlink{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}{apr\+\_\+os\+\_\+file\+\_\+t} $\ast$thefile, apr\+\_\+int32\+\_\+t flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga8886290c57248bc4d6c1e4802cc377f0}{apr\+\_\+os\+\_\+pipe\+\_\+put} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$file, \hyperlink{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}{apr\+\_\+os\+\_\+file\+\_\+t} $\ast$thefile, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_gaa3b025a01b6e9b71e402abba74fe3b93}{apr\+\_\+os\+\_\+pipe\+\_\+put\+\_\+ex} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$file, \hyperlink{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}{apr\+\_\+os\+\_\+file\+\_\+t} $\ast$thefile, int register\+\_\+cleanup, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga5087057e23ff6b79ae31ef6e7cc7301e}{apr\+\_\+os\+\_\+dir\+\_\+put} (\hyperlink{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}{apr\+\_\+dir\+\_\+t} $\ast$$\ast$dir, \hyperlink{group__apr__portabile_gacb790646cfc3da1b43a5f7c4bfaa3937}{apr\+\_\+os\+\_\+dir\+\_\+t} $\ast$thedir, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga729bd6825dfadd814de2aa602462d838}{apr\+\_\+os\+\_\+sock\+\_\+put} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$$\ast$sock, \hyperlink{group__apr__portabile_ga2965cd2e48cb6513bc0ba05aa6083ed7}{apr\+\_\+os\+\_\+sock\+\_\+t} $\ast$thesock, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga5df9f6b1b9c07bfeca3685118760eefc}{apr\+\_\+os\+\_\+sock\+\_\+make} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$$\ast$apr\+\_\+sock, \hyperlink{structapr__os__sock__info__t}{apr\+\_\+os\+\_\+sock\+\_\+info\+\_\+t} $\ast$os\+\_\+sock\+\_\+info, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga885f99da0c19912293b5b7bf9df21b02}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+put} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$$\ast$pmutex, \hyperlink{structapr__os__proc__mutex__t}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$ospmutex, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga8ba8b7036b84e260c1cf519c3247a7d4}{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+put} (\hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} $\ast$aprtime, \hyperlink{group__apr__portabile_ga6d27e476300cd1d3fda24e1ff0e358e1}{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t} $\ast$$\ast$ostime, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga59486f31d5b591863ed83e67cc8106b1}{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+put} (\hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$aprtime, \hyperlink{group__apr__portabile_ga0fa9349212690591b09a0cbea7b61bdd}{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t} $\ast$$\ast$ostime, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_gaac2b48e4ea4ac8f959cd0e78ede6c5f2}{apr\+\_\+os\+\_\+shm\+\_\+put} (\hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$$\ast$shm, \hyperlink{group__apr__portabile_ga7af1085d6390fbd08d66482b8c17de51}{apr\+\_\+os\+\_\+shm\+\_\+t} $\ast$osshm, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+const char $\ast$ \hyperlink{group__apr__portabile_ga6e21845a4a5f3b7dd107b2beea50c91e}{apr\+\_\+os\+\_\+default\+\_\+encoding} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+const char $\ast$ \hyperlink{group__apr__portabile_gaf4c49baaf6cb115c6c92e74e4a40fd46}{apr\+\_\+os\+\_\+locale\+\_\+encoding} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+get@{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+get}}
+\index{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+get@{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+get}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+get}{apr_os_global_mutex_get}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+get~{\bf apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+get}}\hypertarget{group__apr__portabile_gae9be7821e8c021915c930fc83d6d4a73}{}\label{group__apr__portabile_gae9be7821e8c021915c930fc83d6d4a73}
+\begin{DoxyReturn}{Returns}
+apr\+\_\+os\+\_\+global\+\_\+mutex 
+\end{DoxyReturn}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+t@{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+t}}
+\index{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+t@{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+t}{apr_os_global_mutex_t}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+t~{\bf apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}}\hypertarget{group__apr__portabile_gadd3a9818afc16248c3c30f22e19838dd}{}\label{group__apr__portabile_gadd3a9818afc16248c3c30f22e19838dd}
+Opaque global mutex type 
+
+\subsection{Typedef Documentation}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+dir\+\_\+t@{apr\+\_\+os\+\_\+dir\+\_\+t}}
+\index{apr\+\_\+os\+\_\+dir\+\_\+t@{apr\+\_\+os\+\_\+dir\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+dir\+\_\+t}{apr_os_dir_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef D\+IR {\bf apr\+\_\+os\+\_\+dir\+\_\+t}}\hypertarget{group__apr__portabile_gacb790646cfc3da1b43a5f7c4bfaa3937}{}\label{group__apr__portabile_gacb790646cfc3da1b43a5f7c4bfaa3937}
+native dir \index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+t@{apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+t}}
+\index{apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+t@{apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+t}{apr_os_dso_handle_t}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+t}}\hypertarget{group__apr__portabile_ga542684803ee8ab0abd69077697599ec0}{}\label{group__apr__portabile_ga542684803ee8ab0abd69077697599ec0}
+native dso types \index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t@{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t}}
+\index{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t@{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t}{apr_os_exp_time_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct tm {\bf apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t}}\hypertarget{group__apr__portabile_ga0fa9349212690591b09a0cbea7b61bdd}{}\label{group__apr__portabile_ga0fa9349212690591b09a0cbea7b61bdd}
+native tm \index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+file\+\_\+t@{apr\+\_\+os\+\_\+file\+\_\+t}}
+\index{apr\+\_\+os\+\_\+file\+\_\+t@{apr\+\_\+os\+\_\+file\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+file\+\_\+t}{apr_os_file_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf apr\+\_\+os\+\_\+file\+\_\+t}}\hypertarget{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}{}\label{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}
+native file \index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t@{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t}}
+\index{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t@{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t}{apr_os_imp_time_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct timeval {\bf apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t}}\hypertarget{group__apr__portabile_ga6d27e476300cd1d3fda24e1ff0e358e1}{}\label{group__apr__portabile_ga6d27e476300cd1d3fda24e1ff0e358e1}
+native timeval \index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}}
+\index{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}{apr_os_proc_mutex_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t} {\bf apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}}\hypertarget{group__apr__portabile_ga107413a26e947456cabfcab99b8a7ade}{}\label{group__apr__portabile_ga107413a26e947456cabfcab99b8a7ade}
+native process mutex \index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+proc\+\_\+t@{apr\+\_\+os\+\_\+proc\+\_\+t}}
+\index{apr\+\_\+os\+\_\+proc\+\_\+t@{apr\+\_\+os\+\_\+proc\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+proc\+\_\+t}{apr_os_proc_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef pid\+\_\+t {\bf apr\+\_\+os\+\_\+proc\+\_\+t}}\hypertarget{group__apr__portabile_ga2ce5962de629ee6528081813c6b60e2e}{}\label{group__apr__portabile_ga2ce5962de629ee6528081813c6b60e2e}
+native pid \index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+shm\+\_\+t@{apr\+\_\+os\+\_\+shm\+\_\+t}}
+\index{apr\+\_\+os\+\_\+shm\+\_\+t@{apr\+\_\+os\+\_\+shm\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+shm\+\_\+t}{apr_os_shm_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf apr\+\_\+os\+\_\+shm\+\_\+t}}\hypertarget{group__apr__portabile_ga7af1085d6390fbd08d66482b8c17de51}{}\label{group__apr__portabile_ga7af1085d6390fbd08d66482b8c17de51}
+native S\+HM \index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+sock\+\_\+t@{apr\+\_\+os\+\_\+sock\+\_\+t}}
+\index{apr\+\_\+os\+\_\+sock\+\_\+t@{apr\+\_\+os\+\_\+sock\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+sock\+\_\+t}{apr_os_sock_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf apr\+\_\+os\+\_\+sock\+\_\+t}}\hypertarget{group__apr__portabile_ga2965cd2e48cb6513bc0ba05aa6083ed7}{}\label{group__apr__portabile_ga2965cd2e48cb6513bc0ba05aa6083ed7}
+native dir \index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+thread\+\_\+t@{apr\+\_\+os\+\_\+thread\+\_\+t}}
+\index{apr\+\_\+os\+\_\+thread\+\_\+t@{apr\+\_\+os\+\_\+thread\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+thread\+\_\+t}{apr_os_thread_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef pthread\+\_\+t {\bf apr\+\_\+os\+\_\+thread\+\_\+t}}\hypertarget{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{}\label{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}
+native thread \index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+threadkey\+\_\+t@{apr\+\_\+os\+\_\+threadkey\+\_\+t}}
+\index{apr\+\_\+os\+\_\+threadkey\+\_\+t@{apr\+\_\+os\+\_\+threadkey\+\_\+t}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+threadkey\+\_\+t}{apr_os_threadkey_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef pthread\+\_\+key\+\_\+t {\bf apr\+\_\+os\+\_\+threadkey\+\_\+t}}\hypertarget{group__apr__portabile_ga0a228496d8a1a9b3be744ddb101a3e76}{}\label{group__apr__portabile_ga0a228496d8a1a9b3be744ddb101a3e76}
+native thread address space 
+
+\subsection{Function Documentation}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+default\+\_\+encoding@{apr\+\_\+os\+\_\+default\+\_\+encoding}}
+\index{apr\+\_\+os\+\_\+default\+\_\+encoding@{apr\+\_\+os\+\_\+default\+\_\+encoding}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+default\+\_\+encoding(apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_os_default_encoding(apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+os\+\_\+default\+\_\+encoding (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga6e21845a4a5f3b7dd107b2beea50c91e}{}\label{group__apr__portabile_ga6e21845a4a5f3b7dd107b2beea50c91e}
+Get the name of the system default character set. 
+\begin{DoxyParams}{Parameters}
+{\em pool} & the pool to allocate the name from, if needed \\
+\hline
+\end{DoxyParams}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+dir\+\_\+get@{apr\+\_\+os\+\_\+dir\+\_\+get}}
+\index{apr\+\_\+os\+\_\+dir\+\_\+get@{apr\+\_\+os\+\_\+dir\+\_\+get}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+dir\+\_\+get(apr\+\_\+os\+\_\+dir\+\_\+t $\ast$$\ast$thedir, apr\+\_\+dir\+\_\+t $\ast$dir)}{apr_os_dir_get(apr_os_dir_t **thedir, apr_dir_t *dir)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+dir\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+os\+\_\+dir\+\_\+t} $\ast$$\ast$}]{thedir, }
+\item[{{\bf apr\+\_\+dir\+\_\+t} $\ast$}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga99225bfab137069b9d5c5a72f863c577}{}\label{group__apr__portabile_ga99225bfab137069b9d5c5a72f863c577}
+convert the dir from apr type to os specific type. 
+\begin{DoxyParams}{Parameters}
+{\em thedir} & The os specific dir we are converting to \\
+\hline
+{\em dir} & The apr dir to convert. \\
+\hline
+\end{DoxyParams}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+dir\+\_\+put@{apr\+\_\+os\+\_\+dir\+\_\+put}}
+\index{apr\+\_\+os\+\_\+dir\+\_\+put@{apr\+\_\+os\+\_\+dir\+\_\+put}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+dir\+\_\+put(apr\+\_\+dir\+\_\+t $\ast$$\ast$dir, apr\+\_\+os\+\_\+dir\+\_\+t $\ast$thedir, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_dir_put(apr_dir_t **dir, apr_os_dir_t *thedir, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+dir\+\_\+put (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+dir\+\_\+t} $\ast$$\ast$}]{dir, }
+\item[{{\bf apr\+\_\+os\+\_\+dir\+\_\+t} $\ast$}]{thedir, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga5087057e23ff6b79ae31ef6e7cc7301e}{}\label{group__apr__portabile_ga5087057e23ff6b79ae31ef6e7cc7301e}
+convert the dir from os specific type to apr type. 
+\begin{DoxyParams}{Parameters}
+{\em dir} & The apr dir we are converting to. \\
+\hline
+{\em thedir} & The os specific dir to convert \\
+\hline
+{\em cont} & The pool to use when creating to apr directory. \\
+\hline
+\end{DoxyParams}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+get@{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+get}}
+\index{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+get@{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+get}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+get(apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t $\ast$$\ast$ostime, apr\+\_\+time\+\_\+exp\+\_\+t $\ast$aprtime)}{apr_os_exp_time_get(apr_os_exp_time_t **ostime, apr_time_exp_t *aprtime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t} $\ast$$\ast$}]{ostime, }
+\item[{{\bf apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$}]{aprtime}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga903df49f8cd2bb7298cb1612ff6394df}{}\label{group__apr__portabile_ga903df49f8cd2bb7298cb1612ff6394df}
+Get the exploded time in the platforms native format. 
+\begin{DoxyParams}{Parameters}
+{\em ostime} & the native time format \\
+\hline
+{\em aprtime} & the time to convert \\
+\hline
+\end{DoxyParams}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+put@{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+put}}
+\index{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+put@{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+put}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+put(apr\+\_\+time\+\_\+exp\+\_\+t $\ast$aprtime, apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t $\ast$$\ast$ostime, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_exp_time_put(apr_time_exp_t *aprtime, apr_os_exp_time_t **ostime, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+put (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$}]{aprtime, }
+\item[{{\bf apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t} $\ast$$\ast$}]{ostime, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga59486f31d5b591863ed83e67cc8106b1}{}\label{group__apr__portabile_ga59486f31d5b591863ed83e67cc8106b1}
+Put the exploded time in the A\+PR format. 
+\begin{DoxyParams}{Parameters}
+{\em aprtime} & the A\+PR time format \\
+\hline
+{\em ostime} & the time to convert \\
+\hline
+{\em cont} & the pool to use if necessary \\
+\hline
+\end{DoxyParams}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+file\+\_\+get@{apr\+\_\+os\+\_\+file\+\_\+get}}
+\index{apr\+\_\+os\+\_\+file\+\_\+get@{apr\+\_\+os\+\_\+file\+\_\+get}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+file\+\_\+get(apr\+\_\+os\+\_\+file\+\_\+t $\ast$thefile, apr\+\_\+file\+\_\+t $\ast$file)}{apr_os_file_get(apr_os_file_t *thefile, apr_file_t *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+file\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+os\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga1ff9a9a7313954fb6590f280d2c2e992}{}\label{group__apr__portabile_ga1ff9a9a7313954fb6590f280d2c2e992}
+convert the file from apr type to os specific type. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The os specific file we are converting to \\
+\hline
+{\em file} & The apr file to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+On Unix, it is only possible to get a file descriptor from an apr file type. 
+\end{DoxyRemark}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+file\+\_\+put@{apr\+\_\+os\+\_\+file\+\_\+put}}
+\index{apr\+\_\+os\+\_\+file\+\_\+put@{apr\+\_\+os\+\_\+file\+\_\+put}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+file\+\_\+put(apr\+\_\+file\+\_\+t $\ast$$\ast$file, apr\+\_\+os\+\_\+file\+\_\+t $\ast$thefile, apr\+\_\+int32\+\_\+t flags, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_file_put(apr_file_t **file, apr_os_file_t *thefile, apr_int32_t flags, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+file\+\_\+put (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{file, }
+\item[{{\bf apr\+\_\+os\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga17a85a792b05506f293e7cf36f8754b7}{}\label{group__apr__portabile_ga17a85a792b05506f293e7cf36f8754b7}
+convert the file from os specific type to apr type. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The apr file we are converting to. \\
+\hline
+{\em thefile} & The os specific file to convert \\
+\hline
+{\em flags} & The flags that were used to open this file. \\
+\hline
+{\em cont} & The pool to use if it is needed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+On Unix, it is only possible to put a file descriptor into an apr file type. 
+\end{DoxyRemark}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+get@{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+get}}
+\index{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+get@{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+get}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+get(apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t $\ast$$\ast$ostime, apr\+\_\+time\+\_\+t $\ast$aprtime)}{apr_os_imp_time_get(apr_os_imp_time_t **ostime, apr_time_t *aprtime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t} $\ast$$\ast$}]{ostime, }
+\item[{{\bf apr\+\_\+time\+\_\+t} $\ast$}]{aprtime}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga406db611360a70360bec953cd92d2df7}{}\label{group__apr__portabile_ga406db611360a70360bec953cd92d2df7}
+Get the imploded time in the platforms native format. 
+\begin{DoxyParams}{Parameters}
+{\em ostime} & the native time format \\
+\hline
+{\em aprtime} & the time to convert \\
+\hline
+\end{DoxyParams}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+put@{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+put}}
+\index{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+put@{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+put}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+put(apr\+\_\+time\+\_\+t $\ast$aprtime, apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t $\ast$$\ast$ostime, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_imp_time_put(apr_time_t *aprtime, apr_os_imp_time_t **ostime, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+put (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+time\+\_\+t} $\ast$}]{aprtime, }
+\item[{{\bf apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t} $\ast$$\ast$}]{ostime, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga8ba8b7036b84e260c1cf519c3247a7d4}{}\label{group__apr__portabile_ga8ba8b7036b84e260c1cf519c3247a7d4}
+Put the imploded time in the A\+PR format. 
+\begin{DoxyParams}{Parameters}
+{\em aprtime} & the A\+PR time format \\
+\hline
+{\em ostime} & the time to convert \\
+\hline
+{\em cont} & the pool to use if necessary \\
+\hline
+\end{DoxyParams}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+locale\+\_\+encoding@{apr\+\_\+os\+\_\+locale\+\_\+encoding}}
+\index{apr\+\_\+os\+\_\+locale\+\_\+encoding@{apr\+\_\+os\+\_\+locale\+\_\+encoding}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+locale\+\_\+encoding(apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_os_locale_encoding(apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+os\+\_\+locale\+\_\+encoding (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_gaf4c49baaf6cb115c6c92e74e4a40fd46}{}\label{group__apr__portabile_gaf4c49baaf6cb115c6c92e74e4a40fd46}
+Get the name of the current locale character set. 
+\begin{DoxyParams}{Parameters}
+{\em pool} & the pool to allocate the name from, if needed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Defers to apr\+\_\+os\+\_\+default\+\_\+encoding if the current locale\textquotesingle{}s data can\textquotesingle{}t be retrieved on this system. 
+\end{DoxyRemark}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+pipe\+\_\+put@{apr\+\_\+os\+\_\+pipe\+\_\+put}}
+\index{apr\+\_\+os\+\_\+pipe\+\_\+put@{apr\+\_\+os\+\_\+pipe\+\_\+put}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+pipe\+\_\+put(apr\+\_\+file\+\_\+t $\ast$$\ast$file, apr\+\_\+os\+\_\+file\+\_\+t $\ast$thefile, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_pipe_put(apr_file_t **file, apr_os_file_t *thefile, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+pipe\+\_\+put (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{file, }
+\item[{{\bf apr\+\_\+os\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga8886290c57248bc4d6c1e4802cc377f0}{}\label{group__apr__portabile_ga8886290c57248bc4d6c1e4802cc377f0}
+convert the file from os specific type to apr type. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The apr file we are converting to. \\
+\hline
+{\em thefile} & The os specific pipe to convert \\
+\hline
+{\em cont} & The pool to use if it is needed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+On Unix, it is only possible to put a file descriptor into an apr file type. 
+\end{DoxyRemark}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+pipe\+\_\+put\+\_\+ex@{apr\+\_\+os\+\_\+pipe\+\_\+put\+\_\+ex}}
+\index{apr\+\_\+os\+\_\+pipe\+\_\+put\+\_\+ex@{apr\+\_\+os\+\_\+pipe\+\_\+put\+\_\+ex}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+pipe\+\_\+put\+\_\+ex(apr\+\_\+file\+\_\+t $\ast$$\ast$file, apr\+\_\+os\+\_\+file\+\_\+t $\ast$thefile, int register\+\_\+cleanup, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_pipe_put_ex(apr_file_t **file, apr_os_file_t *thefile, int register_cleanup, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+pipe\+\_\+put\+\_\+ex (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{file, }
+\item[{{\bf apr\+\_\+os\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{int}]{register\+\_\+cleanup, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_gaa3b025a01b6e9b71e402abba74fe3b93}{}\label{group__apr__portabile_gaa3b025a01b6e9b71e402abba74fe3b93}
+convert the file from os specific type to apr type. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The apr file we are converting to. \\
+\hline
+{\em thefile} & The os specific pipe to convert \\
+\hline
+{\em register\+\_\+cleanup} & A cleanup will be registered on the apr\+\_\+file\+\_\+t to issue \hyperlink{group__apr__file__io_ga5607bce1c4c798ceb6c8475a998a81a1}{apr\+\_\+file\+\_\+close()}. \\
+\hline
+{\em cont} & The pool to use if it is needed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+On Unix, it is only possible to put a file descriptor into an apr file type. 
+\end{DoxyRemark}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+get@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+get}}
+\index{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+get@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+get}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+get(apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t $\ast$ospmutex, apr\+\_\+proc\+\_\+mutex\+\_\+t $\ast$pmutex)}{apr_os_proc_mutex_get(apr_os_proc_mutex_t *ospmutex, apr_proc_mutex_t *pmutex)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$}]{ospmutex, }
+\item[{{\bf apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$}]{pmutex}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga2003a3142f05675696268053b2fddbe1}{}\label{group__apr__portabile_ga2003a3142f05675696268053b2fddbe1}
+Convert the proc mutex from os specific type to apr type 
+\begin{DoxyParams}{Parameters}
+{\em ospmutex} & The os specific proc mutex we are converting to. \\
+\hline
+{\em pmutex} & The apr proc mutex to convert. \\
+\hline
+\end{DoxyParams}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+put@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+put}}
+\index{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+put@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+put}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+put(apr\+\_\+proc\+\_\+mutex\+\_\+t $\ast$$\ast$pmutex, apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t $\ast$ospmutex, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_proc_mutex_put(apr_proc_mutex_t **pmutex, apr_os_proc_mutex_t *ospmutex, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+put (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$$\ast$}]{pmutex, }
+\item[{{\bf apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$}]{ospmutex, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga885f99da0c19912293b5b7bf9df21b02}{}\label{group__apr__portabile_ga885f99da0c19912293b5b7bf9df21b02}
+Convert the proc mutex from os specific type to apr type 
+\begin{DoxyParams}{Parameters}
+{\em pmutex} & The apr proc mutex we are converting to. \\
+\hline
+{\em ospmutex} & The os specific proc mutex to convert. \\
+\hline
+{\em cont} & The pool to use if it is needed. \\
+\hline
+\end{DoxyParams}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+shm\+\_\+get@{apr\+\_\+os\+\_\+shm\+\_\+get}}
+\index{apr\+\_\+os\+\_\+shm\+\_\+get@{apr\+\_\+os\+\_\+shm\+\_\+get}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+shm\+\_\+get(apr\+\_\+os\+\_\+shm\+\_\+t $\ast$osshm, apr\+\_\+shm\+\_\+t $\ast$shm)}{apr_os_shm_get(apr_os_shm_t *osshm, apr_shm_t *shm)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+shm\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+os\+\_\+shm\+\_\+t} $\ast$}]{osshm, }
+\item[{{\bf apr\+\_\+shm\+\_\+t} $\ast$}]{shm}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga80ebb75a574f97363455dbab05e289d6}{}\label{group__apr__portabile_ga80ebb75a574f97363455dbab05e289d6}
+convert the shm from apr type to os specific type. 
+\begin{DoxyParams}{Parameters}
+{\em osshm} & The os specific shm representation \\
+\hline
+{\em shm} & The apr shm to convert. \\
+\hline
+\end{DoxyParams}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+shm\+\_\+put@{apr\+\_\+os\+\_\+shm\+\_\+put}}
+\index{apr\+\_\+os\+\_\+shm\+\_\+put@{apr\+\_\+os\+\_\+shm\+\_\+put}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+shm\+\_\+put(apr\+\_\+shm\+\_\+t $\ast$$\ast$shm, apr\+\_\+os\+\_\+shm\+\_\+t $\ast$osshm, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_shm_put(apr_shm_t **shm, apr_os_shm_t *osshm, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+shm\+\_\+put (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+shm\+\_\+t} $\ast$$\ast$}]{shm, }
+\item[{{\bf apr\+\_\+os\+\_\+shm\+\_\+t} $\ast$}]{osshm, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_gaac2b48e4ea4ac8f959cd0e78ede6c5f2}{}\label{group__apr__portabile_gaac2b48e4ea4ac8f959cd0e78ede6c5f2}
+convert the shared memory from os specific type to apr type. 
+\begin{DoxyParams}{Parameters}
+{\em shm} & The apr shm representation of osshm \\
+\hline
+{\em osshm} & The os specific shm identity \\
+\hline
+{\em cont} & The pool to use if it is needed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+On fork()ed architectures, this is typically nothing more than the memory block mapped. On non-\/fork architectures, this is typically some internal handle to pass the mapping from process to process. 
+\end{DoxyRemark}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+sock\+\_\+get@{apr\+\_\+os\+\_\+sock\+\_\+get}}
+\index{apr\+\_\+os\+\_\+sock\+\_\+get@{apr\+\_\+os\+\_\+sock\+\_\+get}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+sock\+\_\+get(apr\+\_\+os\+\_\+sock\+\_\+t $\ast$thesock, apr\+\_\+socket\+\_\+t $\ast$sock)}{apr_os_sock_get(apr_os_sock_t *thesock, apr_socket_t *sock)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+sock\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+os\+\_\+sock\+\_\+t} $\ast$}]{thesock, }
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga07ec79bbb5243596933cd2caf2d428df}{}\label{group__apr__portabile_ga07ec79bbb5243596933cd2caf2d428df}
+Convert the socket from an apr type to an OS specific socket 
+\begin{DoxyParams}{Parameters}
+{\em thesock} & The socket to convert. \\
+\hline
+{\em sock} & The os specific equivalent of the apr socket.. \\
+\hline
+\end{DoxyParams}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+sock\+\_\+make@{apr\+\_\+os\+\_\+sock\+\_\+make}}
+\index{apr\+\_\+os\+\_\+sock\+\_\+make@{apr\+\_\+os\+\_\+sock\+\_\+make}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+sock\+\_\+make(apr\+\_\+socket\+\_\+t $\ast$$\ast$apr\+\_\+sock, apr\+\_\+os\+\_\+sock\+\_\+info\+\_\+t $\ast$os\+\_\+sock\+\_\+info, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_sock_make(apr_socket_t **apr_sock, apr_os_sock_info_t *os_sock_info, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+sock\+\_\+make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$$\ast$}]{apr\+\_\+sock, }
+\item[{{\bf apr\+\_\+os\+\_\+sock\+\_\+info\+\_\+t} $\ast$}]{os\+\_\+sock\+\_\+info, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga5df9f6b1b9c07bfeca3685118760eefc}{}\label{group__apr__portabile_ga5df9f6b1b9c07bfeca3685118760eefc}
+Create a socket from an existing descriptor and local and remote socket addresses. 
+\begin{DoxyParams}{Parameters}
+{\em apr\+\_\+sock} & The new socket that has been set up \\
+\hline
+{\em os\+\_\+sock\+\_\+info} & The os representation of the socket handle and other characteristics of the socket \\
+\hline
+{\em cont} & The pool to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If you only know the descriptor/handle or if it isn\textquotesingle{}t really a true socket, use \hyperlink{group__apr__portabile_ga729bd6825dfadd814de2aa602462d838}{apr\+\_\+os\+\_\+sock\+\_\+put()} instead. 
+\end{DoxyRemark}
+\index{Portability Routines@{Portability Routines}!apr\+\_\+os\+\_\+sock\+\_\+put@{apr\+\_\+os\+\_\+sock\+\_\+put}}
+\index{apr\+\_\+os\+\_\+sock\+\_\+put@{apr\+\_\+os\+\_\+sock\+\_\+put}!Portability Routines@{Portability Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+os\+\_\+sock\+\_\+put(apr\+\_\+socket\+\_\+t $\ast$$\ast$sock, apr\+\_\+os\+\_\+sock\+\_\+t $\ast$thesock, apr\+\_\+pool\+\_\+t $\ast$cont)}{apr_os_sock_put(apr_socket_t **sock, apr_os_sock_t *thesock, apr_pool_t *cont)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+os\+\_\+sock\+\_\+put (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$$\ast$}]{sock, }
+\item[{{\bf apr\+\_\+os\+\_\+sock\+\_\+t} $\ast$}]{thesock, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__portabile_ga729bd6825dfadd814de2aa602462d838}{}\label{group__apr__portabile_ga729bd6825dfadd814de2aa602462d838}
+Convert a socket from the os specific type to the apr type 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The pool to use. \\
+\hline
+{\em thesock} & The socket to convert to. \\
+\hline
+{\em cont} & The socket we are converting to an apr type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If it is a true socket, it is best to call \hyperlink{group__apr__portabile_ga5df9f6b1b9c07bfeca3685118760eefc}{apr\+\_\+os\+\_\+sock\+\_\+make()} and provide A\+PR with more information about the socket. 
+\end{DoxyRemark}

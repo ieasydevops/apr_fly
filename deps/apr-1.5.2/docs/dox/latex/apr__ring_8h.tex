@@ -1,0 +1,74 @@
+\hypertarget{apr__ring_8h}{}\section{apr\+\_\+ring.\+h File Reference}
+\label{apr__ring_8h}\index{apr\+\_\+ring.\+h@{apr\+\_\+ring.\+h}}
+
+
+A\+PR Rings.  
+
+
+{\ttfamily \#include \char`\"{}apr\+\_\+general.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__ring_ga095edad4bcb6975014ed9584930f7819}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY}(elem)
+\item 
+\#define \hyperlink{group__apr__ring_ga2953b8d4034077c4020616282e6c0b67}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+H\+E\+AD}(head,  elem)
+\item 
+\#define \hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+E\+N\+T\+I\+N\+EL}(hp,  elem,  link)~(struct elem $\ast$)((char $\ast$)(\&(hp)-\/$>$next) -\/ \hyperlink{group__apr__general_gac16b1187b6ea63706c5dd48c88323dec}{A\+P\+R\+\_\+\+O\+F\+F\+S\+E\+T\+OF}(struct elem, link))
+\item 
+\#define \hyperlink{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+I\+R\+ST}(hp)~(hp)-\/$>$next
+\item 
+\#define \hyperlink{group__apr__ring_ga8b927069ba9dc13defaf45a87267b5d3}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+L\+A\+ST}(hp)~(hp)-\/$>$prev
+\item 
+\#define \hyperlink{group__apr__ring_gae42e4f7148719aa534bdbbc82be26a06}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+N\+E\+XT}(ep,  link)~(ep)-\/$>$link.\+next
+\item 
+\#define \hyperlink{group__apr__ring_ga82d45623d505d59ea5619cf8f63d0ebb}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+EV}(ep,  link)~(ep)-\/$>$link.\+prev
+\item 
+\#define \hyperlink{group__apr__ring_ga245e1a73b162a4a68ebd54c84683729d}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+IT}(hp,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga9b64ad6eebea19f896d2aa90172b6b9a}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+M\+P\+TY}(hp,  elem,  link)~(\hyperlink{group__apr__ring_gacacd9cfca24feb7ff754d4008422efcb}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+I\+R\+ST}((hp)) == \hyperlink{group__apr__ring_ga54210090292ebafcd0a0d75d9ff1563d}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+E\+N\+T\+I\+N\+EL}((hp), elem, link))
+\item 
+\#define \hyperlink{group__apr__ring_gae5048ecda4b26b012ee93c2c830058cb}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+L\+E\+M\+\_\+\+I\+N\+IT}(ep,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga438e7369e650ee07ac98ed0731589750}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+B\+E\+F\+O\+RE}(lep,  ep1,  epN,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga53e6564eba59d7e734a0ce03cb418a42}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+A\+F\+T\+ER}(lep,  ep1,  epN,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga76f9a04f932b3377073fa4e30d745564}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+B\+E\+F\+O\+RE}(lep,  nep,  link)~\hyperlink{group__apr__ring_ga438e7369e650ee07ac98ed0731589750}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+B\+E\+F\+O\+RE}((lep), (nep), (nep), link)
+\item 
+\#define \hyperlink{group__apr__ring_ga40453637d00c853f3a212a30c1f2cb41}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+F\+T\+ER}(lep,  nep,  link)~\hyperlink{group__apr__ring_ga53e6564eba59d7e734a0ce03cb418a42}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+A\+F\+T\+ER}((lep), (nep), (nep), link)
+\item 
+\#define \hyperlink{group__apr__ring_ga592e71a7cf219fc70f4fc47c60ef4c64}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD}(hp,  ep1,  epN,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga51e02e214fb6e218f45ff23cbd1f7abc}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL}(hp,  ep1,  epN,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_gad59352546dc9253c0057ad43cf728a63}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+H\+E\+AD}(hp,  nep,  elem,  link)~\hyperlink{group__apr__ring_ga592e71a7cf219fc70f4fc47c60ef4c64}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+H\+E\+AD}((hp), (nep), (nep), elem, link)
+\item 
+\#define \hyperlink{group__apr__ring_ga235311035184125d72ce0689c9949a3e}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+T\+A\+IL}(hp,  nep,  elem,  link)~\hyperlink{group__apr__ring_ga51e02e214fb6e218f45ff23cbd1f7abc}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+S\+P\+L\+I\+C\+E\+\_\+\+T\+A\+IL}((hp), (nep), (nep), elem, link)
+\item 
+\#define \hyperlink{group__apr__ring_ga34ee7a0d6daa61117006bb74498ff5aa}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+O\+N\+C\+AT}(h1,  h2,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga4d5aaa9b6f02f96f98f234a0a428474d}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+P\+R\+E\+P\+E\+ND}(h1,  h2,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga1d725b0a9ea7ff88f771e37ec130c13b}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+U\+N\+S\+P\+L\+I\+CE}(ep1,  epN,  link)
+\item 
+\#define \hyperlink{group__apr__ring_gaab4a57544bdb660ec1e306137387d9d7}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+R\+E\+M\+O\+VE}(ep,  link)~\hyperlink{group__apr__ring_ga1d725b0a9ea7ff88f771e37ec130c13b}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+U\+N\+S\+P\+L\+I\+CE}((ep), (ep), link)
+\item 
+\#define \hyperlink{group__apr__ring_gab5ac1b1fc25a0764f6c6fafdb1217fea}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+CH}(ep,  head,  elem,  link)                                                
+\item 
+\#define \hyperlink{group__apr__ring_gaed113ac9476193c638dd3e32b158e181}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+F\+O\+R\+E\+A\+C\+H\+\_\+\+S\+A\+FE}(ep1,  ep2,  head,  elem,  link)                          
+\item 
+\#define \hyperlink{group__apr__ring_ga33c7cfbea7c688c7bd0a3d36609f318b}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+NE}(msg,  ptr)
+\item 
+\#define \hyperlink{group__apr__ring_ga97bb4dcc313145496e6b05855f9c6e2b}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+CK}(hp,  elem,  link,  msg)
+\item 
+\#define \hyperlink{group__apr__ring_ga6b0f2091527ee9c7a1511cb6f172a0a7}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY}(hp,  elem,  link)
+\item 
+\#define \hyperlink{group__apr__ring_ga5500df0e96dea1a3258f1e92b28fea0a}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+EM}(ep,  elem,  link,  msg)
+\item 
+\#define \hyperlink{group__apr__ring_gab7070ae5cf69bf16178a0e0e397c5b38}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+L\+E\+M\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY}(ep,  elem,  link)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Rings. 
+

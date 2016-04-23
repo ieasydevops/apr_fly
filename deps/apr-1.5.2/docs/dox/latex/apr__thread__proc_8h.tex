@@ -1,0 +1,226 @@
+\hypertarget{apr__thread__proc_8h}{}\section{apr\+\_\+thread\+\_\+proc.\+h File Reference}
+\label{apr__thread__proc_8h}\index{apr\+\_\+thread\+\_\+proc.\+h@{apr\+\_\+thread\+\_\+proc.\+h}}
+
+
+A\+PR Thread and Process Library.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+file\+\_\+io.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sys/time.\+h$>$}\\*
+{\ttfamily \#include $<$sys/resource.\+h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga8f024515cc81b92d1b62d2b9388ca9d9}{A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+X\+IT}(x)            ~(x \& \hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a977f140c82333af62aa4bed8c99a3ee2}{A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+E\+X\+IT})
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga3928a31da2bae77514855ddd99cc8c38}{A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+I\+G\+N\+A\+L\+ED}(x)    ~(x \& \hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a7e3421d18abe458ca27822d19424225b}{A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+S\+I\+G\+N\+AL})
+\item 
+\#define \hyperlink{group__apr__thread__proc_gad05006a9889e516bb73a6ac7b93f0b77}{A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+R\+E\+\_\+\+D\+U\+MP}(x)  ~(x \& \hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a6b667be4983cb59e9bed37ee05a0dcce}{A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+C\+O\+RE})
+\item 
+\#define \hyperlink{group__apr__thread__proc_gab7cfcb8ed24e6c0a76cd41b5b113ae95}{A\+P\+R\+\_\+\+N\+O\+\_\+\+P\+I\+PE}~0
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga646af57314e71f4647243f36dd03e5ea}{A\+P\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+CK}~1
+\item 
+\#define \hyperlink{group__apr__thread__proc_gae0707f76da785490830fc3491093767c}{A\+P\+R\+\_\+\+F\+U\+L\+L\+\_\+\+N\+O\+N\+B\+L\+O\+CK}~2
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga8653bab028b1c2b98754babc2547f988}{A\+P\+R\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+B\+L\+O\+CK}~3
+\item 
+\#define \hyperlink{group__apr__thread__proc_gacad9da4db7a22f46715e50fb8ec1c939}{A\+P\+R\+\_\+\+C\+H\+I\+L\+D\+\_\+\+B\+L\+O\+CK}~4
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga597fb6a501c20cc3a597fe6c613f4310}{A\+P\+R\+\_\+\+N\+O\+\_\+\+F\+I\+LE}~8
+\item 
+\#define \hyperlink{group__apr__thread__proc_gaf8295548cb0821ee02249d6de8336bcb}{A\+P\+R\+\_\+\+R\+E\+A\+D\+\_\+\+B\+L\+O\+CK}~3
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga36ff2de9664ad6995bd488b4ac715c9c}{A\+P\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+L\+O\+CK}~4
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga597fb6a501c20cc3a597fe6c613f4310}{A\+P\+R\+\_\+\+N\+O\+\_\+\+F\+I\+LE}~8
+\item 
+\#define \hyperlink{group__apr__thread__proc_gaad8a94c7ac2be58fe035b2fd6efec84f}{A\+P\+R\+\_\+\+L\+I\+M\+I\+T\+\_\+\+C\+PU}~0
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga6dbb01bb357b078acff8fd87e9c494e8}{A\+P\+R\+\_\+\+L\+I\+M\+I\+T\+\_\+\+M\+EM}~1
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga72e9be453a20f4e78bc6d7bd95d7c333}{A\+P\+R\+\_\+\+L\+I\+M\+I\+T\+\_\+\+N\+P\+R\+OC}~2
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga18d73099d66988698a9ad2aebdce2c9f}{A\+P\+R\+\_\+\+L\+I\+M\+I\+T\+\_\+\+N\+O\+F\+I\+LE}~3
+\item 
+\#define \hyperlink{group___a_p_r___o_c_ga93a18b17cfedca0c7c99c696508c935b}{A\+P\+R\+\_\+\+O\+C\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+D\+E\+A\+TH}~0
+\item 
+\#define \hyperlink{group___a_p_r___o_c_gae4cb4983512df7df00c9c0401efba9c9}{A\+P\+R\+\_\+\+O\+C\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+U\+N\+W\+R\+I\+T\+A\+B\+LE}~1
+\item 
+\#define \hyperlink{group___a_p_r___o_c_ga5ae054b0b4c7c8eea911c146ae9ccdce}{A\+P\+R\+\_\+\+O\+C\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+R\+E\+S\+T\+A\+RT}~2
+\item 
+\#define \hyperlink{group___a_p_r___o_c_ga7fe88662b788e07800290f68575b2f4b}{A\+P\+R\+\_\+\+O\+C\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+U\+N\+R\+E\+G\+I\+S\+T\+ER}~3
+\item 
+\#define \hyperlink{group___a_p_r___o_c_ga5d441798b20b93bd1f609264d03690fb}{A\+P\+R\+\_\+\+O\+C\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+L\+O\+ST}~4
+\item 
+\#define \hyperlink{group___a_p_r___o_c_gaa4a7ca44f23d67e7e19fd59bf41abd6a}{A\+P\+R\+\_\+\+O\+C\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+R\+U\+N\+N\+I\+NG}~5
+\item 
+\#define \hyperlink{group__apr__thread__proc_gab57b448a464ac299c03d6127781df152}{A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+D\+E\+T\+A\+C\+H\+\_\+\+F\+O\+R\+E\+G\+R\+O\+U\+ND}~0
+\item 
+\#define \hyperlink{group__apr__thread__proc_gab4de7134fcc66c4127ae65b68631f846}{A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+D\+E\+T\+A\+C\+H\+\_\+\+D\+A\+E\+M\+O\+N\+I\+ZE}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} \hyperlink{group__apr__thread__proc_gada60ec0f833048291d98e66f21f4c4c4}{apr\+\_\+proc\+\_\+t}
+\item 
+typedef void( \hyperlink{group__apr__thread__proc_ga428aa21a05476068f95d9ee30d1b420a}{apr\+\_\+child\+\_\+errfn\+\_\+t}) (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$proc, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} err, const char $\ast$description)
+\item 
+typedef struct \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t}
+\item 
+typedef struct \hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\+\_\+threadattr\+\_\+t} \hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\+\_\+threadattr\+\_\+t}
+\item 
+typedef struct \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t}
+\item 
+typedef struct \hyperlink{group__apr__thread__proc_ga91841bcf20d0579e8e6acc6d3c220ac1}{apr\+\_\+thread\+\_\+once\+\_\+t} \hyperlink{group__apr__thread__proc_ga91841bcf20d0579e8e6acc6d3c220ac1}{apr\+\_\+thread\+\_\+once\+\_\+t}
+\item 
+typedef struct \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t} \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t}
+\item 
+typedef struct \hyperlink{group__apr__thread__proc_gafc52ee8b19a7b222278d31ebb3f11a71}{apr\+\_\+other\+\_\+child\+\_\+rec\+\_\+t} \hyperlink{group__apr__thread__proc_gafc52ee8b19a7b222278d31ebb3f11a71}{apr\+\_\+other\+\_\+child\+\_\+rec\+\_\+t}
+\item 
+typedef void $\ast$(\hyperlink{group__apr__platform_gade8f829f9bd98fd4386894acf72edd7c}{A\+P\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+F\+U\+NC} $\ast$ \hyperlink{group__apr__thread__proc_gaa1f88d2a6fe971ac200e466cae5f63e0}{apr\+\_\+thread\+\_\+start\+\_\+t}) (\hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$, void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__apr__thread__proc_gadcb981d7748c580eb69ac11dbf709060}{apr\+\_\+cmdtype\+\_\+e} \{ \\*
+\hyperlink{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060a02f5d83f79e2c12bfca5a86d7f14caa6}{A\+P\+R\+\_\+\+S\+H\+E\+L\+L\+C\+MD}, 
+\hyperlink{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060ac128c1239a524cf21300b8ed6248ac99}{A\+P\+R\+\_\+\+P\+R\+O\+G\+R\+AM}, 
+\hyperlink{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060a6a3f9694aced0e449f6bb4b3e437233a}{A\+P\+R\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+E\+NV}, 
+\hyperlink{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060aa424b51bdc16e4d18bb757a32c6a346a}{A\+P\+R\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+P\+A\+TH}, 
+\\*
+\hyperlink{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060afcefc45317b67fad6dc5459772ce9409}{A\+P\+R\+\_\+\+S\+H\+E\+L\+L\+C\+M\+D\+\_\+\+E\+NV}
+ \}
+\item 
+enum \hyperlink{group__apr__thread__proc_ga5e52d786644f3b66d6180571e68c7260}{apr\+\_\+wait\+\_\+how\+\_\+e} \{ \hyperlink{group__apr__thread__proc_gga5e52d786644f3b66d6180571e68c7260a057885ccf4b8b707e0d115c691037de4}{A\+P\+R\+\_\+\+W\+A\+IT}, 
+\hyperlink{group__apr__thread__proc_gga5e52d786644f3b66d6180571e68c7260a0163031f6b72b0c4add9108052a672d5}{A\+P\+R\+\_\+\+N\+O\+W\+A\+IT}
+ \}
+\item 
+enum \hyperlink{group__apr__thread__proc_gac097b4fa41e67024711c5983446d0951}{apr\+\_\+exit\+\_\+why\+\_\+e} \{ \hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a977f140c82333af62aa4bed8c99a3ee2}{A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+E\+X\+IT} = 1, 
+\hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a7e3421d18abe458ca27822d19424225b}{A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+S\+I\+G\+N\+AL} = 2, 
+\hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a6b667be4983cb59e9bed37ee05a0dcce}{A\+P\+R\+\_\+\+P\+R\+O\+C\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+C\+O\+RE} = 4
+ \}
+\item 
+enum \hyperlink{group__apr__thread__proc_ga3eaec78633742e7e0cb9480a21477aff}{apr\+\_\+kill\+\_\+conditions\+\_\+e} \{ \\*
+\hyperlink{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa33580ab0809e9498855fbdde8a1714ef}{A\+P\+R\+\_\+\+K\+I\+L\+L\+\_\+\+N\+E\+V\+ER}, 
+\hyperlink{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affaf45d0f72811399b394d1311384e2dfe4}{A\+P\+R\+\_\+\+K\+I\+L\+L\+\_\+\+A\+L\+W\+A\+YS}, 
+\hyperlink{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa16a47aa786b1c1f31ef02353bcae9a1a}{A\+P\+R\+\_\+\+K\+I\+L\+L\+\_\+\+A\+F\+T\+E\+R\+\_\+\+T\+I\+M\+E\+O\+UT}, 
+\hyperlink{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa6ada2605856ac94826edbe824e64e503}{A\+P\+R\+\_\+\+J\+U\+S\+T\+\_\+\+W\+A\+IT}, 
+\\*
+\hyperlink{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa24d6f47785093be4cea2a922eeaed098}{A\+P\+R\+\_\+\+K\+I\+L\+L\+\_\+\+O\+N\+L\+Y\+\_\+\+O\+N\+CE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga66c2f55e5dff9ac37bd32e9febd38da5}{apr\+\_\+threadattr\+\_\+create} (\hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\+\_\+threadattr\+\_\+t} $\ast$$\ast$new\+\_\+attr, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga85d44b3b021f28116122d5e40e024648}{apr\+\_\+threadattr\+\_\+detach\+\_\+set} (\hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\+\_\+threadattr\+\_\+t} $\ast$attr, apr\+\_\+int32\+\_\+t on)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_gae5b7cdb3de542d1b7b52fe5d9d8cb00b}{apr\+\_\+threadattr\+\_\+detach\+\_\+get} (\hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\+\_\+threadattr\+\_\+t} $\ast$attr)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga7849e0d637338a18cb44f66f11f28ed1}{apr\+\_\+threadattr\+\_\+stacksize\+\_\+set} (\hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\+\_\+threadattr\+\_\+t} $\ast$attr, apr\+\_\+size\+\_\+t stacksize)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga2e732f2913291180c0c484f57d727140}{apr\+\_\+threadattr\+\_\+guardsize\+\_\+set} (\hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\+\_\+threadattr\+\_\+t} $\ast$attr, apr\+\_\+size\+\_\+t guardsize)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_gaeba6593f43f1de94c2b4495dd72b0e9f}{apr\+\_\+thread\+\_\+create} (\hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$$\ast$new\+\_\+thread, \hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\+\_\+threadattr\+\_\+t} $\ast$attr, \hyperlink{group__apr__thread__proc_gaa1f88d2a6fe971ac200e466cae5f63e0}{apr\+\_\+thread\+\_\+start\+\_\+t} func, void $\ast$data, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga0e35365e530578bca1b4bea522ac8c85}{apr\+\_\+thread\+\_\+exit} (\hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$thd, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} retval)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga1b950f36fa5bcd5a64887073f46f6d13}{apr\+\_\+thread\+\_\+join} (\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} $\ast$retval, \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$thd)
+\item 
+void \hyperlink{group__apr__thread__proc_gacd69fb862c069cb6f297f65d64b5c102}{apr\+\_\+thread\+\_\+yield} (void)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga63f3bf667151053e45d5a2029daeda0d}{apr\+\_\+thread\+\_\+once\+\_\+init} (\hyperlink{group__apr__thread__proc_ga91841bcf20d0579e8e6acc6d3c220ac1}{apr\+\_\+thread\+\_\+once\+\_\+t} $\ast$$\ast$control, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga8f3645ee52ff07566c92181b4ce732d8}{apr\+\_\+thread\+\_\+once} (\hyperlink{group__apr__thread__proc_ga91841bcf20d0579e8e6acc6d3c220ac1}{apr\+\_\+thread\+\_\+once\+\_\+t} $\ast$control, void($\ast$func)(void))
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_gadbd186912d5f6f2a19a175e1e02ba10e}{apr\+\_\+thread\+\_\+detach} (\hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$thd)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_gad799c8140ed068a12f1dbe134423eae7}{apr\+\_\+thread\+\_\+data\+\_\+get} (void $\ast$$\ast$data, const char $\ast$key, \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$thread)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_gaa90d79c9935692db4f27a6573f437221}{apr\+\_\+thread\+\_\+data\+\_\+set} (void $\ast$data, const char $\ast$key, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$), \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$thread)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_gacb9553b2b3165388bfc0a54b1148804a}{apr\+\_\+threadkey\+\_\+private\+\_\+create} (\hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t} $\ast$$\ast$key, void($\ast$dest)(void $\ast$), \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga371c87c122cc3df0b7ad0031f6e11167}{apr\+\_\+threadkey\+\_\+private\+\_\+get} (void $\ast$$\ast$new\+\_\+mem, \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t} $\ast$key)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga63501a064ca7f1818aa056b40146aa0b}{apr\+\_\+threadkey\+\_\+private\+\_\+set} (void $\ast$priv, \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t} $\ast$key)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga20b9b79892a6532784fff023a4ebd8cf}{apr\+\_\+threadkey\+\_\+private\+\_\+delete} (\hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t} $\ast$key)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_gae203664972dfc5c555620ae1788f5b48}{apr\+\_\+threadkey\+\_\+data\+\_\+get} (void $\ast$$\ast$data, const char $\ast$key, \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t} $\ast$threadkey)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga1059158f34dded87f21ba82af1211951}{apr\+\_\+threadkey\+\_\+data\+\_\+set} (void $\ast$data, const char $\ast$key, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$), \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t} $\ast$threadkey)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga90f8ef684e601c110daad9b63da53cf3}{apr\+\_\+procattr\+\_\+create} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$$\ast$new\+\_\+attr, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\+\_\+procattr\+\_\+io\+\_\+set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, apr\+\_\+int32\+\_\+t in, apr\+\_\+int32\+\_\+t out, apr\+\_\+int32\+\_\+t err)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga24f40119b1aa07dd45a681a44915cb1b}{apr\+\_\+procattr\+\_\+child\+\_\+in\+\_\+set} (struct \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$child\+\_\+in, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$parent\+\_\+in)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_gabb97e9a49021ab4452ae3f1a281c977f}{apr\+\_\+procattr\+\_\+child\+\_\+out\+\_\+set} (struct \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$child\+\_\+out, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$parent\+\_\+out)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga6fad364c6c820e37c0915435cfb3921f}{apr\+\_\+procattr\+\_\+child\+\_\+err\+\_\+set} (struct \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$child\+\_\+err, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$parent\+\_\+err)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga97766f50b0ae083a2f8a28e698a59baa}{apr\+\_\+procattr\+\_\+dir\+\_\+set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, const char $\ast$dir)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga1426acc5bdd96385769e7b42bfa6ebbd}{apr\+\_\+procattr\+\_\+cmdtype\+\_\+set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, \hyperlink{group__apr__thread__proc_gadcb981d7748c580eb69ac11dbf709060}{apr\+\_\+cmdtype\+\_\+e} cmd)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga3ccca55041f648f00f0605673d4e0fdc}{apr\+\_\+procattr\+\_\+detach\+\_\+set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, apr\+\_\+int32\+\_\+t detach)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga4de85cfd54d27476dbb943955c1b0a2a}{apr\+\_\+procattr\+\_\+limit\+\_\+set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, apr\+\_\+int32\+\_\+t what, struct rlimit $\ast$limit)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_gaa39deba0837e0772754ad41589b733cf}{apr\+\_\+procattr\+\_\+child\+\_\+errfn\+\_\+set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, \hyperlink{group__apr__thread__proc_ga428aa21a05476068f95d9ee30d1b420a}{apr\+\_\+child\+\_\+errfn\+\_\+t} $\ast$errfn)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga24076f050e9385af09ad8c3931d8dc43}{apr\+\_\+procattr\+\_\+error\+\_\+check\+\_\+set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, apr\+\_\+int32\+\_\+t chk)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga0f1dd02408995767efcb9c0d9c775620}{apr\+\_\+procattr\+\_\+addrspace\+\_\+set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, apr\+\_\+int32\+\_\+t addrspace)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga741ed3dc047b935b091a21528c49bb19}{apr\+\_\+procattr\+\_\+user\+\_\+set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, const char $\ast$username, const char $\ast$password)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga391f0d3831a5894ea2118762789a395d}{apr\+\_\+procattr\+\_\+group\+\_\+set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, const char $\ast$groupname)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga3d0415bf69b0a629a929833e82758b85}{apr\+\_\+proc\+\_\+fork} (\hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} $\ast$proc, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{apr\+\_\+proc\+\_\+create} (\hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} $\ast$new\+\_\+proc, const char $\ast$progname, const char $\ast$const $\ast$args, const char $\ast$const $\ast$env, \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\+\_\+procattr\+\_\+t} $\ast$attr, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga0936f7a7fe7e2d5e08979c9f343a5a1b}{apr\+\_\+proc\+\_\+wait} (\hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} $\ast$proc, int $\ast$exitcode, \hyperlink{group__apr__thread__proc_gac097b4fa41e67024711c5983446d0951}{apr\+\_\+exit\+\_\+why\+\_\+e} $\ast$exitwhy, \hyperlink{group__apr__thread__proc_ga5e52d786644f3b66d6180571e68c7260}{apr\+\_\+wait\+\_\+how\+\_\+e} waithow)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga506183074e8413c3ff597539e4768ea4}{apr\+\_\+proc\+\_\+wait\+\_\+all\+\_\+procs} (\hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} $\ast$proc, int $\ast$exitcode, \hyperlink{group__apr__thread__proc_gac097b4fa41e67024711c5983446d0951}{apr\+\_\+exit\+\_\+why\+\_\+e} $\ast$exitwhy, \hyperlink{group__apr__thread__proc_ga5e52d786644f3b66d6180571e68c7260}{apr\+\_\+wait\+\_\+how\+\_\+e} waithow, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga56c2b005792752b63d804f2021596406}{apr\+\_\+proc\+\_\+detach} (int daemonize)
+\item 
+void \hyperlink{group__apr__thread__proc_ga5a9d123afe81eaa97955fbe45704b662}{apr\+\_\+proc\+\_\+other\+\_\+child\+\_\+register} (\hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} $\ast$proc, void($\ast$maintenance)(int reason,                                                                                                                                                                                                                                                       void $\ast$,                                                                                                                                                                                                                                                       int status), void $\ast$data, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$write\+\_\+fd, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+void \hyperlink{group__apr__thread__proc_ga10b1a4b224566c03c97f100ac8a2c830}{apr\+\_\+proc\+\_\+other\+\_\+child\+\_\+unregister} (void $\ast$data)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga88701979c4e5ac4b94966c73e0159efd}{apr\+\_\+proc\+\_\+other\+\_\+child\+\_\+alert} (\hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} $\ast$proc, int reason, int status)
+\item 
+void \hyperlink{group__apr__thread__proc_ga74a905d90a3476a611adeeb304931a6c}{apr\+\_\+proc\+\_\+other\+\_\+child\+\_\+refresh} (\hyperlink{group__apr__thread__proc_gafc52ee8b19a7b222278d31ebb3f11a71}{apr\+\_\+other\+\_\+child\+\_\+rec\+\_\+t} $\ast$ocr, int reason)
+\item 
+void \hyperlink{group__apr__thread__proc_gacff5e867a92619d30c4e78f9ad2a58e3}{apr\+\_\+proc\+\_\+other\+\_\+child\+\_\+refresh\+\_\+all} (int reason)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga4a5ff2fce2c68460281b0cb3ee0365d5}{apr\+\_\+proc\+\_\+kill} (\hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} $\ast$proc, int sig)
+\item 
+void \hyperlink{group__apr__thread__proc_gacbe3fd9491fa35149de28cebcae22f87}{apr\+\_\+pool\+\_\+note\+\_\+subprocess} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$a, \hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} $\ast$proc, \hyperlink{group__apr__thread__proc_ga3eaec78633742e7e0cb9480a21477aff}{apr\+\_\+kill\+\_\+conditions\+\_\+e} how)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga7adc09cd24568666266edce81cfffbed}{apr\+\_\+setup\+\_\+signal\+\_\+thread} (void)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__proc_ga2e53fa76ff725749c7affe6c81faa9e5}{apr\+\_\+signal\+\_\+thread} (int($\ast$signal\+\_\+handler)(int signum))
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__thread__proc_ga089b70ae9d6c64d2675a1fd1e9cd0d0d}{apr\+\_\+thread\+\_\+pool\+\_\+get} (const \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$thethread)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Thread and Process Library. 
+

@@ -1,0 +1,153 @@
+\hypertarget{group__apr__mmap}{}\section{M\+M\+AP (Memory Map) Routines}
+\label{group__apr__mmap}\index{M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__mmap_gac231fdf15d2d29802e0abbc5d0cf25b8}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+R\+E\+AD}~1
+\item 
+\#define \hyperlink{group__apr__mmap_gac2eb7f697d8bf190e630b85f967c8273}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+W\+R\+I\+TE}~2
+\item 
+\#define \hyperlink{group__apr__mmap_ga19d1916e7b64bfb1a969648fe7b0846a}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}~1
+\item 
+\#define \hyperlink{group__apr__mmap_ga548e49b3c9e8265ad8ccf70994f4fe25}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+L\+I\+M\+IT}~(4$\ast$1024$\ast$1024)
+\item 
+\#define \hyperlink{group__apr__mmap_ga4f469432098e986567576fd4c4ce5adc}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+C\+A\+N\+D\+I\+D\+A\+TE}(filelength)~((filelength $>$= \hyperlink{group__apr__mmap_ga19d1916e7b64bfb1a969648fe7b0846a}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}) \&\& (filelength $<$ \hyperlink{group__apr__mmap_ga548e49b3c9e8265ad8ccf70994f4fe25}{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+L\+I\+M\+IT}))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} \hyperlink{group__apr__mmap_ga766b01a3e1e0438d06dc88d76f826f80}{apr\+\_\+mmap\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mmap_gac6b103139be2e859741ec94cc6ad34cc}{apr\+\_\+mmap\+\_\+create} (\hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} $\ast$$\ast$newmmap, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$file, apr\+\_\+off\+\_\+t offset, apr\+\_\+size\+\_\+t size, apr\+\_\+int32\+\_\+t flag, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cntxt)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mmap_ga9fcdbf8090e924a4e8f2b301519bb4c8}{apr\+\_\+mmap\+\_\+dup} (\hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} $\ast$$\ast$new\+\_\+mmap, \hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} $\ast$old\+\_\+mmap, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mmap_ga4b67a2d22a07707897cc1183a1682040}{apr\+\_\+mmap\+\_\+delete} (\hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} $\ast$mm)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mmap_ga4c1d31bd9e911744bd5edb97e17210ec}{apr\+\_\+mmap\+\_\+offset} (void $\ast$$\ast$addr, \hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} $\ast$mm, apr\+\_\+off\+\_\+t offset)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}!A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+C\+A\+N\+D\+I\+D\+A\+TE@{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+C\+A\+N\+D\+I\+D\+A\+TE}}
+\index{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+C\+A\+N\+D\+I\+D\+A\+TE@{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+C\+A\+N\+D\+I\+D\+A\+TE}!M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+C\+A\+N\+D\+I\+D\+A\+TE}{APR_MMAP_CANDIDATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+C\+A\+N\+D\+I\+D\+A\+TE(
+\begin{DoxyParamCaption}
+\item[{}]{filelength}
+\end{DoxyParamCaption}
+)~((filelength $>$= {\bf A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}) \&\& (filelength $<$ {\bf A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+L\+I\+M\+IT}))}\hypertarget{group__apr__mmap_ga4f469432098e986567576fd4c4ce5adc}{}\label{group__apr__mmap_ga4f469432098e986567576fd4c4ce5adc}
+Can this file be M\+Maped \index{M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}!A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+L\+I\+M\+IT@{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+L\+I\+M\+IT}}
+\index{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+L\+I\+M\+IT@{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+L\+I\+M\+IT}!M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+L\+I\+M\+IT}{APR_MMAP_LIMIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+L\+I\+M\+IT~(4$\ast$1024$\ast$1024)}\hypertarget{group__apr__mmap_ga548e49b3c9e8265ad8ccf70994f4fe25}{}\label{group__apr__mmap_ga548e49b3c9e8265ad8ccf70994f4fe25}
+Maximum size of M\+Map region \index{M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}!A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+R\+E\+AD@{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+R\+E\+AD}}
+\index{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+R\+E\+AD@{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+R\+E\+AD}!M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+R\+E\+AD}{APR_MMAP_READ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+R\+E\+AD~1}\hypertarget{group__apr__mmap_gac231fdf15d2d29802e0abbc5d0cf25b8}{}\label{group__apr__mmap_gac231fdf15d2d29802e0abbc5d0cf25b8}
+M\+Map opened for reading \index{M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}!A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}!M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}{APR_MMAP_THRESHOLD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD~1}\hypertarget{group__apr__mmap_ga19d1916e7b64bfb1a969648fe7b0846a}{}\label{group__apr__mmap_ga19d1916e7b64bfb1a969648fe7b0846a}
+Files have to be at least this big before they\textquotesingle{}re mmap()d. This is to deal with systems where the expense of doing an mmap() and an munmap() outweighs the benefit for small files. It shouldn\textquotesingle{}t be set lower than 1. \index{M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}!A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+W\+R\+I\+TE}}
+\index{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+W\+R\+I\+TE@{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+W\+R\+I\+TE}!M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+W\+R\+I\+TE}{APR_MMAP_WRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+M\+M\+A\+P\+\_\+\+W\+R\+I\+TE~2}\hypertarget{group__apr__mmap_gac2eb7f697d8bf190e630b85f967c8273}{}\label{group__apr__mmap_gac2eb7f697d8bf190e630b85f967c8273}
+M\+Map opened for writing 
+
+\subsection{Typedef Documentation}
+\index{M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}!apr\+\_\+mmap\+\_\+t@{apr\+\_\+mmap\+\_\+t}}
+\index{apr\+\_\+mmap\+\_\+t@{apr\+\_\+mmap\+\_\+t}!M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+mmap\+\_\+t}{apr_mmap_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+mmap\+\_\+t} {\bf apr\+\_\+mmap\+\_\+t}}\hypertarget{group__apr__mmap_ga766b01a3e1e0438d06dc88d76f826f80}{}\label{group__apr__mmap_ga766b01a3e1e0438d06dc88d76f826f80}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\index{M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}!apr\+\_\+mmap\+\_\+create@{apr\+\_\+mmap\+\_\+create}}
+\index{apr\+\_\+mmap\+\_\+create@{apr\+\_\+mmap\+\_\+create}!M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+mmap\+\_\+create(apr\+\_\+mmap\+\_\+t $\ast$$\ast$newmmap, apr\+\_\+file\+\_\+t $\ast$file, apr\+\_\+off\+\_\+t offset, apr\+\_\+size\+\_\+t size, apr\+\_\+int32\+\_\+t flag, apr\+\_\+pool\+\_\+t $\ast$cntxt)}{apr_mmap_create(apr_mmap_t **newmmap, apr_file_t *file, apr_off_t offset, apr_size_t size, apr_int32_t flag, apr_pool_t *cntxt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+mmap\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+mmap\+\_\+t} $\ast$$\ast$}]{newmmap, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{file, }
+\item[{apr\+\_\+off\+\_\+t}]{offset, }
+\item[{apr\+\_\+size\+\_\+t}]{size, }
+\item[{apr\+\_\+int32\+\_\+t}]{flag, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{cntxt}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__mmap_gac6b103139be2e859741ec94cc6ad34cc}{}\label{group__apr__mmap_gac6b103139be2e859741ec94cc6ad34cc}
+Create a new mmap\textquotesingle{}ed file out of an existing A\+PR file. 
+\begin{DoxyParams}{Parameters}
+{\em newmmap} & The newly created mmap\textquotesingle{}ed file. \\
+\hline
+{\em file} & The file to turn into an mmap. \\
+\hline
+{\em offset} & The offset into the file to start the data pointer at. \\
+\hline
+{\em size} & The size of the file \\
+\hline
+{\em flag} & bit-\/wise or of\+: 
+\begin{DoxyPre}
+         APR\_MMAP\_READ       MMap opened for reading
+         APR\_MMAP\_WRITE      MMap opened for writing
+\end{DoxyPre}
+ \\
+\hline
+{\em cntxt} & The pool to use when creating the mmap. \\
+\hline
+\end{DoxyParams}
+\index{M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}!apr\+\_\+mmap\+\_\+delete@{apr\+\_\+mmap\+\_\+delete}}
+\index{apr\+\_\+mmap\+\_\+delete@{apr\+\_\+mmap\+\_\+delete}!M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+mmap\+\_\+delete(apr\+\_\+mmap\+\_\+t $\ast$mm)}{apr_mmap_delete(apr_mmap_t *mm)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+mmap\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+mmap\+\_\+t} $\ast$}]{mm}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__mmap_ga4b67a2d22a07707897cc1183a1682040}{}\label{group__apr__mmap_ga4b67a2d22a07707897cc1183a1682040}
+Remove a mmap\textquotesingle{}ed. 
+\begin{DoxyParams}{Parameters}
+{\em mm} & The mmap\textquotesingle{}ed file. \\
+\hline
+\end{DoxyParams}
+\index{M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}!apr\+\_\+mmap\+\_\+dup@{apr\+\_\+mmap\+\_\+dup}}
+\index{apr\+\_\+mmap\+\_\+dup@{apr\+\_\+mmap\+\_\+dup}!M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+mmap\+\_\+dup(apr\+\_\+mmap\+\_\+t $\ast$$\ast$new\+\_\+mmap, apr\+\_\+mmap\+\_\+t $\ast$old\+\_\+mmap, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_mmap_dup(apr_mmap_t **new_mmap, apr_mmap_t *old_mmap, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+mmap\+\_\+dup (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+mmap\+\_\+t} $\ast$$\ast$}]{new\+\_\+mmap, }
+\item[{{\bf apr\+\_\+mmap\+\_\+t} $\ast$}]{old\+\_\+mmap, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__mmap_ga9fcdbf8090e924a4e8f2b301519bb4c8}{}\label{group__apr__mmap_ga9fcdbf8090e924a4e8f2b301519bb4c8}
+Duplicate the specified M\+M\+AP. 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+mmap} & The structure to duplicate into. \\
+\hline
+{\em old\+\_\+mmap} & The mmap to duplicate. \\
+\hline
+{\em p} & The pool to use for new\+\_\+mmap. \\
+\hline
+\end{DoxyParams}
+\index{M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}!apr\+\_\+mmap\+\_\+offset@{apr\+\_\+mmap\+\_\+offset}}
+\index{apr\+\_\+mmap\+\_\+offset@{apr\+\_\+mmap\+\_\+offset}!M\+M\+A\+P (\+Memory Map) Routines@{M\+M\+A\+P (\+Memory Map) Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+mmap\+\_\+offset(void $\ast$$\ast$addr, apr\+\_\+mmap\+\_\+t $\ast$mm, apr\+\_\+off\+\_\+t offset)}{apr_mmap_offset(void **addr, apr_mmap_t *mm, apr_off_t offset)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+mmap\+\_\+offset (
+\begin{DoxyParamCaption}
+\item[{void $\ast$$\ast$}]{addr, }
+\item[{{\bf apr\+\_\+mmap\+\_\+t} $\ast$}]{mm, }
+\item[{apr\+\_\+off\+\_\+t}]{offset}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__mmap_ga4c1d31bd9e911744bd5edb97e17210ec}{}\label{group__apr__mmap_ga4c1d31bd9e911744bd5edb97e17210ec}
+Move the pointer into the mmap\textquotesingle{}ed file to the specified offset. 
+\begin{DoxyParams}{Parameters}
+{\em addr} & The pointer to the offset specified. \\
+\hline
+{\em mm} & The mmap\textquotesingle{}ed file. \\
+\hline
+{\em offset} & The offset to move to. \\
+\hline
+\end{DoxyParams}

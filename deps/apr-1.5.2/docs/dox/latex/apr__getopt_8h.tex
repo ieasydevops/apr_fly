@@ -1,0 +1,38 @@
+\hypertarget{apr__getopt_8h}{}\section{apr\+\_\+getopt.\+h File Reference}
+\label{apr__getopt_8h}\index{apr\+\_\+getopt.\+h@{apr\+\_\+getopt.\+h}}
+
+
+A\+PR Command Arguments (getopt)  
+
+
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t}
+\item 
+struct \hyperlink{structapr__getopt__option__t}{apr\+\_\+getopt\+\_\+option\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void( \hyperlink{group__apr__getopt_ga67c949e3d93e50e12347acd92a3bbe18}{apr\+\_\+getopt\+\_\+err\+\_\+fn\+\_\+t}) (void $\ast$arg, const char $\ast$err,...)
+\item 
+typedef struct \hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t} \hyperlink{group__apr__getopt_gaed49565eab64803e93f76d0c40d6873d}{apr\+\_\+getopt\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__getopt__option__t}{apr\+\_\+getopt\+\_\+option\+\_\+t} \hyperlink{group__apr__getopt_ga114d2af52f3573eaeee2ffa73b2c4ff5}{apr\+\_\+getopt\+\_\+option\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__getopt_gaaab2b4bfb62361af7a2d427f5f29a3d4}{apr\+\_\+getopt\+\_\+init} (\hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t} $\ast$$\ast$os, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont, int argc, const char $\ast$const $\ast$argv)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__getopt_ga289cdcf7eacc997eb91fea7c02d08934}{apr\+\_\+getopt} (\hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t} $\ast$os, const char $\ast$opts, char $\ast$option\+\_\+ch, const char $\ast$$\ast$option\+\_\+arg)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__getopt_ga80d6ff2213da4e25406b3f179fa13989}{apr\+\_\+getopt\+\_\+long} (\hyperlink{structapr__getopt__t}{apr\+\_\+getopt\+\_\+t} $\ast$os, const \hyperlink{structapr__getopt__option__t}{apr\+\_\+getopt\+\_\+option\+\_\+t} $\ast$opts, int $\ast$option\+\_\+ch, const char $\ast$$\ast$option\+\_\+arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Command Arguments (getopt) 
+

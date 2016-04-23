@@ -1,0 +1,64 @@
+\hypertarget{group___a_p_r___strings___snprintf}{}\section{snprintf implementations}
+\label{group___a_p_r___strings___snprintf}\index{snprintf implementations@{snprintf implementations}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group___a_p_r___strings___snprintf_gaf0d0becc04278df5172f0ce5905f8ff9}{apr\+\_\+snprintf} (char $\ast$buf, apr\+\_\+size\+\_\+t len, const char $\ast$format,...)
+\item 
+int \hyperlink{group___a_p_r___strings___snprintf_gaf6bf63e240e48b517644ff3e99e49c26}{apr\+\_\+vsnprintf} (char $\ast$buf, apr\+\_\+size\+\_\+t len, const char $\ast$format, va\+\_\+list ap)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyWarning}{Warning}
+These are snprintf implementations based on \hyperlink{group__apr__lib_gad2cd3594aeaafd45931d1034965f48c1}{apr\+\_\+vformatter()}.
+\end{DoxyWarning}
+Note that various standards and implementations disagree on the return value of snprintf, and side-\/effects due to n in the formatting string. apr\+\_\+snprintf (and apr\+\_\+vsnprintf) behaves as follows\+:
+
+Process the format string until the entire string is exhausted, or the buffer fills. If the buffer fills then stop processing immediately (so no further n arguments are processed), and return the buffer length. In all cases the buffer is N\+UL terminated. It will return the number of characters inserted into the buffer, not including the terminating N\+UL. As a special case, if len is 0, apr\+\_\+snprintf will return the number of characters that would have been inserted if the buffer had been infinite (in this case, $\ast$buffer can be N\+U\+LL)
+
+In no event does apr\+\_\+snprintf return a negative number. 
+
+\subsection{Function Documentation}
+\index{snprintf implementations@{snprintf implementations}!apr\+\_\+snprintf@{apr\+\_\+snprintf}}
+\index{apr\+\_\+snprintf@{apr\+\_\+snprintf}!snprintf implementations@{snprintf implementations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+snprintf(char $\ast$buf, apr\+\_\+size\+\_\+t len, const char $\ast$format,...)}{apr_snprintf(char *buf, apr_size_t len, const char *format,...)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+snprintf (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t}]{len, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___strings___snprintf_gaf0d0becc04278df5172f0ce5905f8ff9}{}\label{group___a_p_r___strings___snprintf_gaf0d0becc04278df5172f0ce5905f8ff9}
+snprintf routine based on apr\+\_\+vformatter. This means it understands the same extensions. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & The buffer to write to \\
+\hline
+{\em len} & The size of the buffer \\
+\hline
+{\em format} & The format string \\
+\hline
+{\em ...} & The arguments to use to fill out the format string. \\
+\hline
+\end{DoxyParams}
+\index{snprintf implementations@{snprintf implementations}!apr\+\_\+vsnprintf@{apr\+\_\+vsnprintf}}
+\index{apr\+\_\+vsnprintf@{apr\+\_\+vsnprintf}!snprintf implementations@{snprintf implementations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+vsnprintf(char $\ast$buf, apr\+\_\+size\+\_\+t len, const char $\ast$format, va\+\_\+list ap)}{apr_vsnprintf(char *buf, apr_size_t len, const char *format, va_list ap)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+vsnprintf (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t}]{len, }
+\item[{const char $\ast$}]{format, }
+\item[{va\+\_\+list}]{ap}
+\end{DoxyParamCaption}
+)}\hypertarget{group___a_p_r___strings___snprintf_gaf6bf63e240e48b517644ff3e99e49c26}{}\label{group___a_p_r___strings___snprintf_gaf6bf63e240e48b517644ff3e99e49c26}
+vsnprintf routine based on apr\+\_\+vformatter. This means it understands the same extensions. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & The buffer to write to \\
+\hline
+{\em len} & The size of the buffer \\
+\hline
+{\em format} & The format string \\
+\hline
+{\em ap} & The arguments to use to fill out the format string. \\
+\hline
+\end{DoxyParams}

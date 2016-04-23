@@ -1,0 +1,92 @@
+\hypertarget{apr__time_8h}{}\section{apr\+\_\+time.\+h File Reference}
+\label{apr__time_8h}\index{apr\+\_\+time.\+h@{apr\+\_\+time.\+h}}
+
+
+A\+PR Time Library.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__time_gab0d08005432bbda78e03bcd2e235e7d3}{A\+P\+R\+\_\+\+T\+I\+M\+E\+\_\+C}(val)~A\+P\+R\+\_\+\+I\+N\+T64\+\_\+C(val)
+\item 
+\#define \hyperlink{group__apr__time_gaad2d372b64a68d96b1e4c5f1173eb2c7}{A\+P\+R\+\_\+\+T\+I\+M\+E\+\_\+\+T\+\_\+\+F\+MT}~A\+P\+R\+\_\+\+I\+N\+T64\+\_\+\+T\+\_\+\+F\+MT
+\item 
+\#define \hyperlink{group__apr__time_gab4dd3f3015d25a50f3be3e0e91043abf}{A\+P\+R\+\_\+\+U\+S\+E\+C\+\_\+\+P\+E\+R\+\_\+\+S\+EC}~\hyperlink{group__apr__time_gab0d08005432bbda78e03bcd2e235e7d3}{A\+P\+R\+\_\+\+T\+I\+M\+E\+\_\+C}(1000000)
+\item 
+\#define \hyperlink{group__apr__time_gae0237f70a9a3206b5263c0a474219476}{apr\+\_\+time\+\_\+sec}(time)~((time) / \hyperlink{group__apr__time_gab4dd3f3015d25a50f3be3e0e91043abf}{A\+P\+R\+\_\+\+U\+S\+E\+C\+\_\+\+P\+E\+R\+\_\+\+S\+EC})
+\item 
+\#define \hyperlink{group__apr__time_gae842c7b471ccf0dc691eb2ff3cc8fc8e}{apr\+\_\+time\+\_\+usec}(time)~((time) \% \hyperlink{group__apr__time_gab4dd3f3015d25a50f3be3e0e91043abf}{A\+P\+R\+\_\+\+U\+S\+E\+C\+\_\+\+P\+E\+R\+\_\+\+S\+EC})
+\item 
+\#define \hyperlink{group__apr__time_ga05d6c6ea507b74605aa2149a4410076f}{apr\+\_\+time\+\_\+msec}(time)~(((time) / 1000) \% 1000)
+\item 
+\#define \hyperlink{group__apr__time_ga0ab989e84c18e63d36e653aab2821691}{apr\+\_\+time\+\_\+as\+\_\+msec}(time)~((time) / 1000)
+\item 
+\#define \hyperlink{group__apr__time_ga9530ae08ce10e2d653f4e7dc8b14ad00}{apr\+\_\+time\+\_\+from\+\_\+msec}(msec)~((\hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t})(msec) $\ast$ 1000)
+\item 
+\#define \hyperlink{group__apr__time_gaec56c2c03299a750006bfcc08d64ec32}{apr\+\_\+time\+\_\+from\+\_\+sec}(sec)~((\hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t})(sec) $\ast$ \hyperlink{group__apr__time_gab4dd3f3015d25a50f3be3e0e91043abf}{A\+P\+R\+\_\+\+U\+S\+E\+C\+\_\+\+P\+E\+R\+\_\+\+S\+EC})
+\item 
+\#define \hyperlink{group__apr__time_ga47e8d04826e56b6ce39ed082d33abc38}{apr\+\_\+time\+\_\+make}(sec,  usec)
+\item 
+\#define \hyperlink{group__apr__time_ga33933cf7a3e3c2cf6082c5f6d22ca3e5}{A\+P\+R\+\_\+\+R\+F\+C822\+\_\+\+D\+A\+T\+E\+\_\+\+L\+EN}~(30)
+\item 
+\#define \hyperlink{group__apr__time_ga0bd804145d3954f45a6962e9dd10f220}{A\+P\+R\+\_\+\+C\+T\+I\+M\+E\+\_\+\+L\+EN}~(25)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef apr\+\_\+int64\+\_\+t \hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t}
+\item 
+typedef apr\+\_\+int64\+\_\+t \hyperlink{group__apr__time_gaae2129185a395cc393f76fabf4f43e47}{apr\+\_\+interval\+\_\+time\+\_\+t}
+\item 
+typedef apr\+\_\+int32\+\_\+t \hyperlink{group__apr__time_ga3e4663cc0d8b730902ff697c8d3f64be}{apr\+\_\+short\+\_\+interval\+\_\+time\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t} \hyperlink{group__apr__time_gae28f2767111a534f263ced95a28489b1}{apr\+\_\+time\+\_\+exp\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} \hyperlink{group__apr__time_gac5cb8713d0681d7b809169a222512287}{apr\+\_\+time\+\_\+now} (void)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__time_gac2fec71f18b4a286b2e21f0b74fadce8}{apr\+\_\+time\+\_\+ansi\+\_\+put} (\hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} $\ast$result, time\+\_\+t input)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__time_gaaf3b8ba123feaa0af5a5975b9a8ab8b1}{apr\+\_\+time\+\_\+exp\+\_\+tz} (\hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$result, \hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} input, apr\+\_\+int32\+\_\+t offs)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__time_gafa8bdd3a4500f66866d8dd54bf69fb71}{apr\+\_\+time\+\_\+exp\+\_\+gmt} (\hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$result, \hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} input)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__time_ga34d3b9858de1d3111a4b2ff936ada7f6}{apr\+\_\+time\+\_\+exp\+\_\+lt} (\hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$result, \hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} input)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__time_gac13166685922464d9848bda469e0b3b7}{apr\+\_\+time\+\_\+exp\+\_\+get} (\hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} $\ast$result, \hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$input)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__time_ga0f9fdeae48a45662cb3f198d06c743f0}{apr\+\_\+time\+\_\+exp\+\_\+gmt\+\_\+get} (\hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} $\ast$result, \hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$input)
+\item 
+void \hyperlink{group__apr__time_ga8ffddc239a3d8051d9972cee080fd761}{apr\+\_\+sleep} (\hyperlink{group__apr__time_gaae2129185a395cc393f76fabf4f43e47}{apr\+\_\+interval\+\_\+time\+\_\+t} t)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__time_gad77b323dd4402ac89c51240f19015df5}{apr\+\_\+rfc822\+\_\+date} (char $\ast$date\+\_\+str, \hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} t)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__time_gad1fcb8f26d508fbb34ea2beca7bc851e}{apr\+\_\+ctime} (char $\ast$date\+\_\+str, \hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} t)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__time_ga3f5e1aa45e735f3bcf8c13fb718c214f}{apr\+\_\+strftime} (char $\ast$s, apr\+\_\+size\+\_\+t $\ast$retsize, apr\+\_\+size\+\_\+t max, const char $\ast$format, \hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$tm)
+\item 
+void \hyperlink{group__apr__time_gac47e0b54f17857f0ce2925b2930b5500}{apr\+\_\+time\+\_\+clock\+\_\+hires} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \hyperlink{group__apr__time_ga77382d017a2bef80d44478e0b41557a4}{apr\+\_\+month\+\_\+snames} \mbox{[}12\mbox{]}\mbox{[}4\mbox{]}
+\item 
+const char \hyperlink{group__apr__time_ga37d6f7740ae0f5d8ae9cfc286e8712be}{apr\+\_\+day\+\_\+snames} \mbox{[}7\mbox{]}\mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Time Library. 
+

@@ -1,0 +1,44 @@
+\hypertarget{apr__thread__mutex_8h}{}\section{apr\+\_\+thread\+\_\+mutex.\+h File Reference}
+\label{apr__thread__mutex_8h}\index{apr\+\_\+thread\+\_\+mutex.\+h@{apr\+\_\+thread\+\_\+mutex.\+h}}
+
+
+A\+PR Thread Mutex Routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__thread__mutex_ga579050872f9aff06e773b084264f7d06}{A\+P\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+D\+E\+F\+A\+U\+LT}~0x0
+\item 
+\#define \hyperlink{group__apr__thread__mutex_gaf421e0445dbc3c739130f5f6544c2e78}{A\+P\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+N\+E\+S\+T\+ED}~0x1
+\item 
+\#define \hyperlink{group__apr__thread__mutex_gac31107f3db115edc0c26ea48943c6a16}{A\+P\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+U\+N\+N\+E\+S\+T\+ED}~0x2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} \hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__mutex_ga927e99580a669f577fbcb6508814ff12}{apr\+\_\+thread\+\_\+mutex\+\_\+create} (\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$$\ast$mutex, unsigned int flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__mutex_ga1430fd10d8d260c0e3832c959742a977}{apr\+\_\+thread\+\_\+mutex\+\_\+lock} (\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__mutex_ga6ac9c8ebee83ff89416f00231a858798}{apr\+\_\+thread\+\_\+mutex\+\_\+trylock} (\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__mutex_ga74e58f753737283f9b826d8cdcbcb4bf}{apr\+\_\+thread\+\_\+mutex\+\_\+unlock} (\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__thread__mutex_gae80e6f9c2a2fbaa94f5a6954e02118f4}{apr\+\_\+thread\+\_\+mutex\+\_\+destroy} (\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__thread__mutex_gafec9362d92f8bd67660b97cb3c246544}{apr\+\_\+thread\+\_\+mutex\+\_\+pool\+\_\+get} (const \hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$thethread\+\_\+mutex)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Thread Mutex Routines. 
+

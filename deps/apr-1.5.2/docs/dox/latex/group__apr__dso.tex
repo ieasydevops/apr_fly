@@ -1,0 +1,103 @@
+\hypertarget{group__apr__dso}{}\section{Dynamic Object Handling}
+\label{group__apr__dso}\index{Dynamic Object Handling@{Dynamic Object Handling}}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} \hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t}
+\item 
+typedef void $\ast$ \hyperlink{group__apr__dso_gaf1aa0a039e8003586cfdfbc4ac57e775}{apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__dso_gaedc8609c2bb76e5c43f2df2281a9d8b6}{apr\+\_\+dso\+\_\+load} (\hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$$\ast$res\+\_\+handle, const char $\ast$path, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ctx)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__dso_ga4c7b1b4e98a5d23c56182ece047fbb7b}{apr\+\_\+dso\+\_\+unload} (\hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$handle)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__dso_gae84cd7041976787d73a9558e3393b97c}{apr\+\_\+dso\+\_\+sym} (\hyperlink{group__apr__dso_gaf1aa0a039e8003586cfdfbc4ac57e775}{apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t} $\ast$ressym, \hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$handle, const char $\ast$symname)
+\item 
+const char $\ast$ \hyperlink{group__apr__dso_gafa34fc75e1e9b8856385d3b18cfac05c}{apr\+\_\+dso\+\_\+error} (\hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$dso, char $\ast$buf, apr\+\_\+size\+\_\+t bufsize)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\index{Dynamic Object Handling@{Dynamic Object Handling}!apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t@{apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t}}
+\index{apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t@{apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t}!Dynamic Object Handling@{Dynamic Object Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t}{apr_dso_handle_sym_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t}}\hypertarget{group__apr__dso_gaf1aa0a039e8003586cfdfbc4ac57e775}{}\label{group__apr__dso_gaf1aa0a039e8003586cfdfbc4ac57e775}
+Structure for referencing symbols from dynamic objects \index{Dynamic Object Handling@{Dynamic Object Handling}!apr\+\_\+dso\+\_\+handle\+\_\+t@{apr\+\_\+dso\+\_\+handle\+\_\+t}}
+\index{apr\+\_\+dso\+\_\+handle\+\_\+t@{apr\+\_\+dso\+\_\+handle\+\_\+t}!Dynamic Object Handling@{Dynamic Object Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dso\+\_\+handle\+\_\+t}{apr_dso_handle_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+dso\+\_\+handle\+\_\+t} {\bf apr\+\_\+dso\+\_\+handle\+\_\+t}}\hypertarget{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{}\label{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}
+Structure for referencing dynamic objects 
+
+\subsection{Function Documentation}
+\index{Dynamic Object Handling@{Dynamic Object Handling}!apr\+\_\+dso\+\_\+error@{apr\+\_\+dso\+\_\+error}}
+\index{apr\+\_\+dso\+\_\+error@{apr\+\_\+dso\+\_\+error}!Dynamic Object Handling@{Dynamic Object Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dso\+\_\+error(apr\+\_\+dso\+\_\+handle\+\_\+t $\ast$dso, char $\ast$buf, apr\+\_\+size\+\_\+t bufsize)}{apr_dso_error(apr_dso_handle_t *dso, char *buf, apr_size_t bufsize)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+dso\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$}]{dso, }
+\item[{char $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t}]{bufsize}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__dso_gafa34fc75e1e9b8856385d3b18cfac05c}{}\label{group__apr__dso_gafa34fc75e1e9b8856385d3b18cfac05c}
+Report more information when a D\+SO function fails. 
+\begin{DoxyParams}{Parameters}
+{\em dso} & The dso handle that has been opened \\
+\hline
+{\em buf} & Location to store the dso error \\
+\hline
+{\em bufsize} & The size of the provided buffer \\
+\hline
+\end{DoxyParams}
+\index{Dynamic Object Handling@{Dynamic Object Handling}!apr\+\_\+dso\+\_\+load@{apr\+\_\+dso\+\_\+load}}
+\index{apr\+\_\+dso\+\_\+load@{apr\+\_\+dso\+\_\+load}!Dynamic Object Handling@{Dynamic Object Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dso\+\_\+load(apr\+\_\+dso\+\_\+handle\+\_\+t $\ast$$\ast$res\+\_\+handle, const char $\ast$path, apr\+\_\+pool\+\_\+t $\ast$ctx)}{apr_dso_load(apr_dso_handle_t **res_handle, const char *path, apr_pool_t *ctx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+dso\+\_\+load (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$$\ast$}]{res\+\_\+handle, }
+\item[{const char $\ast$}]{path, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__dso_gaedc8609c2bb76e5c43f2df2281a9d8b6}{}\label{group__apr__dso_gaedc8609c2bb76e5c43f2df2281a9d8b6}
+Load a D\+SO library. 
+\begin{DoxyParams}{Parameters}
+{\em res\+\_\+handle} & Location to store new handle for the D\+SO. \\
+\hline
+{\em path} & Path to the D\+SO library \\
+\hline
+{\em ctx} & Pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000001}{Bug}]We aught to provide an alternative to R\+T\+L\+D\+\_\+\+G\+L\+O\+B\+AL, which is the only supported method of loading D\+S\+Os today. \end{DoxyRefDesc}
+\index{Dynamic Object Handling@{Dynamic Object Handling}!apr\+\_\+dso\+\_\+sym@{apr\+\_\+dso\+\_\+sym}}
+\index{apr\+\_\+dso\+\_\+sym@{apr\+\_\+dso\+\_\+sym}!Dynamic Object Handling@{Dynamic Object Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dso\+\_\+sym(apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t $\ast$ressym, apr\+\_\+dso\+\_\+handle\+\_\+t $\ast$handle, const char $\ast$symname)}{apr_dso_sym(apr_dso_handle_sym_t *ressym, apr_dso_handle_t *handle, const char *symname)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+dso\+\_\+sym (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+dso\+\_\+handle\+\_\+sym\+\_\+t} $\ast$}]{ressym, }
+\item[{{\bf apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$}]{handle, }
+\item[{const char $\ast$}]{symname}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__dso_gae84cd7041976787d73a9558e3393b97c}{}\label{group__apr__dso_gae84cd7041976787d73a9558e3393b97c}
+Load a symbol from a D\+SO handle. 
+\begin{DoxyParams}{Parameters}
+{\em ressym} & Location to store the loaded symbol \\
+\hline
+{\em handle} & handle to load the symbol from. \\
+\hline
+{\em symname} & Name of the symbol to load. \\
+\hline
+\end{DoxyParams}
+\index{Dynamic Object Handling@{Dynamic Object Handling}!apr\+\_\+dso\+\_\+unload@{apr\+\_\+dso\+\_\+unload}}
+\index{apr\+\_\+dso\+\_\+unload@{apr\+\_\+dso\+\_\+unload}!Dynamic Object Handling@{Dynamic Object Handling}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dso\+\_\+unload(apr\+\_\+dso\+\_\+handle\+\_\+t $\ast$handle)}{apr_dso_unload(apr_dso_handle_t *handle)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+dso\+\_\+unload (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__dso_ga4c7b1b4e98a5d23c56182ece047fbb7b}{}\label{group__apr__dso_ga4c7b1b4e98a5d23c56182ece047fbb7b}
+Close a D\+SO library. 
+\begin{DoxyParams}{Parameters}
+{\em handle} & handle to close. \\
+\hline
+\end{DoxyParams}

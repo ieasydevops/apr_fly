@@ -1,0 +1,113 @@
+\hypertarget{apr__poll_8h}{}\section{apr\+\_\+poll.\+h File Reference}
+\label{apr__poll_8h}\index{apr\+\_\+poll.\+h@{apr\+\_\+poll.\+h}}
+
+
+A\+PR Poll interface.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+inherit.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+file\+\_\+io.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+network\+\_\+io.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$netinet/in.\+h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionapr__descriptor}{apr\+\_\+descriptor}
+\item 
+struct \hyperlink{structapr__pollfd__t}{apr\+\_\+pollfd\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__pollopts_ga746222e6b858bc2fc77328d59f78e788}{A\+P\+R\+\_\+\+P\+O\+L\+L\+IN}~0x001
+\item 
+\#define \hyperlink{group__pollopts_ga196c38e1914077c4c9a0cf3ce87f1b9c}{A\+P\+R\+\_\+\+P\+O\+L\+L\+P\+RI}~0x002
+\item 
+\#define \hyperlink{group__pollopts_ga6fb703db1d11e2c5f66d8c6146e56053}{A\+P\+R\+\_\+\+P\+O\+L\+L\+O\+UT}~0x004
+\item 
+\#define \hyperlink{group__pollopts_ga6f5a72fd9cf3f5dcf174acce0b4b77ee}{A\+P\+R\+\_\+\+P\+O\+L\+L\+E\+RR}~0x010
+\item 
+\#define \hyperlink{group__pollopts_gace76603c4fa4b56f8b5977ff1ceb6f3b}{A\+P\+R\+\_\+\+P\+O\+L\+L\+H\+UP}~0x020
+\item 
+\#define \hyperlink{group__pollopts_ga132da215e207d4685fb467cc64a73f1b}{A\+P\+R\+\_\+\+P\+O\+L\+L\+N\+V\+AL}~0x040
+\item 
+\#define \hyperlink{group__pollflags_gabdfaccfd394c847f692351dee2e5ef7f}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE}~0x001
+\item 
+\#define \hyperlink{group__pollflags_ga0febaf4378d2705bf1256b22fe8dfd24}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+C\+O\+PY}~0x002
+\item 
+\#define \hyperlink{group__pollflags_ga552d7f28d442602e6c9bb6931f183493}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+W\+A\+K\+E\+A\+B\+LE}~0x004
+\item 
+\#define \hyperlink{group__pollflags_gaa46a9cbb23b2e8e71dd3ba88e69fdf13}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+N\+O\+D\+E\+F\+A\+U\+LT}~0x010
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__pollfd__t}{apr\+\_\+pollfd\+\_\+t} \hyperlink{group__apr__poll_ga0c89b184cbe2337e44207f1ad245129b}{apr\+\_\+pollfd\+\_\+t}
+\item 
+typedef struct \hyperlink{group__apr__poll_ga680da1f10ac5ef75efc503a9d15b8906}{apr\+\_\+pollset\+\_\+t} \hyperlink{group__apr__poll_ga680da1f10ac5ef75efc503a9d15b8906}{apr\+\_\+pollset\+\_\+t}
+\item 
+typedef struct \hyperlink{group__apr__poll_gae382e39bdf0c5a02fca7da3944bece08}{apr\+\_\+pollcb\+\_\+t} \hyperlink{group__apr__poll_gae382e39bdf0c5a02fca7da3944bece08}{apr\+\_\+pollcb\+\_\+t}
+\item 
+typedef \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$ \hyperlink{group__apr__poll_ga1dcd8c87e233dbf105e83d50ef601f55}{apr\+\_\+pollcb\+\_\+cb\+\_\+t}) (void $\ast$baton, \hyperlink{structapr__pollfd__t}{apr\+\_\+pollfd\+\_\+t} $\ast$descriptor)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__apr__poll_gabe6f1238ea45e9425fa052e2788e4a29}{apr\+\_\+pollset\+\_\+method\+\_\+e} \{ \\*
+\hyperlink{group__apr__poll_ggabe6f1238ea45e9425fa052e2788e4a29ae68b155914b79d4a58519675dfc24d94}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+D\+E\+F\+A\+U\+LT}, 
+\hyperlink{group__apr__poll_ggabe6f1238ea45e9425fa052e2788e4a29aa6613bebee1abb348da2a153f91c738e}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+S\+E\+L\+E\+CT}, 
+\hyperlink{group__apr__poll_ggabe6f1238ea45e9425fa052e2788e4a29a2722387d6523f8f02cec7c31a45966d4}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+K\+Q\+U\+E\+UE}, 
+\hyperlink{group__apr__poll_ggabe6f1238ea45e9425fa052e2788e4a29aec66f6da923595ff0a6fa20f4bc41e46}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+P\+O\+RT}, 
+\\*
+\hyperlink{group__apr__poll_ggabe6f1238ea45e9425fa052e2788e4a29a142ebdcab58ccfabd5d964ff3ab476ab}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+E\+P\+O\+LL}, 
+\hyperlink{group__apr__poll_ggabe6f1238ea45e9425fa052e2788e4a29aa8c0b4c036644ea4518f8d7c2fd4fe8e}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+P\+O\+LL}, 
+\hyperlink{group__apr__poll_ggabe6f1238ea45e9425fa052e2788e4a29ace0288893b2db65847536c41c0048e82}{A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+A\+I\+O\+\_\+\+M\+S\+GQ}
+ \}
+\item 
+enum \hyperlink{group__apr__poll_ga0a8549d84c1721788b102a4cc8b4b0f0}{apr\+\_\+datatype\+\_\+e} \{ \hyperlink{group__apr__poll_gga0a8549d84c1721788b102a4cc8b4b0f0aeb85f43492052bf0788d31f6dd85a222}{A\+P\+R\+\_\+\+N\+O\+\_\+\+D\+E\+SC}, 
+\hyperlink{group__apr__poll_gga0a8549d84c1721788b102a4cc8b4b0f0a3629c5b3166fde91792f2f913fbd72f0}{A\+P\+R\+\_\+\+P\+O\+L\+L\+\_\+\+S\+O\+C\+K\+ET}, 
+\hyperlink{group__apr__poll_gga0a8549d84c1721788b102a4cc8b4b0f0a8351d461bf66b706232962fd02e84202}{A\+P\+R\+\_\+\+P\+O\+L\+L\+\_\+\+F\+I\+LE}, 
+\hyperlink{group__apr__poll_gga0a8549d84c1721788b102a4cc8b4b0f0a413b387c7fe1ca7b096d46dfd9942fe5}{A\+P\+R\+\_\+\+P\+O\+L\+L\+\_\+\+L\+A\+S\+T\+D\+E\+SC}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_ga4ca4056a19daee8fe94ddba100fe2326}{apr\+\_\+pollset\+\_\+create} (\hyperlink{group__apr__poll_ga680da1f10ac5ef75efc503a9d15b8906}{apr\+\_\+pollset\+\_\+t} $\ast$$\ast$pollset, apr\+\_\+uint32\+\_\+t size, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+uint32\+\_\+t flags)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_ga9448a2d756868aa1c6dbc9726a2e32b5}{apr\+\_\+pollset\+\_\+create\+\_\+ex} (\hyperlink{group__apr__poll_ga680da1f10ac5ef75efc503a9d15b8906}{apr\+\_\+pollset\+\_\+t} $\ast$$\ast$pollset, apr\+\_\+uint32\+\_\+t size, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+uint32\+\_\+t flags, \hyperlink{group__apr__poll_gabe6f1238ea45e9425fa052e2788e4a29}{apr\+\_\+pollset\+\_\+method\+\_\+e} method)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_gaa06c538d3fea9d860374043aff9450b2}{apr\+\_\+pollset\+\_\+destroy} (\hyperlink{group__apr__poll_ga680da1f10ac5ef75efc503a9d15b8906}{apr\+\_\+pollset\+\_\+t} $\ast$pollset)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_ga4ec50bf9a11c6b60927c51b81412f5b9}{apr\+\_\+pollset\+\_\+add} (\hyperlink{group__apr__poll_ga680da1f10ac5ef75efc503a9d15b8906}{apr\+\_\+pollset\+\_\+t} $\ast$pollset, const \hyperlink{structapr__pollfd__t}{apr\+\_\+pollfd\+\_\+t} $\ast$descriptor)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_ga3c99c06e142d6b6b789eeb6086122e3a}{apr\+\_\+pollset\+\_\+remove} (\hyperlink{group__apr__poll_ga680da1f10ac5ef75efc503a9d15b8906}{apr\+\_\+pollset\+\_\+t} $\ast$pollset, const \hyperlink{structapr__pollfd__t}{apr\+\_\+pollfd\+\_\+t} $\ast$descriptor)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_ga6b31d7b3a7b2d356370403dd2b79ecf3}{apr\+\_\+pollset\+\_\+poll} (\hyperlink{group__apr__poll_ga680da1f10ac5ef75efc503a9d15b8906}{apr\+\_\+pollset\+\_\+t} $\ast$pollset, \hyperlink{group__apr__time_gaae2129185a395cc393f76fabf4f43e47}{apr\+\_\+interval\+\_\+time\+\_\+t} timeout, apr\+\_\+int32\+\_\+t $\ast$num, const \hyperlink{structapr__pollfd__t}{apr\+\_\+pollfd\+\_\+t} $\ast$$\ast$descriptors)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_gac5e86828143e169e18b2a6eab94be531}{apr\+\_\+pollset\+\_\+wakeup} (\hyperlink{group__apr__poll_ga680da1f10ac5ef75efc503a9d15b8906}{apr\+\_\+pollset\+\_\+t} $\ast$pollset)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_gad1d8a1ccd14952be6da5f272ca8dda76}{apr\+\_\+poll} (\hyperlink{structapr__pollfd__t}{apr\+\_\+pollfd\+\_\+t} $\ast$aprset, apr\+\_\+int32\+\_\+t numsock, apr\+\_\+int32\+\_\+t $\ast$nsds, \hyperlink{group__apr__time_gaae2129185a395cc393f76fabf4f43e47}{apr\+\_\+interval\+\_\+time\+\_\+t} timeout)
+\item 
+const char $\ast$ \hyperlink{group__apr__poll_ga942ebbcc17d27911da86e1bd5c7a592e}{apr\+\_\+pollset\+\_\+method\+\_\+name} (\hyperlink{group__apr__poll_ga680da1f10ac5ef75efc503a9d15b8906}{apr\+\_\+pollset\+\_\+t} $\ast$pollset)
+\item 
+const char $\ast$ \hyperlink{group__apr__poll_ga5d64867d7a3abd53d3765b4b47cf774f}{apr\+\_\+poll\+\_\+method\+\_\+defname} (void)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_ga76c33736268d57fca503790711d6d04e}{apr\+\_\+pollcb\+\_\+create} (\hyperlink{group__apr__poll_gae382e39bdf0c5a02fca7da3944bece08}{apr\+\_\+pollcb\+\_\+t} $\ast$$\ast$pollcb, apr\+\_\+uint32\+\_\+t size, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+uint32\+\_\+t flags)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_ga2ebdd0cba2d3b8333c46ee48170f8e90}{apr\+\_\+pollcb\+\_\+create\+\_\+ex} (\hyperlink{group__apr__poll_gae382e39bdf0c5a02fca7da3944bece08}{apr\+\_\+pollcb\+\_\+t} $\ast$$\ast$pollcb, apr\+\_\+uint32\+\_\+t size, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+uint32\+\_\+t flags, \hyperlink{group__apr__poll_gabe6f1238ea45e9425fa052e2788e4a29}{apr\+\_\+pollset\+\_\+method\+\_\+e} method)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_ga8fab02dfa803d911dae98656fac7a2c8}{apr\+\_\+pollcb\+\_\+add} (\hyperlink{group__apr__poll_gae382e39bdf0c5a02fca7da3944bece08}{apr\+\_\+pollcb\+\_\+t} $\ast$pollcb, \hyperlink{structapr__pollfd__t}{apr\+\_\+pollfd\+\_\+t} $\ast$descriptor)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_gad004b778a14d6bcc4e48a10e5af729d8}{apr\+\_\+pollcb\+\_\+remove} (\hyperlink{group__apr__poll_gae382e39bdf0c5a02fca7da3944bece08}{apr\+\_\+pollcb\+\_\+t} $\ast$pollcb, \hyperlink{structapr__pollfd__t}{apr\+\_\+pollfd\+\_\+t} $\ast$descriptor)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__poll_ga11765d1b27e2f621a8dcd2c40f0e259c}{apr\+\_\+pollcb\+\_\+poll} (\hyperlink{group__apr__poll_gae382e39bdf0c5a02fca7da3944bece08}{apr\+\_\+pollcb\+\_\+t} $\ast$pollcb, \hyperlink{group__apr__time_gaae2129185a395cc393f76fabf4f43e47}{apr\+\_\+interval\+\_\+time\+\_\+t} timeout, \hyperlink{group__apr__poll_ga1dcd8c87e233dbf105e83d50ef601f55}{apr\+\_\+pollcb\+\_\+cb\+\_\+t} func, void $\ast$baton)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Poll interface. 
+

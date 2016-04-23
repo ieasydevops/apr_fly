@@ -1,0 +1,111 @@
+\hypertarget{group__apr__mcast}{}\section{IP Multicast}
+\label{group__apr__mcast}\index{I\+P Multicast@{I\+P Multicast}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mcast_ga731894962f9b20b2ee3ccd057053ef71}{apr\+\_\+mcast\+\_\+join} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$join, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$iface, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$source)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mcast_gadd3d59b5f628786093277b962c863d13}{apr\+\_\+mcast\+\_\+leave} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$addr, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$iface, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$source)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mcast_ga373041d43cb0fd05b2974b9fef0ae30f}{apr\+\_\+mcast\+\_\+hops} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, apr\+\_\+byte\+\_\+t ttl)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mcast_ga84bc14970499f79de8b71d77898f68ee}{apr\+\_\+mcast\+\_\+loopback} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, apr\+\_\+byte\+\_\+t opt)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__mcast_ga9949eb40d8bfb670f9bce997cebcdcae}{apr\+\_\+mcast\+\_\+interface} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock, \hyperlink{structapr__sockaddr__t}{apr\+\_\+sockaddr\+\_\+t} $\ast$iface)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{I\+P Multicast@{I\+P Multicast}!apr\+\_\+mcast\+\_\+hops@{apr\+\_\+mcast\+\_\+hops}}
+\index{apr\+\_\+mcast\+\_\+hops@{apr\+\_\+mcast\+\_\+hops}!I\+P Multicast@{I\+P Multicast}}
+\subsubsection[{\texorpdfstring{apr\+\_\+mcast\+\_\+hops(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+byte\+\_\+t ttl)}{apr_mcast_hops(apr_socket_t *sock, apr_byte_t ttl)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+mcast\+\_\+hops (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{apr\+\_\+byte\+\_\+t}]{ttl}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__mcast_ga373041d43cb0fd05b2974b9fef0ae30f}{}\label{group__apr__mcast_ga373041d43cb0fd05b2974b9fef0ae30f}
+Set the Multicast Time to Live (ttl) for a multicast transmission. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to set the multicast ttl \\
+\hline
+{\em ttl} & Time to live to Assign. 0-\/255, default=1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If the T\+TL is 0, packets will only be seen by sockets on the local machine, and only when multicast loopback is enabled. 
+\end{DoxyRemark}
+\index{I\+P Multicast@{I\+P Multicast}!apr\+\_\+mcast\+\_\+interface@{apr\+\_\+mcast\+\_\+interface}}
+\index{apr\+\_\+mcast\+\_\+interface@{apr\+\_\+mcast\+\_\+interface}!I\+P Multicast@{I\+P Multicast}}
+\subsubsection[{\texorpdfstring{apr\+\_\+mcast\+\_\+interface(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+sockaddr\+\_\+t $\ast$iface)}{apr_mcast_interface(apr_socket_t *sock, apr_sockaddr_t *iface)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+mcast\+\_\+interface (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{iface}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__mcast_ga9949eb40d8bfb670f9bce997cebcdcae}{}\label{group__apr__mcast_ga9949eb40d8bfb670f9bce997cebcdcae}
+Set the Interface to be used for outgoing Multicast Transmissions. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to set the multicast interface on \\
+\hline
+{\em iface} & Address of the interface to use for Multicast \\
+\hline
+\end{DoxyParams}
+\index{I\+P Multicast@{I\+P Multicast}!apr\+\_\+mcast\+\_\+join@{apr\+\_\+mcast\+\_\+join}}
+\index{apr\+\_\+mcast\+\_\+join@{apr\+\_\+mcast\+\_\+join}!I\+P Multicast@{I\+P Multicast}}
+\subsubsection[{\texorpdfstring{apr\+\_\+mcast\+\_\+join(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+sockaddr\+\_\+t $\ast$join, apr\+\_\+sockaddr\+\_\+t $\ast$iface, apr\+\_\+sockaddr\+\_\+t $\ast$source)}{apr_mcast_join(apr_socket_t *sock, apr_sockaddr_t *join, apr_sockaddr_t *iface, apr_sockaddr_t *source)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+mcast\+\_\+join (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{join, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{iface, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{source}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__mcast_ga731894962f9b20b2ee3ccd057053ef71}{}\label{group__apr__mcast_ga731894962f9b20b2ee3ccd057053ef71}
+Join a Multicast Group 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to join a multicast group \\
+\hline
+{\em join} & The address of the multicast group to join \\
+\hline
+{\em iface} & Address of the interface to use. If N\+U\+LL is passed, the default multicast interface will be used. (OS Dependent) \\
+\hline
+{\em source} & Source Address to accept transmissions from (non-\/\+N\+U\+LL implies Source-\/\+Specific Multicast) \\
+\hline
+\end{DoxyParams}
+\index{I\+P Multicast@{I\+P Multicast}!apr\+\_\+mcast\+\_\+leave@{apr\+\_\+mcast\+\_\+leave}}
+\index{apr\+\_\+mcast\+\_\+leave@{apr\+\_\+mcast\+\_\+leave}!I\+P Multicast@{I\+P Multicast}}
+\subsubsection[{\texorpdfstring{apr\+\_\+mcast\+\_\+leave(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+sockaddr\+\_\+t $\ast$addr, apr\+\_\+sockaddr\+\_\+t $\ast$iface, apr\+\_\+sockaddr\+\_\+t $\ast$source)}{apr_mcast_leave(apr_socket_t *sock, apr_sockaddr_t *addr, apr_sockaddr_t *iface, apr_sockaddr_t *source)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+mcast\+\_\+leave (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{addr, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{iface, }
+\item[{{\bf apr\+\_\+sockaddr\+\_\+t} $\ast$}]{source}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__mcast_gadd3d59b5f628786093277b962c863d13}{}\label{group__apr__mcast_gadd3d59b5f628786093277b962c863d13}
+Leave a Multicast Group. All arguments must be the same as apr\+\_\+mcast\+\_\+join. 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to leave a multicast group \\
+\hline
+{\em addr} & The address of the multicast group to leave \\
+\hline
+{\em iface} & Address of the interface to use. If N\+U\+LL is passed, the default multicast interface will be used. (OS Dependent) \\
+\hline
+{\em source} & Source Address to accept transmissions from (non-\/\+N\+U\+LL implies Source-\/\+Specific Multicast) \\
+\hline
+\end{DoxyParams}
+\index{I\+P Multicast@{I\+P Multicast}!apr\+\_\+mcast\+\_\+loopback@{apr\+\_\+mcast\+\_\+loopback}}
+\index{apr\+\_\+mcast\+\_\+loopback@{apr\+\_\+mcast\+\_\+loopback}!I\+P Multicast@{I\+P Multicast}}
+\subsubsection[{\texorpdfstring{apr\+\_\+mcast\+\_\+loopback(apr\+\_\+socket\+\_\+t $\ast$sock, apr\+\_\+byte\+\_\+t opt)}{apr_mcast_loopback(apr_socket_t *sock, apr_byte_t opt)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+mcast\+\_\+loopback (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+socket\+\_\+t} $\ast$}]{sock, }
+\item[{apr\+\_\+byte\+\_\+t}]{opt}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__mcast_ga84bc14970499f79de8b71d77898f68ee}{}\label{group__apr__mcast_ga84bc14970499f79de8b71d77898f68ee}
+Toggle IP Multicast Loopback 
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket to set multicast loopback \\
+\hline
+{\em opt} & 0=disable, 1=enable \\
+\hline
+\end{DoxyParams}

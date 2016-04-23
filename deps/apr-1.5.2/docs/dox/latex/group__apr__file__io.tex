@@ -1,0 +1,1285 @@
+\hypertarget{group__apr__file__io}{}\section{File I/O Handling Functions}
+\label{group__apr__file__io}\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__file__open__flags}{File Open Flags/\+Routines}
+\item 
+\hyperlink{group__apr__file__seek__flags}{File Seek Flags}
+\item 
+\hyperlink{group__apr__file__attrs__set__flags}{File Attribute Flags}
+\item 
+\hyperlink{group__apr__file__writev}{\{\+\_\+full\} max iovec size}
+\item 
+\hyperlink{group__apr__file__lock__types}{File Lock Types}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef apr\+\_\+uint32\+\_\+t \hyperlink{group__apr__file__io_ga11fbee5a7a3f3d45fff5c31df0db9737}{apr\+\_\+fileattrs\+\_\+t}
+\item 
+typedef int \hyperlink{group__apr__file__io_ga8eecd44975906042e0e369771802a145}{apr\+\_\+seek\+\_\+where\+\_\+t}
+\item 
+typedef struct \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gabda14cbf242fb4fe99055434213e5446}{apr\+\_\+file\+\_\+open} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$newf, const char $\ast$fname, apr\+\_\+int32\+\_\+t flag, \hyperlink{group__apr__file__info_ga3af19c4c47007169064a70f9351bc7d8}{apr\+\_\+fileperms\+\_\+t} perm, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga5607bce1c4c798ceb6c8475a998a81a1}{apr\+\_\+file\+\_\+close} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$file)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga211c40be82f8bf8b8d7dce5afca5500b}{apr\+\_\+file\+\_\+remove} (const char $\ast$path, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga29b5633bb80226baa5de79a83c6999aa}{apr\+\_\+file\+\_\+rename} (const char $\ast$from\+\_\+path, const char $\ast$to\+\_\+path, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gaa7911275c0e97edc064b8167be658f9e}{apr\+\_\+file\+\_\+link} (const char $\ast$from\+\_\+path, const char $\ast$to\+\_\+path)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga2b82c441246cc4596795420b0a94a9a2}{apr\+\_\+file\+\_\+copy} (const char $\ast$from\+\_\+path, const char $\ast$to\+\_\+path, \hyperlink{group__apr__file__info_ga3af19c4c47007169064a70f9351bc7d8}{apr\+\_\+fileperms\+\_\+t} perms, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga0b9bc41ffa4ac43cbea46b44eace939e}{apr\+\_\+file\+\_\+append} (const char $\ast$from\+\_\+path, const char $\ast$to\+\_\+path, \hyperlink{group__apr__file__info_ga3af19c4c47007169064a70f9351bc7d8}{apr\+\_\+fileperms\+\_\+t} perms, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga8efaff2f556b250fee1021541b782ea8}{apr\+\_\+file\+\_\+eof} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$fptr)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gaf426d98943319acced2c9b52757f377f}{apr\+\_\+file\+\_\+open\+\_\+stderr} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$thefile, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga0d36922c0944ff9675cc820e68d56199}{apr\+\_\+file\+\_\+open\+\_\+stdout} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$thefile, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga539454470148f9b22a31f85936a5f8b4}{apr\+\_\+file\+\_\+open\+\_\+stdin} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$thefile, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga6e87d695994e236dae3d428ed68886bf}{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stderr} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$thefile, apr\+\_\+int32\+\_\+t flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gaeda353505bc1dc46db93b0a80d0b1c4c}{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdout} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$thefile, apr\+\_\+int32\+\_\+t flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga3bde3e61454b5604077f297b1d1671c0}{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdin} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$thefile, apr\+\_\+int32\+\_\+t flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gadd067ee0050dff0c03a9420c9d424466}{apr\+\_\+file\+\_\+read} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile, void $\ast$buf, apr\+\_\+size\+\_\+t $\ast$nbytes)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga2e4baa94102c363fdca3c850375d3584}{apr\+\_\+file\+\_\+write} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile, const void $\ast$buf, apr\+\_\+size\+\_\+t $\ast$nbytes)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gacc7924dd7af1c2948b5b2ea6e5f77984}{apr\+\_\+file\+\_\+writev} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile, const struct iovec $\ast$vec, apr\+\_\+size\+\_\+t nvec, apr\+\_\+size\+\_\+t $\ast$nbytes)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gaf39a17404e868808aff8e2e7ecaa87e0}{apr\+\_\+file\+\_\+read\+\_\+full} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile, void $\ast$buf, apr\+\_\+size\+\_\+t nbytes, apr\+\_\+size\+\_\+t $\ast$bytes\+\_\+read)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga560d5c062d65e64c07d906d1207337d4}{apr\+\_\+file\+\_\+write\+\_\+full} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile, const void $\ast$buf, apr\+\_\+size\+\_\+t nbytes, apr\+\_\+size\+\_\+t $\ast$bytes\+\_\+written)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga24457e11f0db908b21b7e1742db4ed7b}{apr\+\_\+file\+\_\+writev\+\_\+full} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile, const struct iovec $\ast$vec, apr\+\_\+size\+\_\+t nvec, apr\+\_\+size\+\_\+t $\ast$nbytes)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga33e51b53194e7c0dac513ca27ca18e63}{apr\+\_\+file\+\_\+putc} (char ch, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga852b9c77d4223af15d8d3674a0e2714d}{apr\+\_\+file\+\_\+getc} (char $\ast$ch, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga9d06778e719d596ab96bca812b01cb3a}{apr\+\_\+file\+\_\+ungetc} (char ch, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gaf9513b769c10b09e5f37d6d0b86bdce9}{apr\+\_\+file\+\_\+gets} (char $\ast$str, int len, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gacde81145cc38660a1512d469886ddb16}{apr\+\_\+file\+\_\+puts} (const char $\ast$str, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga68aba780b7fc53e47404bfd8def949bc}{apr\+\_\+file\+\_\+flush} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga4385e141c4bbb96294acd7d342f138da}{apr\+\_\+file\+\_\+sync} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gaa4b4e5027c1d8dbe4e5cb47b8eebc03b}{apr\+\_\+file\+\_\+datasync} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga6e849af1b0fd31669c58a803fcb13837}{apr\+\_\+file\+\_\+dup} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$new\+\_\+file, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$old\+\_\+file, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga602926aad867088297e8f59490ff939c}{apr\+\_\+file\+\_\+dup2} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$new\+\_\+file, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$old\+\_\+file, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gadaf046ce39aa118dab921a407446355b}{apr\+\_\+file\+\_\+setaside} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$new\+\_\+file, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$old\+\_\+file, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gafe4be8c3b62c42535b84d4237bf6e421}{apr\+\_\+file\+\_\+buffer\+\_\+set} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile, char $\ast$buffer, apr\+\_\+size\+\_\+t bufsize)
+\item 
+apr\+\_\+size\+\_\+t \hyperlink{group__apr__file__io_ga42bbb9227095686ea15eb79f99d248a2}{apr\+\_\+file\+\_\+buffer\+\_\+size\+\_\+get} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga9db84bec24db97a53890df1a6aff63a1}{apr\+\_\+file\+\_\+seek} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile, \hyperlink{group__apr__file__io_ga8eecd44975906042e0e369771802a145}{apr\+\_\+seek\+\_\+where\+\_\+t} where, apr\+\_\+off\+\_\+t $\ast$offset)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gaae3b81342d239c58c351cf11190740ed}{apr\+\_\+file\+\_\+pipe\+\_\+create} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$in, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$out, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga2fbbae715bee0e0ca9adadd66ac65e96}{apr\+\_\+file\+\_\+pipe\+\_\+create\+\_\+ex} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$in, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$out, apr\+\_\+int32\+\_\+t blocking, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga60cec3e6717bab0f11577bd7c38b4c59}{apr\+\_\+file\+\_\+namedpipe\+\_\+create} (const char $\ast$filename, \hyperlink{group__apr__file__info_ga3af19c4c47007169064a70f9351bc7d8}{apr\+\_\+fileperms\+\_\+t} perm, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga90e481207a38df04818a0c55883ee953}{apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+get} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thepipe, \hyperlink{group__apr__time_gaae2129185a395cc393f76fabf4f43e47}{apr\+\_\+interval\+\_\+time\+\_\+t} $\ast$timeout)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gaf88d2fca768e3fa9f28ea010e1bf602a}{apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+set} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thepipe, \hyperlink{group__apr__time_gaae2129185a395cc393f76fabf4f43e47}{apr\+\_\+interval\+\_\+time\+\_\+t} timeout)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga2d337e66c1fa0cd433164079bf542484}{apr\+\_\+file\+\_\+lock} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile, int type)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga3a255996fb439b6d66ed7cd65319525b}{apr\+\_\+file\+\_\+unlock} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga5c750a88fe1e032e1d85d3db40d9519f}{apr\+\_\+file\+\_\+name\+\_\+get} (const char $\ast$$\ast$new\+\_\+path, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gafa13b7024748a7e45344d6998ddbd281}{apr\+\_\+file\+\_\+data\+\_\+get} (void $\ast$$\ast$data, const char $\ast$key, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$file)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga58c857162593d8b3aa999df5b7af0805}{apr\+\_\+file\+\_\+data\+\_\+set} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$file, void $\ast$data, const char $\ast$key, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$))
+\item 
+int \hyperlink{group__apr__file__io_ga29fca4b0201c236856fea5578f410c0e}{apr\+\_\+file\+\_\+printf} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$fptr, const char $\ast$format,...)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gac5fed6d75597476718c40fc603823b1e}{apr\+\_\+file\+\_\+perms\+\_\+set} (const char $\ast$fname, \hyperlink{group__apr__file__info_ga3af19c4c47007169064a70f9351bc7d8}{apr\+\_\+fileperms\+\_\+t} perms)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga96ceec3492ad0c75d2b58c167087ee6a}{apr\+\_\+file\+\_\+attrs\+\_\+set} (const char $\ast$fname, \hyperlink{group__apr__file__io_ga11fbee5a7a3f3d45fff5c31df0db9737}{apr\+\_\+fileattrs\+\_\+t} attributes, \hyperlink{group__apr__file__io_ga11fbee5a7a3f3d45fff5c31df0db9737}{apr\+\_\+fileattrs\+\_\+t} attr\+\_\+mask, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga79f58458a00a4072622005c09ed8f96f}{apr\+\_\+file\+\_\+mtime\+\_\+set} (const char $\ast$fname, \hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} mtime, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga51e0b4703c7561f72587982808985d29}{apr\+\_\+dir\+\_\+make} (const char $\ast$path, \hyperlink{group__apr__file__info_ga3af19c4c47007169064a70f9351bc7d8}{apr\+\_\+fileperms\+\_\+t} perm, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga6a3b2602f57ff148cd64096da02adbd2}{apr\+\_\+dir\+\_\+make\+\_\+recursive} (const char $\ast$path, \hyperlink{group__apr__file__info_ga3af19c4c47007169064a70f9351bc7d8}{apr\+\_\+fileperms\+\_\+t} perm, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga5487d02a62fba9444747ccb5838150ba}{apr\+\_\+dir\+\_\+remove} (const char $\ast$path, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga39be7fe05d0dda4a28f4358b61a44ac8}{apr\+\_\+file\+\_\+info\+\_\+get} (\hyperlink{structapr__finfo__t}{apr\+\_\+finfo\+\_\+t} $\ast$finfo, apr\+\_\+int32\+\_\+t wanted, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gac067fe5f208c927cf6d213197b9335a8}{apr\+\_\+file\+\_\+trunc} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$fp, apr\+\_\+off\+\_\+t offset)
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{group__apr__file__io_ga023d6e4d2512382a9d4b1f881e105b8f}{apr\+\_\+file\+\_\+flags\+\_\+get} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$f)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__file__io_gab5950b3b0156097b0181394a37e03ede}{apr\+\_\+file\+\_\+pool\+\_\+get} (const \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga137bee13d2c65fb8afd4b34e400187c7}{apr\+\_\+file\+\_\+inherit\+\_\+set} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga69fa72a6f77b96572248c2a6a347c02a}{apr\+\_\+file\+\_\+inherit\+\_\+unset} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$thefile)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_gac34981f9ff41f85e4377a6dde185fe52}{apr\+\_\+file\+\_\+mktemp} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$fp, char $\ast$templ, apr\+\_\+int32\+\_\+t flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__file__io_ga5cc19828a668c362be0ad7a12b805cc0}{apr\+\_\+temp\+\_\+dir\+\_\+get} (const char $\ast$$\ast$temp\+\_\+dir, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+t@{apr\+\_\+file\+\_\+t}}
+\index{apr\+\_\+file\+\_\+t@{apr\+\_\+file\+\_\+t}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+t}{apr_file_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+file\+\_\+t} {\bf apr\+\_\+file\+\_\+t}}\hypertarget{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{}\label{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}
+Structure for referencing files. \index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+fileattrs\+\_\+t@{apr\+\_\+fileattrs\+\_\+t}}
+\index{apr\+\_\+fileattrs\+\_\+t@{apr\+\_\+fileattrs\+\_\+t}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+fileattrs\+\_\+t}{apr_fileattrs_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef apr\+\_\+uint32\+\_\+t {\bf apr\+\_\+fileattrs\+\_\+t}}\hypertarget{group__apr__file__io_ga11fbee5a7a3f3d45fff5c31df0db9737}{}\label{group__apr__file__io_ga11fbee5a7a3f3d45fff5c31df0db9737}
+File attributes \index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+seek\+\_\+where\+\_\+t@{apr\+\_\+seek\+\_\+where\+\_\+t}}
+\index{apr\+\_\+seek\+\_\+where\+\_\+t@{apr\+\_\+seek\+\_\+where\+\_\+t}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+seek\+\_\+where\+\_\+t}{apr_seek_where_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf apr\+\_\+seek\+\_\+where\+\_\+t}}\hypertarget{group__apr__file__io_ga8eecd44975906042e0e369771802a145}{}\label{group__apr__file__io_ga8eecd44975906042e0e369771802a145}
+Type to pass as whence argument to apr\+\_\+file\+\_\+seek. 
+
+\subsection{Function Documentation}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+dir\+\_\+make@{apr\+\_\+dir\+\_\+make}}
+\index{apr\+\_\+dir\+\_\+make@{apr\+\_\+dir\+\_\+make}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dir\+\_\+make(const char $\ast$path, apr\+\_\+fileperms\+\_\+t perm, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_dir_make(const char *path, apr_fileperms_t perm, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+dir\+\_\+make (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{{\bf apr\+\_\+fileperms\+\_\+t}}]{perm, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga51e0b4703c7561f72587982808985d29}{}\label{group__apr__file__io_ga51e0b4703c7561f72587982808985d29}
+Create a new directory on the file system. 
+\begin{DoxyParams}{Parameters}
+{\em path} & the path for the directory to be created. (use / on all systems) \\
+\hline
+{\em perm} & Permissions for the new directory. \\
+\hline
+{\em pool} & the pool to use. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+dir\+\_\+make\+\_\+recursive@{apr\+\_\+dir\+\_\+make\+\_\+recursive}}
+\index{apr\+\_\+dir\+\_\+make\+\_\+recursive@{apr\+\_\+dir\+\_\+make\+\_\+recursive}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dir\+\_\+make\+\_\+recursive(const char $\ast$path, apr\+\_\+fileperms\+\_\+t perm, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_dir_make_recursive(const char *path, apr_fileperms_t perm, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+dir\+\_\+make\+\_\+recursive (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{{\bf apr\+\_\+fileperms\+\_\+t}}]{perm, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga6a3b2602f57ff148cd64096da02adbd2}{}\label{group__apr__file__io_ga6a3b2602f57ff148cd64096da02adbd2}
+Creates a new directory on the file system, but behaves like \textquotesingle{}mkdir -\/p\textquotesingle{}. Creates intermediate directories as required. No error will be reported if P\+A\+TH already exists. 
+\begin{DoxyParams}{Parameters}
+{\em path} & the path for the directory to be created. (use / on all systems) \\
+\hline
+{\em perm} & Permissions for the new directory. \\
+\hline
+{\em pool} & the pool to use. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+dir\+\_\+remove@{apr\+\_\+dir\+\_\+remove}}
+\index{apr\+\_\+dir\+\_\+remove@{apr\+\_\+dir\+\_\+remove}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dir\+\_\+remove(const char $\ast$path, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_dir_remove(const char *path, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+dir\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga5487d02a62fba9444747ccb5838150ba}{}\label{group__apr__file__io_ga5487d02a62fba9444747ccb5838150ba}
+Remove directory from the file system. 
+\begin{DoxyParams}{Parameters}
+{\em path} & the path for the directory to be removed. (use / on all systems) \\
+\hline
+{\em pool} & the pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Removing a directory which is in-\/use (e.\+g., the current working directory, or during apr\+\_\+dir\+\_\+read, or with an open file) is not portable. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+append@{apr\+\_\+file\+\_\+append}}
+\index{apr\+\_\+file\+\_\+append@{apr\+\_\+file\+\_\+append}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+append(const char $\ast$from\+\_\+path, const char $\ast$to\+\_\+path, apr\+\_\+fileperms\+\_\+t perms, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_append(const char *from_path, const char *to_path, apr_fileperms_t perms, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+append (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{from\+\_\+path, }
+\item[{const char $\ast$}]{to\+\_\+path, }
+\item[{{\bf apr\+\_\+fileperms\+\_\+t}}]{perms, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga0b9bc41ffa4ac43cbea46b44eace939e}{}\label{group__apr__file__io_ga0b9bc41ffa4ac43cbea46b44eace939e}
+Append the specified file to another file. 
+\begin{DoxyParams}{Parameters}
+{\em from\+\_\+path} & The full path to the source file (use / on all systems) \\
+\hline
+{\em to\+\_\+path} & The full path to the destination file (use / on all systems) \\
+\hline
+{\em perms} & Access permissions for the destination file if it is created. In place of the usual or\textquotesingle{}d combination of file permissions, the value \hyperlink{group__apr__file__permissions_gac08d4e868c7c9532f7c97c70556663dc}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS} may be given, in which case the source file\textquotesingle{}s permissions are copied. \\
+\hline
+{\em pool} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The new file does not need to exist, it will be created if required. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+attrs\+\_\+set@{apr\+\_\+file\+\_\+attrs\+\_\+set}}
+\index{apr\+\_\+file\+\_\+attrs\+\_\+set@{apr\+\_\+file\+\_\+attrs\+\_\+set}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+attrs\+\_\+set(const char $\ast$fname, apr\+\_\+fileattrs\+\_\+t attributes, apr\+\_\+fileattrs\+\_\+t attr\+\_\+mask, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_attrs_set(const char *fname, apr_fileattrs_t attributes, apr_fileattrs_t attr_mask, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+attrs\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf apr\+\_\+fileattrs\+\_\+t}}]{attributes, }
+\item[{{\bf apr\+\_\+fileattrs\+\_\+t}}]{attr\+\_\+mask, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga96ceec3492ad0c75d2b58c167087ee6a}{}\label{group__apr__file__io_ga96ceec3492ad0c75d2b58c167087ee6a}
+Set attributes of the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em fname} & The full path to the file (using / on all systems) \\
+\hline
+{\em attributes} & Or\textquotesingle{}d combination of \begin{DoxyItemize}
+\item \hyperlink{group__apr__file__attrs__set__flags_ga333f2c798495cfb95ee624e11c862e38}{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+A\+D\+O\+N\+LY} -\/ make the file readonly \item \hyperlink{group__apr__file__attrs__set__flags_ga51346f433e354f0bc8722388b6b275fd}{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+\_\+\+E\+X\+E\+C\+U\+T\+A\+B\+LE} -\/ make the file executable \item \hyperlink{group__apr__file__attrs__set__flags_ga68c188c0e56b9abdef3c97ffd913c5aa}{A\+P\+R\+\_\+\+F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+\_\+\+H\+I\+D\+D\+EN} -\/ make the file hidden \end{DoxyItemize}
+\\
+\hline
+{\em attr\+\_\+mask} & Mask of valid bits in attributes. \\
+\hline
+{\em pool} & the pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function should be used in preference to explicit manipulation of the file permissions, because the operations to provide these attributes are platform specific and may involve more than simply setting permission bits. 
+\end{DoxyRemark}
+\begin{DoxyWarning}{Warning}
+Platforms which do not implement this feature will return \hyperlink{group___a_p_r___error_ga939ddb834a30bc9a5a0a329b13000161}{A\+P\+R\+\_\+\+E\+N\+O\+T\+I\+M\+PL}. 
+\end{DoxyWarning}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+buffer\+\_\+set@{apr\+\_\+file\+\_\+buffer\+\_\+set}}
+\index{apr\+\_\+file\+\_\+buffer\+\_\+set@{apr\+\_\+file\+\_\+buffer\+\_\+set}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+buffer\+\_\+set(apr\+\_\+file\+\_\+t $\ast$thefile, char $\ast$buffer, apr\+\_\+size\+\_\+t bufsize)}{apr_file_buffer_set(apr_file_t *thefile, char *buffer, apr_size_t bufsize)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+buffer\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{char $\ast$}]{buffer, }
+\item[{apr\+\_\+size\+\_\+t}]{bufsize}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gafe4be8c3b62c42535b84d4237bf6e421}{}\label{group__apr__file__io_gafe4be8c3b62c42535b84d4237bf6e421}
+Give the specified apr file handle a new buffer 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file handle that is to be modified \\
+\hline
+{\em buffer} & The buffer \\
+\hline
+{\em bufsize} & The size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+It is possible to add a buffer to previously unbuffered file handles, the \hyperlink{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED} flag will be added to the file handle\textquotesingle{}s flags. Likewise, with buffer=N\+U\+LL and bufsize=0 arguments it is possible to make a previously buffered file handle unbuffered. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+buffer\+\_\+size\+\_\+get@{apr\+\_\+file\+\_\+buffer\+\_\+size\+\_\+get}}
+\index{apr\+\_\+file\+\_\+buffer\+\_\+size\+\_\+get@{apr\+\_\+file\+\_\+buffer\+\_\+size\+\_\+get}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+buffer\+\_\+size\+\_\+get(apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_buffer_size_get(apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+size\+\_\+t apr\+\_\+file\+\_\+buffer\+\_\+size\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga42bbb9227095686ea15eb79f99d248a2}{}\label{group__apr__file__io_ga42bbb9227095686ea15eb79f99d248a2}
+Get the size of any buffer for the specified apr file handle 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file handle \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+close@{apr\+\_\+file\+\_\+close}}
+\index{apr\+\_\+file\+\_\+close@{apr\+\_\+file\+\_\+close}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+close(apr\+\_\+file\+\_\+t $\ast$file)}{apr_file_close(apr_file_t *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+close (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga5607bce1c4c798ceb6c8475a998a81a1}{}\label{group__apr__file__io_ga5607bce1c4c798ceb6c8475a998a81a1}
+Close the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The file descriptor to close. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+copy@{apr\+\_\+file\+\_\+copy}}
+\index{apr\+\_\+file\+\_\+copy@{apr\+\_\+file\+\_\+copy}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+copy(const char $\ast$from\+\_\+path, const char $\ast$to\+\_\+path, apr\+\_\+fileperms\+\_\+t perms, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_copy(const char *from_path, const char *to_path, apr_fileperms_t perms, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+copy (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{from\+\_\+path, }
+\item[{const char $\ast$}]{to\+\_\+path, }
+\item[{{\bf apr\+\_\+fileperms\+\_\+t}}]{perms, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga2b82c441246cc4596795420b0a94a9a2}{}\label{group__apr__file__io_ga2b82c441246cc4596795420b0a94a9a2}
+Copy the specified file to another file. 
+\begin{DoxyParams}{Parameters}
+{\em from\+\_\+path} & The full path to the original file (using / on all systems) \\
+\hline
+{\em to\+\_\+path} & The full path to the new file (using / on all systems) \\
+\hline
+{\em perms} & Access permissions for the new file if it is created. In place of the usual or\textquotesingle{}d combination of file permissions, the value \hyperlink{group__apr__file__permissions_gac08d4e868c7c9532f7c97c70556663dc}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+F\+I\+L\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+E\+R\+MS} may be given, in which case the source file\textquotesingle{}s permissions are copied. \\
+\hline
+{\em pool} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The new file does not need to exist, it will be created if required. 
+\end{DoxyRemark}
+\begin{DoxyWarning}{Warning}
+If the new file already exists, its contents will be overwritten. 
+\end{DoxyWarning}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+data\+\_\+get@{apr\+\_\+file\+\_\+data\+\_\+get}}
+\index{apr\+\_\+file\+\_\+data\+\_\+get@{apr\+\_\+file\+\_\+data\+\_\+get}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+data\+\_\+get(void $\ast$$\ast$data, const char $\ast$key, apr\+\_\+file\+\_\+t $\ast$file)}{apr_file_data_get(void **data, const char *key, apr_file_t *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+data\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{void $\ast$$\ast$}]{data, }
+\item[{const char $\ast$}]{key, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gafa13b7024748a7e45344d6998ddbd281}{}\label{group__apr__file__io_gafa13b7024748a7e45344d6998ddbd281}
+Return the data associated with the current file. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The user data associated with the file. \\
+\hline
+{\em key} & The key to use for retrieving data associated with this file. \\
+\hline
+{\em file} & The currently open file. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+data\+\_\+set@{apr\+\_\+file\+\_\+data\+\_\+set}}
+\index{apr\+\_\+file\+\_\+data\+\_\+set@{apr\+\_\+file\+\_\+data\+\_\+set}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+data\+\_\+set(apr\+\_\+file\+\_\+t $\ast$file, void $\ast$data, const char $\ast$key, apr\+\_\+status\+\_\+t($\ast$cleanup)(void $\ast$))}{apr_file_data_set(apr_file_t *file, void *data, const char *key, apr_status_t(*cleanup)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+data\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{file, }
+\item[{void $\ast$}]{data, }
+\item[{const char $\ast$}]{key, }
+\item[{{\bf apr\+\_\+status\+\_\+t}($\ast$)(void $\ast$)}]{cleanup}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga58c857162593d8b3aa999df5b7af0805}{}\label{group__apr__file__io_ga58c857162593d8b3aa999df5b7af0805}
+Set the data associated with the current file. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The currently open file. \\
+\hline
+{\em data} & The user data to associate with the file. \\
+\hline
+{\em key} & The key to use for associating data with the file. \\
+\hline
+{\em cleanup} & The cleanup routine to use when the file is destroyed. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+datasync@{apr\+\_\+file\+\_\+datasync}}
+\index{apr\+\_\+file\+\_\+datasync@{apr\+\_\+file\+\_\+datasync}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+datasync(apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_datasync(apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+datasync (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gaa4b4e5027c1d8dbe4e5cb47b8eebc03b}{}\label{group__apr__file__io_gaa4b4e5027c1d8dbe4e5cb47b8eebc03b}
+Transfer all file modified data to disk. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file descriptor to sync \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+dup@{apr\+\_\+file\+\_\+dup}}
+\index{apr\+\_\+file\+\_\+dup@{apr\+\_\+file\+\_\+dup}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+dup(apr\+\_\+file\+\_\+t $\ast$$\ast$new\+\_\+file, apr\+\_\+file\+\_\+t $\ast$old\+\_\+file, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_file_dup(apr_file_t **new_file, apr_file_t *old_file, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+dup (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{new\+\_\+file, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{old\+\_\+file, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga6e849af1b0fd31669c58a803fcb13837}{}\label{group__apr__file__io_ga6e849af1b0fd31669c58a803fcb13837}
+Duplicate the specified file descriptor. 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+file} & The structure to duplicate into. \\
+\hline
+{\em old\+\_\+file} & The file to duplicate. \\
+\hline
+{\em p} & The pool to use for the new file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+$\ast$new\+\_\+file must point to a valid apr\+\_\+file\+\_\+t, or point to N\+U\+LL. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+dup2@{apr\+\_\+file\+\_\+dup2}}
+\index{apr\+\_\+file\+\_\+dup2@{apr\+\_\+file\+\_\+dup2}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+dup2(apr\+\_\+file\+\_\+t $\ast$new\+\_\+file, apr\+\_\+file\+\_\+t $\ast$old\+\_\+file, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_file_dup2(apr_file_t *new_file, apr_file_t *old_file, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+dup2 (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{new\+\_\+file, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{old\+\_\+file, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga602926aad867088297e8f59490ff939c}{}\label{group__apr__file__io_ga602926aad867088297e8f59490ff939c}
+Duplicate the specified file descriptor and close the original 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+file} & The old file that is to be closed and reused \\
+\hline
+{\em old\+\_\+file} & The file to duplicate \\
+\hline
+{\em p} & The pool to use for the new file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+new\+\_\+file M\+U\+ST point at a valid apr\+\_\+file\+\_\+t. It cannot be N\+U\+LL. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+eof@{apr\+\_\+file\+\_\+eof}}
+\index{apr\+\_\+file\+\_\+eof@{apr\+\_\+file\+\_\+eof}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+eof(apr\+\_\+file\+\_\+t $\ast$fptr)}{apr_file_eof(apr_file_t *fptr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+eof (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{fptr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga8efaff2f556b250fee1021541b782ea8}{}\label{group__apr__file__io_ga8efaff2f556b250fee1021541b782ea8}
+Are we at the end of the file 
+\begin{DoxyParams}{Parameters}
+{\em fptr} & The apr file we are testing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Returns \hyperlink{group___a_p_r___error_ga35d9dca2514c522a2840aca0f3e2ebd3}{A\+P\+R\+\_\+\+E\+OF} if we are at the end of file, \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS} otherwise. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+flags\+\_\+get@{apr\+\_\+file\+\_\+flags\+\_\+get}}
+\index{apr\+\_\+file\+\_\+flags\+\_\+get@{apr\+\_\+file\+\_\+flags\+\_\+get}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+flags\+\_\+get(apr\+\_\+file\+\_\+t $\ast$f)}{apr_file_flags_get(apr_file_t *f)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+file\+\_\+flags\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga023d6e4d2512382a9d4b1f881e105b8f}{}\label{group__apr__file__io_ga023d6e4d2512382a9d4b1f881e105b8f}
+Retrieve the flags that were passed into \hyperlink{group__apr__file__io_gabda14cbf242fb4fe99055434213e5446}{apr\+\_\+file\+\_\+open()} when the file was opened. \begin{DoxyReturn}{Returns}
+apr\+\_\+int32\+\_\+t the flags 
+\end{DoxyReturn}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+flush@{apr\+\_\+file\+\_\+flush}}
+\index{apr\+\_\+file\+\_\+flush@{apr\+\_\+file\+\_\+flush}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+flush(apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_flush(apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+flush (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga68aba780b7fc53e47404bfd8def949bc}{}\label{group__apr__file__io_ga68aba780b7fc53e47404bfd8def949bc}
+Flush the file\textquotesingle{}s buffer. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file descriptor to flush \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+getc@{apr\+\_\+file\+\_\+getc}}
+\index{apr\+\_\+file\+\_\+getc@{apr\+\_\+file\+\_\+getc}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+getc(char $\ast$ch, apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_getc(char *ch, apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+getc (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ch, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga852b9c77d4223af15d8d3674a0e2714d}{}\label{group__apr__file__io_ga852b9c77d4223af15d8d3674a0e2714d}
+Read a character from the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em ch} & The character to read into \\
+\hline
+{\em thefile} & The file descriptor to read from \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+gets@{apr\+\_\+file\+\_\+gets}}
+\index{apr\+\_\+file\+\_\+gets@{apr\+\_\+file\+\_\+gets}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+gets(char $\ast$str, int len, apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_gets(char *str, int len, apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+gets (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{int}]{len, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gaf9513b769c10b09e5f37d6d0b86bdce9}{}\label{group__apr__file__io_gaf9513b769c10b09e5f37d6d0b86bdce9}
+Read a line from the specified file 
+\begin{DoxyParams}{Parameters}
+{\em str} & The buffer to store the string in. \\
+\hline
+{\em len} & The length of the string \\
+\hline
+{\em thefile} & The file descriptor to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The buffer will be N\+U\+L-\/terminated if any characters are stored. The newline at the end of the line will not be stripped. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+info\+\_\+get@{apr\+\_\+file\+\_\+info\+\_\+get}}
+\index{apr\+\_\+file\+\_\+info\+\_\+get@{apr\+\_\+file\+\_\+info\+\_\+get}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+info\+\_\+get(apr\+\_\+finfo\+\_\+t $\ast$finfo, apr\+\_\+int32\+\_\+t wanted, apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_info_get(apr_finfo_t *finfo, apr_int32_t wanted, apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+info\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+finfo\+\_\+t} $\ast$}]{finfo, }
+\item[{apr\+\_\+int32\+\_\+t}]{wanted, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga39be7fe05d0dda4a28f4358b61a44ac8}{}\label{group__apr__file__io_ga39be7fe05d0dda4a28f4358b61a44ac8}
+get the specified file\textquotesingle{}s stats. 
+\begin{DoxyParams}{Parameters}
+{\em finfo} & Where to store the information about the file. \\
+\hline
+{\em wanted} & The desired \hyperlink{structapr__finfo__t}{apr\+\_\+finfo\+\_\+t} fields, as a bit flag of A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+$\ast$ values \\
+\hline
+{\em thefile} & The file to get information about. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+inherit\+\_\+set@{apr\+\_\+file\+\_\+inherit\+\_\+set}}
+\index{apr\+\_\+file\+\_\+inherit\+\_\+set@{apr\+\_\+file\+\_\+inherit\+\_\+set}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+inherit\+\_\+set(apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_inherit_set(apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+inherit\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga137bee13d2c65fb8afd4b34e400187c7}{}\label{group__apr__file__io_ga137bee13d2c65fb8afd4b34e400187c7}
+Set a file to be inherited by child processes. \index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+inherit\+\_\+unset@{apr\+\_\+file\+\_\+inherit\+\_\+unset}}
+\index{apr\+\_\+file\+\_\+inherit\+\_\+unset@{apr\+\_\+file\+\_\+inherit\+\_\+unset}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+inherit\+\_\+unset(apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_inherit_unset(apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+inherit\+\_\+unset (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga69fa72a6f77b96572248c2a6a347c02a}{}\label{group__apr__file__io_ga69fa72a6f77b96572248c2a6a347c02a}
+Unset a file from being inherited by child processes. \index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+link@{apr\+\_\+file\+\_\+link}}
+\index{apr\+\_\+file\+\_\+link@{apr\+\_\+file\+\_\+link}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+link(const char $\ast$from\+\_\+path, const char $\ast$to\+\_\+path)}{apr_file_link(const char *from_path, const char *to_path)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+link (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{from\+\_\+path, }
+\item[{const char $\ast$}]{to\+\_\+path}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gaa7911275c0e97edc064b8167be658f9e}{}\label{group__apr__file__io_gaa7911275c0e97edc064b8167be658f9e}
+Create a hard link to the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em from\+\_\+path} & The full path to the original file (using / on all systems) \\
+\hline
+{\em to\+\_\+path} & The full path to the new file (using / on all systems) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Both files must reside on the same device. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+lock@{apr\+\_\+file\+\_\+lock}}
+\index{apr\+\_\+file\+\_\+lock@{apr\+\_\+file\+\_\+lock}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+lock(apr\+\_\+file\+\_\+t $\ast$thefile, int type)}{apr_file_lock(apr_file_t *thefile, int type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+lock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga2d337e66c1fa0cd433164079bf542484}{}\label{group__apr__file__io_ga2d337e66c1fa0cd433164079bf542484}
+file (un)locking functions. Establish a lock on the specified, open file. The lock may be advisory or mandatory, at the discretion of the platform. The lock applies to the file as a whole, rather than a specific range. Locks are established on a per-\/thread/process basis; a second lock by the same thread will not block. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file to lock. \\
+\hline
+{\em type} & The type of lock to establish on the file. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+mktemp@{apr\+\_\+file\+\_\+mktemp}}
+\index{apr\+\_\+file\+\_\+mktemp@{apr\+\_\+file\+\_\+mktemp}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+mktemp(apr\+\_\+file\+\_\+t $\ast$$\ast$fp, char $\ast$templ, apr\+\_\+int32\+\_\+t flags, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_file_mktemp(apr_file_t **fp, char *templ, apr_int32_t flags, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+mktemp (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{fp, }
+\item[{char $\ast$}]{templ, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gac34981f9ff41f85e4377a6dde185fe52}{}\label{group__apr__file__io_gac34981f9ff41f85e4377a6dde185fe52}
+Open a temporary file 
+\begin{DoxyParams}{Parameters}
+{\em fp} & The apr file to use as a temporary file. \\
+\hline
+{\em templ} & The template to use when creating a temp file. \\
+\hline
+{\em flags} & The flags to open the file with. If this is zero, the file is opened with \hyperlink{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE} $\vert$ \hyperlink{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD} $\vert$ \hyperlink{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE} $\vert$ \hyperlink{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL} $\vert$ \hyperlink{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE} \\
+\hline
+{\em p} & The pool to allocate the file out of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function generates a unique temporary file name from template. The last six characters of template must be X\+X\+X\+X\+XX and these are replaced with a string that makes the filename unique. Since it will be modified, template must not be a string constant, but should be declared as a character array. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+mtime\+\_\+set@{apr\+\_\+file\+\_\+mtime\+\_\+set}}
+\index{apr\+\_\+file\+\_\+mtime\+\_\+set@{apr\+\_\+file\+\_\+mtime\+\_\+set}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+mtime\+\_\+set(const char $\ast$fname, apr\+\_\+time\+\_\+t mtime, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_mtime_set(const char *fname, apr_time_t mtime, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+mtime\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf apr\+\_\+time\+\_\+t}}]{mtime, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga79f58458a00a4072622005c09ed8f96f}{}\label{group__apr__file__io_ga79f58458a00a4072622005c09ed8f96f}
+Set the mtime of the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em fname} & The full path to the file (using / on all systems) \\
+\hline
+{\em mtime} & The mtime to apply to the file. \\
+\hline
+{\em pool} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Platforms which do not implement this feature will return \hyperlink{group___a_p_r___error_ga939ddb834a30bc9a5a0a329b13000161}{A\+P\+R\+\_\+\+E\+N\+O\+T\+I\+M\+PL}. 
+\end{DoxyWarning}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+name\+\_\+get@{apr\+\_\+file\+\_\+name\+\_\+get}}
+\index{apr\+\_\+file\+\_\+name\+\_\+get@{apr\+\_\+file\+\_\+name\+\_\+get}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+name\+\_\+get(const char $\ast$$\ast$new\+\_\+path, apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_name_get(const char **new_path, apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+name\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$$\ast$}]{new\+\_\+path, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga5c750a88fe1e032e1d85d3db40d9519f}{}\label{group__apr__file__io_ga5c750a88fe1e032e1d85d3db40d9519f}
+accessor and general file\+\_\+io functions. return the file name of the current file. 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+path} & The path of the file. \\
+\hline
+{\em thefile} & The currently open file. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+namedpipe\+\_\+create@{apr\+\_\+file\+\_\+namedpipe\+\_\+create}}
+\index{apr\+\_\+file\+\_\+namedpipe\+\_\+create@{apr\+\_\+file\+\_\+namedpipe\+\_\+create}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+namedpipe\+\_\+create(const char $\ast$filename, apr\+\_\+fileperms\+\_\+t perm, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_namedpipe_create(const char *filename, apr_fileperms_t perm, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+namedpipe\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf apr\+\_\+fileperms\+\_\+t}}]{perm, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga60cec3e6717bab0f11577bd7c38b4c59}{}\label{group__apr__file__io_ga60cec3e6717bab0f11577bd7c38b4c59}
+Create a named pipe. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & The filename of the named pipe \\
+\hline
+{\em perm} & The permissions for the newly created pipe. \\
+\hline
+{\em pool} & The pool to operate on. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+open@{apr\+\_\+file\+\_\+open}}
+\index{apr\+\_\+file\+\_\+open@{apr\+\_\+file\+\_\+open}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+open(apr\+\_\+file\+\_\+t $\ast$$\ast$newf, const char $\ast$fname, apr\+\_\+int32\+\_\+t flag, apr\+\_\+fileperms\+\_\+t perm, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_open(apr_file_t **newf, const char *fname, apr_int32_t flag, apr_fileperms_t perm, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+open (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{newf, }
+\item[{const char $\ast$}]{fname, }
+\item[{apr\+\_\+int32\+\_\+t}]{flag, }
+\item[{{\bf apr\+\_\+fileperms\+\_\+t}}]{perm, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gabda14cbf242fb4fe99055434213e5446}{}\label{group__apr__file__io_gabda14cbf242fb4fe99055434213e5446}
+Open the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em newf} & The opened file descriptor. \\
+\hline
+{\em fname} & The full path to the file (using / on all systems) \\
+\hline
+{\em flag} & Or\textquotesingle{}ed value of\+: \begin{DoxyItemize}
+\item \hyperlink{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+R\+E\+AD} open for reading \item \hyperlink{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE} open for writing \item \hyperlink{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE} create the file if not there \item \hyperlink{group__apr__file__open__flags_ga45f353db9b71d4760a3f35cf3781cfc8}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+A\+P\+P\+E\+ND} file ptr is set to end prior to all writes \item \hyperlink{group__apr__file__open__flags_ga09b05a5bd5db534b93794f7657bcb146}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+T\+R\+U\+N\+C\+A\+TE} set length to zero if file exists \item \hyperlink{group__apr__file__open__flags_gacb20b3028864f34cb26314fe2cacc3fa}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+I\+N\+A\+RY} not a text file \item \hyperlink{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED} buffer the data. Default is non-\/buffered \item \hyperlink{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL} return error if \hyperlink{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE} and file exists \item \hyperlink{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+D\+E\+L\+O\+N\+C\+L\+O\+SE} delete the file after closing \item \hyperlink{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD} Platform dependent tag to open the file for use across multiple threads \item \hyperlink{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK} Platform dependent support for higher level locked read/write access to support writes across process/machines \item \hyperlink{group__apr__file__open__flags_ga3fc9b5a7791d9f462997cd29de67eb80}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+C\+L\+E\+A\+N\+UP} Do not register a cleanup with the pool passed in on the {\itshape pool} argument (see below) \item \hyperlink{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED} Open with appropriate platform semantics for sendfile operations. Advisory only, apr\+\_\+socket\+\_\+sendfile does not check this flag \item \hyperlink{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE} Platform dependent flag to enable large file support, see W\+A\+R\+N\+I\+NG below \item \hyperlink{group__apr__file__open__flags_ga0d155e9bb7fbf1a5cd4e84b5ede059f4}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+P\+A\+R\+SE} Platform dependent flag to enable sparse file support, see W\+A\+R\+N\+I\+NG below \item \hyperlink{group__apr__file__open__flags_ga31e4d14068147e43e1778bcf975dda62}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+N\+O\+N\+B\+L\+O\+CK} Platform dependent flag to enable non blocking file io \end{DoxyItemize}
+\\
+\hline
+{\em perm} & Access permissions for file. \\
+\hline
+{\em pool} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If perm is \hyperlink{group__apr__file__permissions_gad3c65a67ee6eb12ecc6a33857397900b}{A\+P\+R\+\_\+\+F\+P\+R\+O\+T\+\_\+\+O\+S\+\_\+\+D\+E\+F\+A\+U\+LT} and the file is being created, appropriate default permissions will be used. 
+
+By default, the returned file descriptor will not be inherited by child processes created by \hyperlink{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{apr\+\_\+proc\+\_\+create()}. This can be changed using \hyperlink{group__apr__file__io_ga137bee13d2c65fb8afd4b34e400187c7}{apr\+\_\+file\+\_\+inherit\+\_\+set()}. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stderr@{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stderr}}
+\index{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stderr@{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stderr}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stderr(apr\+\_\+file\+\_\+t $\ast$$\ast$thefile, apr\+\_\+int32\+\_\+t flags, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_open_flags_stderr(apr_file_t **thefile, apr_int32_t flags, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stderr (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{thefile, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga6e87d695994e236dae3d428ed68886bf}{}\label{group__apr__file__io_ga6e87d695994e236dae3d428ed68886bf}
+open standard error as an apr file pointer, with flags. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The apr file to use as stderr. \\
+\hline
+{\em flags} & The flags to open the file with. Only the \begin{DoxyItemize}
+\item \hyperlink{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL} \item \hyperlink{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED} \item \hyperlink{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD} \item \hyperlink{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK} \item \hyperlink{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED} \item \hyperlink{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}\end{DoxyItemize}
+flags should be used. The \hyperlink{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE} flag will be set unconditionally. \\
+\hline
+{\em pool} & The pool to allocate the file out of.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+See remarks for \hyperlink{group__apr__file__io_gaf426d98943319acced2c9b52757f377f}{apr\+\_\+file\+\_\+open\+\_\+stderr()}. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdin@{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdin}}
+\index{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdin@{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdin}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdin(apr\+\_\+file\+\_\+t $\ast$$\ast$thefile, apr\+\_\+int32\+\_\+t flags, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_open_flags_stdin(apr_file_t **thefile, apr_int32_t flags, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdin (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{thefile, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga3bde3e61454b5604077f297b1d1671c0}{}\label{group__apr__file__io_ga3bde3e61454b5604077f297b1d1671c0}
+open standard input as an apr file pointer, with flags. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The apr file to use as stdin. \\
+\hline
+{\em flags} & The flags to open the file with. Only the \begin{DoxyItemize}
+\item \hyperlink{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL} \item \hyperlink{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED} \item \hyperlink{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD} \item \hyperlink{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK} \item \hyperlink{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED} \item \hyperlink{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}\end{DoxyItemize}
+flags should be used. The \hyperlink{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE} flag will be set unconditionally. \\
+\hline
+{\em pool} & The pool to allocate the file out of.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+See remarks for \hyperlink{group__apr__file__io_gaf426d98943319acced2c9b52757f377f}{apr\+\_\+file\+\_\+open\+\_\+stderr()}. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdout@{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdout}}
+\index{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdout@{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdout}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdout(apr\+\_\+file\+\_\+t $\ast$$\ast$thefile, apr\+\_\+int32\+\_\+t flags, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_open_flags_stdout(apr_file_t **thefile, apr_int32_t flags, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+open\+\_\+flags\+\_\+stdout (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{thefile, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gaeda353505bc1dc46db93b0a80d0b1c4c}{}\label{group__apr__file__io_gaeda353505bc1dc46db93b0a80d0b1c4c}
+open standard output as an apr file pointer, with flags. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The apr file to use as stdout. \\
+\hline
+{\em flags} & The flags to open the file with. Only the \begin{DoxyItemize}
+\item \hyperlink{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+E\+X\+CL} \item \hyperlink{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+B\+U\+F\+F\+E\+R\+ED} \item \hyperlink{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+X\+T\+H\+R\+E\+AD} \item \hyperlink{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+L\+O\+CK} \item \hyperlink{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+S\+E\+N\+D\+F\+I\+L\+E\+\_\+\+E\+N\+A\+B\+L\+ED} \item \hyperlink{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+L\+A\+R\+G\+E\+F\+I\+LE}\end{DoxyItemize}
+flags should be used. The \hyperlink{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{A\+P\+R\+\_\+\+F\+O\+P\+E\+N\+\_\+\+W\+R\+I\+TE} flag will be set unconditionally. \\
+\hline
+{\em pool} & The pool to allocate the file out of.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+See remarks for \hyperlink{group__apr__file__io_gaf426d98943319acced2c9b52757f377f}{apr\+\_\+file\+\_\+open\+\_\+stderr()}. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+open\+\_\+stderr@{apr\+\_\+file\+\_\+open\+\_\+stderr}}
+\index{apr\+\_\+file\+\_\+open\+\_\+stderr@{apr\+\_\+file\+\_\+open\+\_\+stderr}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+open\+\_\+stderr(apr\+\_\+file\+\_\+t $\ast$$\ast$thefile, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_open_stderr(apr_file_t **thefile, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+open\+\_\+stderr (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{thefile, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gaf426d98943319acced2c9b52757f377f}{}\label{group__apr__file__io_gaf426d98943319acced2c9b52757f377f}
+Open standard error as an apr file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The apr file to use as stderr. \\
+\hline
+{\em pool} & The pool to allocate the file out of.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The only reason that the apr\+\_\+file\+\_\+open\+\_\+std$\ast$ functions exist is that you may not always have a stderr/out/in on Windows. This is generally a problem with newer versions of Windows and services.
+
+The other problem is that the C library functions generally work differently on Windows and Unix. So, by using apr\+\_\+file\+\_\+open\+\_\+std$\ast$ functions, you can get a handle to an A\+PR struct that works with the A\+PR functions which are supposed to work identically on all platforms. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+open\+\_\+stdin@{apr\+\_\+file\+\_\+open\+\_\+stdin}}
+\index{apr\+\_\+file\+\_\+open\+\_\+stdin@{apr\+\_\+file\+\_\+open\+\_\+stdin}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+open\+\_\+stdin(apr\+\_\+file\+\_\+t $\ast$$\ast$thefile, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_open_stdin(apr_file_t **thefile, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+open\+\_\+stdin (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{thefile, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga539454470148f9b22a31f85936a5f8b4}{}\label{group__apr__file__io_ga539454470148f9b22a31f85936a5f8b4}
+open standard input as an apr file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The apr file to use as stdin. \\
+\hline
+{\em pool} & The pool to allocate the file out of.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+See remarks for \hyperlink{group__apr__file__io_gaf426d98943319acced2c9b52757f377f}{apr\+\_\+file\+\_\+open\+\_\+stderr()}. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+open\+\_\+stdout@{apr\+\_\+file\+\_\+open\+\_\+stdout}}
+\index{apr\+\_\+file\+\_\+open\+\_\+stdout@{apr\+\_\+file\+\_\+open\+\_\+stdout}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+open\+\_\+stdout(apr\+\_\+file\+\_\+t $\ast$$\ast$thefile, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_open_stdout(apr_file_t **thefile, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+open\+\_\+stdout (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{thefile, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga0d36922c0944ff9675cc820e68d56199}{}\label{group__apr__file__io_ga0d36922c0944ff9675cc820e68d56199}
+open standard output as an apr file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The apr file to use as stdout. \\
+\hline
+{\em pool} & The pool to allocate the file out of.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+See remarks for \hyperlink{group__apr__file__io_gaf426d98943319acced2c9b52757f377f}{apr\+\_\+file\+\_\+open\+\_\+stderr()}. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+perms\+\_\+set@{apr\+\_\+file\+\_\+perms\+\_\+set}}
+\index{apr\+\_\+file\+\_\+perms\+\_\+set@{apr\+\_\+file\+\_\+perms\+\_\+set}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+perms\+\_\+set(const char $\ast$fname, apr\+\_\+fileperms\+\_\+t perms)}{apr_file_perms_set(const char *fname, apr_fileperms_t perms)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+perms\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf apr\+\_\+fileperms\+\_\+t}}]{perms}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gac5fed6d75597476718c40fc603823b1e}{}\label{group__apr__file__io_gac5fed6d75597476718c40fc603823b1e}
+set the specified file\textquotesingle{}s permission bits. 
+\begin{DoxyParams}{Parameters}
+{\em fname} & The file (name) to apply the permissions to. \\
+\hline
+{\em perms} & The permission bits to apply to the file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Some platforms may not be able to apply all of the available permission bits; \hyperlink{group___a_p_r___error_ga64dff43b83bcefd3f3c751be6b864ca1}{A\+P\+R\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE} will be returned if some permissions are specified which could not be set.
+
+Platforms which do not implement this feature will return \hyperlink{group___a_p_r___error_ga939ddb834a30bc9a5a0a329b13000161}{A\+P\+R\+\_\+\+E\+N\+O\+T\+I\+M\+PL}. 
+\end{DoxyWarning}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+pipe\+\_\+create@{apr\+\_\+file\+\_\+pipe\+\_\+create}}
+\index{apr\+\_\+file\+\_\+pipe\+\_\+create@{apr\+\_\+file\+\_\+pipe\+\_\+create}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+pipe\+\_\+create(apr\+\_\+file\+\_\+t $\ast$$\ast$in, apr\+\_\+file\+\_\+t $\ast$$\ast$out, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_pipe_create(apr_file_t **in, apr_file_t **out, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+pipe\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{in, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{out, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gaae3b81342d239c58c351cf11190740ed}{}\label{group__apr__file__io_gaae3b81342d239c58c351cf11190740ed}
+Create an anonymous pipe. 
+\begin{DoxyParams}{Parameters}
+{\em in} & The newly created pipe\textquotesingle{}s file for reading. \\
+\hline
+{\em out} & The newly created pipe\textquotesingle{}s file for writing. \\
+\hline
+{\em pool} & The pool to operate on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+By default, the returned file descriptors will be inherited by child processes created using \hyperlink{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{apr\+\_\+proc\+\_\+create()}. This can be changed using \hyperlink{group__apr__file__io_ga69fa72a6f77b96572248c2a6a347c02a}{apr\+\_\+file\+\_\+inherit\+\_\+unset()}. 
+\end{DoxyRemark}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000003}{Bug}]Some platforms cannot toggle between blocking and nonblocking, and when passing a pipe as a standard handle to an application which does not expect it, a non-\/blocking stream will fluxor the client app. \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000031}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__file__io_ga2fbbae715bee0e0ca9adadd66ac65e96}{apr\+\_\+file\+\_\+pipe\+\_\+create\+\_\+ex()} 
+\end{DoxySeeAlso}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+pipe\+\_\+create\+\_\+ex@{apr\+\_\+file\+\_\+pipe\+\_\+create\+\_\+ex}}
+\index{apr\+\_\+file\+\_\+pipe\+\_\+create\+\_\+ex@{apr\+\_\+file\+\_\+pipe\+\_\+create\+\_\+ex}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+pipe\+\_\+create\+\_\+ex(apr\+\_\+file\+\_\+t $\ast$$\ast$in, apr\+\_\+file\+\_\+t $\ast$$\ast$out, apr\+\_\+int32\+\_\+t blocking, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_pipe_create_ex(apr_file_t **in, apr_file_t **out, apr_int32_t blocking, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+pipe\+\_\+create\+\_\+ex (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{in, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{out, }
+\item[{apr\+\_\+int32\+\_\+t}]{blocking, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga2fbbae715bee0e0ca9adadd66ac65e96}{}\label{group__apr__file__io_ga2fbbae715bee0e0ca9adadd66ac65e96}
+Create an anonymous pipe which portably supports async timeout options. 
+\begin{DoxyParams}{Parameters}
+{\em in} & The newly created pipe\textquotesingle{}s file for reading. \\
+\hline
+{\em out} & The newly created pipe\textquotesingle{}s file for writing. \\
+\hline
+{\em blocking} & one of these values defined in \hyperlink{apr__thread__proc_8h}{apr\+\_\+thread\+\_\+proc.\+h}; \begin{DoxyItemize}
+\item \hyperlink{group__apr__thread__proc_ga646af57314e71f4647243f36dd03e5ea}{A\+P\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+CK} \item \hyperlink{group__apr__thread__proc_gaf8295548cb0821ee02249d6de8336bcb}{A\+P\+R\+\_\+\+R\+E\+A\+D\+\_\+\+B\+L\+O\+CK} \item \hyperlink{group__apr__thread__proc_ga36ff2de9664ad6995bd488b4ac715c9c}{A\+P\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+L\+O\+CK} \item \hyperlink{group__apr__thread__proc_gae0707f76da785490830fc3491093767c}{A\+P\+R\+\_\+\+F\+U\+L\+L\+\_\+\+N\+O\+N\+B\+L\+O\+CK} \end{DoxyItemize}
+\\
+\hline
+{\em pool} & The pool to operate on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+By default, the returned file descriptors will be inherited by child processes created using \hyperlink{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{apr\+\_\+proc\+\_\+create()}. This can be changed using \hyperlink{group__apr__file__io_ga69fa72a6f77b96572248c2a6a347c02a}{apr\+\_\+file\+\_\+inherit\+\_\+unset()}. 
+
+Some platforms cannot toggle between blocking and nonblocking, and when passing a pipe as a standard handle to an application which does not expect it, a non-\/blocking stream will fluxor the client app. Use this function rather than \hyperlink{group__apr__file__io_gaae3b81342d239c58c351cf11190740ed}{apr\+\_\+file\+\_\+pipe\+\_\+create()} to create pipes where one or both ends require non-\/blocking semantics. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+get@{apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+get}}
+\index{apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+get@{apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+get}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+get(apr\+\_\+file\+\_\+t $\ast$thepipe, apr\+\_\+interval\+\_\+time\+\_\+t $\ast$timeout)}{apr_file_pipe_timeout_get(apr_file_t *thepipe, apr_interval_time_t *timeout)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thepipe, }
+\item[{{\bf apr\+\_\+interval\+\_\+time\+\_\+t} $\ast$}]{timeout}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga90e481207a38df04818a0c55883ee953}{}\label{group__apr__file__io_ga90e481207a38df04818a0c55883ee953}
+Get the timeout value for a pipe or manipulate the blocking state. 
+\begin{DoxyParams}{Parameters}
+{\em thepipe} & The pipe we are getting a timeout for. \\
+\hline
+{\em timeout} & The current timeout value in microseconds. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+set@{apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+set}}
+\index{apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+set@{apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+set}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+set(apr\+\_\+file\+\_\+t $\ast$thepipe, apr\+\_\+interval\+\_\+time\+\_\+t timeout)}{apr_file_pipe_timeout_set(apr_file_t *thepipe, apr_interval_time_t timeout)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+pipe\+\_\+timeout\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thepipe, }
+\item[{{\bf apr\+\_\+interval\+\_\+time\+\_\+t}}]{timeout}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gaf88d2fca768e3fa9f28ea010e1bf602a}{}\label{group__apr__file__io_gaf88d2fca768e3fa9f28ea010e1bf602a}
+Set the timeout value for a pipe or manipulate the blocking state. 
+\begin{DoxyParams}{Parameters}
+{\em thepipe} & The pipe we are setting a timeout on. \\
+\hline
+{\em timeout} & The timeout value in microseconds. Values $<$ 0 mean wait forever, 0 means do not wait at all. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+pool\+\_\+get@{apr\+\_\+file\+\_\+pool\+\_\+get}}
+\index{apr\+\_\+file\+\_\+pool\+\_\+get@{apr\+\_\+file\+\_\+pool\+\_\+get}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+pool\+\_\+get(const apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_pool_get(const apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+pool\+\_\+t}$\ast$ apr\+\_\+file\+\_\+pool\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gab5950b3b0156097b0181394a37e03ede}{}\label{group__apr__file__io_gab5950b3b0156097b0181394a37e03ede}
+Get the pool used by the file. \index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+printf@{apr\+\_\+file\+\_\+printf}}
+\index{apr\+\_\+file\+\_\+printf@{apr\+\_\+file\+\_\+printf}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+printf(apr\+\_\+file\+\_\+t $\ast$fptr, const char $\ast$format,...)}{apr_file_printf(apr_file_t *fptr, const char *format,...)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+file\+\_\+printf (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{fptr, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga29fca4b0201c236856fea5578f410c0e}{}\label{group__apr__file__io_ga29fca4b0201c236856fea5578f410c0e}
+Write a string to a file using a printf format. 
+\begin{DoxyParams}{Parameters}
+{\em fptr} & The file to write to. \\
+\hline
+{\em format} & The format string \\
+\hline
+{\em ...} & The values to substitute in the format string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes written 
+\end{DoxyReturn}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+putc@{apr\+\_\+file\+\_\+putc}}
+\index{apr\+\_\+file\+\_\+putc@{apr\+\_\+file\+\_\+putc}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+putc(char ch, apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_putc(char ch, apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+putc (
+\begin{DoxyParamCaption}
+\item[{char}]{ch, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga33e51b53194e7c0dac513ca27ca18e63}{}\label{group__apr__file__io_ga33e51b53194e7c0dac513ca27ca18e63}
+Write a character into the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em ch} & The character to write. \\
+\hline
+{\em thefile} & The file descriptor to write to \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+puts@{apr\+\_\+file\+\_\+puts}}
+\index{apr\+\_\+file\+\_\+puts@{apr\+\_\+file\+\_\+puts}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+puts(const char $\ast$str, apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_puts(const char *str, apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+puts (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gacde81145cc38660a1512d469886ddb16}{}\label{group__apr__file__io_gacde81145cc38660a1512d469886ddb16}
+Write the string into the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to write. \\
+\hline
+{\em thefile} & The file descriptor to write to \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+read@{apr\+\_\+file\+\_\+read}}
+\index{apr\+\_\+file\+\_\+read@{apr\+\_\+file\+\_\+read}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+read(apr\+\_\+file\+\_\+t $\ast$thefile, void $\ast$buf, apr\+\_\+size\+\_\+t $\ast$nbytes)}{apr_file_read(apr_file_t *thefile, void *buf, apr_size_t *nbytes)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{void $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{nbytes}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gadd067ee0050dff0c03a9420c9d424466}{}\label{group__apr__file__io_gadd067ee0050dff0c03a9420c9d424466}
+Read data from the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file descriptor to read from. \\
+\hline
+{\em buf} & The buffer to store the data to. \\
+\hline
+{\em nbytes} & On entry, the number of bytes to read; on exit, the number of bytes read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+\hyperlink{group__apr__file__io_gadd067ee0050dff0c03a9420c9d424466}{apr\+\_\+file\+\_\+read()} will read up to the specified number of bytes, but never more. If there isn\textquotesingle{}t enough data to fill that number of bytes, all of the available data is read. The third argument is modified to reflect the number of bytes read. If a char was put back into the stream via ungetc, it will be the first character returned.
+
+It is not possible for both bytes to be read and an \hyperlink{group___a_p_r___error_ga35d9dca2514c522a2840aca0f3e2ebd3}{A\+P\+R\+\_\+\+E\+OF} or other error to be returned. \hyperlink{group___a_p_r___error_gaee1ce306c0ebf1701b34172310aa1bd5}{A\+P\+R\+\_\+\+E\+I\+N\+TR} is never returned. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+read\+\_\+full@{apr\+\_\+file\+\_\+read\+\_\+full}}
+\index{apr\+\_\+file\+\_\+read\+\_\+full@{apr\+\_\+file\+\_\+read\+\_\+full}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+read\+\_\+full(apr\+\_\+file\+\_\+t $\ast$thefile, void $\ast$buf, apr\+\_\+size\+\_\+t nbytes, apr\+\_\+size\+\_\+t $\ast$bytes\+\_\+read)}{apr_file_read_full(apr_file_t *thefile, void *buf, apr_size_t nbytes, apr_size_t *bytes_read)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+read\+\_\+full (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{void $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t}]{nbytes, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{bytes\+\_\+read}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gaf39a17404e868808aff8e2e7ecaa87e0}{}\label{group__apr__file__io_gaf39a17404e868808aff8e2e7ecaa87e0}
+Read data from the specified file, ensuring that the buffer is filled before returning. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file descriptor to read from. \\
+\hline
+{\em buf} & The buffer to store the data to. \\
+\hline
+{\em nbytes} & The number of bytes to read. \\
+\hline
+{\em bytes\+\_\+read} & If non-\/\+N\+U\+LL, this will contain the number of bytes read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+\hyperlink{group__apr__file__io_gaf39a17404e868808aff8e2e7ecaa87e0}{apr\+\_\+file\+\_\+read\+\_\+full()} will read up to the specified number of bytes, but never more. If there isn\textquotesingle{}t enough data to fill that number of bytes, then the process/thread will block until it is available or E\+OF is reached. If a char was put back into the stream via ungetc, it will be the first character returned.
+
+It is possible for both bytes to be read and an error to be returned. And if $\ast$bytes\+\_\+read is less than nbytes, an accompanying error is {\itshape always} returned.
+
+\hyperlink{group___a_p_r___error_gaee1ce306c0ebf1701b34172310aa1bd5}{A\+P\+R\+\_\+\+E\+I\+N\+TR} is never returned. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+remove@{apr\+\_\+file\+\_\+remove}}
+\index{apr\+\_\+file\+\_\+remove@{apr\+\_\+file\+\_\+remove}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+remove(const char $\ast$path, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_remove(const char *path, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga211c40be82f8bf8b8d7dce5afca5500b}{}\label{group__apr__file__io_ga211c40be82f8bf8b8d7dce5afca5500b}
+Delete the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em path} & The full path to the file (using / on all systems) \\
+\hline
+{\em pool} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If the file is open, it won\textquotesingle{}t be removed until all instances are closed. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+rename@{apr\+\_\+file\+\_\+rename}}
+\index{apr\+\_\+file\+\_\+rename@{apr\+\_\+file\+\_\+rename}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+rename(const char $\ast$from\+\_\+path, const char $\ast$to\+\_\+path, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_file_rename(const char *from_path, const char *to_path, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+rename (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{from\+\_\+path, }
+\item[{const char $\ast$}]{to\+\_\+path, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga29b5633bb80226baa5de79a83c6999aa}{}\label{group__apr__file__io_ga29b5633bb80226baa5de79a83c6999aa}
+Rename the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em from\+\_\+path} & The full path to the original file (using / on all systems) \\
+\hline
+{\em to\+\_\+path} & The full path to the new file (using / on all systems) \\
+\hline
+{\em pool} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+If a file exists at the new location, then it will be overwritten. Moving files or directories across devices may not be possible. 
+\end{DoxyWarning}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+seek@{apr\+\_\+file\+\_\+seek}}
+\index{apr\+\_\+file\+\_\+seek@{apr\+\_\+file\+\_\+seek}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+seek(apr\+\_\+file\+\_\+t $\ast$thefile, apr\+\_\+seek\+\_\+where\+\_\+t where, apr\+\_\+off\+\_\+t $\ast$offset)}{apr_file_seek(apr_file_t *thefile, apr_seek_where_t where, apr_off_t *offset)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+seek (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{{\bf apr\+\_\+seek\+\_\+where\+\_\+t}}]{where, }
+\item[{apr\+\_\+off\+\_\+t $\ast$}]{offset}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga9db84bec24db97a53890df1a6aff63a1}{}\label{group__apr__file__io_ga9db84bec24db97a53890df1a6aff63a1}
+Move the read/write file offset to a specified byte within a file. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file descriptor \\
+\hline
+{\em where} & How to move the pointer, one of\+: \begin{DoxyItemize}
+\item \hyperlink{group__apr__file__seek__flags_ga2fdf78845c897f69451d49e1e2b90ac9}{A\+P\+R\+\_\+\+S\+ET} -- set the offset to offset \item \hyperlink{group__apr__file__seek__flags_gae17abc53fea00bfd51e184017113e250}{A\+P\+R\+\_\+\+C\+UR} -- add the offset to the current position \item \hyperlink{group__apr__file__seek__flags_ga438f3568be799d1e4bbd19492ca47d22}{A\+P\+R\+\_\+\+E\+ND} -- add the offset to the current file size \end{DoxyItemize}
+\\
+\hline
+{\em offset} & The offset to move the pointer to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The third argument is modified to be the offset the pointer was actually moved to. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+setaside@{apr\+\_\+file\+\_\+setaside}}
+\index{apr\+\_\+file\+\_\+setaside@{apr\+\_\+file\+\_\+setaside}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+setaside(apr\+\_\+file\+\_\+t $\ast$$\ast$new\+\_\+file, apr\+\_\+file\+\_\+t $\ast$old\+\_\+file, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_file_setaside(apr_file_t **new_file, apr_file_t *old_file, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+setaside (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$$\ast$}]{new\+\_\+file, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{old\+\_\+file, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gadaf046ce39aa118dab921a407446355b}{}\label{group__apr__file__io_gadaf046ce39aa118dab921a407446355b}
+Move the specified file descriptor to a new pool 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+file} & Pointer in which to return the new apr\+\_\+file\+\_\+t \\
+\hline
+{\em old\+\_\+file} & The file to move \\
+\hline
+{\em p} & The pool to which the descriptor is to be moved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Unlike \hyperlink{group__apr__file__io_ga602926aad867088297e8f59490ff939c}{apr\+\_\+file\+\_\+dup2()}, this function doesn\textquotesingle{}t do an OS dup() operation on the underlying descriptor; it just moves the descriptor\textquotesingle{}s apr\+\_\+file\+\_\+t wrapper to a new pool. 
+
+The new pool need not be an ancestor of old\+\_\+file\textquotesingle{}s pool. 
+
+After calling this function, old\+\_\+file may not be used 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+sync@{apr\+\_\+file\+\_\+sync}}
+\index{apr\+\_\+file\+\_\+sync@{apr\+\_\+file\+\_\+sync}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+sync(apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_sync(apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+sync (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga4385e141c4bbb96294acd7d342f138da}{}\label{group__apr__file__io_ga4385e141c4bbb96294acd7d342f138da}
+Transfer all file modified data and metadata to disk. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file descriptor to sync \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+trunc@{apr\+\_\+file\+\_\+trunc}}
+\index{apr\+\_\+file\+\_\+trunc@{apr\+\_\+file\+\_\+trunc}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+trunc(apr\+\_\+file\+\_\+t $\ast$fp, apr\+\_\+off\+\_\+t offset)}{apr_file_trunc(apr_file_t *fp, apr_off_t offset)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+trunc (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{fp, }
+\item[{apr\+\_\+off\+\_\+t}]{offset}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gac067fe5f208c927cf6d213197b9335a8}{}\label{group__apr__file__io_gac067fe5f208c927cf6d213197b9335a8}
+Truncate the file\textquotesingle{}s length to the specified offset 
+\begin{DoxyParams}{Parameters}
+{\em fp} & The file to truncate \\
+\hline
+{\em offset} & The offset to truncate to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The read/write file offset is repositioned to offset. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+ungetc@{apr\+\_\+file\+\_\+ungetc}}
+\index{apr\+\_\+file\+\_\+ungetc@{apr\+\_\+file\+\_\+ungetc}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+ungetc(char ch, apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_ungetc(char ch, apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+ungetc (
+\begin{DoxyParamCaption}
+\item[{char}]{ch, }
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga9d06778e719d596ab96bca812b01cb3a}{}\label{group__apr__file__io_ga9d06778e719d596ab96bca812b01cb3a}
+Put a character back onto a specified stream. 
+\begin{DoxyParams}{Parameters}
+{\em ch} & The character to write. \\
+\hline
+{\em thefile} & The file descriptor to write to \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+unlock@{apr\+\_\+file\+\_\+unlock}}
+\index{apr\+\_\+file\+\_\+unlock@{apr\+\_\+file\+\_\+unlock}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+unlock(apr\+\_\+file\+\_\+t $\ast$thefile)}{apr_file_unlock(apr_file_t *thefile)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+unlock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga3a255996fb439b6d66ed7cd65319525b}{}\label{group__apr__file__io_ga3a255996fb439b6d66ed7cd65319525b}
+Remove any outstanding locks on the file. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file to unlock. \\
+\hline
+\end{DoxyParams}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+write@{apr\+\_\+file\+\_\+write}}
+\index{apr\+\_\+file\+\_\+write@{apr\+\_\+file\+\_\+write}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+write(apr\+\_\+file\+\_\+t $\ast$thefile, const void $\ast$buf, apr\+\_\+size\+\_\+t $\ast$nbytes)}{apr_file_write(apr_file_t *thefile, const void *buf, apr_size_t *nbytes)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{const void $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{nbytes}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga2e4baa94102c363fdca3c850375d3584}{}\label{group__apr__file__io_ga2e4baa94102c363fdca3c850375d3584}
+Write data to the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file descriptor to write to. \\
+\hline
+{\em buf} & The buffer which contains the data. \\
+\hline
+{\em nbytes} & On entry, the number of bytes to write; on exit, the number of bytes written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+\hyperlink{group__apr__file__io_ga2e4baa94102c363fdca3c850375d3584}{apr\+\_\+file\+\_\+write()} will write up to the specified number of bytes, but never more. If the OS cannot write that many bytes, it will write as many as it can. The third argument is modified to reflect the $\ast$ number of bytes written.
+
+It is possible for both bytes to be written and an error to be returned. \hyperlink{group___a_p_r___error_gaee1ce306c0ebf1701b34172310aa1bd5}{A\+P\+R\+\_\+\+E\+I\+N\+TR} is never returned. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+write\+\_\+full@{apr\+\_\+file\+\_\+write\+\_\+full}}
+\index{apr\+\_\+file\+\_\+write\+\_\+full@{apr\+\_\+file\+\_\+write\+\_\+full}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+write\+\_\+full(apr\+\_\+file\+\_\+t $\ast$thefile, const void $\ast$buf, apr\+\_\+size\+\_\+t nbytes, apr\+\_\+size\+\_\+t $\ast$bytes\+\_\+written)}{apr_file_write_full(apr_file_t *thefile, const void *buf, apr_size_t nbytes, apr_size_t *bytes_written)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+write\+\_\+full (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{const void $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t}]{nbytes, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{bytes\+\_\+written}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga560d5c062d65e64c07d906d1207337d4}{}\label{group__apr__file__io_ga560d5c062d65e64c07d906d1207337d4}
+Write data to the specified file, ensuring that all of the data is written before returning. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file descriptor to write to. \\
+\hline
+{\em buf} & The buffer which contains the data. \\
+\hline
+{\em nbytes} & The number of bytes to write. \\
+\hline
+{\em bytes\+\_\+written} & If non-\/\+N\+U\+LL, set to the number of bytes written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+\hyperlink{group__apr__file__io_ga560d5c062d65e64c07d906d1207337d4}{apr\+\_\+file\+\_\+write\+\_\+full()} will write up to the specified number of bytes, but never more. If the OS cannot write that many bytes, the process/thread will block until they can be written. Exceptional error such as \char`\"{}out of space\char`\"{} or \char`\"{}pipe closed\char`\"{} will terminate with an error.
+
+It is possible for both bytes to be written and an error to be returned. And if $\ast$bytes\+\_\+written is less than nbytes, an accompanying error is {\itshape always} returned.
+
+\hyperlink{group___a_p_r___error_gaee1ce306c0ebf1701b34172310aa1bd5}{A\+P\+R\+\_\+\+E\+I\+N\+TR} is never returned. 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+writev@{apr\+\_\+file\+\_\+writev}}
+\index{apr\+\_\+file\+\_\+writev@{apr\+\_\+file\+\_\+writev}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+writev(apr\+\_\+file\+\_\+t $\ast$thefile, const struct iovec $\ast$vec, apr\+\_\+size\+\_\+t nvec, apr\+\_\+size\+\_\+t $\ast$nbytes)}{apr_file_writev(apr_file_t *thefile, const struct iovec *vec, apr_size_t nvec, apr_size_t *nbytes)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+writev (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{const struct iovec $\ast$}]{vec, }
+\item[{apr\+\_\+size\+\_\+t}]{nvec, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{nbytes}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_gacc7924dd7af1c2948b5b2ea6e5f77984}{}\label{group__apr__file__io_gacc7924dd7af1c2948b5b2ea6e5f77984}
+Write data from iovec array to the specified file. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file descriptor to write to. \\
+\hline
+{\em vec} & The array from which to get the data to write to the file. \\
+\hline
+{\em nvec} & The number of elements in the struct iovec array. This must be smaller than \hyperlink{group__apr__file__writev_gae04a4721139b2b252ea20e68883da4b4}{A\+P\+R\+\_\+\+M\+A\+X\+\_\+\+I\+O\+V\+E\+C\+\_\+\+S\+I\+ZE}. If it isn\textquotesingle{}t, the function will fail with \hyperlink{group___a_p_r___error_gae3ffc41994444e71ce522c036ca1d9a4}{A\+P\+R\+\_\+\+E\+I\+N\+V\+AL}. \\
+\hline
+{\em nbytes} & The number of bytes written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+It is possible for both bytes to be written and an error to be returned. \hyperlink{group___a_p_r___error_gaee1ce306c0ebf1701b34172310aa1bd5}{A\+P\+R\+\_\+\+E\+I\+N\+TR} is never returned.
+
+\hyperlink{group__apr__file__io_gacc7924dd7af1c2948b5b2ea6e5f77984}{apr\+\_\+file\+\_\+writev()} is available even if the underlying operating system doesn\textquotesingle{}t provide writev(). 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+file\+\_\+writev\+\_\+full@{apr\+\_\+file\+\_\+writev\+\_\+full}}
+\index{apr\+\_\+file\+\_\+writev\+\_\+full@{apr\+\_\+file\+\_\+writev\+\_\+full}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+file\+\_\+writev\+\_\+full(apr\+\_\+file\+\_\+t $\ast$thefile, const struct iovec $\ast$vec, apr\+\_\+size\+\_\+t nvec, apr\+\_\+size\+\_\+t $\ast$nbytes)}{apr_file_writev_full(apr_file_t *thefile, const struct iovec *vec, apr_size_t nvec, apr_size_t *nbytes)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+file\+\_\+writev\+\_\+full (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+file\+\_\+t} $\ast$}]{thefile, }
+\item[{const struct iovec $\ast$}]{vec, }
+\item[{apr\+\_\+size\+\_\+t}]{nvec, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{nbytes}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga24457e11f0db908b21b7e1742db4ed7b}{}\label{group__apr__file__io_ga24457e11f0db908b21b7e1742db4ed7b}
+Write data from iovec array to the specified file, ensuring that all of the data is written before returning. 
+\begin{DoxyParams}{Parameters}
+{\em thefile} & The file descriptor to write to. \\
+\hline
+{\em vec} & The array from which to get the data to write to the file. \\
+\hline
+{\em nvec} & The number of elements in the struct iovec array. This must be smaller than \hyperlink{group__apr__file__writev_gae04a4721139b2b252ea20e68883da4b4}{A\+P\+R\+\_\+\+M\+A\+X\+\_\+\+I\+O\+V\+E\+C\+\_\+\+S\+I\+ZE}. If it isn\textquotesingle{}t, the function will fail with \hyperlink{group___a_p_r___error_gae3ffc41994444e71ce522c036ca1d9a4}{A\+P\+R\+\_\+\+E\+I\+N\+V\+AL}. \\
+\hline
+{\em nbytes} & The number of bytes written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+\hyperlink{group__apr__file__io_ga24457e11f0db908b21b7e1742db4ed7b}{apr\+\_\+file\+\_\+writev\+\_\+full()} is available even if the underlying operating system doesn\textquotesingle{}t provide writev(). 
+\end{DoxyRemark}
+\index{File I/\+O Handling Functions@{File I/\+O Handling Functions}!apr\+\_\+temp\+\_\+dir\+\_\+get@{apr\+\_\+temp\+\_\+dir\+\_\+get}}
+\index{apr\+\_\+temp\+\_\+dir\+\_\+get@{apr\+\_\+temp\+\_\+dir\+\_\+get}!File I/\+O Handling Functions@{File I/\+O Handling Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+temp\+\_\+dir\+\_\+get(const char $\ast$$\ast$temp\+\_\+dir, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_temp_dir_get(const char **temp_dir, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+temp\+\_\+dir\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$$\ast$}]{temp\+\_\+dir, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__file__io_ga5cc19828a668c362be0ad7a12b805cc0}{}\label{group__apr__file__io_ga5cc19828a668c362be0ad7a12b805cc0}
+Find an existing directory suitable as a temporary storage location. 
+\begin{DoxyParams}{Parameters}
+{\em temp\+\_\+dir} & The temp directory. \\
+\hline
+{\em p} & The pool to use for any necessary allocations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function uses an algorithm to search for a directory that an an application can use for temporary storage. 
+\end{DoxyRemark}

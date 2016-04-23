@@ -1,0 +1,236 @@
+\hypertarget{group__apr__filepath}{}\section{Filepath Manipulation Functions}
+\label{group__apr__filepath}\index{Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__filepath_gabb57ce7b23caf512d7f64b92a662ab3d}{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+O\+V\+E\+R\+O\+OT}~0x01
+\item 
+\#define \hyperlink{group__apr__filepath_ga48b6cabfa91e6070c45977ba7035f328}{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+O\+T\+T\+E\+ST}~0x02
+\item 
+\#define \hyperlink{group__apr__filepath_ga6a518889311b81e1d2fc434e7d3acecd}{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+OT}~0x03
+\item 
+\#define \hyperlink{group__apr__filepath_ga487344eb474ea4033b19c386db9aa03a}{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+R\+E\+L\+A\+T\+I\+VE}~0x04
+\item 
+\#define \hyperlink{group__apr__filepath_gaac75b8e9fd5c248b52ac36a1fd6b7f98}{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+S\+O\+L\+U\+TE}~0x08
+\item 
+\#define \hyperlink{group__apr__filepath_ga2d72ade2cada76d2fa8af3fe4d8fb1de}{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+A\+T\+I\+VE}~0x10
+\item 
+\#define \hyperlink{group__apr__filepath_gafb7dd411e9ef212a03051806cb60c9d8}{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+T\+R\+U\+E\+N\+A\+ME}~0x20
+\item 
+\#define \hyperlink{group__apr__filepath_ga26cd6345ccc38ae3ad001fd2fa885634}{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN}~0
+\item 
+\#define \hyperlink{group__apr__filepath_gaecb3193c8e36fbf58564f94b8c38b6d9}{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+O\+C\+A\+LE}~1
+\item 
+\#define \hyperlink{group__apr__filepath_ga1c99d1644a8b49dc0be166bdc352819a}{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+T\+F8}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__filepath_ga1eacdd5ed069faa137bde014fa50494d}{apr\+\_\+filepath\+\_\+root} (const char $\ast$$\ast$rootpath, const char $\ast$$\ast$filepath, apr\+\_\+int32\+\_\+t flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__filepath_gae89fd67108f10dc5044b6d062dde0138}{apr\+\_\+filepath\+\_\+merge} (char $\ast$$\ast$newpath, const char $\ast$rootpath, const char $\ast$addpath, apr\+\_\+int32\+\_\+t flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__filepath_gaf259849de62ac172dde7dcbe73421500}{apr\+\_\+filepath\+\_\+list\+\_\+split} (\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$$\ast$pathelts, const char $\ast$liststr, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__filepath_ga8316896ab8e3901f9711d9d4cc89b373}{apr\+\_\+filepath\+\_\+list\+\_\+merge} (char $\ast$$\ast$liststr, \hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$pathelts, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__filepath_gaac7c26321fd60d7304326fe531639507}{apr\+\_\+filepath\+\_\+get} (char $\ast$$\ast$path, apr\+\_\+int32\+\_\+t flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__filepath_ga9773589b65b7f0b7d5b59d427fd0eb93}{apr\+\_\+filepath\+\_\+set} (const char $\ast$path, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__filepath_gad4d3a5888a54a52b3552911e448a3eb3}{apr\+\_\+filepath\+\_\+encoding} (int $\ast$style, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+O\+C\+A\+LE@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+O\+C\+A\+LE}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+O\+C\+A\+LE@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+O\+C\+A\+LE}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+O\+C\+A\+LE}{APR_FILEPATH_ENCODING_LOCALE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+L\+O\+C\+A\+LE~1}\hypertarget{group__apr__filepath_gaecb3193c8e36fbf58564f94b8c38b6d9}{}\label{group__apr__filepath_gaecb3193c8e36fbf58564f94b8c38b6d9}
+The File\+Path character encoding is locale-\/dependent \index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN}{APR_FILEPATH_ENCODING_UNKNOWN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN~0}\hypertarget{group__apr__filepath_ga26cd6345ccc38ae3ad001fd2fa885634}{}\label{group__apr__filepath_ga26cd6345ccc38ae3ad001fd2fa885634}
+The File\+Path character encoding is unknown \index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+T\+F8@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+T\+F8}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+T\+F8@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+T\+F8}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+T\+F8}{APR_FILEPATH_ENCODING_UTF8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+T\+F8~2}\hypertarget{group__apr__filepath_ga1c99d1644a8b49dc0be166bdc352819a}{}\label{group__apr__filepath_ga1c99d1644a8b49dc0be166bdc352819a}
+The File\+Path character encoding is U\+T\+F-\/8 \index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+A\+T\+I\+VE@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+A\+T\+I\+VE}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+A\+T\+I\+VE@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+A\+T\+I\+VE}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+A\+T\+I\+VE}{APR_FILEPATH_NATIVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+A\+T\+I\+VE~0x10}\hypertarget{group__apr__filepath_ga2d72ade2cada76d2fa8af3fe4d8fb1de}{}\label{group__apr__filepath_ga2d72ade2cada76d2fa8af3fe4d8fb1de}
+Return the file system\textquotesingle{}s native path format (e.\+g. path delimiters of \textquotesingle{}\+:\textquotesingle{} on Mac\+O\+S9, \textquotesingle{}\textbackslash{}\textquotesingle{} on Win32, etc.) \index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+O\+V\+E\+R\+O\+OT@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+O\+V\+E\+R\+O\+OT}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+O\+V\+E\+R\+O\+OT@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+O\+V\+E\+R\+O\+OT}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+O\+V\+E\+R\+O\+OT}{APR_FILEPATH_NOTABOVEROOT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+O\+V\+E\+R\+O\+OT~0x01}\hypertarget{group__apr__filepath_gabb57ce7b23caf512d7f64b92a662ab3d}{}\label{group__apr__filepath_gabb57ce7b23caf512d7f64b92a662ab3d}
+Cause apr\+\_\+filepath\+\_\+merge to fail if addpath is above rootpath \begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000002}{Bug}]in A\+PR 0.\+9 and 1.\+x, this flag\textquotesingle{}s behavior is undefined if the rootpath is N\+U\+LL or empty. In A\+PR 2.\+0 this should be changed to imply N\+O\+T\+A\+B\+S\+O\+L\+U\+TE if the rootpath is N\+U\+LL or empty. \end{DoxyRefDesc}
+\index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+S\+O\+L\+U\+TE@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+S\+O\+L\+U\+TE}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+S\+O\+L\+U\+TE@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+S\+O\+L\+U\+TE}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+S\+O\+L\+U\+TE}{APR_FILEPATH_NOTABSOLUTE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+S\+O\+L\+U\+TE~0x08}\hypertarget{group__apr__filepath_gaac75b8e9fd5c248b52ac36a1fd6b7f98}{}\label{group__apr__filepath_gaac75b8e9fd5c248b52ac36a1fd6b7f98}
+Fail apr\+\_\+filepath\+\_\+merge if the merged path is absolute \index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+R\+E\+L\+A\+T\+I\+VE@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+R\+E\+L\+A\+T\+I\+VE}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+R\+E\+L\+A\+T\+I\+VE@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+R\+E\+L\+A\+T\+I\+VE}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+R\+E\+L\+A\+T\+I\+VE}{APR_FILEPATH_NOTRELATIVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+R\+E\+L\+A\+T\+I\+VE~0x04}\hypertarget{group__apr__filepath_ga487344eb474ea4033b19c386db9aa03a}{}\label{group__apr__filepath_ga487344eb474ea4033b19c386db9aa03a}
+Fail apr\+\_\+filepath\+\_\+merge if the merged path is relative \index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+OT@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+OT}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+OT@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+OT}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+OT}{APR_FILEPATH_SECUREROOT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+OT~0x03}\hypertarget{group__apr__filepath_ga6a518889311b81e1d2fc434e7d3acecd}{}\label{group__apr__filepath_ga6a518889311b81e1d2fc434e7d3acecd}
+Cause apr\+\_\+filepath\+\_\+merge to fail if addpath is above rootpath, even given a rootpath /foo/bar and an addpath ../bar/bash \index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+O\+T\+T\+E\+ST@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+O\+T\+T\+E\+ST}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+O\+T\+T\+E\+ST@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+O\+T\+T\+E\+ST}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+O\+T\+T\+E\+ST}{APR_FILEPATH_SECUREROOTTEST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+S\+E\+C\+U\+R\+E\+R\+O\+O\+T\+T\+E\+ST~0x02}\hypertarget{group__apr__filepath_ga48b6cabfa91e6070c45977ba7035f328}{}\label{group__apr__filepath_ga48b6cabfa91e6070c45977ba7035f328}
+internal\+: Only meaningful with A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+O\+V\+E\+R\+O\+OT \index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+T\+R\+U\+E\+N\+A\+ME@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+T\+R\+U\+E\+N\+A\+ME}}
+\index{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+T\+R\+U\+E\+N\+A\+ME@{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+T\+R\+U\+E\+N\+A\+ME}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+T\+R\+U\+E\+N\+A\+ME}{APR_FILEPATH_TRUENAME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+T\+R\+U\+E\+N\+A\+ME~0x20}\hypertarget{group__apr__filepath_gafb7dd411e9ef212a03051806cb60c9d8}{}\label{group__apr__filepath_gafb7dd411e9ef212a03051806cb60c9d8}
+Resolve the true case of existing directories and file elements of addpath, (resolving any aliases on Win32) and append a proper trailing slash if a directory 
+
+\subsection{Function Documentation}
+\index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!apr\+\_\+filepath\+\_\+encoding@{apr\+\_\+filepath\+\_\+encoding}}
+\index{apr\+\_\+filepath\+\_\+encoding@{apr\+\_\+filepath\+\_\+encoding}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+filepath\+\_\+encoding(int $\ast$style, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_filepath_encoding(int *style, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+filepath\+\_\+encoding (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{style, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__filepath_gad4d3a5888a54a52b3552911e448a3eb3}{}\label{group__apr__filepath_gad4d3a5888a54a52b3552911e448a3eb3}
+Determine the encoding used internally by the File\+Path functions 
+\begin{DoxyParams}{Parameters}
+{\em style} & points to a variable which receives the encoding style flag \\
+\hline
+{\em p} & the pool to allocate any working storage \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Use {\ttfamily apr\+\_\+os\+\_\+locale\+\_\+encoding} and/or {\ttfamily apr\+\_\+os\+\_\+default\+\_\+encoding} to get the name of the path encoding if it\textquotesingle{}s not U\+T\+F-\/8. 
+\end{DoxyRemark}
+\index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!apr\+\_\+filepath\+\_\+get@{apr\+\_\+filepath\+\_\+get}}
+\index{apr\+\_\+filepath\+\_\+get@{apr\+\_\+filepath\+\_\+get}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+filepath\+\_\+get(char $\ast$$\ast$path, apr\+\_\+int32\+\_\+t flags, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_filepath_get(char **path, apr_int32_t flags, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+filepath\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{path, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__filepath_gaac7c26321fd60d7304326fe531639507}{}\label{group__apr__filepath_gaac7c26321fd60d7304326fe531639507}
+Return the default file path (for relative file names) 
+\begin{DoxyParams}{Parameters}
+{\em path} & the default path string returned \\
+\hline
+{\em flags} & optional flag A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+A\+T\+I\+VE to retrieve the default file path in os-\/native format. \\
+\hline
+{\em p} & the pool to allocate the default path string from \\
+\hline
+\end{DoxyParams}
+\index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!apr\+\_\+filepath\+\_\+list\+\_\+merge@{apr\+\_\+filepath\+\_\+list\+\_\+merge}}
+\index{apr\+\_\+filepath\+\_\+list\+\_\+merge@{apr\+\_\+filepath\+\_\+list\+\_\+merge}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+filepath\+\_\+list\+\_\+merge(char $\ast$$\ast$liststr, apr\+\_\+array\+\_\+header\+\_\+t $\ast$pathelts, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_filepath_list_merge(char **liststr, apr_array_header_t *pathelts, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+filepath\+\_\+list\+\_\+merge (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{liststr, }
+\item[{{\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{pathelts, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__filepath_ga8316896ab8e3901f9711d9d4cc89b373}{}\label{group__apr__filepath_ga8316896ab8e3901f9711d9d4cc89b373}
+Merge a list of search path components into a single search path 
+\begin{DoxyParams}{Parameters}
+{\em liststr} & the returned search path; may be N\+U\+LL if {\itshape pathelts} is empty \\
+\hline
+{\em pathelts} & the components of the search path \\
+\hline
+{\em p} & the pool to allocate the search path from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+emtpy strings in the source array are ignored. 
+
+the path separator in {\itshape liststr} is system specific; e.\+g., \textquotesingle{}\+:\textquotesingle{} on Unix, \textquotesingle{};\textquotesingle{} on Windows, etc. 
+\end{DoxyRemark}
+\index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!apr\+\_\+filepath\+\_\+list\+\_\+split@{apr\+\_\+filepath\+\_\+list\+\_\+split}}
+\index{apr\+\_\+filepath\+\_\+list\+\_\+split@{apr\+\_\+filepath\+\_\+list\+\_\+split}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+filepath\+\_\+list\+\_\+split(apr\+\_\+array\+\_\+header\+\_\+t $\ast$$\ast$pathelts, const char $\ast$liststr, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_filepath_list_split(apr_array_header_t **pathelts, const char *liststr, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+filepath\+\_\+list\+\_\+split (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$$\ast$}]{pathelts, }
+\item[{const char $\ast$}]{liststr, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__filepath_gaf259849de62ac172dde7dcbe73421500}{}\label{group__apr__filepath_gaf259849de62ac172dde7dcbe73421500}
+Split a search path into separate components 
+\begin{DoxyParams}{Parameters}
+{\em pathelts} & the returned components of the search path \\
+\hline
+{\em liststr} & the search path (e.\+g., {\ttfamily getenv(\char`\"{}\+P\+A\+T\+H\char`\"{})}) \\
+\hline
+{\em p} & the pool to allocate the array and path components from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+empty path components do not become part of {\itshape pathelts}. 
+
+the path separator in {\itshape liststr} is system specific; e.\+g., \textquotesingle{}\+:\textquotesingle{} on Unix, \textquotesingle{};\textquotesingle{} on Windows, etc. 
+\end{DoxyRemark}
+\index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!apr\+\_\+filepath\+\_\+merge@{apr\+\_\+filepath\+\_\+merge}}
+\index{apr\+\_\+filepath\+\_\+merge@{apr\+\_\+filepath\+\_\+merge}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+filepath\+\_\+merge(char $\ast$$\ast$newpath, const char $\ast$rootpath, const char $\ast$addpath, apr\+\_\+int32\+\_\+t flags, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_filepath_merge(char **newpath, const char *rootpath, const char *addpath, apr_int32_t flags, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+filepath\+\_\+merge (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{newpath, }
+\item[{const char $\ast$}]{rootpath, }
+\item[{const char $\ast$}]{addpath, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__filepath_gae89fd67108f10dc5044b6d062dde0138}{}\label{group__apr__filepath_gae89fd67108f10dc5044b6d062dde0138}
+Merge additional file path onto the previously processed rootpath 
+\begin{DoxyParams}{Parameters}
+{\em newpath} & the merged paths returned \\
+\hline
+{\em rootpath} & the root file path (N\+U\+LL uses the current working path) \\
+\hline
+{\em addpath} & the path to add to the root path \\
+\hline
+{\em flags} & the desired A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+ rules to apply when merging \\
+\hline
+{\em p} & the pool to allocate the new path string from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+if the flag A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+T\+R\+U\+E\+N\+A\+ME is given, and the addpath contains wildcard characters (\textquotesingle{}$\ast$\textquotesingle{}, \textquotesingle{}?\textquotesingle{}) on platforms that don\textquotesingle{}t support such characters within filenames, the paths will be merged, but the result code will be A\+P\+R\+\_\+\+E\+P\+A\+T\+H\+W\+I\+LD, and all further segments will not reflect the true filenames including the wildcard and following segments. 
+\end{DoxyRemark}
+\index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!apr\+\_\+filepath\+\_\+root@{apr\+\_\+filepath\+\_\+root}}
+\index{apr\+\_\+filepath\+\_\+root@{apr\+\_\+filepath\+\_\+root}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+filepath\+\_\+root(const char $\ast$$\ast$rootpath, const char $\ast$$\ast$filepath, apr\+\_\+int32\+\_\+t flags, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_filepath_root(const char **rootpath, const char **filepath, apr_int32_t flags, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+filepath\+\_\+root (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$$\ast$}]{rootpath, }
+\item[{const char $\ast$$\ast$}]{filepath, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__filepath_ga1eacdd5ed069faa137bde014fa50494d}{}\label{group__apr__filepath_ga1eacdd5ed069faa137bde014fa50494d}
+Extract the rootpath from the given filepath 
+\begin{DoxyParams}{Parameters}
+{\em rootpath} & the root file path returned with A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS or A\+P\+R\+\_\+\+E\+I\+N\+C\+O\+M\+P\+L\+E\+TE \\
+\hline
+{\em filepath} & the pathname to parse for its root component \\
+\hline
+{\em flags} & the desired rules to apply, from 
+\begin{DoxyPre}
+     APR\_FILEPATH\_NATIVE    Use native path separators (e.g. '\textbackslash{}' on Win32)
+     APR\_FILEPATH\_TRUENAME  Tests that the root exists, and makes it proper
+\end{DoxyPre}
+ \\
+\hline
+{\em p} & the pool to allocate the new path string from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+on return, filepath points to the first non-\/root character in the given filepath. In the simplest example, given a filepath of \char`\"{}/foo\char`\"{}, returns the rootpath of \char`\"{}/\char`\"{} and filepath points at \char`\"{}foo\char`\"{}. This is far more complex on other platforms, which will canonicalize the root form to a consistant format, given the A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+T\+R\+U\+E\+N\+A\+ME flag, and also test for the validity of that root (e.\+g., that a drive d\+:/ or network share //machine/foovol/). The function returns A\+P\+R\+\_\+\+E\+R\+E\+L\+A\+T\+I\+VE if filepath isn\textquotesingle{}t rooted (an error), A\+P\+R\+\_\+\+E\+I\+N\+C\+O\+M\+P\+L\+E\+TE if the root path is ambiguous (but potentially legitimate, e.\+g. \char`\"{}/\char`\"{} on Windows is incomplete because it doesn\textquotesingle{}t specify the drive letter), or A\+P\+R\+\_\+\+E\+B\+A\+D\+P\+A\+TH if the root is simply invalid. A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS is returned if filepath is an absolute path. 
+\end{DoxyRemark}
+\index{Filepath Manipulation Functions@{Filepath Manipulation Functions}!apr\+\_\+filepath\+\_\+set@{apr\+\_\+filepath\+\_\+set}}
+\index{apr\+\_\+filepath\+\_\+set@{apr\+\_\+filepath\+\_\+set}!Filepath Manipulation Functions@{Filepath Manipulation Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+filepath\+\_\+set(const char $\ast$path, apr\+\_\+pool\+\_\+t $\ast$p)}{apr_filepath_set(const char *path, apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+filepath\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__filepath_ga9773589b65b7f0b7d5b59d427fd0eb93}{}\label{group__apr__filepath_ga9773589b65b7f0b7d5b59d427fd0eb93}
+Set the default file path (for relative file names) 
+\begin{DoxyParams}{Parameters}
+{\em path} & the default path returned \\
+\hline
+{\em p} & the pool to allocate any working storage \\
+\hline
+\end{DoxyParams}

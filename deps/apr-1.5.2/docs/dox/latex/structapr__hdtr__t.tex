@@ -1,0 +1,40 @@
+\hypertarget{structapr__hdtr__t}{}\section{apr\+\_\+hdtr\+\_\+t Struct Reference}
+\label{structapr__hdtr__t}\index{apr\+\_\+hdtr\+\_\+t@{apr\+\_\+hdtr\+\_\+t}}
+
+
+{\ttfamily \#include $<$apr\+\_\+network\+\_\+io.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct iovec $\ast$ \hyperlink{structapr__hdtr__t_afc2035a3ef314f9aa6ae3aabe7c0dc72}{headers}
+\item 
+int \hyperlink{structapr__hdtr__t_a8915ade68ef06f4d23005ec0f81e9305}{numheaders}
+\item 
+struct iovec $\ast$ \hyperlink{structapr__hdtr__t_a538387cfa0065abc2bfa6ba7393fa3ee}{trailers}
+\item 
+int \hyperlink{structapr__hdtr__t_a9468659de891a5672b0b84cf442e9c7b}{numtrailers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A structure to encapsulate headers and trailers for apr\+\_\+socket\+\_\+sendfile 
+
+\subsection{Field Documentation}
+\index{apr\+\_\+hdtr\+\_\+t@{apr\+\_\+hdtr\+\_\+t}!headers@{headers}}
+\index{headers@{headers}!apr\+\_\+hdtr\+\_\+t@{apr\+\_\+hdtr\+\_\+t}}
+\subsubsection[{\texorpdfstring{headers}{headers}}]{\setlength{\rightskip}{0pt plus 5cm}struct iovec$\ast$ apr\+\_\+hdtr\+\_\+t\+::headers}\hypertarget{structapr__hdtr__t_afc2035a3ef314f9aa6ae3aabe7c0dc72}{}\label{structapr__hdtr__t_afc2035a3ef314f9aa6ae3aabe7c0dc72}
+An iovec to store the headers sent before the file. \index{apr\+\_\+hdtr\+\_\+t@{apr\+\_\+hdtr\+\_\+t}!numheaders@{numheaders}}
+\index{numheaders@{numheaders}!apr\+\_\+hdtr\+\_\+t@{apr\+\_\+hdtr\+\_\+t}}
+\subsubsection[{\texorpdfstring{numheaders}{numheaders}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+hdtr\+\_\+t\+::numheaders}\hypertarget{structapr__hdtr__t_a8915ade68ef06f4d23005ec0f81e9305}{}\label{structapr__hdtr__t_a8915ade68ef06f4d23005ec0f81e9305}
+number of headers in the iovec \index{apr\+\_\+hdtr\+\_\+t@{apr\+\_\+hdtr\+\_\+t}!numtrailers@{numtrailers}}
+\index{numtrailers@{numtrailers}!apr\+\_\+hdtr\+\_\+t@{apr\+\_\+hdtr\+\_\+t}}
+\subsubsection[{\texorpdfstring{numtrailers}{numtrailers}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+hdtr\+\_\+t\+::numtrailers}\hypertarget{structapr__hdtr__t_a9468659de891a5672b0b84cf442e9c7b}{}\label{structapr__hdtr__t_a9468659de891a5672b0b84cf442e9c7b}
+number of trailers in the iovec \index{apr\+\_\+hdtr\+\_\+t@{apr\+\_\+hdtr\+\_\+t}!trailers@{trailers}}
+\index{trailers@{trailers}!apr\+\_\+hdtr\+\_\+t@{apr\+\_\+hdtr\+\_\+t}}
+\subsubsection[{\texorpdfstring{trailers}{trailers}}]{\setlength{\rightskip}{0pt plus 5cm}struct iovec$\ast$ apr\+\_\+hdtr\+\_\+t\+::trailers}\hypertarget{structapr__hdtr__t_a538387cfa0065abc2bfa6ba7393fa3ee}{}\label{structapr__hdtr__t_a538387cfa0065abc2bfa6ba7393fa3ee}
+An iovec to store the trailers sent after the file. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{apr__network__io_8h}{apr\+\_\+network\+\_\+io.\+h}\end{DoxyCompactItemize}

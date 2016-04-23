@@ -1,0 +1,450 @@
+\hypertarget{group__apr__hash}{}\section{Hash Tables}
+\label{group__apr__hash}\index{Hash Tables@{Hash Tables}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__hash_ga3ba32541f2717b394000f87f38c7e12d}{A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG}~(-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t}
+\item 
+typedef struct \hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} \hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t}
+\item 
+typedef unsigned int($\ast$ \hyperlink{group__apr__hash_ga0bf5622266af13a2489c907a101cb156}{apr\+\_\+hashfunc\+\_\+t}) (const char $\ast$key, apr\+\_\+ssize\+\_\+t $\ast$klen)
+\item 
+typedef int( \hyperlink{group__apr__hash_ga9352d7eed661ad06b7635314530a3227}{apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t}) (void $\ast$rec, const void $\ast$key, apr\+\_\+ssize\+\_\+t klen, const void $\ast$value)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{group__apr__hash_ga8baa6e9d9d6c2c496d2a0ff1a5c53abe}{apr\+\_\+hashfunc\+\_\+default} (const char $\ast$key, apr\+\_\+ssize\+\_\+t $\ast$klen)
+\item 
+\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga5f4b424d6761de4d32aa16ff6803bac9}{apr\+\_\+hash\+\_\+make} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga27f40acb206f1821a783ddcb71bc8971}{apr\+\_\+hash\+\_\+make\+\_\+custom} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool, \hyperlink{group__apr__hash_ga0bf5622266af13a2489c907a101cb156}{apr\+\_\+hashfunc\+\_\+t} hash\+\_\+func)
+\item 
+\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ \hyperlink{group__apr__hash_gafa0b1b9fb91b2249ee3bcb645d93e148}{apr\+\_\+hash\+\_\+copy} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$h)
+\item 
+void \hyperlink{group__apr__hash_ga456beb139bc548728b49c09c2f89b93c}{apr\+\_\+hash\+\_\+set} (\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht, const void $\ast$key, apr\+\_\+ssize\+\_\+t klen, const void $\ast$val)
+\item 
+void $\ast$ \hyperlink{group__apr__hash_ga05e526dad8afaebe14caea90d906d6ec}{apr\+\_\+hash\+\_\+get} (\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht, const void $\ast$key, apr\+\_\+ssize\+\_\+t klen)
+\item 
+\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga640005a4ba64a5db039b0b43a8ad4898}{apr\+\_\+hash\+\_\+first} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht)
+\item 
+\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga9d7b9198555659e9abac4e3028ccce00}{apr\+\_\+hash\+\_\+next} (\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$hi)
+\item 
+void \hyperlink{group__apr__hash_gad90e5b895397c2c535e32b3e44a75b3f}{apr\+\_\+hash\+\_\+this} (\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$hi, const void $\ast$$\ast$key, apr\+\_\+ssize\+\_\+t $\ast$klen, void $\ast$$\ast$val)
+\item 
+const void $\ast$ \hyperlink{group__apr__hash_ga835bd602131de7d40cbf8abd4e0f9f6c}{apr\+\_\+hash\+\_\+this\+\_\+key} (\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$hi)
+\item 
+apr\+\_\+ssize\+\_\+t \hyperlink{group__apr__hash_gae49a862095e9a3ca96603faa69493736}{apr\+\_\+hash\+\_\+this\+\_\+key\+\_\+len} (\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$hi)
+\item 
+void $\ast$ \hyperlink{group__apr__hash_gaebf56aa7585e6fa18b6ff9563c71914b}{apr\+\_\+hash\+\_\+this\+\_\+val} (\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$hi)
+\item 
+unsigned int \hyperlink{group__apr__hash_ga4e44efa9ef043c1bb8a4abc5edcfda2c}{apr\+\_\+hash\+\_\+count} (\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht)
+\item 
+void \hyperlink{group__apr__hash_ga06fb1b9ecff1a15ee41ff02db74264e4}{apr\+\_\+hash\+\_\+clear} (\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht)
+\item 
+\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga2f68646a64bad44efcbf3457af581fdb}{apr\+\_\+hash\+\_\+overlay} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$overlay, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$base)
+\item 
+\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ \hyperlink{group__apr__hash_gad353e2c54964c243bd376572af4992ea}{apr\+\_\+hash\+\_\+merge} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$h1, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$h2, void $\ast$($\ast$merger)(\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p,                                                                                                                                                                                                           const void $\ast$key,                                                                                                                                                                                                           apr\+\_\+ssize\+\_\+t klen,                                                                                                                                                                                                           const void $\ast$h1\+\_\+val,                                                                                                                                                                                                           const void $\ast$h2\+\_\+val,                                                                                                                                                                                                           const void $\ast$data), const void $\ast$data)
+\item 
+int \hyperlink{group__apr__hash_ga3f3bac64e281d9e7eb9fed6101031394}{apr\+\_\+hash\+\_\+do} (\hyperlink{group__apr__hash_ga9352d7eed661ad06b7635314530a3227}{apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t} $\ast$comp, void $\ast$rec, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga6c170fee4d679928d381cd61c559c105}{apr\+\_\+hash\+\_\+pool\+\_\+get} (const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$thehash)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Hash Tables@{Hash Tables}!A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG@{A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG}}
+\index{A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG@{A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG}{APR_HASH_KEY_STRING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG~(-\/1)}\hypertarget{group__apr__hash_ga3ba32541f2717b394000f87f38c7e12d}{}\label{group__apr__hash_ga3ba32541f2717b394000f87f38c7e12d}
+When passing a key to apr\+\_\+hash\+\_\+set or apr\+\_\+hash\+\_\+get, this value can be passed to indicate a string-\/valued key, and have apr\+\_\+hash compute the length automatically.
+
+\begin{DoxyRemark}{Remarks}
+apr\+\_\+hash will use strlen(key) for the length. The N\+UL terminator is not included in the hash value (why throw a constant in?). Since the hash table merely references the provided key (rather than copying it), \hyperlink{group__apr__hash_gad90e5b895397c2c535e32b3e44a75b3f}{apr\+\_\+hash\+\_\+this()} will return the N\+U\+L-\/term\textquotesingle{}d key. 
+\end{DoxyRemark}
+
+
+\subsection{Typedef Documentation}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t@{apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t}}
+\index{apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t@{apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t}{apr_hash_do_callback_fn_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int( apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t) (void $\ast$rec, const void $\ast$key, apr\+\_\+ssize\+\_\+t klen, const void $\ast$value)}\hypertarget{group__apr__hash_ga9352d7eed661ad06b7635314530a3227}{}\label{group__apr__hash_ga9352d7eed661ad06b7635314530a3227}
+Declaration prototype for the iterator callback function of \hyperlink{group__apr__hash_ga3f3bac64e281d9e7eb9fed6101031394}{apr\+\_\+hash\+\_\+do()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rec} & The data passed as the first argument to apr\+\_\+hash\+\_\+\mbox{[}v\mbox{]}do() \\
+\hline
+{\em key} & The key from this iteration of the hash table \\
+\hline
+{\em klen} & The key length from this iteration of the hash table \\
+\hline
+{\em value} & The value from this iteration of the hash table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Iteration continues while this callback function returns non-\/zero. To export the callback function for \hyperlink{group__apr__hash_ga3f3bac64e281d9e7eb9fed6101031394}{apr\+\_\+hash\+\_\+do()} it must be declared in the \+\_\+\+N\+O\+N\+S\+TD convention. 
+\end{DoxyRemark}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+index\+\_\+t@{apr\+\_\+hash\+\_\+index\+\_\+t}}
+\index{apr\+\_\+hash\+\_\+index\+\_\+t@{apr\+\_\+hash\+\_\+index\+\_\+t}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+index\+\_\+t}{apr_hash_index_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+hash\+\_\+index\+\_\+t} {\bf apr\+\_\+hash\+\_\+index\+\_\+t}}\hypertarget{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{}\label{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}
+Abstract type for scanning hash tables. \index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+t@{apr\+\_\+hash\+\_\+t}}
+\index{apr\+\_\+hash\+\_\+t@{apr\+\_\+hash\+\_\+t}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+t}{apr_hash_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+hash\+\_\+t} {\bf apr\+\_\+hash\+\_\+t}}\hypertarget{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{}\label{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}
+Abstract type for hash tables. \index{Hash Tables@{Hash Tables}!apr\+\_\+hashfunc\+\_\+t@{apr\+\_\+hashfunc\+\_\+t}}
+\index{apr\+\_\+hashfunc\+\_\+t@{apr\+\_\+hashfunc\+\_\+t}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hashfunc\+\_\+t}{apr_hashfunc_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int($\ast$ apr\+\_\+hashfunc\+\_\+t) (const char $\ast$key, apr\+\_\+ssize\+\_\+t $\ast$klen)}\hypertarget{group__apr__hash_ga0bf5622266af13a2489c907a101cb156}{}\label{group__apr__hash_ga0bf5622266af13a2489c907a101cb156}
+Callback functions for calculating hash values. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The key. \\
+\hline
+{\em klen} & The length of the key, or A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG to use the string length. If A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG then returns the actual key length. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+clear@{apr\+\_\+hash\+\_\+clear}}
+\index{apr\+\_\+hash\+\_\+clear@{apr\+\_\+hash\+\_\+clear}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+clear(apr\+\_\+hash\+\_\+t $\ast$ht)}{apr_hash_clear(apr_hash_t *ht)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+hash\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+hash\+\_\+t} $\ast$}]{ht}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga06fb1b9ecff1a15ee41ff02db74264e4}{}\label{group__apr__hash_ga06fb1b9ecff1a15ee41ff02db74264e4}
+Clear any key/value pairs in the hash table. 
+\begin{DoxyParams}{Parameters}
+{\em ht} & The hash table \\
+\hline
+\end{DoxyParams}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+copy@{apr\+\_\+hash\+\_\+copy}}
+\index{apr\+\_\+hash\+\_\+copy@{apr\+\_\+hash\+\_\+copy}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+copy(apr\+\_\+pool\+\_\+t $\ast$pool, const apr\+\_\+hash\+\_\+t $\ast$h)}{apr_hash_copy(apr_pool_t *pool, const apr_hash_t *h)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+hash\+\_\+t}$\ast$ apr\+\_\+hash\+\_\+copy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool, }
+\item[{const {\bf apr\+\_\+hash\+\_\+t} $\ast$}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_gafa0b1b9fb91b2249ee3bcb645d93e148}{}\label{group__apr__hash_gafa0b1b9fb91b2249ee3bcb645d93e148}
+Make a copy of a hash table 
+\begin{DoxyParams}{Parameters}
+{\em pool} & The pool from which to allocate the new hash table \\
+\hline
+{\em h} & The hash table to clone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The hash table just created 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Makes a shallow copy 
+\end{DoxyRemark}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+count@{apr\+\_\+hash\+\_\+count}}
+\index{apr\+\_\+hash\+\_\+count@{apr\+\_\+hash\+\_\+count}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+count(apr\+\_\+hash\+\_\+t $\ast$ht)}{apr_hash_count(apr_hash_t *ht)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int apr\+\_\+hash\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+hash\+\_\+t} $\ast$}]{ht}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga4e44efa9ef043c1bb8a4abc5edcfda2c}{}\label{group__apr__hash_ga4e44efa9ef043c1bb8a4abc5edcfda2c}
+Get the number of key/value pairs in the hash table. 
+\begin{DoxyParams}{Parameters}
+{\em ht} & The hash table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of key/value pairs in the hash table. 
+\end{DoxyReturn}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+do@{apr\+\_\+hash\+\_\+do}}
+\index{apr\+\_\+hash\+\_\+do@{apr\+\_\+hash\+\_\+do}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+do(apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t $\ast$comp, void $\ast$rec, const apr\+\_\+hash\+\_\+t $\ast$ht)}{apr_hash_do(apr_hash_do_callback_fn_t *comp, void *rec, const apr_hash_t *ht)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+hash\+\_\+do (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t} $\ast$}]{comp, }
+\item[{void $\ast$}]{rec, }
+\item[{const {\bf apr\+\_\+hash\+\_\+t} $\ast$}]{ht}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga3f3bac64e281d9e7eb9fed6101031394}{}\label{group__apr__hash_ga3f3bac64e281d9e7eb9fed6101031394}
+Iterate over a hash table running the provided function once for every element in the hash table. The 
+\begin{DoxyParams}{Parameters}
+{\em comp} & function will be invoked for every element in the hash table.\\
+\hline
+{\em comp} & The function to run \\
+\hline
+{\em rec} & The data to pass as the first argument to the function \\
+\hline
+{\em ht} & The hash table to iterate over \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if one of the comp() iterations returned zero; T\+R\+UE if all iterations returned non-\/zero 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__hash_ga9352d7eed661ad06b7635314530a3227}{apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t} 
+\end{DoxySeeAlso}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+first@{apr\+\_\+hash\+\_\+first}}
+\index{apr\+\_\+hash\+\_\+first@{apr\+\_\+hash\+\_\+first}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+first(apr\+\_\+pool\+\_\+t $\ast$p, apr\+\_\+hash\+\_\+t $\ast$ht)}{apr_hash_first(apr_pool_t *p, apr_hash_t *ht)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+hash\+\_\+index\+\_\+t}$\ast$ apr\+\_\+hash\+\_\+first (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{{\bf apr\+\_\+hash\+\_\+t} $\ast$}]{ht}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga640005a4ba64a5db039b0b43a8ad4898}{}\label{group__apr__hash_ga640005a4ba64a5db039b0b43a8ad4898}
+Start iterating over the entries in a hash table. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate the apr\+\_\+hash\+\_\+index\+\_\+t iterator. If this pool is N\+U\+LL, then an internal, non-\/thread-\/safe iterator is used. \\
+\hline
+{\em ht} & The hash table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The iteration state 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+There is no restriction on adding or deleting hash entries during an iteration (although the results may be unpredictable unless all you do is delete the current entry) and multiple iterations can be in progress at the same time.
+\end{DoxyRemark}
+\begin{DoxyParagraph}{Example\+:}
+
+\end{DoxyParagraph}
+
+\begin{DoxyCode}
+1 int sum\_values(apr\_pool\_t *p, apr\_hash\_t *ht)
+2 \{
+3     apr\_hash\_index\_t *hi;
+4     void *val;
+5     int sum = 0;
+6     for (hi = apr\_hash\_first(p, ht); hi; hi = apr\_hash\_next(hi)) \{
+7         apr\_hash\_this(hi, NULL, NULL, &val);
+8         sum += *(int *)val;
+9     \}
+10     return sum;
+11 \}
+\end{DoxyCode}
+ \index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+get@{apr\+\_\+hash\+\_\+get}}
+\index{apr\+\_\+hash\+\_\+get@{apr\+\_\+hash\+\_\+get}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+get(apr\+\_\+hash\+\_\+t $\ast$ht, const void $\ast$key, apr\+\_\+ssize\+\_\+t klen)}{apr_hash_get(apr_hash_t *ht, const void *key, apr_ssize_t klen)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+hash\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+hash\+\_\+t} $\ast$}]{ht, }
+\item[{const void $\ast$}]{key, }
+\item[{apr\+\_\+ssize\+\_\+t}]{klen}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga05e526dad8afaebe14caea90d906d6ec}{}\label{group__apr__hash_ga05e526dad8afaebe14caea90d906d6ec}
+Look up the value associated with a key in a hash table. 
+\begin{DoxyParams}{Parameters}
+{\em ht} & The hash table \\
+\hline
+{\em key} & Pointer to the key \\
+\hline
+{\em klen} & Length of the key. Can be A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG to use the string length. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns N\+U\+LL if the key is not present. 
+\end{DoxyReturn}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+make@{apr\+\_\+hash\+\_\+make}}
+\index{apr\+\_\+hash\+\_\+make@{apr\+\_\+hash\+\_\+make}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+make(apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_hash_make(apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+hash\+\_\+t}$\ast$ apr\+\_\+hash\+\_\+make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga5f4b424d6761de4d32aa16ff6803bac9}{}\label{group__apr__hash_ga5f4b424d6761de4d32aa16ff6803bac9}
+Create a hash table. 
+\begin{DoxyParams}{Parameters}
+{\em pool} & The pool to allocate the hash table out of \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The hash table just created 
+\end{DoxyReturn}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+make\+\_\+custom@{apr\+\_\+hash\+\_\+make\+\_\+custom}}
+\index{apr\+\_\+hash\+\_\+make\+\_\+custom@{apr\+\_\+hash\+\_\+make\+\_\+custom}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+make\+\_\+custom(apr\+\_\+pool\+\_\+t $\ast$pool, apr\+\_\+hashfunc\+\_\+t hash\+\_\+func)}{apr_hash_make_custom(apr_pool_t *pool, apr_hashfunc_t hash_func)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+hash\+\_\+t}$\ast$ apr\+\_\+hash\+\_\+make\+\_\+custom (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool, }
+\item[{{\bf apr\+\_\+hashfunc\+\_\+t}}]{hash\+\_\+func}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga27f40acb206f1821a783ddcb71bc8971}{}\label{group__apr__hash_ga27f40acb206f1821a783ddcb71bc8971}
+Create a hash table with a custom hash function 
+\begin{DoxyParams}{Parameters}
+{\em pool} & The pool to allocate the hash table out of \\
+\hline
+{\em hash\+\_\+func} & A custom hash function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The hash table just created 
+\end{DoxyReturn}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+merge@{apr\+\_\+hash\+\_\+merge}}
+\index{apr\+\_\+hash\+\_\+merge@{apr\+\_\+hash\+\_\+merge}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+merge(apr\+\_\+pool\+\_\+t $\ast$p, const apr\+\_\+hash\+\_\+t $\ast$h1, const apr\+\_\+hash\+\_\+t $\ast$h2, void $\ast$($\ast$merger)(apr\+\_\+pool\+\_\+t $\ast$p,                                                                                                                                                                                                           const void $\ast$key,                                                                                                                                                                                                           apr\+\_\+ssize\+\_\+t klen,                                                                                                                                                                                                           const void $\ast$h1\+\_\+val,                                                                                                                                                                                                           const void $\ast$h2\+\_\+val,                                                                                                                                                                                                           const void $\ast$data), const void $\ast$data)}{apr_hash_merge(apr_pool_t *p, const apr_hash_t *h1, const apr_hash_t *h2, void *(*merger)(apr_pool_t *p,                                                                                                                                                                                                           const void *key,                                                                                                                                                                                                           apr_ssize_t klen,                                                                                                                                                                                                           const void *h1_val,                                                                                                                                                                                                           const void *h2_val,                                                                                                                                                                                                           const void *data), const void *data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+hash\+\_\+t}$\ast$ apr\+\_\+hash\+\_\+merge (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const {\bf apr\+\_\+hash\+\_\+t} $\ast$}]{h1, }
+\item[{const {\bf apr\+\_\+hash\+\_\+t} $\ast$}]{h2, }
+\item[{void $\ast$($\ast$)({\bf apr\+\_\+pool\+\_\+t} $\ast$p,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   const void $\ast$key,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   apr\+\_\+ssize\+\_\+t klen,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   const void $\ast$h1\+\_\+val,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   const void $\ast$h2\+\_\+val,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   const void $\ast$data)}]{merger, }
+\item[{const void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_gad353e2c54964c243bd376572af4992ea}{}\label{group__apr__hash_gad353e2c54964c243bd376572af4992ea}
+Merge two hash tables into one new hash table. If the same key is present in both tables, call the supplied merge function to produce a merged value for the key in the new table. Both hash tables must use the same hash function. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to use for the new hash table \\
+\hline
+{\em h1} & The first of the tables to merge \\
+\hline
+{\em h2} & The second of the tables to merge \\
+\hline
+{\em merger} & A callback function to merge values, or N\+U\+LL to make values from h1 override values from h2 (same semantics as \hyperlink{group__apr__hash_ga2f68646a64bad44efcbf3457af581fdb}{apr\+\_\+hash\+\_\+overlay()}) \\
+\hline
+{\em data} & Client data to pass to the merger function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new hash table containing all of the data from the two passed in 
+\end{DoxyReturn}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+next@{apr\+\_\+hash\+\_\+next}}
+\index{apr\+\_\+hash\+\_\+next@{apr\+\_\+hash\+\_\+next}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+next(apr\+\_\+hash\+\_\+index\+\_\+t $\ast$hi)}{apr_hash_next(apr_hash_index_t *hi)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+hash\+\_\+index\+\_\+t}$\ast$ apr\+\_\+hash\+\_\+next (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$}]{hi}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga9d7b9198555659e9abac4e3028ccce00}{}\label{group__apr__hash_ga9d7b9198555659e9abac4e3028ccce00}
+Continue iterating over the entries in a hash table. 
+\begin{DoxyParams}{Parameters}
+{\em hi} & The iteration state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the updated iteration state. N\+U\+LL if there are no more entries. 
+\end{DoxyReturn}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+overlay@{apr\+\_\+hash\+\_\+overlay}}
+\index{apr\+\_\+hash\+\_\+overlay@{apr\+\_\+hash\+\_\+overlay}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+overlay(apr\+\_\+pool\+\_\+t $\ast$p, const apr\+\_\+hash\+\_\+t $\ast$overlay, const apr\+\_\+hash\+\_\+t $\ast$base)}{apr_hash_overlay(apr_pool_t *p, const apr_hash_t *overlay, const apr_hash_t *base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+hash\+\_\+t}$\ast$ apr\+\_\+hash\+\_\+overlay (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const {\bf apr\+\_\+hash\+\_\+t} $\ast$}]{overlay, }
+\item[{const {\bf apr\+\_\+hash\+\_\+t} $\ast$}]{base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga2f68646a64bad44efcbf3457af581fdb}{}\label{group__apr__hash_ga2f68646a64bad44efcbf3457af581fdb}
+Merge two hash tables into one new hash table. The values of the overlay hash override the values of the base if both have the same key. Both hash tables must use the same hash function. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to use for the new hash table \\
+\hline
+{\em overlay} & The table to add to the initial table \\
+\hline
+{\em base} & The table that represents the initial values of the new table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new hash table containing all of the data from the two passed in 
+\end{DoxyReturn}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+pool\+\_\+get@{apr\+\_\+hash\+\_\+pool\+\_\+get}}
+\index{apr\+\_\+hash\+\_\+pool\+\_\+get@{apr\+\_\+hash\+\_\+pool\+\_\+get}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+pool\+\_\+get(const apr\+\_\+hash\+\_\+t $\ast$thehash)}{apr_hash_pool_get(const apr_hash_t *thehash)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+pool\+\_\+t}$\ast$ apr\+\_\+hash\+\_\+pool\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+hash\+\_\+t} $\ast$}]{thehash}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga6c170fee4d679928d381cd61c559c105}{}\label{group__apr__hash_ga6c170fee4d679928d381cd61c559c105}
+Get a pointer to the pool which the hash table was created in \index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+set@{apr\+\_\+hash\+\_\+set}}
+\index{apr\+\_\+hash\+\_\+set@{apr\+\_\+hash\+\_\+set}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+set(apr\+\_\+hash\+\_\+t $\ast$ht, const void $\ast$key, apr\+\_\+ssize\+\_\+t klen, const void $\ast$val)}{apr_hash_set(apr_hash_t *ht, const void *key, apr_ssize_t klen, const void *val)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+hash\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+hash\+\_\+t} $\ast$}]{ht, }
+\item[{const void $\ast$}]{key, }
+\item[{apr\+\_\+ssize\+\_\+t}]{klen, }
+\item[{const void $\ast$}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga456beb139bc548728b49c09c2f89b93c}{}\label{group__apr__hash_ga456beb139bc548728b49c09c2f89b93c}
+Associate a value with a key in a hash table. 
+\begin{DoxyParams}{Parameters}
+{\em ht} & The hash table \\
+\hline
+{\em key} & Pointer to the key \\
+\hline
+{\em klen} & Length of the key. Can be A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG to use the string length. \\
+\hline
+{\em val} & Value to associate with the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If the value is N\+U\+LL the hash entry is deleted. 
+\end{DoxyRemark}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+this@{apr\+\_\+hash\+\_\+this}}
+\index{apr\+\_\+hash\+\_\+this@{apr\+\_\+hash\+\_\+this}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+this(apr\+\_\+hash\+\_\+index\+\_\+t $\ast$hi, const void $\ast$$\ast$key, apr\+\_\+ssize\+\_\+t $\ast$klen, void $\ast$$\ast$val)}{apr_hash_this(apr_hash_index_t *hi, const void **key, apr_ssize_t *klen, void **val)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+hash\+\_\+this (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$}]{hi, }
+\item[{const void $\ast$$\ast$}]{key, }
+\item[{apr\+\_\+ssize\+\_\+t $\ast$}]{klen, }
+\item[{void $\ast$$\ast$}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_gad90e5b895397c2c535e32b3e44a75b3f}{}\label{group__apr__hash_gad90e5b895397c2c535e32b3e44a75b3f}
+Get the current entry\textquotesingle{}s details from the iteration state. 
+\begin{DoxyParams}{Parameters}
+{\em hi} & The iteration state \\
+\hline
+{\em key} & Return pointer for the pointer to the key. \\
+\hline
+{\em klen} & Return pointer for the key length. \\
+\hline
+{\em val} & Return pointer for the associated value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The return pointers should point to a variable that will be set to the corresponding data, or they may be N\+U\+LL if the data isn\textquotesingle{}t interesting. 
+\end{DoxyRemark}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+this\+\_\+key@{apr\+\_\+hash\+\_\+this\+\_\+key}}
+\index{apr\+\_\+hash\+\_\+this\+\_\+key@{apr\+\_\+hash\+\_\+this\+\_\+key}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+this\+\_\+key(apr\+\_\+hash\+\_\+index\+\_\+t $\ast$hi)}{apr_hash_this_key(apr_hash_index_t *hi)}}]{\setlength{\rightskip}{0pt plus 5cm}const void$\ast$ apr\+\_\+hash\+\_\+this\+\_\+key (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$}]{hi}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga835bd602131de7d40cbf8abd4e0f9f6c}{}\label{group__apr__hash_ga835bd602131de7d40cbf8abd4e0f9f6c}
+Get the current entry\textquotesingle{}s key from the iteration state. 
+\begin{DoxyParams}{Parameters}
+{\em hi} & The iteration state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the key 
+\end{DoxyReturn}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+this\+\_\+key\+\_\+len@{apr\+\_\+hash\+\_\+this\+\_\+key\+\_\+len}}
+\index{apr\+\_\+hash\+\_\+this\+\_\+key\+\_\+len@{apr\+\_\+hash\+\_\+this\+\_\+key\+\_\+len}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+this\+\_\+key\+\_\+len(apr\+\_\+hash\+\_\+index\+\_\+t $\ast$hi)}{apr_hash_this_key_len(apr_hash_index_t *hi)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+ssize\+\_\+t apr\+\_\+hash\+\_\+this\+\_\+key\+\_\+len (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$}]{hi}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_gae49a862095e9a3ca96603faa69493736}{}\label{group__apr__hash_gae49a862095e9a3ca96603faa69493736}
+Get the current entry\textquotesingle{}s key length from the iteration state. 
+\begin{DoxyParams}{Parameters}
+{\em hi} & The iteration state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The key length 
+\end{DoxyReturn}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hash\+\_\+this\+\_\+val@{apr\+\_\+hash\+\_\+this\+\_\+val}}
+\index{apr\+\_\+hash\+\_\+this\+\_\+val@{apr\+\_\+hash\+\_\+this\+\_\+val}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hash\+\_\+this\+\_\+val(apr\+\_\+hash\+\_\+index\+\_\+t $\ast$hi)}{apr_hash_this_val(apr_hash_index_t *hi)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+hash\+\_\+this\+\_\+val (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$}]{hi}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_gaebf56aa7585e6fa18b6ff9563c71914b}{}\label{group__apr__hash_gaebf56aa7585e6fa18b6ff9563c71914b}
+Get the current entry\textquotesingle{}s value from the iteration state. 
+\begin{DoxyParams}{Parameters}
+{\em hi} & The iteration state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the value 
+\end{DoxyReturn}
+\index{Hash Tables@{Hash Tables}!apr\+\_\+hashfunc\+\_\+default@{apr\+\_\+hashfunc\+\_\+default}}
+\index{apr\+\_\+hashfunc\+\_\+default@{apr\+\_\+hashfunc\+\_\+default}!Hash Tables@{Hash Tables}}
+\subsubsection[{\texorpdfstring{apr\+\_\+hashfunc\+\_\+default(const char $\ast$key, apr\+\_\+ssize\+\_\+t $\ast$klen)}{apr_hashfunc_default(const char *key, apr_ssize_t *klen)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int apr\+\_\+hashfunc\+\_\+default (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{apr\+\_\+ssize\+\_\+t $\ast$}]{klen}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__hash_ga8baa6e9d9d6c2c496d2a0ff1a5c53abe}{}\label{group__apr__hash_ga8baa6e9d9d6c2c496d2a0ff1a5c53abe}
+The default hash function. 

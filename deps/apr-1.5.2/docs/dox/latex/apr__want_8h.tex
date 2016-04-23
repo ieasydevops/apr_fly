@@ -1,0 +1,46 @@
+\hypertarget{apr__want_8h}{}\section{apr\+\_\+want.\+h File Reference}
+\label{apr__want_8h}\index{apr\+\_\+want.\+h@{apr\+\_\+want.\+h}}
+
+
+A\+PR Standard Headers Support.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+
+
+\subsection{Detailed Description}
+A\+PR Standard Headers Support. 
+
+
+\begin{DoxyPre}
+Features:\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  APR\_WANT\_STRFUNC:  strcmp, strcat, strcpy, etc
+  APR\_WANT\_MEMFUNC:  memcmp, memcpy, etc
+  APR\_WANT\_STDIO:    <stdio.h> and related bits
+  APR\_WANT\_IOVEC:    struct iovec
+  APR\_WANT\_BYTEFUNC: htons, htonl, ntohl, ntohs\end{DoxyPre}
+
+
+
+\begin{DoxyPre}Typical usage:\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  \#define APR\_WANT\_STRFUNC
+  \#define APR\_WANT\_MEMFUNC
+  \#include "apr\_want.h"\end{DoxyPre}
+
+
+
+\begin{DoxyPre}The appropriate headers will be included.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}Note: it is safe to use this in a header (it won't interfere with other
+      headers' or source files' use of \hyperlink{apr__want_8h}{apr\_want.h})
+\end{DoxyPre}
+ 

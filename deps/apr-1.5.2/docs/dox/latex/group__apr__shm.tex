@@ -1,0 +1,245 @@
+\hypertarget{group__apr__shm}{}\section{Shared Memory Routines}
+\label{group__apr__shm}\index{Shared Memory Routines@{Shared Memory Routines}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__shm_ga47cc28ddc5f32cf904383b9e4f82825b}{A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+L\+O\+C\+AL}
+\item 
+\#define {\bfseries A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+G\+L\+O\+B\+AL}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} \hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__shm_gac370c4943c22505ce2b0d57c51805480}{apr\+\_\+shm\+\_\+create} (\hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$$\ast$m, apr\+\_\+size\+\_\+t reqsize, const char $\ast$filename, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__shm_ga21baaa66956641e06e072501f61882e7}{apr\+\_\+shm\+\_\+create\+\_\+ex} (\hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$$\ast$m, apr\+\_\+size\+\_\+t reqsize, const char $\ast$filename, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool, apr\+\_\+int32\+\_\+t flags)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__shm_gaee8b7d9b952ff6157ddbb00fabb477e0}{apr\+\_\+shm\+\_\+remove} (const char $\ast$filename, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__shm_ga7de5b65a9c7d9840bfa289854f8d59d4}{apr\+\_\+shm\+\_\+destroy} (\hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$m)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__shm_ga0e542941c280cb72b78e30d452464759}{apr\+\_\+shm\+\_\+attach} (\hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$$\ast$m, const char $\ast$filename, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__shm_ga088260723c96815610ff628f358d3630}{apr\+\_\+shm\+\_\+attach\+\_\+ex} (\hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$$\ast$m, const char $\ast$filename, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool, apr\+\_\+int32\+\_\+t flags)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__shm_ga900095a06d3fdb4cdd04ca4449a9d42a}{apr\+\_\+shm\+\_\+detach} (\hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$m)
+\item 
+void $\ast$ \hyperlink{group__apr__shm_gade739e1f5f4e88c93256a63ebfd47d4d}{apr\+\_\+shm\+\_\+baseaddr\+\_\+get} (const \hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$m)
+\item 
+apr\+\_\+size\+\_\+t \hyperlink{group__apr__shm_ga557ae85d3f225620a77ad80caeaacac7}{apr\+\_\+shm\+\_\+size\+\_\+get} (const \hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$m)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__shm_ga072c40df7643e697885935ae65545098}{apr\+\_\+shm\+\_\+pool\+\_\+get} (const \hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$theshm)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Shared Memory Routines@{Shared Memory Routines}!A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+G\+L\+O\+B\+AL@{A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+G\+L\+O\+B\+AL}}
+\index{A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+G\+L\+O\+B\+AL@{A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+G\+L\+O\+B\+AL}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+G\+L\+O\+B\+AL}{APR_SHM_NS_GLOBAL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+G\+L\+O\+B\+AL}\hypertarget{group__apr__shm_ga0de8e4acab42e7ff8e35e5ac9620f667}{}\label{group__apr__shm_ga0de8e4acab42e7ff8e35e5ac9620f667}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+2 \textcolor{comment}{/* Create or attach to named shared memory}
+\textcolor{comment}{                               * segment in the "Global" namespace on}
+\textcolor{comment}{                               * Windows.  (Ignored on other platforms.)}
+\textcolor{comment}{                               */}
+\end{DoxyCode}
+\index{Shared Memory Routines@{Shared Memory Routines}!A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+L\+O\+C\+AL@{A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+L\+O\+C\+AL}}
+\index{A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+L\+O\+C\+AL@{A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+L\+O\+C\+AL}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+L\+O\+C\+AL}{APR_SHM_NS_LOCAL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+S\+H\+M\+\_\+\+N\+S\+\_\+\+L\+O\+C\+AL}\hypertarget{group__apr__shm_ga47cc28ddc5f32cf904383b9e4f82825b}{}\label{group__apr__shm_ga47cc28ddc5f32cf904383b9e4f82825b}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+1 \textcolor{comment}{/* Create or attach to named shared memory}
+\textcolor{comment}{                               * segment in the "Local" namespace on}
+\textcolor{comment}{                               * Windows.  (Ignored on other platforms.)}
+\textcolor{comment}{                               * By default, the "Global" namespace is}
+\textcolor{comment}{                               * used for privileged processes and the}
+\textcolor{comment}{                               * "Local" namespace is used otherwise.}
+\textcolor{comment}{                               */}
+\end{DoxyCode}
+Special processing flags for \hyperlink{group__apr__shm_ga21baaa66956641e06e072501f61882e7}{apr\+\_\+shm\+\_\+create\+\_\+ex()} and \hyperlink{group__apr__shm_ga088260723c96815610ff628f358d3630}{apr\+\_\+shm\+\_\+attach\+\_\+ex()}. 
+
+\subsection{Typedef Documentation}
+\index{Shared Memory Routines@{Shared Memory Routines}!apr\+\_\+shm\+\_\+t@{apr\+\_\+shm\+\_\+t}}
+\index{apr\+\_\+shm\+\_\+t@{apr\+\_\+shm\+\_\+t}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shm\+\_\+t}{apr_shm_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+shm\+\_\+t} {\bf apr\+\_\+shm\+\_\+t}}\hypertarget{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{}\label{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}
+Private, platform-\/specific data struture representing a shared memory segment. 
+
+\subsection{Function Documentation}
+\index{Shared Memory Routines@{Shared Memory Routines}!apr\+\_\+shm\+\_\+attach@{apr\+\_\+shm\+\_\+attach}}
+\index{apr\+\_\+shm\+\_\+attach@{apr\+\_\+shm\+\_\+attach}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shm\+\_\+attach(apr\+\_\+shm\+\_\+t $\ast$$\ast$m, const char $\ast$filename, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_shm_attach(apr_shm_t **m, const char *filename, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+shm\+\_\+attach (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+shm\+\_\+t} $\ast$$\ast$}]{m, }
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__shm_ga0e542941c280cb72b78e30d452464759}{}\label{group__apr__shm_ga0e542941c280cb72b78e30d452464759}
+Attach to a shared memory segment that was created by another process. 
+\begin{DoxyParams}{Parameters}
+{\em m} & The shared memory structure to create. \\
+\hline
+{\em filename} & The file used to create the original segment. (This M\+U\+ST match the original filename.) \\
+\hline
+{\em pool} & the pool from which to allocate the shared memory structure for this process. \\
+\hline
+\end{DoxyParams}
+\index{Shared Memory Routines@{Shared Memory Routines}!apr\+\_\+shm\+\_\+attach\+\_\+ex@{apr\+\_\+shm\+\_\+attach\+\_\+ex}}
+\index{apr\+\_\+shm\+\_\+attach\+\_\+ex@{apr\+\_\+shm\+\_\+attach\+\_\+ex}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shm\+\_\+attach\+\_\+ex(apr\+\_\+shm\+\_\+t $\ast$$\ast$m, const char $\ast$filename, apr\+\_\+pool\+\_\+t $\ast$pool, apr\+\_\+int32\+\_\+t flags)}{apr_shm_attach_ex(apr_shm_t **m, const char *filename, apr_pool_t *pool, apr_int32_t flags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+shm\+\_\+attach\+\_\+ex (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+shm\+\_\+t} $\ast$$\ast$}]{m, }
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__shm_ga088260723c96815610ff628f358d3630}{}\label{group__apr__shm_ga088260723c96815610ff628f358d3630}
+Attach to a shared memory segment that was created by another process, with platform-\/specific processing. 
+\begin{DoxyParams}{Parameters}
+{\em m} & The shared memory structure to create. \\
+\hline
+{\em filename} & The file used to create the original segment. (This M\+U\+ST match the original filename.) \\
+\hline
+{\em pool} & the pool from which to allocate the shared memory structure for this process. \\
+\hline
+{\em flags} & mask of A\+P\+R\+\_\+\+S\+H\+M\+\_\+$\ast$ (defined above) \\
+\hline
+\end{DoxyParams}
+\index{Shared Memory Routines@{Shared Memory Routines}!apr\+\_\+shm\+\_\+baseaddr\+\_\+get@{apr\+\_\+shm\+\_\+baseaddr\+\_\+get}}
+\index{apr\+\_\+shm\+\_\+baseaddr\+\_\+get@{apr\+\_\+shm\+\_\+baseaddr\+\_\+get}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shm\+\_\+baseaddr\+\_\+get(const apr\+\_\+shm\+\_\+t $\ast$m)}{apr_shm_baseaddr_get(const apr_shm_t *m)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+shm\+\_\+baseaddr\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+shm\+\_\+t} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__shm_gade739e1f5f4e88c93256a63ebfd47d4d}{}\label{group__apr__shm_gade739e1f5f4e88c93256a63ebfd47d4d}
+Retrieve the base address of the shared memory segment. N\+O\+TE\+: This address is only usable within the callers address space, since this A\+PI does not guarantee that other attaching processes will maintain the same address mapping. 
+\begin{DoxyParams}{Parameters}
+{\em m} & The shared memory segment from which to retrieve the base address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+address, aligned by A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT. 
+\end{DoxyReturn}
+\index{Shared Memory Routines@{Shared Memory Routines}!apr\+\_\+shm\+\_\+create@{apr\+\_\+shm\+\_\+create}}
+\index{apr\+\_\+shm\+\_\+create@{apr\+\_\+shm\+\_\+create}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shm\+\_\+create(apr\+\_\+shm\+\_\+t $\ast$$\ast$m, apr\+\_\+size\+\_\+t reqsize, const char $\ast$filename, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_shm_create(apr_shm_t **m, apr_size_t reqsize, const char *filename, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+shm\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+shm\+\_\+t} $\ast$$\ast$}]{m, }
+\item[{apr\+\_\+size\+\_\+t}]{reqsize, }
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__shm_gac370c4943c22505ce2b0d57c51805480}{}\label{group__apr__shm_gac370c4943c22505ce2b0d57c51805480}
+Create and make accessible a shared memory segment with default properties. 
+\begin{DoxyParams}{Parameters}
+{\em m} & The shared memory structure to create. \\
+\hline
+{\em reqsize} & The desired size of the segment. \\
+\hline
+{\em filename} & The file to use for shared memory on platforms that require it. \\
+\hline
+{\em pool} & the pool from which to allocate the shared memory structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+A note about Anonymous vs. Named shared memory segments\+: Not all plaforms support anonymous shared memory segments, but in some cases it is prefered over other types of shared memory implementations. Passing a N\+U\+LL \textquotesingle{}file\textquotesingle{} parameter to this function will cause the subsystem to use anonymous shared memory segments. If such a system is not available, A\+P\+R\+\_\+\+E\+N\+O\+T\+I\+M\+PL is returned. 
+
+A note about allocation sizes\+: On some platforms it is necessary to store some metainformation about the segment within the actual segment. In order to supply the caller with the requested size it may be necessary for the implementation to request a slightly greater segment length from the subsystem. In all cases, the \hyperlink{group__apr__shm_gade739e1f5f4e88c93256a63ebfd47d4d}{apr\+\_\+shm\+\_\+baseaddr\+\_\+get()} function will return the first usable byte of memory. 
+\end{DoxyRemark}
+\index{Shared Memory Routines@{Shared Memory Routines}!apr\+\_\+shm\+\_\+create\+\_\+ex@{apr\+\_\+shm\+\_\+create\+\_\+ex}}
+\index{apr\+\_\+shm\+\_\+create\+\_\+ex@{apr\+\_\+shm\+\_\+create\+\_\+ex}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shm\+\_\+create\+\_\+ex(apr\+\_\+shm\+\_\+t $\ast$$\ast$m, apr\+\_\+size\+\_\+t reqsize, const char $\ast$filename, apr\+\_\+pool\+\_\+t $\ast$pool, apr\+\_\+int32\+\_\+t flags)}{apr_shm_create_ex(apr_shm_t **m, apr_size_t reqsize, const char *filename, apr_pool_t *pool, apr_int32_t flags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+shm\+\_\+create\+\_\+ex (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+shm\+\_\+t} $\ast$$\ast$}]{m, }
+\item[{apr\+\_\+size\+\_\+t}]{reqsize, }
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool, }
+\item[{apr\+\_\+int32\+\_\+t}]{flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__shm_ga21baaa66956641e06e072501f61882e7}{}\label{group__apr__shm_ga21baaa66956641e06e072501f61882e7}
+Create and make accessible a shared memory segment with platform-\/ specific processing. 
+\begin{DoxyParams}{Parameters}
+{\em m} & The shared memory structure to create. \\
+\hline
+{\em reqsize} & The desired size of the segment. \\
+\hline
+{\em filename} & The file to use for shared memory on platforms that require it. \\
+\hline
+{\em pool} & the pool from which to allocate the shared memory structure. \\
+\hline
+{\em flags} & mask of A\+P\+R\+\_\+\+S\+H\+M\+\_\+$\ast$ (defined above) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+A note about Anonymous vs. Named shared memory segments\+: Not all plaforms support anonymous shared memory segments, but in some cases it is prefered over other types of shared memory implementations. Passing a N\+U\+LL \textquotesingle{}file\textquotesingle{} parameter to this function will cause the subsystem to use anonymous shared memory segments. If such a system is not available, A\+P\+R\+\_\+\+E\+N\+O\+T\+I\+M\+PL is returned. 
+
+A note about allocation sizes\+: On some platforms it is necessary to store some metainformation about the segment within the actual segment. In order to supply the caller with the requested size it may be necessary for the implementation to request a slightly greater segment length from the subsystem. In all cases, the \hyperlink{group__apr__shm_gade739e1f5f4e88c93256a63ebfd47d4d}{apr\+\_\+shm\+\_\+baseaddr\+\_\+get()} function will return the first usable byte of memory. 
+\end{DoxyRemark}
+\index{Shared Memory Routines@{Shared Memory Routines}!apr\+\_\+shm\+\_\+destroy@{apr\+\_\+shm\+\_\+destroy}}
+\index{apr\+\_\+shm\+\_\+destroy@{apr\+\_\+shm\+\_\+destroy}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shm\+\_\+destroy(apr\+\_\+shm\+\_\+t $\ast$m)}{apr_shm_destroy(apr_shm_t *m)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+shm\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+shm\+\_\+t} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__shm_ga7de5b65a9c7d9840bfa289854f8d59d4}{}\label{group__apr__shm_ga7de5b65a9c7d9840bfa289854f8d59d4}
+Destroy a shared memory segment and associated memory. 
+\begin{DoxyParams}{Parameters}
+{\em m} & The shared memory segment structure to destroy. \\
+\hline
+\end{DoxyParams}
+\index{Shared Memory Routines@{Shared Memory Routines}!apr\+\_\+shm\+\_\+detach@{apr\+\_\+shm\+\_\+detach}}
+\index{apr\+\_\+shm\+\_\+detach@{apr\+\_\+shm\+\_\+detach}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shm\+\_\+detach(apr\+\_\+shm\+\_\+t $\ast$m)}{apr_shm_detach(apr_shm_t *m)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+shm\+\_\+detach (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+shm\+\_\+t} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__shm_ga900095a06d3fdb4cdd04ca4449a9d42a}{}\label{group__apr__shm_ga900095a06d3fdb4cdd04ca4449a9d42a}
+Detach from a shared memory segment without destroying it. 
+\begin{DoxyParams}{Parameters}
+{\em m} & The shared memory structure representing the segment to detach from. \\
+\hline
+\end{DoxyParams}
+\index{Shared Memory Routines@{Shared Memory Routines}!apr\+\_\+shm\+\_\+pool\+\_\+get@{apr\+\_\+shm\+\_\+pool\+\_\+get}}
+\index{apr\+\_\+shm\+\_\+pool\+\_\+get@{apr\+\_\+shm\+\_\+pool\+\_\+get}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shm\+\_\+pool\+\_\+get(const apr\+\_\+shm\+\_\+t $\ast$theshm)}{apr_shm_pool_get(const apr_shm_t *theshm)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+pool\+\_\+t}$\ast$ apr\+\_\+shm\+\_\+pool\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+shm\+\_\+t} $\ast$}]{theshm}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__shm_ga072c40df7643e697885935ae65545098}{}\label{group__apr__shm_ga072c40df7643e697885935ae65545098}
+Get the pool used by this shared memory segment. \index{Shared Memory Routines@{Shared Memory Routines}!apr\+\_\+shm\+\_\+remove@{apr\+\_\+shm\+\_\+remove}}
+\index{apr\+\_\+shm\+\_\+remove@{apr\+\_\+shm\+\_\+remove}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shm\+\_\+remove(const char $\ast$filename, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_shm_remove(const char *filename, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+shm\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__shm_gaee8b7d9b952ff6157ddbb00fabb477e0}{}\label{group__apr__shm_gaee8b7d9b952ff6157ddbb00fabb477e0}
+Remove named resource associated with a shared memory segment, preventing attachments to the resource, but not destroying it. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & The filename associated with shared-\/memory segment which needs to be removed \\
+\hline
+{\em pool} & The pool used for file operations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function is only supported on platforms which support name-\/based shared memory segments, and will return A\+P\+R\+\_\+\+E\+N\+O\+T\+I\+M\+PL on platforms without such support. Removing the file while the shm is in use is not entirely portable, caller may use this to enhance obscurity of the resource, but be prepared for the call to fail, and for concurrent attempts to create a resource of the same name to also fail. The pool cleanup of apr\+\_\+shm\+\_\+create (apr\+\_\+shm\+\_\+destroy) also removes the named resource. 
+\end{DoxyRemark}
+\index{Shared Memory Routines@{Shared Memory Routines}!apr\+\_\+shm\+\_\+size\+\_\+get@{apr\+\_\+shm\+\_\+size\+\_\+get}}
+\index{apr\+\_\+shm\+\_\+size\+\_\+get@{apr\+\_\+shm\+\_\+size\+\_\+get}!Shared Memory Routines@{Shared Memory Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+shm\+\_\+size\+\_\+get(const apr\+\_\+shm\+\_\+t $\ast$m)}{apr_shm_size_get(const apr_shm_t *m)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+size\+\_\+t apr\+\_\+shm\+\_\+size\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+shm\+\_\+t} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__shm_ga557ae85d3f225620a77ad80caeaacac7}{}\label{group__apr__shm_ga557ae85d3f225620a77ad80caeaacac7}
+Retrieve the length of a shared memory segment in bytes. 
+\begin{DoxyParams}{Parameters}
+{\em m} & The shared memory segment from which to retrieve the segment length. \\
+\hline
+\end{DoxyParams}

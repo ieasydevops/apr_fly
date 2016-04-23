@@ -1,0 +1,219 @@
+\hypertarget{group__apr__atomic}{}\section{Atomic Operations}
+\label{group__apr__atomic}\index{Atomic Operations@{Atomic Operations}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__atomic_gaa89b4022de39ca4d1c2ae6715e888e97}{apr\+\_\+atomic\+\_\+init} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{group__apr__atomic_gafba4de90e113d26536cff48418689771}{apr\+\_\+atomic\+\_\+read32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem)
+\item 
+void \hyperlink{group__apr__atomic_gac689de9df18c093f66959227359328bb}{apr\+\_\+atomic\+\_\+set32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{group__apr__atomic_ga3ef16e13b679710fafd5196713e17433}{apr\+\_\+atomic\+\_\+add32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)
+\item 
+void \hyperlink{group__apr__atomic_ga4603396650e844bd987f01358ccb4df1}{apr\+\_\+atomic\+\_\+sub32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{group__apr__atomic_ga4af33da5aa6493ec321af14bedfc47a9}{apr\+\_\+atomic\+\_\+inc32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem)
+\item 
+int \hyperlink{group__apr__atomic_ga7a8d16335fdcd27f2baca90df35ad300}{apr\+\_\+atomic\+\_\+dec32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem)
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{group__apr__atomic_gae45c529f14f8489102382bd3fd4cce22}{apr\+\_\+atomic\+\_\+cas32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t with, apr\+\_\+uint32\+\_\+t cmp)
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{group__apr__atomic_ga50850e462d65e0409d5a93a6b4ec26c6}{apr\+\_\+atomic\+\_\+xchg32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)
+\item 
+void $\ast$ \hyperlink{group__apr__atomic_gafdd02b41cc39ade873daa2734597b0fa}{apr\+\_\+atomic\+\_\+casptr} (volatile void $\ast$$\ast$mem, void $\ast$with, const void $\ast$cmp)
+\item 
+void $\ast$ \hyperlink{group__apr__atomic_gaab4c1c5b8be70ded06dd31a1a4f65bf6}{apr\+\_\+atomic\+\_\+xchgptr} (volatile void $\ast$$\ast$mem, void $\ast$with)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Atomic Operations@{Atomic Operations}!apr\+\_\+atomic\+\_\+add32@{apr\+\_\+atomic\+\_\+add32}}
+\index{apr\+\_\+atomic\+\_\+add32@{apr\+\_\+atomic\+\_\+add32}!Atomic Operations@{Atomic Operations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atomic\+\_\+add32(volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)}{apr_atomic_add32(volatile apr_uint32_t *mem, apr_uint32_t val)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+uint32\+\_\+t apr\+\_\+atomic\+\_\+add32 (
+\begin{DoxyParamCaption}
+\item[{volatile apr\+\_\+uint32\+\_\+t $\ast$}]{mem, }
+\item[{apr\+\_\+uint32\+\_\+t}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__atomic_ga3ef16e13b679710fafd5196713e17433}{}\label{group__apr__atomic_ga3ef16e13b679710fafd5196713e17433}
+atomically add \textquotesingle{}val\textquotesingle{} to an apr\+\_\+uint32\+\_\+t 
+\begin{DoxyParams}{Parameters}
+{\em mem} & pointer to the object \\
+\hline
+{\em val} & amount to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+old value pointed to by mem 
+\end{DoxyReturn}
+\index{Atomic Operations@{Atomic Operations}!apr\+\_\+atomic\+\_\+cas32@{apr\+\_\+atomic\+\_\+cas32}}
+\index{apr\+\_\+atomic\+\_\+cas32@{apr\+\_\+atomic\+\_\+cas32}!Atomic Operations@{Atomic Operations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atomic\+\_\+cas32(volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t with, apr\+\_\+uint32\+\_\+t cmp)}{apr_atomic_cas32(volatile apr_uint32_t *mem, apr_uint32_t with, apr_uint32_t cmp)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+uint32\+\_\+t apr\+\_\+atomic\+\_\+cas32 (
+\begin{DoxyParamCaption}
+\item[{volatile apr\+\_\+uint32\+\_\+t $\ast$}]{mem, }
+\item[{apr\+\_\+uint32\+\_\+t}]{with, }
+\item[{apr\+\_\+uint32\+\_\+t}]{cmp}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__atomic_gae45c529f14f8489102382bd3fd4cce22}{}\label{group__apr__atomic_gae45c529f14f8489102382bd3fd4cce22}
+compare an apr\+\_\+uint32\+\_\+t\textquotesingle{}s value with \textquotesingle{}cmp\textquotesingle{}. If they are the same swap the value with \textquotesingle{}with\textquotesingle{} 
+\begin{DoxyParams}{Parameters}
+{\em mem} & pointer to the value \\
+\hline
+{\em with} & what to swap it with \\
+\hline
+{\em cmp} & the value to compare it to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the old value of $\ast$mem 
+\end{DoxyReturn}
+\index{Atomic Operations@{Atomic Operations}!apr\+\_\+atomic\+\_\+casptr@{apr\+\_\+atomic\+\_\+casptr}}
+\index{apr\+\_\+atomic\+\_\+casptr@{apr\+\_\+atomic\+\_\+casptr}!Atomic Operations@{Atomic Operations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atomic\+\_\+casptr(volatile void $\ast$$\ast$mem, void $\ast$with, const void $\ast$cmp)}{apr_atomic_casptr(volatile void **mem, void *with, const void *cmp)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+atomic\+\_\+casptr (
+\begin{DoxyParamCaption}
+\item[{volatile void $\ast$$\ast$}]{mem, }
+\item[{void $\ast$}]{with, }
+\item[{const void $\ast$}]{cmp}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__atomic_gafdd02b41cc39ade873daa2734597b0fa}{}\label{group__apr__atomic_gafdd02b41cc39ade873daa2734597b0fa}
+compare the pointer\textquotesingle{}s value with cmp. If they are the same swap the value with \textquotesingle{}with\textquotesingle{} 
+\begin{DoxyParams}{Parameters}
+{\em mem} & pointer to the pointer \\
+\hline
+{\em with} & what to swap it with \\
+\hline
+{\em cmp} & the value to compare it to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the old value of the pointer 
+\end{DoxyReturn}
+\index{Atomic Operations@{Atomic Operations}!apr\+\_\+atomic\+\_\+dec32@{apr\+\_\+atomic\+\_\+dec32}}
+\index{apr\+\_\+atomic\+\_\+dec32@{apr\+\_\+atomic\+\_\+dec32}!Atomic Operations@{Atomic Operations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atomic\+\_\+dec32(volatile apr\+\_\+uint32\+\_\+t $\ast$mem)}{apr_atomic_dec32(volatile apr_uint32_t *mem)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+atomic\+\_\+dec32 (
+\begin{DoxyParamCaption}
+\item[{volatile apr\+\_\+uint32\+\_\+t $\ast$}]{mem}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__atomic_ga7a8d16335fdcd27f2baca90df35ad300}{}\label{group__apr__atomic_ga7a8d16335fdcd27f2baca90df35ad300}
+atomically decrement an apr\+\_\+uint32\+\_\+t by 1 
+\begin{DoxyParams}{Parameters}
+{\em mem} & pointer to the atomic value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zero if the value becomes zero on decrement, otherwise non-\/zero 
+\end{DoxyReturn}
+\index{Atomic Operations@{Atomic Operations}!apr\+\_\+atomic\+\_\+inc32@{apr\+\_\+atomic\+\_\+inc32}}
+\index{apr\+\_\+atomic\+\_\+inc32@{apr\+\_\+atomic\+\_\+inc32}!Atomic Operations@{Atomic Operations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atomic\+\_\+inc32(volatile apr\+\_\+uint32\+\_\+t $\ast$mem)}{apr_atomic_inc32(volatile apr_uint32_t *mem)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+uint32\+\_\+t apr\+\_\+atomic\+\_\+inc32 (
+\begin{DoxyParamCaption}
+\item[{volatile apr\+\_\+uint32\+\_\+t $\ast$}]{mem}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__atomic_ga4af33da5aa6493ec321af14bedfc47a9}{}\label{group__apr__atomic_ga4af33da5aa6493ec321af14bedfc47a9}
+atomically increment an apr\+\_\+uint32\+\_\+t by 1 
+\begin{DoxyParams}{Parameters}
+{\em mem} & pointer to the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+old value pointed to by mem 
+\end{DoxyReturn}
+\index{Atomic Operations@{Atomic Operations}!apr\+\_\+atomic\+\_\+init@{apr\+\_\+atomic\+\_\+init}}
+\index{apr\+\_\+atomic\+\_\+init@{apr\+\_\+atomic\+\_\+init}!Atomic Operations@{Atomic Operations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atomic\+\_\+init(apr\+\_\+pool\+\_\+t $\ast$p)}{apr_atomic_init(apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+atomic\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__atomic_gaa89b4022de39ca4d1c2ae6715e888e97}{}\label{group__apr__atomic_gaa89b4022de39ca4d1c2ae6715e888e97}
+this function is required on some platforms to initialize the atomic operation\textquotesingle{}s internal structures 
+\begin{DoxyParams}{Parameters}
+{\em p} & pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS on successful completion 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Programs do N\+OT need to call this directly. A\+PR will call this automatically from apr\+\_\+initialize. 
+\end{DoxyRemark}
+\index{Atomic Operations@{Atomic Operations}!apr\+\_\+atomic\+\_\+read32@{apr\+\_\+atomic\+\_\+read32}}
+\index{apr\+\_\+atomic\+\_\+read32@{apr\+\_\+atomic\+\_\+read32}!Atomic Operations@{Atomic Operations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atomic\+\_\+read32(volatile apr\+\_\+uint32\+\_\+t $\ast$mem)}{apr_atomic_read32(volatile apr_uint32_t *mem)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+uint32\+\_\+t apr\+\_\+atomic\+\_\+read32 (
+\begin{DoxyParamCaption}
+\item[{volatile apr\+\_\+uint32\+\_\+t $\ast$}]{mem}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__atomic_gafba4de90e113d26536cff48418689771}{}\label{group__apr__atomic_gafba4de90e113d26536cff48418689771}
+atomically read an apr\+\_\+uint32\+\_\+t from memory 
+\begin{DoxyParams}{Parameters}
+{\em mem} & the pointer \\
+\hline
+\end{DoxyParams}
+\index{Atomic Operations@{Atomic Operations}!apr\+\_\+atomic\+\_\+set32@{apr\+\_\+atomic\+\_\+set32}}
+\index{apr\+\_\+atomic\+\_\+set32@{apr\+\_\+atomic\+\_\+set32}!Atomic Operations@{Atomic Operations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atomic\+\_\+set32(volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)}{apr_atomic_set32(volatile apr_uint32_t *mem, apr_uint32_t val)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+atomic\+\_\+set32 (
+\begin{DoxyParamCaption}
+\item[{volatile apr\+\_\+uint32\+\_\+t $\ast$}]{mem, }
+\item[{apr\+\_\+uint32\+\_\+t}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__atomic_gac689de9df18c093f66959227359328bb}{}\label{group__apr__atomic_gac689de9df18c093f66959227359328bb}
+atomically set an apr\+\_\+uint32\+\_\+t in memory 
+\begin{DoxyParams}{Parameters}
+{\em mem} & pointer to the object \\
+\hline
+{\em val} & value that the object will assume \\
+\hline
+\end{DoxyParams}
+\index{Atomic Operations@{Atomic Operations}!apr\+\_\+atomic\+\_\+sub32@{apr\+\_\+atomic\+\_\+sub32}}
+\index{apr\+\_\+atomic\+\_\+sub32@{apr\+\_\+atomic\+\_\+sub32}!Atomic Operations@{Atomic Operations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atomic\+\_\+sub32(volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)}{apr_atomic_sub32(volatile apr_uint32_t *mem, apr_uint32_t val)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+atomic\+\_\+sub32 (
+\begin{DoxyParamCaption}
+\item[{volatile apr\+\_\+uint32\+\_\+t $\ast$}]{mem, }
+\item[{apr\+\_\+uint32\+\_\+t}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__atomic_ga4603396650e844bd987f01358ccb4df1}{}\label{group__apr__atomic_ga4603396650e844bd987f01358ccb4df1}
+atomically subtract \textquotesingle{}val\textquotesingle{} from an apr\+\_\+uint32\+\_\+t 
+\begin{DoxyParams}{Parameters}
+{\em mem} & pointer to the object \\
+\hline
+{\em val} & amount to subtract \\
+\hline
+\end{DoxyParams}
+\index{Atomic Operations@{Atomic Operations}!apr\+\_\+atomic\+\_\+xchg32@{apr\+\_\+atomic\+\_\+xchg32}}
+\index{apr\+\_\+atomic\+\_\+xchg32@{apr\+\_\+atomic\+\_\+xchg32}!Atomic Operations@{Atomic Operations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atomic\+\_\+xchg32(volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)}{apr_atomic_xchg32(volatile apr_uint32_t *mem, apr_uint32_t val)}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+uint32\+\_\+t apr\+\_\+atomic\+\_\+xchg32 (
+\begin{DoxyParamCaption}
+\item[{volatile apr\+\_\+uint32\+\_\+t $\ast$}]{mem, }
+\item[{apr\+\_\+uint32\+\_\+t}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__atomic_ga50850e462d65e0409d5a93a6b4ec26c6}{}\label{group__apr__atomic_ga50850e462d65e0409d5a93a6b4ec26c6}
+exchange an apr\+\_\+uint32\+\_\+t\textquotesingle{}s value with \textquotesingle{}val\textquotesingle{}. 
+\begin{DoxyParams}{Parameters}
+{\em mem} & pointer to the value \\
+\hline
+{\em val} & what to swap it with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the old value of $\ast$mem 
+\end{DoxyReturn}
+\index{Atomic Operations@{Atomic Operations}!apr\+\_\+atomic\+\_\+xchgptr@{apr\+\_\+atomic\+\_\+xchgptr}}
+\index{apr\+\_\+atomic\+\_\+xchgptr@{apr\+\_\+atomic\+\_\+xchgptr}!Atomic Operations@{Atomic Operations}}
+\subsubsection[{\texorpdfstring{apr\+\_\+atomic\+\_\+xchgptr(volatile void $\ast$$\ast$mem, void $\ast$with)}{apr_atomic_xchgptr(volatile void **mem, void *with)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+atomic\+\_\+xchgptr (
+\begin{DoxyParamCaption}
+\item[{volatile void $\ast$$\ast$}]{mem, }
+\item[{void $\ast$}]{with}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__atomic_gaab4c1c5b8be70ded06dd31a1a4f65bf6}{}\label{group__apr__atomic_gaab4c1c5b8be70ded06dd31a1a4f65bf6}
+exchange a pair of pointer values 
+\begin{DoxyParams}{Parameters}
+{\em mem} & pointer to the pointer \\
+\hline
+{\em with} & what to swap it with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the old value of the pointer 
+\end{DoxyReturn}

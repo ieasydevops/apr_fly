@@ -1,0 +1,35 @@
+\hypertarget{structapr__os__proc__mutex__t}{}\section{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t Struct Reference}
+\label{structapr__os__proc__mutex__t}\index{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}}
+
+
+{\ttfamily \#include $<$apr\+\_\+portable.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structapr__os__proc__mutex__t_ab75e29a654ba0ff0dc491b625308fb79}{crossproc}
+\item 
+pthread\+\_\+mutex\+\_\+t $\ast$ \hyperlink{structapr__os__proc__mutex__t_aed588bef2efc836e5a768f32638e89c1}{pthread\+\_\+interproc}
+\item 
+pthread\+\_\+mutex\+\_\+t $\ast$ \hyperlink{structapr__os__proc__mutex__t_aa2e01fa37b652185a0dd3fae80caa4ad}{intraproc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic OS process mutex structure. 
+
+\subsection{Field Documentation}
+\index{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}!crossproc@{crossproc}}
+\index{crossproc@{crossproc}!apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}}
+\subsubsection[{\texorpdfstring{crossproc}{crossproc}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t\+::crossproc}\hypertarget{structapr__os__proc__mutex__t_ab75e29a654ba0ff0dc491b625308fb79}{}\label{structapr__os__proc__mutex__t_ab75e29a654ba0ff0dc491b625308fb79}
+Value used for S\+YS V Semaphore, F\+C\+N\+TL and F\+L\+O\+CK serialization \index{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}!intraproc@{intraproc}}
+\index{intraproc@{intraproc}!apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}}
+\subsubsection[{\texorpdfstring{intraproc}{intraproc}}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+mutex\+\_\+t$\ast$ apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t\+::intraproc}\hypertarget{structapr__os__proc__mutex__t_aa2e01fa37b652185a0dd3fae80caa4ad}{}\label{structapr__os__proc__mutex__t_aa2e01fa37b652185a0dd3fae80caa4ad}
+This value is currently unused within A\+PR and Apache \index{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}!pthread\+\_\+interproc@{pthread\+\_\+interproc}}
+\index{pthread\+\_\+interproc@{pthread\+\_\+interproc}!apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t@{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}}
+\subsubsection[{\texorpdfstring{pthread\+\_\+interproc}{pthread_interproc}}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+mutex\+\_\+t$\ast$ apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t\+::pthread\+\_\+interproc}\hypertarget{structapr__os__proc__mutex__t_aed588bef2efc836e5a768f32638e89c1}{}\label{structapr__os__proc__mutex__t_aed588bef2efc836e5a768f32638e89c1}
+Value used for P\+T\+H\+R\+E\+AD serialization 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{apr__portable_8h}{apr\+\_\+portable.\+h}\end{DoxyCompactItemize}

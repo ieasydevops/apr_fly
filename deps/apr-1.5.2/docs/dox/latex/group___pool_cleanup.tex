@@ -1,0 +1,163 @@
+\hypertarget{group___pool_cleanup}{}\section{Pool Cleanup Functions}
+\label{group___pool_cleanup}\index{Pool Cleanup Functions@{Pool Cleanup Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___pool_cleanup_ga6bdb28224dfe08160cbe3ba6b22dcbd7}{apr\+\_\+pool\+\_\+cleanup\+\_\+register} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$data, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$plain\+\_\+cleanup)(void $\ast$), \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$child\+\_\+cleanup)(void $\ast$))
+\item 
+void \hyperlink{group___pool_cleanup_ga64114542989d8872c7fd3c62f2a68678}{apr\+\_\+pool\+\_\+pre\+\_\+cleanup\+\_\+register} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$data, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$plain\+\_\+cleanup)(void $\ast$))
+\item 
+void \hyperlink{group___pool_cleanup_gadc59bf32a0302e34fa0a2663f6e48a44}{apr\+\_\+pool\+\_\+cleanup\+\_\+kill} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$data, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$))
+\item 
+void \hyperlink{group___pool_cleanup_ga7197fa6b43d9c5e99de17e0e900989ea}{apr\+\_\+pool\+\_\+child\+\_\+cleanup\+\_\+set} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$data, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$plain\+\_\+cleanup)(void $\ast$), \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$child\+\_\+cleanup)(void $\ast$))
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___pool_cleanup_gabf3913823af6015895a726ab738eaac5}{apr\+\_\+pool\+\_\+cleanup\+\_\+run} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, void $\ast$data, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$))
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___pool_cleanup_gaa211acee585df08f396a50b0ea489b02}{apr\+\_\+pool\+\_\+cleanup\+\_\+null} (void $\ast$data)
+\item 
+void \hyperlink{group___pool_cleanup_ga1726cc585bda8997fcb0828f884be55b}{apr\+\_\+pool\+\_\+cleanup\+\_\+for\+\_\+exec} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cleanups are performed in the reverse order they were registered. That is\+: Last In, First Out. A cleanup function can safely allocate memory from the pool that is being cleaned up. It can also safely register additional cleanups which will be run L\+I\+FO, directly after the current cleanup terminates. Cleanups have to take caution in calling functions that create subpools. Subpools, created during cleanup will N\+OT automatically be cleaned up. In other words, cleanups are to clean up after themselves. 
+
+\subsection{Function Documentation}
+\index{Pool Cleanup Functions@{Pool Cleanup Functions}!apr\+\_\+pool\+\_\+child\+\_\+cleanup\+\_\+set@{apr\+\_\+pool\+\_\+child\+\_\+cleanup\+\_\+set}}
+\index{apr\+\_\+pool\+\_\+child\+\_\+cleanup\+\_\+set@{apr\+\_\+pool\+\_\+child\+\_\+cleanup\+\_\+set}!Pool Cleanup Functions@{Pool Cleanup Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+child\+\_\+cleanup\+\_\+set(apr\+\_\+pool\+\_\+t $\ast$p, const void $\ast$data, apr\+\_\+status\+\_\+t($\ast$plain\+\_\+cleanup)(void $\ast$), apr\+\_\+status\+\_\+t($\ast$child\+\_\+cleanup)(void $\ast$))}{apr_pool_child_cleanup_set(apr_pool_t *p, const void *data, apr_status_t(*plain_cleanup)(void *), apr_status_t(*child_cleanup)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+child\+\_\+cleanup\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const void $\ast$}]{data, }
+\item[{{\bf apr\+\_\+status\+\_\+t}($\ast$)(void $\ast$)}]{plain\+\_\+cleanup, }
+\item[{{\bf apr\+\_\+status\+\_\+t}($\ast$)(void $\ast$)}]{child\+\_\+cleanup}
+\end{DoxyParamCaption}
+)}\hypertarget{group___pool_cleanup_ga7197fa6b43d9c5e99de17e0e900989ea}{}\label{group___pool_cleanup_ga7197fa6b43d9c5e99de17e0e900989ea}
+Replace the child cleanup function of a previously registered cleanup.
+
+The cleanup most recently registered with {\itshape p} having the same values of {\itshape data} and {\itshape plain\+\_\+cleanup} will have the registered child cleanup function replaced with {\itshape child\+\_\+cleanup}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool of the registered cleanup \\
+\hline
+{\em data} & The data of the registered cleanup \\
+\hline
+{\em plain\+\_\+cleanup} & The plain cleanup function of the registered cleanup \\
+\hline
+{\em child\+\_\+cleanup} & The function to register as the child cleanup \\
+\hline
+\end{DoxyParams}
+\index{Pool Cleanup Functions@{Pool Cleanup Functions}!apr\+\_\+pool\+\_\+cleanup\+\_\+for\+\_\+exec@{apr\+\_\+pool\+\_\+cleanup\+\_\+for\+\_\+exec}}
+\index{apr\+\_\+pool\+\_\+cleanup\+\_\+for\+\_\+exec@{apr\+\_\+pool\+\_\+cleanup\+\_\+for\+\_\+exec}!Pool Cleanup Functions@{Pool Cleanup Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+cleanup\+\_\+for\+\_\+exec(void)}{apr_pool_cleanup_for_exec(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+cleanup\+\_\+for\+\_\+exec (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___pool_cleanup_ga1726cc585bda8997fcb0828f884be55b}{}\label{group___pool_cleanup_ga1726cc585bda8997fcb0828f884be55b}
+Run all registered child cleanups, in preparation for an exec() call in a forked child -- close files, etc., but {\itshape don\textquotesingle{}t} flush I/O buffers, {\itshape don\textquotesingle{}t} wait for subprocesses, and {\itshape don\textquotesingle{}t} free any memory. \index{Pool Cleanup Functions@{Pool Cleanup Functions}!apr\+\_\+pool\+\_\+cleanup\+\_\+kill@{apr\+\_\+pool\+\_\+cleanup\+\_\+kill}}
+\index{apr\+\_\+pool\+\_\+cleanup\+\_\+kill@{apr\+\_\+pool\+\_\+cleanup\+\_\+kill}!Pool Cleanup Functions@{Pool Cleanup Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+cleanup\+\_\+kill(apr\+\_\+pool\+\_\+t $\ast$p, const void $\ast$data, apr\+\_\+status\+\_\+t($\ast$cleanup)(void $\ast$))}{apr_pool_cleanup_kill(apr_pool_t *p, const void *data, apr_status_t(*cleanup)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+cleanup\+\_\+kill (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const void $\ast$}]{data, }
+\item[{{\bf apr\+\_\+status\+\_\+t}($\ast$)(void $\ast$)}]{cleanup}
+\end{DoxyParamCaption}
+)}\hypertarget{group___pool_cleanup_gadc59bf32a0302e34fa0a2663f6e48a44}{}\label{group___pool_cleanup_gadc59bf32a0302e34fa0a2663f6e48a44}
+Remove a previously registered cleanup function.
+
+The cleanup most recently registered with {\itshape p} having the same values of {\itshape data} and {\itshape cleanup} will be removed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to remove the cleanup from \\
+\hline
+{\em data} & The data of the registered cleanup \\
+\hline
+{\em cleanup} & The function to remove from cleanup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+For some strange reason only the plain\+\_\+cleanup is handled by this function 
+\end{DoxyRemark}
+\index{Pool Cleanup Functions@{Pool Cleanup Functions}!apr\+\_\+pool\+\_\+cleanup\+\_\+null@{apr\+\_\+pool\+\_\+cleanup\+\_\+null}}
+\index{apr\+\_\+pool\+\_\+cleanup\+\_\+null@{apr\+\_\+pool\+\_\+cleanup\+\_\+null}!Pool Cleanup Functions@{Pool Cleanup Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+cleanup\+\_\+null(void $\ast$data)}{apr_pool_cleanup_null(void *data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+cleanup\+\_\+null (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{group___pool_cleanup_gaa211acee585df08f396a50b0ea489b02}{}\label{group___pool_cleanup_gaa211acee585df08f396a50b0ea489b02}
+An empty cleanup function.
+
+Passed to \hyperlink{group___pool_cleanup_ga6bdb28224dfe08160cbe3ba6b22dcbd7}{apr\+\_\+pool\+\_\+cleanup\+\_\+register()} when no cleanup is required.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to cleanup, will not be used by this function. \\
+\hline
+\end{DoxyParams}
+\index{Pool Cleanup Functions@{Pool Cleanup Functions}!apr\+\_\+pool\+\_\+cleanup\+\_\+register@{apr\+\_\+pool\+\_\+cleanup\+\_\+register}}
+\index{apr\+\_\+pool\+\_\+cleanup\+\_\+register@{apr\+\_\+pool\+\_\+cleanup\+\_\+register}!Pool Cleanup Functions@{Pool Cleanup Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+cleanup\+\_\+register(apr\+\_\+pool\+\_\+t $\ast$p, const void $\ast$data, apr\+\_\+status\+\_\+t($\ast$plain\+\_\+cleanup)(void $\ast$), apr\+\_\+status\+\_\+t($\ast$child\+\_\+cleanup)(void $\ast$))}{apr_pool_cleanup_register(apr_pool_t *p, const void *data, apr_status_t(*plain_cleanup)(void *), apr_status_t(*child_cleanup)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+cleanup\+\_\+register (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const void $\ast$}]{data, }
+\item[{{\bf apr\+\_\+status\+\_\+t}($\ast$)(void $\ast$)}]{plain\+\_\+cleanup, }
+\item[{{\bf apr\+\_\+status\+\_\+t}($\ast$)(void $\ast$)}]{child\+\_\+cleanup}
+\end{DoxyParamCaption}
+)}\hypertarget{group___pool_cleanup_ga6bdb28224dfe08160cbe3ba6b22dcbd7}{}\label{group___pool_cleanup_ga6bdb28224dfe08160cbe3ba6b22dcbd7}
+Register a function to be called when a pool is cleared or destroyed 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to register the cleanup with \\
+\hline
+{\em data} & The data to pass to the cleanup function. \\
+\hline
+{\em plain\+\_\+cleanup} & The function to call when the pool is cleared or destroyed \\
+\hline
+{\em child\+\_\+cleanup} & The function to call when a child process is about to exec -\/ this function is called in the child, obviously! \\
+\hline
+\end{DoxyParams}
+\index{Pool Cleanup Functions@{Pool Cleanup Functions}!apr\+\_\+pool\+\_\+cleanup\+\_\+run@{apr\+\_\+pool\+\_\+cleanup\+\_\+run}}
+\index{apr\+\_\+pool\+\_\+cleanup\+\_\+run@{apr\+\_\+pool\+\_\+cleanup\+\_\+run}!Pool Cleanup Functions@{Pool Cleanup Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+cleanup\+\_\+run(apr\+\_\+pool\+\_\+t $\ast$p, void $\ast$data, apr\+\_\+status\+\_\+t($\ast$cleanup)(void $\ast$))}{apr_pool_cleanup_run(apr_pool_t *p, void *data, apr_status_t(*cleanup)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+pool\+\_\+cleanup\+\_\+run (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf apr\+\_\+status\+\_\+t}($\ast$)(void $\ast$)}]{cleanup}
+\end{DoxyParamCaption}
+)}\hypertarget{group___pool_cleanup_gabf3913823af6015895a726ab738eaac5}{}\label{group___pool_cleanup_gabf3913823af6015895a726ab738eaac5}
+Run the specified cleanup function immediately and unregister it.
+
+The cleanup most recently registered with {\itshape p} having the same values of {\itshape data} and {\itshape cleanup} will be removed and {\itshape cleanup} will be called with {\itshape data} as the argument.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to remove the cleanup from \\
+\hline
+{\em data} & The data to remove from cleanup \\
+\hline
+{\em cleanup} & The function to remove from cleanup \\
+\hline
+\end{DoxyParams}
+\index{Pool Cleanup Functions@{Pool Cleanup Functions}!apr\+\_\+pool\+\_\+pre\+\_\+cleanup\+\_\+register@{apr\+\_\+pool\+\_\+pre\+\_\+cleanup\+\_\+register}}
+\index{apr\+\_\+pool\+\_\+pre\+\_\+cleanup\+\_\+register@{apr\+\_\+pool\+\_\+pre\+\_\+cleanup\+\_\+register}!Pool Cleanup Functions@{Pool Cleanup Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+pool\+\_\+pre\+\_\+cleanup\+\_\+register(apr\+\_\+pool\+\_\+t $\ast$p, const void $\ast$data, apr\+\_\+status\+\_\+t($\ast$plain\+\_\+cleanup)(void $\ast$))}{apr_pool_pre_cleanup_register(apr_pool_t *p, const void *data, apr_status_t(*plain_cleanup)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+pool\+\_\+pre\+\_\+cleanup\+\_\+register (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const void $\ast$}]{data, }
+\item[{{\bf apr\+\_\+status\+\_\+t}($\ast$)(void $\ast$)}]{plain\+\_\+cleanup}
+\end{DoxyParamCaption}
+)}\hypertarget{group___pool_cleanup_ga64114542989d8872c7fd3c62f2a68678}{}\label{group___pool_cleanup_ga64114542989d8872c7fd3c62f2a68678}
+Register a function to be called when a pool is cleared or destroyed.
+
+Unlike apr\+\_\+pool\+\_\+cleanup\+\_\+register which registers a cleanup that is called A\+F\+T\+ER all subpools are destroyed, this function registers a function that will be called before any of the subpools are destroyed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to register the cleanup with \\
+\hline
+{\em data} & The data to pass to the cleanup function. \\
+\hline
+{\em plain\+\_\+cleanup} & The function to call when the pool is cleared or destroyed \\
+\hline
+\end{DoxyParams}

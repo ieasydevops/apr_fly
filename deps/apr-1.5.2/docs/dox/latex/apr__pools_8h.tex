@@ -1,0 +1,129 @@
+\hypertarget{apr__pools_8h}{}\section{apr\+\_\+pools.\+h File Reference}
+\label{apr__pools_8h}\index{apr\+\_\+pools.\+h@{apr\+\_\+pools.\+h}}
+
+
+A\+PR memory allocation.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+general.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+want.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+allocator.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{apr__pools_8h_a26faf43e3f61783d8b7aa928c0a41a11}{A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC}
+\item 
+\#define \hyperlink{group__apr__pools_ga89ce1d55c7f0c39ea87c88eabd655394}{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR}(type)
+\item 
+\#define \hyperlink{group__apr__pools_ga43a8a52f68f8b7d3b7694c254da4a074}{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+A\+C\+C\+E\+S\+S\+OR}(type)
+\item 
+\#define \hyperlink{group__apr__pools_gac81cff34d0ff4be52fa924663478eade}{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+}~\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+ \char`\"{}\+:\char`\"{} \hyperlink{apr__version_8h_ae90215615972dfa4108018304361ef0b}{A\+P\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}(\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t}
+\item 
+typedef int($\ast$ \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t}) (int retcode)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gad64a6a29515621bc13f8a8da50366d67}{apr\+\_\+pool\+\_\+initialize} (void)
+\item 
+void \hyperlink{group__apr__pools_ga3728aacec227318cef973b8a33f3b430}{apr\+\_\+pool\+\_\+terminate} (void)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gab274bd29e4e4d4944b4618403148074f}{apr\+\_\+pool\+\_\+create\+\_\+ex} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$parent, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_ga20e514c83555398acddc30c4dfa0c540}{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gaae7212db77bb57f86419cd594f73a92f}{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gacbea97ae5c0c861f6b7c147d46ac1d0c}{apr\+\_\+pool\+\_\+create\+\_\+ex\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$parent, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, const char $\ast$file\+\_\+line)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gaa1c5bfc44188884bb439670f81448c20}{apr\+\_\+pool\+\_\+create\+\_\+core\+\_\+ex\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, const char $\ast$file\+\_\+line)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gae220e572b14355f1aa7b21c8fb022524}{apr\+\_\+pool\+\_\+create\+\_\+unmanaged\+\_\+ex\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abort\+\_\+fn, \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, const char $\ast$file\+\_\+line)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_ga918adf3026c894efeae254a0446aed3b}{apr\+\_\+pool\+\_\+create} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$parent)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gad3675378924bc9d98e46258c049f1761}{apr\+\_\+pool\+\_\+create\+\_\+core} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} {\bfseries apr\+\_\+pool\+\_\+create\+\_\+unmanaged} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$$\ast$newpool)
+\item 
+\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$ \hyperlink{group__apr__pools_gaf446fcf5da1fcd62d3f802a4c0c10f97}{apr\+\_\+pool\+\_\+allocator\+\_\+get} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+void \hyperlink{group__apr__pools_gafa8a998cd660e82b62aecec09e239d0d}{apr\+\_\+pool\+\_\+clear} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+void \hyperlink{group__apr__pools_ga9521870e42ec4395a0bf8388706a57b9}{apr\+\_\+pool\+\_\+clear\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$file\+\_\+line)
+\item 
+void \hyperlink{group__apr__pools_ga54759954d2cba7cb649ab5680a33f9e3}{apr\+\_\+pool\+\_\+destroy} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+void \hyperlink{group__apr__pools_ga7efe64dfcce883d7fad9df813d9259fc}{apr\+\_\+pool\+\_\+destroy\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$file\+\_\+line)
+\item 
+void $\ast$ \hyperlink{group__apr__pools_ga85f1e193c31d109affda72f9a92c6915}{apr\+\_\+palloc} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+size\+\_\+t size)
+\item 
+void $\ast$ \hyperlink{group__apr__pools_ga0ac211ac89be868b107776b4183a8174}{apr\+\_\+palloc\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+size\+\_\+t size, const char $\ast$file\+\_\+line)
+\item 
+void $\ast$ \hyperlink{group__apr__pools_gaf61c098ad258069d64cdf8c0a9369f9e}{apr\+\_\+pcalloc} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+size\+\_\+t size)
+\item 
+void $\ast$ \hyperlink{group__apr__pools_ga7b43035318ffdc57a6eddab07dc57cb2}{apr\+\_\+pcalloc\+\_\+debug} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+size\+\_\+t size, const char $\ast$file\+\_\+line)
+\item 
+void \hyperlink{group__apr__pools_gaa658b1f10dd13967eaa7c4156d4c2174}{apr\+\_\+pool\+\_\+abort\+\_\+set} (\hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} abortfunc, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__pools_ga370a939349adf6d1438068e2fc69a0dd}{apr\+\_\+abortfunc\+\_\+t} \hyperlink{group__apr__pools_gaf7610c30ef5f84a8742c0b3e63fdd7b0}{apr\+\_\+pool\+\_\+abort\+\_\+get} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__pools_ga94db31f40609b15b592ff47f989ca9ec}{apr\+\_\+pool\+\_\+parent\+\_\+get} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+int \hyperlink{group__apr__pools_ga05d299f778659d1e0806140d8a7fea79}{apr\+\_\+pool\+\_\+is\+\_\+ancestor} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$a, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$b)
+\item 
+void \hyperlink{group__apr__pools_gaeaa872f7999740a60803e95429890518}{apr\+\_\+pool\+\_\+tag} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool, const char $\ast$tag)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_ga78d1aa2d9fa842d83eaffccb0f0c0c5c}{apr\+\_\+pool\+\_\+userdata\+\_\+set} (const void $\ast$data, const char $\ast$key, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$), \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_ga435644c493dc5b10d80c4b99b8cd4589}{apr\+\_\+pool\+\_\+userdata\+\_\+setn} (const void $\ast$data, const char $\ast$key, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$), \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__pools_gaf930f1fad2cf92a2432c0814c8a0b86f}{apr\+\_\+pool\+\_\+userdata\+\_\+get} (void $\ast$$\ast$data, const char $\ast$key, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+void \hyperlink{group___pool_cleanup_ga6bdb28224dfe08160cbe3ba6b22dcbd7}{apr\+\_\+pool\+\_\+cleanup\+\_\+register} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$data, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$plain\+\_\+cleanup)(void $\ast$), \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$child\+\_\+cleanup)(void $\ast$))
+\item 
+void \hyperlink{group___pool_cleanup_ga64114542989d8872c7fd3c62f2a68678}{apr\+\_\+pool\+\_\+pre\+\_\+cleanup\+\_\+register} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$data, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$plain\+\_\+cleanup)(void $\ast$))
+\item 
+void \hyperlink{group___pool_cleanup_gadc59bf32a0302e34fa0a2663f6e48a44}{apr\+\_\+pool\+\_\+cleanup\+\_\+kill} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$data, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$))
+\item 
+void \hyperlink{group___pool_cleanup_ga7197fa6b43d9c5e99de17e0e900989ea}{apr\+\_\+pool\+\_\+child\+\_\+cleanup\+\_\+set} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$data, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$plain\+\_\+cleanup)(void $\ast$), \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$child\+\_\+cleanup)(void $\ast$))
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___pool_cleanup_gabf3913823af6015895a726ab738eaac5}{apr\+\_\+pool\+\_\+cleanup\+\_\+run} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, void $\ast$data, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}($\ast$cleanup)(void $\ast$))
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group___pool_cleanup_gaa211acee585df08f396a50b0ea489b02}{apr\+\_\+pool\+\_\+cleanup\+\_\+null} (void $\ast$data)
+\item 
+void \hyperlink{group___pool_cleanup_ga1726cc585bda8997fcb0828f884be55b}{apr\+\_\+pool\+\_\+cleanup\+\_\+for\+\_\+exec} (void)
+\item 
+void \hyperlink{group___pool_debug_gaecd956092f81c70117507ad8cbca8ea7}{apr\+\_\+pool\+\_\+join} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$sub)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group___pool_debug_ga0bc40d9069709020e3643492dae2ccb0}{apr\+\_\+pool\+\_\+find} (const void $\ast$mem)
+\item 
+apr\+\_\+size\+\_\+t \hyperlink{group___pool_debug_ga22462da23d70dfde389a370b131cd351}{apr\+\_\+pool\+\_\+num\+\_\+bytes} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, int recurse)
+\item 
+void \hyperlink{group___pool_debug_ga24f8f0287478fa71f77d0ce4ec035e4a}{apr\+\_\+pool\+\_\+lock} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool, int flag)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR memory allocation. 
+
+Resource allocation routines...
+
+designed so that we don\textquotesingle{}t have to keep track of E\+V\+E\+R\+Y\+T\+H\+I\+NG so that it can be explicitly freed later (a fundamentally unsound strategy --- particularly in the presence of die()).
+
+Instead, we maintain pools, and allocate items (both memory and I/O handlers) from the pools --- currently there are two, one for per-\/transaction info, and one for config info. When a transaction is over, we can delete everything in the per-\/transaction apr\+\_\+pool\+\_\+t without fear, and without thinking too hard about it either.
+
+Note that most operations on pools are not thread-\/safe\+: a single pool should only be accessed by a single thread at any given time. The one exception to this rule is creating a subpool of a given pool\+: one or more threads can safely create subpools at the same time that another thread accesses the parent pool. 
+
+\subsection{Macro Definition Documentation}
+\index{apr\+\_\+pools.\+h@{apr\+\_\+pools.\+h}!A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC@{A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC}}
+\index{A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC@{A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC}!apr\+\_\+pools.\+h@{apr\+\_\+pools.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC}{APR_WANT_MEMFUNC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+W\+A\+N\+T\+\_\+\+M\+E\+M\+F\+U\+NC}\hypertarget{apr__pools_8h_a26faf43e3f61783d8b7aa928c0a41a11}{}\label{apr__pools_8h_a26faf43e3f61783d8b7aa928c0a41a11}
+for no good reason? 

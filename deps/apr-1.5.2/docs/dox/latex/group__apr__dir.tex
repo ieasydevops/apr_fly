@@ -1,0 +1,85 @@
+\hypertarget{group__apr__dir}{}\section{Directory Manipulation Functions}
+\label{group__apr__dir}\index{Directory Manipulation Functions@{Directory Manipulation Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__dir_ga796002db3e3c7b7c9d5632efbcd4329c}{apr\+\_\+dir\+\_\+open} (\hyperlink{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}{apr\+\_\+dir\+\_\+t} $\ast$$\ast$new\+\_\+dir, const char $\ast$dirname, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__dir_ga57fef00ccea03e9244f6fa21da4d3359}{apr\+\_\+dir\+\_\+close} (\hyperlink{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}{apr\+\_\+dir\+\_\+t} $\ast$thedir)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__dir_ga3e4ee253e0c712160bee10bfb9c8e4a8}{apr\+\_\+dir\+\_\+read} (\hyperlink{structapr__finfo__t}{apr\+\_\+finfo\+\_\+t} $\ast$finfo, apr\+\_\+int32\+\_\+t wanted, \hyperlink{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}{apr\+\_\+dir\+\_\+t} $\ast$thedir)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__dir_gab9b9f23e76128144d3fb953cabea6290}{apr\+\_\+dir\+\_\+rewind} (\hyperlink{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}{apr\+\_\+dir\+\_\+t} $\ast$thedir)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Directory Manipulation Functions@{Directory Manipulation Functions}!apr\+\_\+dir\+\_\+close@{apr\+\_\+dir\+\_\+close}}
+\index{apr\+\_\+dir\+\_\+close@{apr\+\_\+dir\+\_\+close}!Directory Manipulation Functions@{Directory Manipulation Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dir\+\_\+close(apr\+\_\+dir\+\_\+t $\ast$thedir)}{apr_dir_close(apr_dir_t *thedir)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+dir\+\_\+close (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+dir\+\_\+t} $\ast$}]{thedir}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__dir_ga57fef00ccea03e9244f6fa21da4d3359}{}\label{group__apr__dir_ga57fef00ccea03e9244f6fa21da4d3359}
+close the specified directory. 
+\begin{DoxyParams}{Parameters}
+{\em thedir} & the directory descriptor to close. \\
+\hline
+\end{DoxyParams}
+\index{Directory Manipulation Functions@{Directory Manipulation Functions}!apr\+\_\+dir\+\_\+open@{apr\+\_\+dir\+\_\+open}}
+\index{apr\+\_\+dir\+\_\+open@{apr\+\_\+dir\+\_\+open}!Directory Manipulation Functions@{Directory Manipulation Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dir\+\_\+open(apr\+\_\+dir\+\_\+t $\ast$$\ast$new\+\_\+dir, const char $\ast$dirname, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_dir_open(apr_dir_t **new_dir, const char *dirname, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+dir\+\_\+open (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+dir\+\_\+t} $\ast$$\ast$}]{new\+\_\+dir, }
+\item[{const char $\ast$}]{dirname, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__dir_ga796002db3e3c7b7c9d5632efbcd4329c}{}\label{group__apr__dir_ga796002db3e3c7b7c9d5632efbcd4329c}
+Open the specified directory. 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+dir} & The opened directory descriptor. \\
+\hline
+{\em dirname} & The full path to the directory (use / on all systems) \\
+\hline
+{\em pool} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\index{Directory Manipulation Functions@{Directory Manipulation Functions}!apr\+\_\+dir\+\_\+read@{apr\+\_\+dir\+\_\+read}}
+\index{apr\+\_\+dir\+\_\+read@{apr\+\_\+dir\+\_\+read}!Directory Manipulation Functions@{Directory Manipulation Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dir\+\_\+read(apr\+\_\+finfo\+\_\+t $\ast$finfo, apr\+\_\+int32\+\_\+t wanted, apr\+\_\+dir\+\_\+t $\ast$thedir)}{apr_dir_read(apr_finfo_t *finfo, apr_int32_t wanted, apr_dir_t *thedir)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+dir\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+finfo\+\_\+t} $\ast$}]{finfo, }
+\item[{apr\+\_\+int32\+\_\+t}]{wanted, }
+\item[{{\bf apr\+\_\+dir\+\_\+t} $\ast$}]{thedir}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__dir_ga3e4ee253e0c712160bee10bfb9c8e4a8}{}\label{group__apr__dir_ga3e4ee253e0c712160bee10bfb9c8e4a8}
+Read the next entry from the specified directory. 
+\begin{DoxyParams}{Parameters}
+{\em finfo} & the file info structure and filled in by apr\+\_\+dir\+\_\+read \\
+\hline
+{\em wanted} & The desired \hyperlink{structapr__finfo__t}{apr\+\_\+finfo\+\_\+t} fields, as a bit flag of A\+P\+R\+\_\+\+F\+I\+N\+F\+O\+\_\+ values \\
+\hline
+{\em thedir} & the directory descriptor returned from apr\+\_\+dir\+\_\+open \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+No ordering is guaranteed for the entries read.
+\end{DoxyRemark}
+\begin{DoxyNote}{Note}
+If {\ttfamily A\+P\+R\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE} is returned all the fields in {\itshape finfo} may not be filled in, and you need to check the {\ttfamily finfo-\/$>$valid} bitmask to verify that what you\textquotesingle{}re looking for is there. When no more entries are available, A\+P\+R\+\_\+\+E\+N\+O\+E\+NT is returned. 
+\end{DoxyNote}
+\index{Directory Manipulation Functions@{Directory Manipulation Functions}!apr\+\_\+dir\+\_\+rewind@{apr\+\_\+dir\+\_\+rewind}}
+\index{apr\+\_\+dir\+\_\+rewind@{apr\+\_\+dir\+\_\+rewind}!Directory Manipulation Functions@{Directory Manipulation Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+dir\+\_\+rewind(apr\+\_\+dir\+\_\+t $\ast$thedir)}{apr_dir_rewind(apr_dir_t *thedir)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+dir\+\_\+rewind (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+dir\+\_\+t} $\ast$}]{thedir}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__dir_gab9b9f23e76128144d3fb953cabea6290}{}\label{group__apr__dir_gab9b9f23e76128144d3fb953cabea6290}
+Rewind the directory to the first entry. 
+\begin{DoxyParams}{Parameters}
+{\em thedir} & the directory descriptor to rewind. \\
+\hline
+\end{DoxyParams}

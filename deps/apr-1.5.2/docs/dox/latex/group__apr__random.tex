@@ -1,0 +1,231 @@
+\hypertarget{group__apr__random}{}\section{Random Functions}
+\label{group__apr__random}\index{Random Functions@{Random Functions}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__crypto__hash__t}{apr\+\_\+crypto\+\_\+hash\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__crypto__hash__t}{apr\+\_\+crypto\+\_\+hash\+\_\+t} {\bfseries apr\+\_\+crypto\+\_\+hash\+\_\+t}\hypertarget{group__apr__random_ga30fbaf80424a9f1a0e9cc51072f65127}{}\label{group__apr__random_ga30fbaf80424a9f1a0e9cc51072f65127}
+
+\item 
+typedef void {\bfseries apr\+\_\+crypto\+\_\+hash\+\_\+init\+\_\+t}(\hyperlink{structapr__crypto__hash__t}{apr\+\_\+crypto\+\_\+hash\+\_\+t} $\ast$hash)\hypertarget{group__apr__random_gad2775bc1cdb376d9dec0e97283b4bdd9}{}\label{group__apr__random_gad2775bc1cdb376d9dec0e97283b4bdd9}
+
+\item 
+typedef void {\bfseries apr\+\_\+crypto\+\_\+hash\+\_\+add\+\_\+t}(\hyperlink{structapr__crypto__hash__t}{apr\+\_\+crypto\+\_\+hash\+\_\+t} $\ast$hash, const void $\ast$data, apr\+\_\+size\+\_\+t bytes)\hypertarget{group__apr__random_ga2f8a4fb18078a76357327ea55936c1ea}{}\label{group__apr__random_ga2f8a4fb18078a76357327ea55936c1ea}
+
+\item 
+typedef void {\bfseries apr\+\_\+crypto\+\_\+hash\+\_\+finish\+\_\+t}(\hyperlink{structapr__crypto__hash__t}{apr\+\_\+crypto\+\_\+hash\+\_\+t} $\ast$hash, unsigned char $\ast$result)\hypertarget{group__apr__random_gab70ea9133870efdb5532d20d4bcf7442}{}\label{group__apr__random_gab70ea9133870efdb5532d20d4bcf7442}
+
+\item 
+typedef struct \hyperlink{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}{apr\+\_\+random\+\_\+t} \hyperlink{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}{apr\+\_\+random\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__random_ga564e4c380e820a9b0d9e877d4852a65e}{apr\+\_\+generate\+\_\+random\+\_\+bytes} (unsigned char $\ast$buf, apr\+\_\+size\+\_\+t length)
+\item 
+\hyperlink{structapr__crypto__hash__t}{apr\+\_\+crypto\+\_\+hash\+\_\+t} $\ast$ \hyperlink{group__apr__random_gae992c6f642e9661d2417cd8f2df8d345}{apr\+\_\+crypto\+\_\+sha256\+\_\+new} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+void \hyperlink{group__apr__random_ga0184a90774212132f883c463811aacdc}{apr\+\_\+random\+\_\+init} (\hyperlink{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}{apr\+\_\+random\+\_\+t} $\ast$g, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, \hyperlink{structapr__crypto__hash__t}{apr\+\_\+crypto\+\_\+hash\+\_\+t} $\ast$pool\+\_\+hash, \hyperlink{structapr__crypto__hash__t}{apr\+\_\+crypto\+\_\+hash\+\_\+t} $\ast$key\+\_\+hash, \hyperlink{structapr__crypto__hash__t}{apr\+\_\+crypto\+\_\+hash\+\_\+t} $\ast$prng\+\_\+hash)
+\item 
+\hyperlink{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}{apr\+\_\+random\+\_\+t} $\ast$ \hyperlink{group__apr__random_ga7a73c9bcf026b63847aeae483c53191f}{apr\+\_\+random\+\_\+standard\+\_\+new} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+void \hyperlink{group__apr__random_ga8cf2875644c1dffc0c336289bd370efb}{apr\+\_\+random\+\_\+add\+\_\+entropy} (\hyperlink{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}{apr\+\_\+random\+\_\+t} $\ast$g, const void $\ast$entropy\+\_\+, apr\+\_\+size\+\_\+t bytes)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__random_gab9a63359bb9543d746e6fd46933b7256}{apr\+\_\+random\+\_\+insecure\+\_\+bytes} (\hyperlink{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}{apr\+\_\+random\+\_\+t} $\ast$g, void $\ast$random, apr\+\_\+size\+\_\+t bytes)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__random_ga9f0607e06656a1c76cc5ee878fd94f09}{apr\+\_\+random\+\_\+secure\+\_\+bytes} (\hyperlink{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}{apr\+\_\+random\+\_\+t} $\ast$g, void $\ast$random, apr\+\_\+size\+\_\+t bytes)
+\item 
+void \hyperlink{group__apr__random_ga37d8d7529cf972c605ebce97c57f8825}{apr\+\_\+random\+\_\+barrier} (\hyperlink{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}{apr\+\_\+random\+\_\+t} $\ast$g)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__random_ga99d0c0722eeef2951e8ccede2e1451fa}{apr\+\_\+random\+\_\+secure\+\_\+ready} (\hyperlink{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}{apr\+\_\+random\+\_\+t} $\ast$r)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__random_ga6465698bdc752d07abc8c515aac6e2c0}{apr\+\_\+random\+\_\+insecure\+\_\+ready} (\hyperlink{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}{apr\+\_\+random\+\_\+t} $\ast$r)
+\item 
+void \hyperlink{group__apr__random_gaa1ab9b8adeeb6e37bb29def249ff9e6a}{apr\+\_\+random\+\_\+after\+\_\+fork} (\hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} $\ast$proc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\index{Random Functions@{Random Functions}!apr\+\_\+random\+\_\+t@{apr\+\_\+random\+\_\+t}}
+\index{apr\+\_\+random\+\_\+t@{apr\+\_\+random\+\_\+t}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+random\+\_\+t}{apr_random_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+random\+\_\+t} {\bf apr\+\_\+random\+\_\+t}}\hypertarget{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}{}\label{group__apr__random_ga33073741e56b1bafe52ba58cefcbbf96}
+Opaque P\+R\+NG structure. 
+
+\subsection{Function Documentation}
+\index{Random Functions@{Random Functions}!apr\+\_\+crypto\+\_\+sha256\+\_\+new@{apr\+\_\+crypto\+\_\+sha256\+\_\+new}}
+\index{apr\+\_\+crypto\+\_\+sha256\+\_\+new@{apr\+\_\+crypto\+\_\+sha256\+\_\+new}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+crypto\+\_\+sha256\+\_\+new(apr\+\_\+pool\+\_\+t $\ast$p)}{apr_crypto_sha256_new(apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+crypto\+\_\+hash\+\_\+t}$\ast$ apr\+\_\+crypto\+\_\+sha256\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__random_gae992c6f642e9661d2417cd8f2df8d345}{}\label{group__apr__random_gae992c6f642e9661d2417cd8f2df8d345}
+Allocate and initialize the S\+H\+A-\/256 context 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate from \\
+\hline
+\end{DoxyParams}
+\index{Random Functions@{Random Functions}!apr\+\_\+generate\+\_\+random\+\_\+bytes@{apr\+\_\+generate\+\_\+random\+\_\+bytes}}
+\index{apr\+\_\+generate\+\_\+random\+\_\+bytes@{apr\+\_\+generate\+\_\+random\+\_\+bytes}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+generate\+\_\+random\+\_\+bytes(unsigned char $\ast$buf, apr\+\_\+size\+\_\+t length)}{apr_generate_random_bytes(unsigned char *buf, apr_size_t length)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+generate\+\_\+random\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__random_ga564e4c380e820a9b0d9e877d4852a65e}{}\label{group__apr__random_ga564e4c380e820a9b0d9e877d4852a65e}
+Generate random bytes. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer to fill with random bytes \\
+\hline
+{\em length} & Length of buffer in bytes \\
+\hline
+\end{DoxyParams}
+\index{Random Functions@{Random Functions}!apr\+\_\+random\+\_\+add\+\_\+entropy@{apr\+\_\+random\+\_\+add\+\_\+entropy}}
+\index{apr\+\_\+random\+\_\+add\+\_\+entropy@{apr\+\_\+random\+\_\+add\+\_\+entropy}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+random\+\_\+add\+\_\+entropy(apr\+\_\+random\+\_\+t $\ast$g, const void $\ast$entropy\+\_\+, apr\+\_\+size\+\_\+t bytes)}{apr_random_add_entropy(apr_random_t *g, const void *entropy_, apr_size_t bytes)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+random\+\_\+add\+\_\+entropy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+random\+\_\+t} $\ast$}]{g, }
+\item[{const void $\ast$}]{entropy\+\_\+, }
+\item[{apr\+\_\+size\+\_\+t}]{bytes}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__random_ga8cf2875644c1dffc0c336289bd370efb}{}\label{group__apr__random_ga8cf2875644c1dffc0c336289bd370efb}
+Mix the randomness pools. 
+\begin{DoxyParams}{Parameters}
+{\em g} & The P\+R\+NG state \\
+\hline
+{\em entropy\+\_\+} & Entropy buffer \\
+\hline
+{\em bytes} & Length of entropy\+\_\+ in bytes \\
+\hline
+\end{DoxyParams}
+\index{Random Functions@{Random Functions}!apr\+\_\+random\+\_\+after\+\_\+fork@{apr\+\_\+random\+\_\+after\+\_\+fork}}
+\index{apr\+\_\+random\+\_\+after\+\_\+fork@{apr\+\_\+random\+\_\+after\+\_\+fork}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+random\+\_\+after\+\_\+fork(apr\+\_\+proc\+\_\+t $\ast$proc)}{apr_random_after_fork(apr_proc_t *proc)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+random\+\_\+after\+\_\+fork (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+proc\+\_\+t} $\ast$}]{proc}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__random_gaa1ab9b8adeeb6e37bb29def249ff9e6a}{}\label{group__apr__random_gaa1ab9b8adeeb6e37bb29def249ff9e6a}
+Mix the randomness pools after forking. 
+\begin{DoxyParams}{Parameters}
+{\em proc} & The resulting process handle from \hyperlink{group__apr__thread__proc_ga3d0415bf69b0a629a929833e82758b85}{apr\+\_\+proc\+\_\+fork()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Call this in the child after forking to mix the randomness pools. Note that its generally a bad idea to fork a process with a real P\+R\+NG in it -\/ better to have the P\+R\+NG externally and get the randomness from there. However, if you really must do it, then you should supply all your entropy to all the P\+R\+N\+Gs -\/ don\textquotesingle{}t worry, they won\textquotesingle{}t produce the same output. 
+
+Note that \hyperlink{group__apr__thread__proc_ga3d0415bf69b0a629a929833e82758b85}{apr\+\_\+proc\+\_\+fork()} calls this for you, so only weird applications need ever call it themselves. 
+\end{DoxyRemark}
+\index{Random Functions@{Random Functions}!apr\+\_\+random\+\_\+barrier@{apr\+\_\+random\+\_\+barrier}}
+\index{apr\+\_\+random\+\_\+barrier@{apr\+\_\+random\+\_\+barrier}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+random\+\_\+barrier(apr\+\_\+random\+\_\+t $\ast$g)}{apr_random_barrier(apr_random_t *g)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+random\+\_\+barrier (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+random\+\_\+t} $\ast$}]{g}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__random_ga37d8d7529cf972c605ebce97c57f8825}{}\label{group__apr__random_ga37d8d7529cf972c605ebce97c57f8825}
+Ensures that E bits of conditional entropy are mixed into the P\+R\+NG before any further randomness is extracted. 
+\begin{DoxyParams}{Parameters}
+{\em g} & The R\+NG state \\
+\hline
+\end{DoxyParams}
+\index{Random Functions@{Random Functions}!apr\+\_\+random\+\_\+init@{apr\+\_\+random\+\_\+init}}
+\index{apr\+\_\+random\+\_\+init@{apr\+\_\+random\+\_\+init}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+random\+\_\+init(apr\+\_\+random\+\_\+t $\ast$g, apr\+\_\+pool\+\_\+t $\ast$p, apr\+\_\+crypto\+\_\+hash\+\_\+t $\ast$pool\+\_\+hash, apr\+\_\+crypto\+\_\+hash\+\_\+t $\ast$key\+\_\+hash, apr\+\_\+crypto\+\_\+hash\+\_\+t $\ast$prng\+\_\+hash)}{apr_random_init(apr_random_t *g, apr_pool_t *p, apr_crypto_hash_t *pool_hash, apr_crypto_hash_t *key_hash, apr_crypto_hash_t *prng_hash)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+random\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+random\+\_\+t} $\ast$}]{g, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{{\bf apr\+\_\+crypto\+\_\+hash\+\_\+t} $\ast$}]{pool\+\_\+hash, }
+\item[{{\bf apr\+\_\+crypto\+\_\+hash\+\_\+t} $\ast$}]{key\+\_\+hash, }
+\item[{{\bf apr\+\_\+crypto\+\_\+hash\+\_\+t} $\ast$}]{prng\+\_\+hash}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__random_ga0184a90774212132f883c463811aacdc}{}\label{group__apr__random_ga0184a90774212132f883c463811aacdc}
+Initialize a P\+R\+NG state 
+\begin{DoxyParams}{Parameters}
+{\em g} & The P\+R\+NG state \\
+\hline
+{\em p} & The pool to allocate from \\
+\hline
+{\em pool\+\_\+hash} & Pool hash functions \\
+\hline
+{\em key\+\_\+hash} & Key hash functions \\
+\hline
+{\em prng\+\_\+hash} & P\+R\+NG hash functions \\
+\hline
+\end{DoxyParams}
+\index{Random Functions@{Random Functions}!apr\+\_\+random\+\_\+insecure\+\_\+bytes@{apr\+\_\+random\+\_\+insecure\+\_\+bytes}}
+\index{apr\+\_\+random\+\_\+insecure\+\_\+bytes@{apr\+\_\+random\+\_\+insecure\+\_\+bytes}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+random\+\_\+insecure\+\_\+bytes(apr\+\_\+random\+\_\+t $\ast$g, void $\ast$random, apr\+\_\+size\+\_\+t bytes)}{apr_random_insecure_bytes(apr_random_t *g, void *random, apr_size_t bytes)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+random\+\_\+insecure\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+random\+\_\+t} $\ast$}]{g, }
+\item[{void $\ast$}]{random, }
+\item[{apr\+\_\+size\+\_\+t}]{bytes}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__random_gab9a63359bb9543d746e6fd46933b7256}{}\label{group__apr__random_gab9a63359bb9543d746e6fd46933b7256}
+Generate cryptographically insecure random bytes. 
+\begin{DoxyParams}{Parameters}
+{\em g} & The R\+NG state \\
+\hline
+{\em random} & Buffer to fill with random bytes \\
+\hline
+{\em bytes} & Length of buffer in bytes \\
+\hline
+\end{DoxyParams}
+\index{Random Functions@{Random Functions}!apr\+\_\+random\+\_\+insecure\+\_\+ready@{apr\+\_\+random\+\_\+insecure\+\_\+ready}}
+\index{apr\+\_\+random\+\_\+insecure\+\_\+ready@{apr\+\_\+random\+\_\+insecure\+\_\+ready}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+random\+\_\+insecure\+\_\+ready(apr\+\_\+random\+\_\+t $\ast$r)}{apr_random_insecure_ready(apr_random_t *r)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+random\+\_\+insecure\+\_\+ready (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+random\+\_\+t} $\ast$}]{r}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__random_ga6465698bdc752d07abc8c515aac6e2c0}{}\label{group__apr__random_ga6465698bdc752d07abc8c515aac6e2c0}
+Return A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS if the P\+R\+NG has been seeded with enough data, A\+P\+R\+\_\+\+E\+N\+O\+T\+E\+N\+O\+U\+G\+H\+E\+N\+T\+R\+O\+PY otherwise. 
+\begin{DoxyParams}{Parameters}
+{\em r} & The P\+R\+NG state \\
+\hline
+\end{DoxyParams}
+\index{Random Functions@{Random Functions}!apr\+\_\+random\+\_\+secure\+\_\+bytes@{apr\+\_\+random\+\_\+secure\+\_\+bytes}}
+\index{apr\+\_\+random\+\_\+secure\+\_\+bytes@{apr\+\_\+random\+\_\+secure\+\_\+bytes}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+random\+\_\+secure\+\_\+bytes(apr\+\_\+random\+\_\+t $\ast$g, void $\ast$random, apr\+\_\+size\+\_\+t bytes)}{apr_random_secure_bytes(apr_random_t *g, void *random, apr_size_t bytes)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+random\+\_\+secure\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+random\+\_\+t} $\ast$}]{g, }
+\item[{void $\ast$}]{random, }
+\item[{apr\+\_\+size\+\_\+t}]{bytes}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__random_ga9f0607e06656a1c76cc5ee878fd94f09}{}\label{group__apr__random_ga9f0607e06656a1c76cc5ee878fd94f09}
+Generate cryptographically secure random bytes. 
+\begin{DoxyParams}{Parameters}
+{\em g} & The R\+NG state \\
+\hline
+{\em random} & Buffer to fill with random bytes \\
+\hline
+{\em bytes} & Length of buffer in bytes \\
+\hline
+\end{DoxyParams}
+\index{Random Functions@{Random Functions}!apr\+\_\+random\+\_\+secure\+\_\+ready@{apr\+\_\+random\+\_\+secure\+\_\+ready}}
+\index{apr\+\_\+random\+\_\+secure\+\_\+ready@{apr\+\_\+random\+\_\+secure\+\_\+ready}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+random\+\_\+secure\+\_\+ready(apr\+\_\+random\+\_\+t $\ast$r)}{apr_random_secure_ready(apr_random_t *r)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+random\+\_\+secure\+\_\+ready (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+random\+\_\+t} $\ast$}]{r}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__random_ga99d0c0722eeef2951e8ccede2e1451fa}{}\label{group__apr__random_ga99d0c0722eeef2951e8ccede2e1451fa}
+Return A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS if the cryptographic P\+R\+NG has been seeded with enough data, A\+P\+R\+\_\+\+E\+N\+O\+T\+E\+N\+O\+U\+G\+H\+E\+N\+T\+R\+O\+PY otherwise. 
+\begin{DoxyParams}{Parameters}
+{\em r} & The R\+NG state \\
+\hline
+\end{DoxyParams}
+\index{Random Functions@{Random Functions}!apr\+\_\+random\+\_\+standard\+\_\+new@{apr\+\_\+random\+\_\+standard\+\_\+new}}
+\index{apr\+\_\+random\+\_\+standard\+\_\+new@{apr\+\_\+random\+\_\+standard\+\_\+new}!Random Functions@{Random Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+random\+\_\+standard\+\_\+new(apr\+\_\+pool\+\_\+t $\ast$p)}{apr_random_standard_new(apr_pool_t *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+random\+\_\+t}$\ast$ apr\+\_\+random\+\_\+standard\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__random_ga7a73c9bcf026b63847aeae483c53191f}{}\label{group__apr__random_ga7a73c9bcf026b63847aeae483c53191f}
+Allocate and initialize (apr\+\_\+crypto\+\_\+sha256\+\_\+new) a new P\+R\+NG state. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate from \\
+\hline
+\end{DoxyParams}

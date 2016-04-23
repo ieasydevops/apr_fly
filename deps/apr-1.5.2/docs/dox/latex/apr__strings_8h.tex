@@ -1,0 +1,66 @@
+\hypertarget{apr__strings_8h}{}\section{apr\+\_\+strings.\+h File Reference}
+\label{apr__strings_8h}\index{apr\+\_\+strings.\+h@{apr\+\_\+strings.\+h}}
+
+
+A\+PR Strings library.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+want.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__apr__strings_gabe7e226c26e1535d787a7836b9c8d0a1}{apr\+\_\+strnatcmp} (char const $\ast$a, char const $\ast$b)
+\item 
+int \hyperlink{group__apr__strings_ga1708d51c4989934fec663b23366430f3}{apr\+\_\+strnatcasecmp} (char const $\ast$a, char const $\ast$b)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gabc79e99ff19abbd7cfd18308c5f85d47}{apr\+\_\+pstrdup} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$s)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga0eae1185559578c0f9792413305eca25}{apr\+\_\+pstrmemdup} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$s, apr\+\_\+size\+\_\+t n)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gad17053ffe6604d908ae7cac33543a6b4}{apr\+\_\+pstrndup} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$s, apr\+\_\+size\+\_\+t n)
+\item 
+void $\ast$ \hyperlink{group__apr__strings_gac3886f14ecf5aed8fe4493087799685c}{apr\+\_\+pmemdup} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const void $\ast$m, apr\+\_\+size\+\_\+t n)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga7bd80c95ffb7b3f96bc78e7b5b5b0045}{apr\+\_\+pstrcat} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p,...)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga15d0853af252a894e288c682b8f84309}{apr\+\_\+pstrcatv} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const struct iovec $\ast$vec, apr\+\_\+size\+\_\+t nvec, apr\+\_\+size\+\_\+t $\ast$nbytes)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga05248544edebc71070140d2ce5969c10}{apr\+\_\+pvsprintf} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$fmt, va\+\_\+list ap)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga3eca76b8d293c5c3f8021e45eda813d8}{apr\+\_\+psprintf} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const char $\ast$fmt,...)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga69700a825e82dd646f9f166599040431}{apr\+\_\+cpystrn} (char $\ast$dst, const char $\ast$src, apr\+\_\+size\+\_\+t dst\+\_\+size)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gafd92441a5f4fa3b5f5aa49e1f9884bc7}{apr\+\_\+collapse\+\_\+spaces} (char $\ast$dest, const char $\ast$src)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__strings_ga5213cee7e8ba799df9dc2e57f71cd4dd}{apr\+\_\+tokenize\+\_\+to\+\_\+argv} (const char $\ast$arg\+\_\+str, char $\ast$$\ast$$\ast$argv\+\_\+out, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$token\+\_\+context)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga1cf7fcb5843707ece733e27aad85c516}{apr\+\_\+strtok} (char $\ast$str, const char $\ast$sep, char $\ast$$\ast$last)
+\item 
+int \hyperlink{group___a_p_r___strings___snprintf_gaf0d0becc04278df5172f0ce5905f8ff9}{apr\+\_\+snprintf} (char $\ast$buf, apr\+\_\+size\+\_\+t len, const char $\ast$format,...)
+\item 
+int \hyperlink{group___a_p_r___strings___snprintf_gaf6bf63e240e48b517644ff3e99e49c26}{apr\+\_\+vsnprintf} (char $\ast$buf, apr\+\_\+size\+\_\+t len, const char $\ast$format, va\+\_\+list ap)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gae1c780f2d908a286a141e4b885254a9c}{apr\+\_\+itoa} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, int n)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_ga578ea3fa78957c6b2e9b8ab4cbfd60b1}{apr\+\_\+ltoa} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, long n)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gabce9fb74bbad08d795389bfe859053d3}{apr\+\_\+off\+\_\+t\+\_\+toa} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, apr\+\_\+off\+\_\+t n)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__strings_ga1583688e0777398174f62e46a522ae8f}{apr\+\_\+strtoff} (apr\+\_\+off\+\_\+t $\ast$offset, const char $\ast$buf, char $\ast$$\ast$end, int base)
+\item 
+apr\+\_\+int64\+\_\+t \hyperlink{group__apr__strings_ga1da34829609e8976f498b235afd6cbe4}{apr\+\_\+strtoi64} (const char $\ast$buf, char $\ast$$\ast$end, int base)
+\item 
+apr\+\_\+int64\+\_\+t \hyperlink{group__apr__strings_gaf0653577ee64efb5406d932db95cce3d}{apr\+\_\+atoi64} (const char $\ast$buf)
+\item 
+char $\ast$ \hyperlink{group__apr__strings_gaf66522fda6d2dfa540fdc58831405980}{apr\+\_\+strfsize} (apr\+\_\+off\+\_\+t size, char $\ast$buf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Strings library. 
+

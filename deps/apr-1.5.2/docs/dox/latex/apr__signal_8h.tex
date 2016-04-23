@@ -1,0 +1,33 @@
+\hypertarget{apr__signal_8h}{}\section{apr\+\_\+signal.\+h File Reference}
+\label{apr__signal_8h}\index{apr\+\_\+signal.\+h@{apr\+\_\+signal.\+h}}
+
+
+A\+PR Signal Handling.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void \hyperlink{group__apr__signal_ga2afd99d29d57dc1358aeccedb714368a}{apr\+\_\+sigfunc\+\_\+t}(int)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__signal_ga2afd99d29d57dc1358aeccedb714368a}{apr\+\_\+sigfunc\+\_\+t} $\ast$ \hyperlink{group__apr__signal_ga77ecb509002eeb784c06014c635a9a5a}{apr\+\_\+signal} (int signo, \hyperlink{group__apr__signal_ga2afd99d29d57dc1358aeccedb714368a}{apr\+\_\+sigfunc\+\_\+t} $\ast$func)
+\item 
+const char $\ast$ \hyperlink{group__apr__signal_ga685b8a8e5e7a5067e3fe3456c5c1a150}{apr\+\_\+signal\+\_\+description\+\_\+get} (int signum)
+\item 
+void \hyperlink{group__apr__signal_ga76f1701a2f33697425b3fa6fa44a192b}{apr\+\_\+signal\+\_\+init} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pglobal)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__signal_ga111744ccf1db400150bf7c14c2cfc312}{apr\+\_\+signal\+\_\+block} (int signum)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__signal_ga9d8a1d786de4ace76f711806e9e34071}{apr\+\_\+signal\+\_\+unblock} (int signum)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Signal Handling. 
+

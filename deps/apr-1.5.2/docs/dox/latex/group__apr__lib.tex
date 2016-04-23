@@ -1,0 +1,227 @@
+\hypertarget{group__apr__lib}{}\section{General Purpose Library Routines}
+\label{group__apr__lib}\index{General Purpose Library Routines@{General Purpose Library Routines}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__vformatter__buff__t}{apr\+\_\+vformatter\+\_\+buff\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__lib_ga0c9dd98f46b90b5bcd4cbf75e252d0da}{H\+U\+G\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+EN}~8192
+\item 
+\#define \hyperlink{group__apr__lib_gaf138e3f0273185532f1aa4443b40d428}{apr\+\_\+killpg}(x,  y)            ~(killpg ((x), (y)))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__vformatter__buff__t}{apr\+\_\+vformatter\+\_\+buff\+\_\+t} \hyperlink{group__apr__lib_ga5e9986deebda40f2d1cf8364fa03c3c5}{apr\+\_\+vformatter\+\_\+buff\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{group__apr__lib_ga241e929df23aede34eb3f2651cf56bc9}{apr\+\_\+filepath\+\_\+name\+\_\+get} (const char $\ast$pathname)
+\item 
+int \hyperlink{group__apr__lib_gad2cd3594aeaafd45931d1034965f48c1}{apr\+\_\+vformatter} (int($\ast$flush\+\_\+func)(\hyperlink{structapr__vformatter__buff__t}{apr\+\_\+vformatter\+\_\+buff\+\_\+t} $\ast$b), \hyperlink{structapr__vformatter__buff__t}{apr\+\_\+vformatter\+\_\+buff\+\_\+t} $\ast$c, const char $\ast$fmt, va\+\_\+list ap)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__lib_ga377e0677598745769ec6f80fecf8f859}{apr\+\_\+password\+\_\+get} (const char $\ast$prompt, char $\ast$pwbuf, apr\+\_\+size\+\_\+t $\ast$bufsize)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is collection of oddballs that didn\textquotesingle{}t fit anywhere else, and might move to more appropriate headers with the release of A\+PR 1.\+0. 
+
+\subsection{Macro Definition Documentation}
+\index{General Purpose Library Routines@{General Purpose Library Routines}!apr\+\_\+killpg@{apr\+\_\+killpg}}
+\index{apr\+\_\+killpg@{apr\+\_\+killpg}!General Purpose Library Routines@{General Purpose Library Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+killpg}{apr_killpg}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+killpg(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)~(killpg ((x), (y)))}\hypertarget{group__apr__lib_gaf138e3f0273185532f1aa4443b40d428}{}\label{group__apr__lib_gaf138e3f0273185532f1aa4443b40d428}
+apr\+\_\+killpg Small utility macros to make things easier to read. Not usually a goal, to be sure.. \index{General Purpose Library Routines@{General Purpose Library Routines}!H\+U\+G\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+EN@{H\+U\+G\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+EN}}
+\index{H\+U\+G\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+EN@{H\+U\+G\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+EN}!General Purpose Library Routines@{General Purpose Library Routines}}
+\subsubsection[{\texorpdfstring{H\+U\+G\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+EN}{HUGE_STRING_LEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+U\+G\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+EN~8192}\hypertarget{group__apr__lib_ga0c9dd98f46b90b5bcd4cbf75e252d0da}{}\label{group__apr__lib_ga0c9dd98f46b90b5bcd4cbf75e252d0da}
+A constant representing a \textquotesingle{}large\textquotesingle{} string. 
+
+\subsection{Typedef Documentation}
+\index{General Purpose Library Routines@{General Purpose Library Routines}!apr\+\_\+vformatter\+\_\+buff\+\_\+t@{apr\+\_\+vformatter\+\_\+buff\+\_\+t}}
+\index{apr\+\_\+vformatter\+\_\+buff\+\_\+t@{apr\+\_\+vformatter\+\_\+buff\+\_\+t}!General Purpose Library Routines@{General Purpose Library Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+vformatter\+\_\+buff\+\_\+t}{apr_vformatter_buff_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+vformatter\+\_\+buff\+\_\+t} {\bf apr\+\_\+vformatter\+\_\+buff\+\_\+t}}\hypertarget{group__apr__lib_ga5e9986deebda40f2d1cf8364fa03c3c5}{}\label{group__apr__lib_ga5e9986deebda40f2d1cf8364fa03c3c5}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structapr__vformatter__buff__t}{apr\+\_\+vformatter\+\_\+buff\+\_\+t} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\index{General Purpose Library Routines@{General Purpose Library Routines}!apr\+\_\+filepath\+\_\+name\+\_\+get@{apr\+\_\+filepath\+\_\+name\+\_\+get}}
+\index{apr\+\_\+filepath\+\_\+name\+\_\+get@{apr\+\_\+filepath\+\_\+name\+\_\+get}!General Purpose Library Routines@{General Purpose Library Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+filepath\+\_\+name\+\_\+get(const char $\ast$pathname)}{apr_filepath_name_get(const char *pathname)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+filepath\+\_\+name\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pathname}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__lib_ga241e929df23aede34eb3f2651cf56bc9}{}\label{group__apr__lib_ga241e929df23aede34eb3f2651cf56bc9}
+return the final element of the pathname 
+\begin{DoxyParams}{Parameters}
+{\em pathname} & The path to get the final element of \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the final element of the path 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+
+\begin{DoxyPre}
+For example:
+                "/foo/bar/gum"    -> "gum"
+                "/foo/bar/gum/"   -> ""
+                "gum"             -> "gum"
+                "bs\(\backslash\)\(\backslash\)path\(\backslash\)\(\backslash\)stuff" -> "stuff"
+\end{DoxyPre}
+ 
+\end{DoxyRemark}
+\index{General Purpose Library Routines@{General Purpose Library Routines}!apr\+\_\+password\+\_\+get@{apr\+\_\+password\+\_\+get}}
+\index{apr\+\_\+password\+\_\+get@{apr\+\_\+password\+\_\+get}!General Purpose Library Routines@{General Purpose Library Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+password\+\_\+get(const char $\ast$prompt, char $\ast$pwbuf, apr\+\_\+size\+\_\+t $\ast$bufsize)}{apr_password_get(const char *prompt, char *pwbuf, apr_size_t *bufsize)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+password\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{prompt, }
+\item[{char $\ast$}]{pwbuf, }
+\item[{apr\+\_\+size\+\_\+t $\ast$}]{bufsize}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__lib_ga377e0677598745769ec6f80fecf8f859}{}\label{group__apr__lib_ga377e0677598745769ec6f80fecf8f859}
+Display a prompt and read in the password from stdin. 
+\begin{DoxyParams}{Parameters}
+{\em prompt} & The prompt to display \\
+\hline
+{\em pwbuf} & Buffer to store the password \\
+\hline
+{\em bufsize} & The length of the password buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If the password entered must be truncated to fit in the provided buffer, A\+P\+R\+\_\+\+E\+N\+A\+M\+E\+T\+O\+O\+L\+O\+NG will be returned. Note that the bufsize paramater is passed by reference for no reason; its value will never be modified by the \hyperlink{group__apr__lib_ga377e0677598745769ec6f80fecf8f859}{apr\+\_\+password\+\_\+get()} function. 
+\end{DoxyRemark}
+\index{General Purpose Library Routines@{General Purpose Library Routines}!apr\+\_\+vformatter@{apr\+\_\+vformatter}}
+\index{apr\+\_\+vformatter@{apr\+\_\+vformatter}!General Purpose Library Routines@{General Purpose Library Routines}}
+\subsubsection[{\texorpdfstring{apr\+\_\+vformatter(int($\ast$flush\+\_\+func)(apr\+\_\+vformatter\+\_\+buff\+\_\+t $\ast$b), apr\+\_\+vformatter\+\_\+buff\+\_\+t $\ast$c, const char $\ast$fmt, va\+\_\+list ap)}{apr_vformatter(int(*flush_func)(apr_vformatter_buff_t *b), apr_vformatter_buff_t *c, const char *fmt, va_list ap)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+vformatter (
+\begin{DoxyParamCaption}
+\item[{int($\ast$)({\bf apr\+\_\+vformatter\+\_\+buff\+\_\+t} $\ast$b)}]{flush\+\_\+func, }
+\item[{{\bf apr\+\_\+vformatter\+\_\+buff\+\_\+t} $\ast$}]{c, }
+\item[{const char $\ast$}]{fmt, }
+\item[{va\+\_\+list}]{ap}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__lib_gad2cd3594aeaafd45931d1034965f48c1}{}\label{group__apr__lib_gad2cd3594aeaafd45931d1034965f48c1}
+\hyperlink{group__apr__lib_gad2cd3594aeaafd45931d1034965f48c1}{apr\+\_\+vformatter()} is a generic printf-\/style formatting routine with some extensions. 
+\begin{DoxyParams}{Parameters}
+{\em flush\+\_\+func} & The function to call when the buffer is full \\
+\hline
+{\em c} & The buffer to write to \\
+\hline
+{\em fmt} & The format string \\
+\hline
+{\em ap} & The arguments to use to fill out the format string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+
+\begin{DoxyPre}
+The extensions are:\end{DoxyPre}
+
+\end{DoxyRemark}
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyPre}\%pA takes a struct in\_addr *, and prints it as a.b.c.d\end{DoxyPre}
+
+\item 
+\begin{DoxyPre}\%pI takes an \hyperlink{structapr__sockaddr__t}{apr\_sockaddr\_t} * and prints it as a.b.c.d:port or
+[ipv6-address]:port\end{DoxyPre}
+
+\item 
+\begin{DoxyPre}\%pT takes an apr\_os\_thread\_t * and prints it in decimal
+('0' is printed if !APR\_HAS\_THREADS)\end{DoxyPre}
+
+\item 
+\begin{DoxyPre}\%pt takes an apr\_os\_thread\_t * and prints it in hexadecimal
+('0' is printed if !APR\_HAS\_THREADS)\end{DoxyPre}
+
+\item 
+\begin{DoxyPre}\%pm takes an apr\_status\_t * and prints the appropriate error
+string (from apr\_strerror) corresponding to that error code.\end{DoxyPre}
+
+\item 
+\begin{DoxyPre}\%pp takes a void * and outputs it in hex\end{DoxyPre}
+
+\item 
+\begin{DoxyPre}\%pB takes a apr\_uint32\_t * as bytes and outputs it's apr\_strfsize\end{DoxyPre}
+
+\item 
+\begin{DoxyPre}\%pF same as above, but takes a apr\_off\_t *\end{DoxyPre}
+
+\item 
+\begin{DoxyPre}\%pS same as above, but takes a apr\_size\_t *\end{DoxyPre}
+
+\end{DoxyItemize}
+
+
+\begin{DoxyPre}\%pA, \%pI, \%pT, \%pp are available from APR 1.0.0 onwards (and in 0.9.x).
+\%pt is only available from APR 1.2.0 onwards.
+\%pm, \%pB, \%pF and \%pS are only available from APR 1.3.0 onwards.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}The \%p hacks are to force gcc's printf warning code to skip
+over a pointer argument without complaining.  This does
+mean that the ANSI-style \%p (output a void * in hex format) won't
+work as expected at all, but that seems to be a fair trade-off
+for the increased robustness of having printf-warnings work.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}Additionally, apr\_vformatter allows for arbitrary output methods
+using the apr\_vformatter\_buff and flush\_func.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}The apr\_vformatter\_buff has two elements curpos and endpos.
+curpos is where apr\_vformatter will write the next byte of output.
+It proceeds writing output to curpos, and updating curpos, until
+either the end of output is reached, or curpos == endpos (i.e. the
+buffer is full).\end{DoxyPre}
+
+
+
+\begin{DoxyPre}If the end of output is reached, apr\_vformatter returns the
+number of bytes written.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}When the buffer is full, the flush\_func is called.  The flush\_func
+can return -1 to indicate that no further output should be attempted,
+and apr\_vformatter will return immediately with -1.  Otherwise
+the flush\_func should flush the buffer in whatever manner is
+appropriate, re apr\_pool\_t nitialize curpos and endpos, and return 0.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}Note that flush\_func is only invoked as a result of attempting to
+write another byte at curpos when curpos >= endpos.  So for
+example, it's possible when the output exactly matches the buffer
+space available that curpos == endpos will be true when
+apr\_vformatter returns.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}apr\_vformatter does not call out to any other code, it is entirely
+self-contained.  This allows the callers to do things which are
+otherwise "unsafe".  For example, apr\_psprintf uses the "scratch"
+space at the unallocated end of a block, and doesn't actually
+complete the allocation until apr\_vformatter returns.  apr\_psprintf
+would be completely broken if apr\_vformatter were to call anything
+that used this same pool.  Similarly http\_bprintf() uses the "scratch"
+space at the end of its output buffer, and doesn't actually note
+that the space is in use until it either has to flush the buffer
+or until apr\_vformatter returns.
+\end{DoxyPre}
+ 

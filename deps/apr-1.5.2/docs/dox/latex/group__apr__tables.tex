@@ -1,0 +1,809 @@
+\hypertarget{group__apr__tables}{}\section{Table and Array Functions}
+\label{group__apr__tables}\index{Table and Array Functions@{Table and Array Functions}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t}
+\item 
+struct \hyperlink{structapr__table__entry__t}{apr\+\_\+table\+\_\+entry\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__tables_ga84066caaa4c7632671af18c229809fc4}{A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+I\+DX}(ary,  i,  type)~(((type $\ast$)(ary)-\/$>$elts)\mbox{[}i\mbox{]})
+\item 
+\#define \hyperlink{group__apr__tables_ga1833b0f940ec03d0b95926812152e1ca}{A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+U\+SH}(ary,  type)~($\ast$((type $\ast$)\hyperlink{group__apr__tables_gac08267b32905197dd02ffff3314d9603}{apr\+\_\+array\+\_\+push}(ary)))
+\item 
+\#define \hyperlink{group__apr__tables_ga867455bb7008872e03b08c0742f9698c}{A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+S\+ET}~(0)
+\item 
+\#define \hyperlink{group__apr__tables_ga553eea6eb6fea4bafaf4cbd7acafdf5f}{A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+M\+E\+R\+GE}~(1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} \hyperlink{group__apr__tables_ga63e76617a1cd3828bbaefcbf93928ec2}{apr\+\_\+array\+\_\+header\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__table__entry__t}{apr\+\_\+table\+\_\+entry\+\_\+t} \hyperlink{group__apr__tables_gac7e0151b714e58b75c597dafed75df3f}{apr\+\_\+table\+\_\+entry\+\_\+t}
+\item 
+typedef int( \hyperlink{group__apr__tables_gabac50c7b2bae5f8cef6245d1959f8b06}{apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t}) (void $\ast$rec, const char $\ast$key, const char $\ast$value)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$ \hyperlink{group__apr__tables_gaea3005541cce67481f48ab201b5c0cf3}{apr\+\_\+table\+\_\+elts} (const \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t)
+\item 
+int \hyperlink{group__apr__tables_ga198e52683a86ecf8df9642990c220ff7}{apr\+\_\+is\+\_\+empty\+\_\+table} (const \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t)
+\item 
+int \hyperlink{group__apr__tables_gacae19f5b2182d5813f4ef3050f82ff29}{apr\+\_\+is\+\_\+empty\+\_\+array} (const \hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$a)
+\item 
+\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$ \hyperlink{group__apr__tables_ga8f4308b5a1636ec06544113a9c283304}{apr\+\_\+array\+\_\+make} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, int nelts, int elt\+\_\+size)
+\item 
+void $\ast$ \hyperlink{group__apr__tables_gac08267b32905197dd02ffff3314d9603}{apr\+\_\+array\+\_\+push} (\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$arr)
+\item 
+void $\ast$ \hyperlink{group__apr__tables_gad1ab3e0ca2de25a7ff2fbed393380972}{apr\+\_\+array\+\_\+pop} (\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$arr)
+\item 
+void \hyperlink{group__apr__tables_ga6a6436840256ed8a47b5d6be4ea2ae03}{apr\+\_\+array\+\_\+clear} (\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$arr)
+\item 
+void \hyperlink{group__apr__tables_ga532e0f0e4d1e2b7243ebdb7eb1f783c7}{apr\+\_\+array\+\_\+cat} (\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$dst, const \hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$src)
+\item 
+\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$ \hyperlink{group__apr__tables_ga327e2d5e29fa49d5a2a31295a6932950}{apr\+\_\+array\+\_\+copy} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$arr)
+\item 
+\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$ \hyperlink{group__apr__tables_ga6203e9f731bf43e7373857c38d04397d}{apr\+\_\+array\+\_\+copy\+\_\+hdr} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$arr)
+\item 
+\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$ \hyperlink{group__apr__tables_ga893cade58c5fabecb593cb4ffac7e9be}{apr\+\_\+array\+\_\+append} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$first, const \hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$second)
+\item 
+char $\ast$ \hyperlink{group__apr__tables_ga6232817e4a32ee5619c99fe55e145c7a}{apr\+\_\+array\+\_\+pstrcat} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} $\ast$arr, const char sep)
+\item 
+\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$ \hyperlink{group__apr__tables_ga7b0a16a1388c68e66bff32190cf092f6}{apr\+\_\+table\+\_\+make} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, int nelts)
+\item 
+\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$ \hyperlink{group__apr__tables_gae69f2b0b593bcdbf4c678a0f3dfde5f3}{apr\+\_\+table\+\_\+copy} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t)
+\item 
+\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$ \hyperlink{group__apr__tables_ga7e8bc16b272840302545ed4a6a082a6e}{apr\+\_\+table\+\_\+clone} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t)
+\item 
+void \hyperlink{group__apr__tables_ga03f03de545f9a18e25420f261938ffea}{apr\+\_\+table\+\_\+clear} (\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t)
+\item 
+const char $\ast$ \hyperlink{group__apr__tables_ga4db13e3915c6b9a3142b175d4c15d915}{apr\+\_\+table\+\_\+get} (const \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t, const char $\ast$key)
+\item 
+const char $\ast$ \hyperlink{group__apr__tables_gaa52177e485731ec599d04f863872c5f3}{apr\+\_\+table\+\_\+getm} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t, const char $\ast$key)
+\item 
+void \hyperlink{group__apr__tables_gaf101d92c2f6343cdf4ec062ff416f244}{apr\+\_\+table\+\_\+set} (\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t, const char $\ast$key, const char $\ast$val)
+\item 
+void \hyperlink{group__apr__tables_ga1fe7bb25d4027bb79d3c2bb41d8d8b75}{apr\+\_\+table\+\_\+setn} (\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t, const char $\ast$key, const char $\ast$val)
+\item 
+void \hyperlink{group__apr__tables_gab0df7a237feb4cd9beed201f4e236127}{apr\+\_\+table\+\_\+unset} (\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t, const char $\ast$key)
+\item 
+void \hyperlink{group__apr__tables_gad5d10eca30b76fb44d999b4dfda8d632}{apr\+\_\+table\+\_\+merge} (\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t, const char $\ast$key, const char $\ast$val)
+\item 
+void \hyperlink{group__apr__tables_ga1d50805448114c476cfcd00d5ee3e3a8}{apr\+\_\+table\+\_\+mergen} (\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t, const char $\ast$key, const char $\ast$val)
+\item 
+void \hyperlink{group__apr__tables_gab2ea874754a0fbf139b7316c1f837f12}{apr\+\_\+table\+\_\+add} (\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t, const char $\ast$key, const char $\ast$val)
+\item 
+void \hyperlink{group__apr__tables_gaff9fdbd8f499f0dfb07123230e19ea54}{apr\+\_\+table\+\_\+addn} (\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t, const char $\ast$key, const char $\ast$val)
+\item 
+\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$ \hyperlink{group__apr__tables_ga783b5c439d46c109bb45e7bc1a6d7ef2}{apr\+\_\+table\+\_\+overlay} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$overlay, const \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$base)
+\item 
+int \hyperlink{group__apr__tables_ga5917e542ae910961ee48b0ec2d09a879}{apr\+\_\+table\+\_\+do} (\hyperlink{group__apr__tables_gabac50c7b2bae5f8cef6245d1959f8b06}{apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t} $\ast$comp, void $\ast$rec, const \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t,...)
+\item 
+int \hyperlink{group__apr__tables_ga753c5247c9cd7f90c8958b64d9b6aeae}{apr\+\_\+table\+\_\+vdo} (\hyperlink{group__apr__tables_gabac50c7b2bae5f8cef6245d1959f8b06}{apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t} $\ast$comp, void $\ast$rec, const \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t, va\+\_\+list vp)
+\item 
+void \hyperlink{group__apr__tables_ga603ebc9b97703b855f8ad77640165372}{apr\+\_\+table\+\_\+overlap} (\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$a, const \hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$b, unsigned flags)
+\item 
+void \hyperlink{group__apr__tables_ga7f2a652a0cdaf8c20588823c97a3007f}{apr\+\_\+table\+\_\+compress} (\hyperlink{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{apr\+\_\+table\+\_\+t} $\ast$t, unsigned flags)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Arrays are used to store data which is referenced sequentially or as a stack. Functions are provided to push and pop individual elements as well as to operate on the entire array.
+
+Tables are used to store data which can be referenced by key. Limited capabilities are provided for tables with multiple elements which share a key; while key lookup will return only a single element, iteration is available. Additionally, a table can be compressed to resolve duplicates.
+
+Both arrays and tables may store string or binary data; some features, such as concatenation or merging of elements, work only for string data. 
+
+\subsection{Macro Definition Documentation}
+\index{Table and Array Functions@{Table and Array Functions}!A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+I\+DX@{A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+I\+DX}}
+\index{A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+I\+DX@{A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+I\+DX}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+I\+DX}{APR_ARRAY_IDX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+I\+DX(
+\begin{DoxyParamCaption}
+\item[{}]{ary, }
+\item[{}]{i, }
+\item[{}]{type}
+\end{DoxyParamCaption}
+)~(((type $\ast$)(ary)-\/$>$elts)\mbox{[}i\mbox{]})}\hypertarget{group__apr__tables_ga84066caaa4c7632671af18c229809fc4}{}\label{group__apr__tables_ga84066caaa4c7632671af18c229809fc4}
+A helper macro for accessing a member of an A\+PR array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ary} & the array \\
+\hline
+{\em i} & the index into the array to return \\
+\hline
+{\em type} & the type of the objects stored in the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the item at index i 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+U\+SH@{A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+U\+SH}}
+\index{A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+U\+SH@{A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+U\+SH}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+U\+SH}{APR_ARRAY_PUSH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+U\+SH(
+\begin{DoxyParamCaption}
+\item[{}]{ary, }
+\item[{}]{type}
+\end{DoxyParamCaption}
+)~($\ast$((type $\ast$){\bf apr\+\_\+array\+\_\+push}(ary)))}\hypertarget{group__apr__tables_ga1833b0f940ec03d0b95926812152e1ca}{}\label{group__apr__tables_ga1833b0f940ec03d0b95926812152e1ca}
+A helper macro for pushing elements into an A\+PR array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ary} & the array \\
+\hline
+{\em type} & the type of the objects stored in the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the location where the new object should be placed 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+M\+E\+R\+GE@{A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+M\+E\+R\+GE}}
+\index{A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+M\+E\+R\+GE@{A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+M\+E\+R\+GE}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+M\+E\+R\+GE}{APR_OVERLAP_TABLES_MERGE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+M\+E\+R\+GE~(1)}\hypertarget{group__apr__tables_ga553eea6eb6fea4bafaf4cbd7acafdf5f}{}\label{group__apr__tables_ga553eea6eb6fea4bafaf4cbd7acafdf5f}
+flag for overlap to use apr\+\_\+table\+\_\+mergen \index{Table and Array Functions@{Table and Array Functions}!A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+S\+ET@{A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+S\+ET}}
+\index{A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+S\+ET@{A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+S\+ET}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+S\+ET}{APR_OVERLAP_TABLES_SET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+S\+ET~(0)}\hypertarget{group__apr__tables_ga867455bb7008872e03b08c0742f9698c}{}\label{group__apr__tables_ga867455bb7008872e03b08c0742f9698c}
+flag for overlap to use apr\+\_\+table\+\_\+setn 
+
+\subsection{Typedef Documentation}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+array\+\_\+header\+\_\+t@{apr\+\_\+array\+\_\+header\+\_\+t}}
+\index{apr\+\_\+array\+\_\+header\+\_\+t@{apr\+\_\+array\+\_\+header\+\_\+t}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+array\+\_\+header\+\_\+t}{apr_array_header_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+array\+\_\+header\+\_\+t} {\bf apr\+\_\+array\+\_\+header\+\_\+t}}\hypertarget{group__apr__tables_ga63e76617a1cd3828bbaefcbf93928ec2}{}\label{group__apr__tables_ga63e76617a1cd3828bbaefcbf93928ec2}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t} 
+\end{DoxySeeAlso}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t@{apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t}}
+\index{apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t@{apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t}{apr_table_do_callback_fn_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int( apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t) (void $\ast$rec, const char $\ast$key, const char $\ast$value)}\hypertarget{group__apr__tables_gabac50c7b2bae5f8cef6245d1959f8b06}{}\label{group__apr__tables_gabac50c7b2bae5f8cef6245d1959f8b06}
+Declaration prototype for the iterator callback function of \hyperlink{group__apr__tables_ga5917e542ae910961ee48b0ec2d09a879}{apr\+\_\+table\+\_\+do()} and \hyperlink{group__apr__tables_ga753c5247c9cd7f90c8958b64d9b6aeae}{apr\+\_\+table\+\_\+vdo()}. 
+\begin{DoxyParams}{Parameters}
+{\em rec} & The data passed as the first argument to apr\+\_\+table\+\_\+\mbox{[}v\mbox{]}do() \\
+\hline
+{\em key} & The key from this iteration of the table \\
+\hline
+{\em value} & The value from this iteration of the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Iteration continues while this callback function returns non-\/zero. To export the callback function for apr\+\_\+table\+\_\+\mbox{[}v\mbox{]}do() it must be declared in the \+\_\+\+N\+O\+N\+S\+TD convention. 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+entry\+\_\+t@{apr\+\_\+table\+\_\+entry\+\_\+t}}
+\index{apr\+\_\+table\+\_\+entry\+\_\+t@{apr\+\_\+table\+\_\+entry\+\_\+t}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+entry\+\_\+t}{apr_table_entry_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+table\+\_\+entry\+\_\+t} {\bf apr\+\_\+table\+\_\+entry\+\_\+t}}\hypertarget{group__apr__tables_gac7e0151b714e58b75c597dafed75df3f}{}\label{group__apr__tables_gac7e0151b714e58b75c597dafed75df3f}
+The (opaque) structure for string-\/content tables. \index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+t@{apr\+\_\+table\+\_\+t}}
+\index{apr\+\_\+table\+\_\+t@{apr\+\_\+table\+\_\+t}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+t}{apr_table_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+table\+\_\+t} {\bf apr\+\_\+table\+\_\+t}}\hypertarget{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}{}\label{group__apr__tables_gad7ea82d6608a4a633fc3775694ab71e4}
+the table abstract data type 
+
+\subsection{Function Documentation}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+array\+\_\+append@{apr\+\_\+array\+\_\+append}}
+\index{apr\+\_\+array\+\_\+append@{apr\+\_\+array\+\_\+append}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+array\+\_\+append(apr\+\_\+pool\+\_\+t $\ast$p, const apr\+\_\+array\+\_\+header\+\_\+t $\ast$first, const apr\+\_\+array\+\_\+header\+\_\+t $\ast$second)}{apr_array_append(apr_pool_t *p, const apr_array_header_t *first, const apr_array_header_t *second)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+array\+\_\+header\+\_\+t}$\ast$ apr\+\_\+array\+\_\+append (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const {\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{first, }
+\item[{const {\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{second}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga893cade58c5fabecb593cb4ffac7e9be}{}\label{group__apr__tables_ga893cade58c5fabecb593cb4ffac7e9be}
+Append one array to the end of another, creating a new array in the process. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate the new array out of \\
+\hline
+{\em first} & The array to put first in the new array. \\
+\hline
+{\em second} & The array to put second in the new array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new array containing the data from the two arrays passed in. 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+array\+\_\+cat@{apr\+\_\+array\+\_\+cat}}
+\index{apr\+\_\+array\+\_\+cat@{apr\+\_\+array\+\_\+cat}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+array\+\_\+cat(apr\+\_\+array\+\_\+header\+\_\+t $\ast$dst, const apr\+\_\+array\+\_\+header\+\_\+t $\ast$src)}{apr_array_cat(apr_array_header_t *dst, const apr_array_header_t *src)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+array\+\_\+cat (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{dst, }
+\item[{const {\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga532e0f0e4d1e2b7243ebdb7eb1f783c7}{}\label{group__apr__tables_ga532e0f0e4d1e2b7243ebdb7eb1f783c7}
+Concatenate two arrays together. 
+\begin{DoxyParams}{Parameters}
+{\em dst} & The destination array, and the one to go first in the combined array \\
+\hline
+{\em src} & The source array to add to the destination array \\
+\hline
+\end{DoxyParams}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+array\+\_\+clear@{apr\+\_\+array\+\_\+clear}}
+\index{apr\+\_\+array\+\_\+clear@{apr\+\_\+array\+\_\+clear}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+array\+\_\+clear(apr\+\_\+array\+\_\+header\+\_\+t $\ast$arr)}{apr_array_clear(apr_array_header_t *arr)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+array\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga6a6436840256ed8a47b5d6be4ea2ae03}{}\label{group__apr__tables_ga6a6436840256ed8a47b5d6be4ea2ae03}
+Remove all elements from an array. 
+\begin{DoxyParams}{Parameters}
+{\em arr} & The array to remove all elements from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+As the underlying storage is allocated from a pool, no memory is freed by this operation, but is available for reuse. 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+array\+\_\+copy@{apr\+\_\+array\+\_\+copy}}
+\index{apr\+\_\+array\+\_\+copy@{apr\+\_\+array\+\_\+copy}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+array\+\_\+copy(apr\+\_\+pool\+\_\+t $\ast$p, const apr\+\_\+array\+\_\+header\+\_\+t $\ast$arr)}{apr_array_copy(apr_pool_t *p, const apr_array_header_t *arr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+array\+\_\+header\+\_\+t}$\ast$ apr\+\_\+array\+\_\+copy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const {\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga327e2d5e29fa49d5a2a31295a6932950}{}\label{group__apr__tables_ga327e2d5e29fa49d5a2a31295a6932950}
+Copy the entire array. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate the copy of the array out of \\
+\hline
+{\em arr} & The array to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An exact copy of the array passed in 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The alternate apr\+\_\+array\+\_\+copy\+\_\+hdr copies only the header, and arranges for the elements to be copied if (and only if) the code subsequently does a push or arraycat. 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+array\+\_\+copy\+\_\+hdr@{apr\+\_\+array\+\_\+copy\+\_\+hdr}}
+\index{apr\+\_\+array\+\_\+copy\+\_\+hdr@{apr\+\_\+array\+\_\+copy\+\_\+hdr}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+array\+\_\+copy\+\_\+hdr(apr\+\_\+pool\+\_\+t $\ast$p, const apr\+\_\+array\+\_\+header\+\_\+t $\ast$arr)}{apr_array_copy_hdr(apr_pool_t *p, const apr_array_header_t *arr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+array\+\_\+header\+\_\+t}$\ast$ apr\+\_\+array\+\_\+copy\+\_\+hdr (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const {\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga6203e9f731bf43e7373857c38d04397d}{}\label{group__apr__tables_ga6203e9f731bf43e7373857c38d04397d}
+Copy the headers of the array, and arrange for the elements to be copied if and only if the code subsequently does a push or arraycat. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate the copy of the array out of \\
+\hline
+{\em arr} & The array to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An exact copy of the array passed in 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The alternate apr\+\_\+array\+\_\+copy copies the {\itshape entire} array. 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+array\+\_\+make@{apr\+\_\+array\+\_\+make}}
+\index{apr\+\_\+array\+\_\+make@{apr\+\_\+array\+\_\+make}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+array\+\_\+make(apr\+\_\+pool\+\_\+t $\ast$p, int nelts, int elt\+\_\+size)}{apr_array_make(apr_pool_t *p, int nelts, int elt_size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+array\+\_\+header\+\_\+t}$\ast$ apr\+\_\+array\+\_\+make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{int}]{nelts, }
+\item[{int}]{elt\+\_\+size}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga8f4308b5a1636ec06544113a9c283304}{}\label{group__apr__tables_ga8f4308b5a1636ec06544113a9c283304}
+Create an array. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate the memory out of \\
+\hline
+{\em nelts} & the number of elements in the initial array \\
+\hline
+{\em elt\+\_\+size} & The size of each element in the array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new array 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+array\+\_\+pop@{apr\+\_\+array\+\_\+pop}}
+\index{apr\+\_\+array\+\_\+pop@{apr\+\_\+array\+\_\+pop}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+array\+\_\+pop(apr\+\_\+array\+\_\+header\+\_\+t $\ast$arr)}{apr_array_pop(apr_array_header_t *arr)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+array\+\_\+pop (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_gad1ab3e0ca2de25a7ff2fbed393380972}{}\label{group__apr__tables_gad1ab3e0ca2de25a7ff2fbed393380972}
+Remove an element from an array (as a first-\/in, last-\/out stack). 
+\begin{DoxyParams}{Parameters}
+{\em arr} & The array to remove an element from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Location of the element in the array. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+If there are no elements in the array, N\+U\+LL is returned. 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+array\+\_\+pstrcat@{apr\+\_\+array\+\_\+pstrcat}}
+\index{apr\+\_\+array\+\_\+pstrcat@{apr\+\_\+array\+\_\+pstrcat}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+array\+\_\+pstrcat(apr\+\_\+pool\+\_\+t $\ast$p, const apr\+\_\+array\+\_\+header\+\_\+t $\ast$arr, const char sep)}{apr_array_pstrcat(apr_pool_t *p, const apr_array_header_t *arr, const char sep)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+array\+\_\+pstrcat (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const {\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{arr, }
+\item[{const char}]{sep}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga6232817e4a32ee5619c99fe55e145c7a}{}\label{group__apr__tables_ga6232817e4a32ee5619c99fe55e145c7a}
+Generate a new string from the apr\+\_\+pool\+\_\+t containing the concatenated sequence of substrings referenced as elements within the array. The string will be empty if all substrings are empty or null, or if there are no elements in the array. If sep is non-\/\+N\+UL, it will be inserted between elements as a separator. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate the string out of \\
+\hline
+{\em arr} & The array to generate the string from \\
+\hline
+{\em sep} & The separator to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string containing all of the data in the array. 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+array\+\_\+push@{apr\+\_\+array\+\_\+push}}
+\index{apr\+\_\+array\+\_\+push@{apr\+\_\+array\+\_\+push}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+array\+\_\+push(apr\+\_\+array\+\_\+header\+\_\+t $\ast$arr)}{apr_array_push(apr_array_header_t *arr)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\+\_\+array\+\_\+push (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_gac08267b32905197dd02ffff3314d9603}{}\label{group__apr__tables_gac08267b32905197dd02ffff3314d9603}
+Add a new element to an array (as a first-\/in, last-\/out stack). 
+\begin{DoxyParams}{Parameters}
+{\em arr} & The array to add an element to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Location for the new element in the array. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+If there are no free spots in the array, then this function will allocate new space for the new element. 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+is\+\_\+empty\+\_\+array@{apr\+\_\+is\+\_\+empty\+\_\+array}}
+\index{apr\+\_\+is\+\_\+empty\+\_\+array@{apr\+\_\+is\+\_\+empty\+\_\+array}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+is\+\_\+empty\+\_\+array(const apr\+\_\+array\+\_\+header\+\_\+t $\ast$a)}{apr_is_empty_array(const apr_array_header_t *a)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+is\+\_\+empty\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+array\+\_\+header\+\_\+t} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_gacae19f5b2182d5813f4ef3050f82ff29}{}\label{group__apr__tables_gacae19f5b2182d5813f4ef3050f82ff29}
+Determine if the array is empty (either N\+U\+LL or having no elements). 
+\begin{DoxyParams}{Parameters}
+{\em a} & The array to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if empty, False otherwise 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+is\+\_\+empty\+\_\+table@{apr\+\_\+is\+\_\+empty\+\_\+table}}
+\index{apr\+\_\+is\+\_\+empty\+\_\+table@{apr\+\_\+is\+\_\+empty\+\_\+table}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+is\+\_\+empty\+\_\+table(const apr\+\_\+table\+\_\+t $\ast$t)}{apr_is_empty_table(const apr_table_t *t)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+is\+\_\+empty\+\_\+table (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+table\+\_\+t} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga198e52683a86ecf8df9642990c220ff7}{}\label{group__apr__tables_ga198e52683a86ecf8df9642990c220ff7}
+Determine if the table is empty (either N\+U\+LL or having no elements). 
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if empty, False otherwise 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+add@{apr\+\_\+table\+\_\+add}}
+\index{apr\+\_\+table\+\_\+add@{apr\+\_\+table\+\_\+add}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+add(apr\+\_\+table\+\_\+t $\ast$t, const char $\ast$key, const char $\ast$val)}{apr_table_add(apr_table_t *t, const char *key, const char *val)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+table\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_gab2ea874754a0fbf139b7316c1f837f12}{}\label{group__apr__tables_gab2ea874754a0fbf139b7316c1f837f12}
+Add data to a table, regardless of whether there is another element with the same key. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to add to \\
+\hline
+{\em key} & The key to use \\
+\hline
+{\em val} & The value to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+When adding data, this function makes a copy of both the key and the value. 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+addn@{apr\+\_\+table\+\_\+addn}}
+\index{apr\+\_\+table\+\_\+addn@{apr\+\_\+table\+\_\+addn}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+addn(apr\+\_\+table\+\_\+t $\ast$t, const char $\ast$key, const char $\ast$val)}{apr_table_addn(apr_table_t *t, const char *key, const char *val)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+table\+\_\+addn (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_gaff9fdbd8f499f0dfb07123230e19ea54}{}\label{group__apr__tables_gaff9fdbd8f499f0dfb07123230e19ea54}
+Add data to a table, regardless of whether there is another element with the same key. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to add to \\
+\hline
+{\em key} & The key to use \\
+\hline
+{\em val} & The value to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+When adding data, this function does not make a copy of the key or the value, so care should be taken to ensure that the values will not change after they have been added. 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+clear@{apr\+\_\+table\+\_\+clear}}
+\index{apr\+\_\+table\+\_\+clear@{apr\+\_\+table\+\_\+clear}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+clear(apr\+\_\+table\+\_\+t $\ast$t)}{apr_table_clear(apr_table_t *t)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+table\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+t} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga03f03de545f9a18e25420f261938ffea}{}\label{group__apr__tables_ga03f03de545f9a18e25420f261938ffea}
+Delete all of the elements from a table. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to clear \\
+\hline
+\end{DoxyParams}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+clone@{apr\+\_\+table\+\_\+clone}}
+\index{apr\+\_\+table\+\_\+clone@{apr\+\_\+table\+\_\+clone}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+clone(apr\+\_\+pool\+\_\+t $\ast$p, const apr\+\_\+table\+\_\+t $\ast$t)}{apr_table_clone(apr_pool_t *p, const apr_table_t *t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+table\+\_\+t}$\ast$ apr\+\_\+table\+\_\+clone (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const {\bf apr\+\_\+table\+\_\+t} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga7e8bc16b272840302545ed4a6a082a6e}{}\label{group__apr__tables_ga7e8bc16b272840302545ed4a6a082a6e}
+Create a new table whose contents are deep copied from the given table. A deep copy operation copies all fields, and makes copies of dynamically allocated memory pointed to by the fields. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate the new table out of \\
+\hline
+{\em t} & The table to clone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A deep copy of the table passed in 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+compress@{apr\+\_\+table\+\_\+compress}}
+\index{apr\+\_\+table\+\_\+compress@{apr\+\_\+table\+\_\+compress}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+compress(apr\+\_\+table\+\_\+t $\ast$t, unsigned flags)}{apr_table_compress(apr_table_t *t, unsigned flags)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+table\+\_\+compress (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{unsigned}]{flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga7f2a652a0cdaf8c20588823c97a3007f}{}\label{group__apr__tables_ga7f2a652a0cdaf8c20588823c97a3007f}
+Eliminate redundant entries in a table by either overwriting or merging duplicates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Table. \\
+\hline
+{\em flags} & A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+M\+E\+R\+GE to merge, or A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+S\+ET to overwrite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+When merging duplicates, the two values are concatenated, separated by the string \char`\"{}, \char`\"{}. 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+copy@{apr\+\_\+table\+\_\+copy}}
+\index{apr\+\_\+table\+\_\+copy@{apr\+\_\+table\+\_\+copy}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+copy(apr\+\_\+pool\+\_\+t $\ast$p, const apr\+\_\+table\+\_\+t $\ast$t)}{apr_table_copy(apr_pool_t *p, const apr_table_t *t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+table\+\_\+t}$\ast$ apr\+\_\+table\+\_\+copy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const {\bf apr\+\_\+table\+\_\+t} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_gae69f2b0b593bcdbf4c678a0f3dfde5f3}{}\label{group__apr__tables_gae69f2b0b593bcdbf4c678a0f3dfde5f3}
+Create a new table and copy another table into it. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate the new table out of \\
+\hline
+{\em t} & The table to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A copy of the table passed in 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+The table keys and respective values are not copied 
+\end{DoxyWarning}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+do@{apr\+\_\+table\+\_\+do}}
+\index{apr\+\_\+table\+\_\+do@{apr\+\_\+table\+\_\+do}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+do(apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t $\ast$comp, void $\ast$rec, const apr\+\_\+table\+\_\+t $\ast$t,...)}{apr_table_do(apr_table_do_callback_fn_t *comp, void *rec, const apr_table_t *t,...)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+table\+\_\+do (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t} $\ast$}]{comp, }
+\item[{void $\ast$}]{rec, }
+\item[{const {\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga5917e542ae910961ee48b0ec2d09a879}{}\label{group__apr__tables_ga5917e542ae910961ee48b0ec2d09a879}
+Iterate over a table running the provided function once for every element in the table. The varargs array must be a list of zero or more (char $\ast$) keys followed by a N\+U\+LL pointer. If zero keys are given, the 
+\begin{DoxyParams}{Parameters}
+{\em comp} & function will be invoked for every element in the table. Otherwise, the function is invoked only for those elements matching the keys specified.\\
+\hline
+\end{DoxyParams}
+If an invocation of the 
+\begin{DoxyParams}{Parameters}
+{\em comp} & function returns zero, iteration will continue using the next specified key, if any.\\
+\hline
+{\em comp} & The function to run \\
+\hline
+{\em rec} & The data to pass as the first argument to the function \\
+\hline
+{\em t} & The table to iterate over \\
+\hline
+{\em ...} & A varargs array of zero or more (char $\ast$) keys followed by N\+U\+LL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if one of the comp() iterations returned zero; T\+R\+UE if all iterations returned non-\/zero 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__tables_gabac50c7b2bae5f8cef6245d1959f8b06}{apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t} 
+\end{DoxySeeAlso}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+elts@{apr\+\_\+table\+\_\+elts}}
+\index{apr\+\_\+table\+\_\+elts@{apr\+\_\+table\+\_\+elts}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+elts(const apr\+\_\+table\+\_\+t $\ast$t)}{apr_table_elts(const apr_table_t *t)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\+\_\+array\+\_\+header\+\_\+t}$\ast$ apr\+\_\+table\+\_\+elts (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+table\+\_\+t} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_gaea3005541cce67481f48ab201b5c0cf3}{}\label{group__apr__tables_gaea3005541cce67481f48ab201b5c0cf3}
+Get the elements from a table. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array containing the contents of the table 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+get@{apr\+\_\+table\+\_\+get}}
+\index{apr\+\_\+table\+\_\+get@{apr\+\_\+table\+\_\+get}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+get(const apr\+\_\+table\+\_\+t $\ast$t, const char $\ast$key)}{apr_table_get(const apr_table_t *t, const char *key)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+table\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga4db13e3915c6b9a3142b175d4c15d915}{}\label{group__apr__tables_ga4db13e3915c6b9a3142b175d4c15d915}
+Get the value associated with a given key from the table. After this call, the data is still in the table. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to search for the key \\
+\hline
+{\em key} & The key to search for (case does not matter) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value associated with the key, or N\+U\+LL if the key does not exist. 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+getm@{apr\+\_\+table\+\_\+getm}}
+\index{apr\+\_\+table\+\_\+getm@{apr\+\_\+table\+\_\+getm}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+getm(apr\+\_\+pool\+\_\+t $\ast$p, const apr\+\_\+table\+\_\+t $\ast$t, const char $\ast$key)}{apr_table_getm(apr_pool_t *p, const apr_table_t *t, const char *key)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\+\_\+table\+\_\+getm (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const {\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_gaa52177e485731ec599d04f863872c5f3}{}\label{group__apr__tables_gaa52177e485731ec599d04f863872c5f3}
+Get values associated with a given key from the table. If more than one value exists, return a comma separated list of values. After this call, the data is still in the table. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate the combined value from, if necessary \\
+\hline
+{\em t} & The table to search for the key \\
+\hline
+{\em key} & The key to search for (case does not matter) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value associated with the key, or N\+U\+LL if the key does not exist. 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+make@{apr\+\_\+table\+\_\+make}}
+\index{apr\+\_\+table\+\_\+make@{apr\+\_\+table\+\_\+make}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+make(apr\+\_\+pool\+\_\+t $\ast$p, int nelts)}{apr_table_make(apr_pool_t *p, int nelts)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+table\+\_\+t}$\ast$ apr\+\_\+table\+\_\+make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{int}]{nelts}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga7b0a16a1388c68e66bff32190cf092f6}{}\label{group__apr__tables_ga7b0a16a1388c68e66bff32190cf092f6}
+Make a new table. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to allocate the pool out of \\
+\hline
+{\em nelts} & The number of elements in the initial table. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new table. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+This table can only store text data 
+\end{DoxyWarning}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+merge@{apr\+\_\+table\+\_\+merge}}
+\index{apr\+\_\+table\+\_\+merge@{apr\+\_\+table\+\_\+merge}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+merge(apr\+\_\+table\+\_\+t $\ast$t, const char $\ast$key, const char $\ast$val)}{apr_table_merge(apr_table_t *t, const char *key, const char *val)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+table\+\_\+merge (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_gad5d10eca30b76fb44d999b4dfda8d632}{}\label{group__apr__tables_gad5d10eca30b76fb44d999b4dfda8d632}
+Add data to a table by merging the value with data that has already been stored. The merging is done by concatenating the two values, separated by the string \char`\"{}, \char`\"{}. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to search for the data \\
+\hline
+{\em key} & The key to merge data for (case does not matter) \\
+\hline
+{\em val} & The data to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If the key is not found, then this function acts like apr\+\_\+table\+\_\+add 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+mergen@{apr\+\_\+table\+\_\+mergen}}
+\index{apr\+\_\+table\+\_\+mergen@{apr\+\_\+table\+\_\+mergen}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+mergen(apr\+\_\+table\+\_\+t $\ast$t, const char $\ast$key, const char $\ast$val)}{apr_table_mergen(apr_table_t *t, const char *key, const char *val)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+table\+\_\+mergen (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga1d50805448114c476cfcd00d5ee3e3a8}{}\label{group__apr__tables_ga1d50805448114c476cfcd00d5ee3e3a8}
+Add data to a table by merging the value with data that has already been stored. The merging is done by concatenating the two values, separated by the string \char`\"{}, \char`\"{}. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to search for the data \\
+\hline
+{\em key} & The key to merge data for (case does not matter) \\
+\hline
+{\em val} & The data to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If the key is not found, then this function acts like apr\+\_\+table\+\_\+addn 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+overlap@{apr\+\_\+table\+\_\+overlap}}
+\index{apr\+\_\+table\+\_\+overlap@{apr\+\_\+table\+\_\+overlap}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+overlap(apr\+\_\+table\+\_\+t $\ast$a, const apr\+\_\+table\+\_\+t $\ast$b, unsigned flags)}{apr_table_overlap(apr_table_t *a, const apr_table_t *b, unsigned flags)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+table\+\_\+overlap (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+t} $\ast$}]{a, }
+\item[{const {\bf apr\+\_\+table\+\_\+t} $\ast$}]{b, }
+\item[{unsigned}]{flags}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga603ebc9b97703b855f8ad77640165372}{}\label{group__apr__tables_ga603ebc9b97703b855f8ad77640165372}
+For each element in table b, either use setn or mergen to add the data to table a. Which method is used is determined by the flags passed in. 
+\begin{DoxyParams}{Parameters}
+{\em a} & The table to add the data to. \\
+\hline
+{\em b} & The table to iterate over, adding its data to table a \\
+\hline
+{\em flags} & How to add the table to table a. One of\+: A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+S\+ET Use apr\+\_\+table\+\_\+setn A\+P\+R\+\_\+\+O\+V\+E\+R\+L\+A\+P\+\_\+\+T\+A\+B\+L\+E\+S\+\_\+\+M\+E\+R\+GE Use apr\+\_\+table\+\_\+mergen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+When merging duplicates, the two values are concatenated, separated by the string \char`\"{}, \char`\"{}. 
+
+This function is highly optimized, and uses less memory and C\+PU cycles than a function that just loops through table b calling other functions. Conceptually, apr\+\_\+table\+\_\+overlap does this\+:
+\end{DoxyRemark}
+
+\begin{DoxyPre}
+ \hyperlink{structapr__array__header__t}{apr\_array\_header\_t} *barr = apr\_table\_elts(b);
+ \hyperlink{structapr__table__entry__t}{apr\_table\_entry\_t} *belt = (\hyperlink{structapr__table__entry__t}{apr\_table\_entry\_t} *)barr->elts;
+ int i;\end{DoxyPre}
+
+
+
+\begin{DoxyPre} for (i = 0; i < barr->nelts; ++i) \{
+     if (flags \& APR\_OVERLAP\_TABLES\_MERGE) \{
+         apr\_table\_mergen(a, belt[i].key, belt[i].val);
+     \}
+     else \{
+         apr\_table\_setn(a, belt[i].key, belt[i].val);
+     \}
+ \}
+\end{DoxyPre}
+
+
+Except that it is more efficient (less space and cpu-\/time) especially when b has many elements.
+
+Notice the assumptions on the keys and values in b -- they must be in an ancestor of a\textquotesingle{}s pool. In practice b and a are usually from the same pool. \index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+overlay@{apr\+\_\+table\+\_\+overlay}}
+\index{apr\+\_\+table\+\_\+overlay@{apr\+\_\+table\+\_\+overlay}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+overlay(apr\+\_\+pool\+\_\+t $\ast$p, const apr\+\_\+table\+\_\+t $\ast$overlay, const apr\+\_\+table\+\_\+t $\ast$base)}{apr_table_overlay(apr_pool_t *p, const apr_table_t *overlay, const apr_table_t *base)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+table\+\_\+t}$\ast$ apr\+\_\+table\+\_\+overlay (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{p, }
+\item[{const {\bf apr\+\_\+table\+\_\+t} $\ast$}]{overlay, }
+\item[{const {\bf apr\+\_\+table\+\_\+t} $\ast$}]{base}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga783b5c439d46c109bb45e7bc1a6d7ef2}{}\label{group__apr__tables_ga783b5c439d46c109bb45e7bc1a6d7ef2}
+Merge two tables into one new table. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to use for the new table \\
+\hline
+{\em overlay} & The first table to put in the new table \\
+\hline
+{\em base} & The table to add at the end of the new table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new table containing all of the data from the two passed in 
+\end{DoxyReturn}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+set@{apr\+\_\+table\+\_\+set}}
+\index{apr\+\_\+table\+\_\+set@{apr\+\_\+table\+\_\+set}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+set(apr\+\_\+table\+\_\+t $\ast$t, const char $\ast$key, const char $\ast$val)}{apr_table_set(apr_table_t *t, const char *key, const char *val)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+table\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_gaf101d92c2f6343cdf4ec062ff416f244}{}\label{group__apr__tables_gaf101d92c2f6343cdf4ec062ff416f244}
+Add a key/value pair to a table. If another element already exists with the same key, this will overwrite the old data. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to add the data to. \\
+\hline
+{\em key} & The key to use (case does not matter) \\
+\hline
+{\em val} & The value to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+When adding data, this function makes a copy of both the key and the value. 
+\end{DoxyRemark}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+setn@{apr\+\_\+table\+\_\+setn}}
+\index{apr\+\_\+table\+\_\+setn@{apr\+\_\+table\+\_\+setn}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+setn(apr\+\_\+table\+\_\+t $\ast$t, const char $\ast$key, const char $\ast$val)}{apr_table_setn(apr_table_t *t, const char *key, const char *val)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+table\+\_\+setn (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga1fe7bb25d4027bb79d3c2bb41d8d8b75}{}\label{group__apr__tables_ga1fe7bb25d4027bb79d3c2bb41d8d8b75}
+Add a key/value pair to a table. If another element already exists with the same key, this will overwrite the old data. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to add the data to. \\
+\hline
+{\em key} & The key to use (case does not matter) \\
+\hline
+{\em val} & The value to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+When adding data, this function does not make a copy of the key or the value, so care should be taken to ensure that the values will not change after they have been added.. 
+\end{DoxyWarning}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+unset@{apr\+\_\+table\+\_\+unset}}
+\index{apr\+\_\+table\+\_\+unset@{apr\+\_\+table\+\_\+unset}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+unset(apr\+\_\+table\+\_\+t $\ast$t, const char $\ast$key)}{apr_table_unset(apr_table_t *t, const char *key)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+table\+\_\+unset (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_gab0df7a237feb4cd9beed201f4e236127}{}\label{group__apr__tables_gab0df7a237feb4cd9beed201f4e236127}
+Remove data from the table. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to remove data from \\
+\hline
+{\em key} & The key of the data being removed (case does not matter) \\
+\hline
+\end{DoxyParams}
+\index{Table and Array Functions@{Table and Array Functions}!apr\+\_\+table\+\_\+vdo@{apr\+\_\+table\+\_\+vdo}}
+\index{apr\+\_\+table\+\_\+vdo@{apr\+\_\+table\+\_\+vdo}!Table and Array Functions@{Table and Array Functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+table\+\_\+vdo(apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t $\ast$comp, void $\ast$rec, const apr\+\_\+table\+\_\+t $\ast$t, va\+\_\+list vp)}{apr_table_vdo(apr_table_do_callback_fn_t *comp, void *rec, const apr_table_t *t, va_list vp)}}]{\setlength{\rightskip}{0pt plus 5cm}int apr\+\_\+table\+\_\+vdo (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t} $\ast$}]{comp, }
+\item[{void $\ast$}]{rec, }
+\item[{const {\bf apr\+\_\+table\+\_\+t} $\ast$}]{t, }
+\item[{va\+\_\+list}]{vp}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__tables_ga753c5247c9cd7f90c8958b64d9b6aeae}{}\label{group__apr__tables_ga753c5247c9cd7f90c8958b64d9b6aeae}
+Iterate over a table running the provided function once for every element in the table. The 
+\begin{DoxyParams}{Parameters}
+{\em vp} & varargs parameter must be a list of zero or more (char $\ast$) keys followed by a N\+U\+LL pointer. If zero keys are given, the \\
+\hline
+{\em comp} & function will be invoked for every element in the table. Otherwise, the function is invoked only for those elements matching the keys specified.\\
+\hline
+\end{DoxyParams}
+If an invocation of the 
+\begin{DoxyParams}{Parameters}
+{\em comp} & function returns zero, iteration will continue using the next specified key, if any.\\
+\hline
+{\em comp} & The function to run \\
+\hline
+{\em rec} & The data to pass as the first argument to the function \\
+\hline
+{\em t} & The table to iterate over \\
+\hline
+{\em vp} & List of zero or more (char $\ast$) keys followed by N\+U\+LL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if one of the comp() iterations returned zero; T\+R\+UE if all iterations returned non-\/zero 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__apr__tables_gabac50c7b2bae5f8cef6245d1959f8b06}{apr\+\_\+table\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t} 
+\end{DoxySeeAlso}

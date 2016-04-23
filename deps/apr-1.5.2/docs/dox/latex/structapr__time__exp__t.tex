@@ -1,0 +1,79 @@
+\hypertarget{structapr__time__exp__t}{}\section{apr\+\_\+time\+\_\+exp\+\_\+t Struct Reference}
+\label{structapr__time__exp__t}\index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+
+
+{\ttfamily \#include $<$apr\+\_\+time.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__time__exp__t_ac5f11e3c1f5a30d357df2108296a8d30}{tm\+\_\+usec}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__time__exp__t_a2c29c99a75b55237917cb05ebae6706c}{tm\+\_\+sec}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__time__exp__t_a56a380db482ba5b2bef43351faad27fb}{tm\+\_\+min}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__time__exp__t_a2dbab1d10ed6234c8e9e714e13b7911c}{tm\+\_\+hour}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__time__exp__t_a6c09a274f011841e9e988c3c9504848a}{tm\+\_\+mday}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__time__exp__t_a746f38956dfeb6be3bd17282791e3577}{tm\+\_\+mon}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__time__exp__t_a35c32245be49279a6689e34bcd6e534a}{tm\+\_\+year}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__time__exp__t_a57e892bbf3c52df34dcff2c6a9f1adbf}{tm\+\_\+wday}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__time__exp__t_aa15c7ab0d7e2a974e89cc1470f1583ab}{tm\+\_\+yday}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__time__exp__t_a4d899f1fb9fde3c6b6893941fa81b1c8}{tm\+\_\+isdst}
+\item 
+apr\+\_\+int32\+\_\+t \hyperlink{structapr__time__exp__t_a1102ca16ed70b1c707473431eed58d7b}{tm\+\_\+gmtoff}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a structure similar to A\+N\+SI struct tm with the following differences\+:
+\begin{DoxyItemize}
+\item tm\+\_\+usec isn\textquotesingle{}t an A\+N\+SI field
+\item tm\+\_\+gmtoff isn\textquotesingle{}t an A\+N\+SI field (it\textquotesingle{}s a B\+S\+Dism) 
+\end{DoxyItemize}
+
+\subsection{Field Documentation}
+\index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}!tm\+\_\+gmtoff@{tm\+\_\+gmtoff}}
+\index{tm\+\_\+gmtoff@{tm\+\_\+gmtoff}!apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+\subsubsection[{\texorpdfstring{tm\+\_\+gmtoff}{tm_gmtoff}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+time\+\_\+exp\+\_\+t\+::tm\+\_\+gmtoff}\hypertarget{structapr__time__exp__t_a1102ca16ed70b1c707473431eed58d7b}{}\label{structapr__time__exp__t_a1102ca16ed70b1c707473431eed58d7b}
+seconds east of U\+TC \index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}!tm\+\_\+hour@{tm\+\_\+hour}}
+\index{tm\+\_\+hour@{tm\+\_\+hour}!apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+\subsubsection[{\texorpdfstring{tm\+\_\+hour}{tm_hour}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+time\+\_\+exp\+\_\+t\+::tm\+\_\+hour}\hypertarget{structapr__time__exp__t_a2dbab1d10ed6234c8e9e714e13b7911c}{}\label{structapr__time__exp__t_a2dbab1d10ed6234c8e9e714e13b7911c}
+(0-\/23) hours past midnight \index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}!tm\+\_\+isdst@{tm\+\_\+isdst}}
+\index{tm\+\_\+isdst@{tm\+\_\+isdst}!apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+\subsubsection[{\texorpdfstring{tm\+\_\+isdst}{tm_isdst}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+time\+\_\+exp\+\_\+t\+::tm\+\_\+isdst}\hypertarget{structapr__time__exp__t_a4d899f1fb9fde3c6b6893941fa81b1c8}{}\label{structapr__time__exp__t_a4d899f1fb9fde3c6b6893941fa81b1c8}
+daylight saving time \index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}!tm\+\_\+mday@{tm\+\_\+mday}}
+\index{tm\+\_\+mday@{tm\+\_\+mday}!apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+\subsubsection[{\texorpdfstring{tm\+\_\+mday}{tm_mday}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+time\+\_\+exp\+\_\+t\+::tm\+\_\+mday}\hypertarget{structapr__time__exp__t_a6c09a274f011841e9e988c3c9504848a}{}\label{structapr__time__exp__t_a6c09a274f011841e9e988c3c9504848a}
+(1-\/31) day of the month \index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}!tm\+\_\+min@{tm\+\_\+min}}
+\index{tm\+\_\+min@{tm\+\_\+min}!apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+\subsubsection[{\texorpdfstring{tm\+\_\+min}{tm_min}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+time\+\_\+exp\+\_\+t\+::tm\+\_\+min}\hypertarget{structapr__time__exp__t_a56a380db482ba5b2bef43351faad27fb}{}\label{structapr__time__exp__t_a56a380db482ba5b2bef43351faad27fb}
+(0-\/59) minutes past tm\+\_\+hour \index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}!tm\+\_\+mon@{tm\+\_\+mon}}
+\index{tm\+\_\+mon@{tm\+\_\+mon}!apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+\subsubsection[{\texorpdfstring{tm\+\_\+mon}{tm_mon}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+time\+\_\+exp\+\_\+t\+::tm\+\_\+mon}\hypertarget{structapr__time__exp__t_a746f38956dfeb6be3bd17282791e3577}{}\label{structapr__time__exp__t_a746f38956dfeb6be3bd17282791e3577}
+(0-\/11) month of the year \index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}!tm\+\_\+sec@{tm\+\_\+sec}}
+\index{tm\+\_\+sec@{tm\+\_\+sec}!apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+\subsubsection[{\texorpdfstring{tm\+\_\+sec}{tm_sec}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+time\+\_\+exp\+\_\+t\+::tm\+\_\+sec}\hypertarget{structapr__time__exp__t_a2c29c99a75b55237917cb05ebae6706c}{}\label{structapr__time__exp__t_a2c29c99a75b55237917cb05ebae6706c}
+(0-\/61) seconds past tm\+\_\+min \index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}!tm\+\_\+usec@{tm\+\_\+usec}}
+\index{tm\+\_\+usec@{tm\+\_\+usec}!apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+\subsubsection[{\texorpdfstring{tm\+\_\+usec}{tm_usec}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+time\+\_\+exp\+\_\+t\+::tm\+\_\+usec}\hypertarget{structapr__time__exp__t_ac5f11e3c1f5a30d357df2108296a8d30}{}\label{structapr__time__exp__t_ac5f11e3c1f5a30d357df2108296a8d30}
+microseconds past tm\+\_\+sec \index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}!tm\+\_\+wday@{tm\+\_\+wday}}
+\index{tm\+\_\+wday@{tm\+\_\+wday}!apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+\subsubsection[{\texorpdfstring{tm\+\_\+wday}{tm_wday}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+time\+\_\+exp\+\_\+t\+::tm\+\_\+wday}\hypertarget{structapr__time__exp__t_a57e892bbf3c52df34dcff2c6a9f1adbf}{}\label{structapr__time__exp__t_a57e892bbf3c52df34dcff2c6a9f1adbf}
+(0-\/6) days since Sunday \index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}!tm\+\_\+yday@{tm\+\_\+yday}}
+\index{tm\+\_\+yday@{tm\+\_\+yday}!apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+\subsubsection[{\texorpdfstring{tm\+\_\+yday}{tm_yday}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+time\+\_\+exp\+\_\+t\+::tm\+\_\+yday}\hypertarget{structapr__time__exp__t_aa15c7ab0d7e2a974e89cc1470f1583ab}{}\label{structapr__time__exp__t_aa15c7ab0d7e2a974e89cc1470f1583ab}
+(0-\/365) days since January 1 \index{apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}!tm\+\_\+year@{tm\+\_\+year}}
+\index{tm\+\_\+year@{tm\+\_\+year}!apr\+\_\+time\+\_\+exp\+\_\+t@{apr\+\_\+time\+\_\+exp\+\_\+t}}
+\subsubsection[{\texorpdfstring{tm\+\_\+year}{tm_year}}]{\setlength{\rightskip}{0pt plus 5cm}apr\+\_\+int32\+\_\+t apr\+\_\+time\+\_\+exp\+\_\+t\+::tm\+\_\+year}\hypertarget{structapr__time__exp__t_a35c32245be49279a6689e34bcd6e534a}{}\label{structapr__time__exp__t_a35c32245be49279a6689e34bcd6e534a}
+year since 1900 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{apr__time_8h}{apr\+\_\+time.\+h}\end{DoxyCompactItemize}

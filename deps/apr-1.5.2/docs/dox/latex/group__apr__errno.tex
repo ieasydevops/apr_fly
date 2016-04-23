@@ -1,0 +1,275 @@
+\hypertarget{group__apr__errno}{}\section{Error Codes}
+\label{group__apr__errno}\index{Error Codes@{Error Codes}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___a_p_r___e_r_r_o_r__map}{A\+P\+R Error Space}
+\item 
+\hyperlink{group___a_p_r___error}{A\+P\+R Error Values}
+\item 
+\hyperlink{group___a_p_r___s_t_a_t_u_s___i_s}{Status Value Tests}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}(e)~(e == 0 ? \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS} \+: e + \hyperlink{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR})
+\item 
+\#define \hyperlink{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}(e)~(e)
+\item 
+\#define \hyperlink{group__apr__errno_ga2385cae04b04afbdcb65f1a45c4d8506}{A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}(e)~(e == 0 ? \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS} \+: e -\/ \hyperlink{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR})
+\item 
+\#define \hyperlink{group__apr__errno_ga5b08e985b7a8c59c817abf99a16b758d}{A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}(e)    ~(e)
+\item 
+\#define \hyperlink{group__apr__errno_ga8d5ccb0b1ce67ba5ee6d51473baa6c3c}{apr\+\_\+get\+\_\+os\+\_\+error}()    ~(errno)
+\item 
+\#define \hyperlink{group__apr__errno_gaea601f23bedeaca52fd1f5d705ec7543}{apr\+\_\+set\+\_\+os\+\_\+error}(e)  ~(errno = (e))
+\item 
+\#define \hyperlink{group__apr__errno_ga66e54f155b4a80ac7df9118af9bd896a}{apr\+\_\+get\+\_\+netos\+\_\+error}()~(errno)
+\item 
+\#define \hyperlink{group__apr__errno_gaafc38481621653ece6f592f9c5a9a09b}{apr\+\_\+set\+\_\+netos\+\_\+error}(e)~(errno = (e))
+\item 
+\#define \hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+OR}~20000
+\item 
+\#define \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}~50000
+\item 
+\#define \hyperlink{group__apr__errno_gaef5e79630739f24d1512d0d044c2bae7}{A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}~20000
+\item 
+\#define \hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+OR} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE})
+\item 
+\#define \hyperlink{group__apr__errno_gadf26297a72afa0ea224e7097fe59a1cd}{A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US}
+\item 
+\#define \hyperlink{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE})
+\item 
+\#define \hyperlink{group__apr__errno_ga803b8badf8695bdfa4fbcf4d330371f0}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+E\+RR}~\hyperlink{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR}
+\item 
+\#define \hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+A\+N\+O\+N\+E\+RR}
+\item 
+\#define \hyperlink{group__apr__errno_ga2d04991cb57c67a896e22125a1f22b49}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+A\+I\+E\+RR}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+A\+N\+O\+N\+E\+RR} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE})
+\item 
+\#define \hyperlink{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR}~(\hyperlink{group__apr__errno_ga2d04991cb57c67a896e22125a1f22b49}{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+A\+I\+E\+RR} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE})
+\item 
+\#define \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS}~0
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{group__apr__errno_gaf2edf92be162ab8fb1bbc6f22856a131}{apr\+\_\+strerror} (\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} statcode, char $\ast$buf, apr\+\_\+size\+\_\+t bufsize)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR@{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}}
+\index{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR@{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}{APR_FROM_OS_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(e == 0 ? {\bf A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS} \+: e + {\bf A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR})}\hypertarget{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{}\label{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}
+Fold a platform specific error into an apr\+\_\+status\+\_\+t code. \begin{DoxyReturn}{Returns}
+apr\+\_\+status\+\_\+t 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The platform os error code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+macro implementation; the syserr argument may be evaluated multiple times. 
+\end{DoxyWarning}
+\index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR@{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}}
+\index{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR@{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}{APR_FROM_OS_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(e)}\hypertarget{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{}\label{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}
+Fold a platform specific error into an apr\+\_\+status\+\_\+t code. \begin{DoxyReturn}{Returns}
+apr\+\_\+status\+\_\+t 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The platform os error code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+macro implementation; the syserr argument may be evaluated multiple times. 
+\end{DoxyWarning}
+\index{Error Codes@{Error Codes}!apr\+\_\+get\+\_\+netos\+\_\+error@{apr\+\_\+get\+\_\+netos\+\_\+error}}
+\index{apr\+\_\+get\+\_\+netos\+\_\+error@{apr\+\_\+get\+\_\+netos\+\_\+error}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{apr\+\_\+get\+\_\+netos\+\_\+error}{apr_get_netos_error}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+get\+\_\+netos\+\_\+error(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(errno)}\hypertarget{group__apr__errno_ga66e54f155b4a80ac7df9118af9bd896a}{}\label{group__apr__errno_ga66e54f155b4a80ac7df9118af9bd896a}
+Return the last socket error, folded into apr\+\_\+status\+\_\+t, on all platforms \begin{DoxyRemark}{Remarks}
+This retrieves errno or calls a Get\+Last\+Socket\+Error() style function, and folds it with A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyRemark}
+\index{Error Codes@{Error Codes}!apr\+\_\+get\+\_\+os\+\_\+error@{apr\+\_\+get\+\_\+os\+\_\+error}}
+\index{apr\+\_\+get\+\_\+os\+\_\+error@{apr\+\_\+get\+\_\+os\+\_\+error}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{apr\+\_\+get\+\_\+os\+\_\+error}{apr_get_os_error}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+get\+\_\+os\+\_\+error(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(errno)}\hypertarget{group__apr__errno_ga8d5ccb0b1ce67ba5ee6d51473baa6c3c}{}\label{group__apr__errno_ga8d5ccb0b1ce67ba5ee6d51473baa6c3c}
+\begin{DoxyReturn}{Returns}
+apr\+\_\+status\+\_\+t the last platform error, folded into apr\+\_\+status\+\_\+t, on most platforms 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+This retrieves errno, or calls a Get\+Last\+Error() style function, and folds it with A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR. Some platforms (such as O\+S2) have no such mechanism, so this call may be unsupported. Do N\+OT use this call for socket errors from socket, send, recv etc! 
+\end{DoxyRemark}
+\index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE@{A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}}
+\index{A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE@{A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}{APR_OS_ERRSPACE_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE~50000}\hypertarget{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{}\label{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}
+A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE is the maximum number of errors you can fit into one of the error/status ranges below -- except for A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR, which see. \index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+A\+N\+O\+N\+E\+RR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+A\+N\+O\+N\+E\+RR}}
+\index{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+A\+N\+O\+N\+E\+RR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+A\+N\+O\+N\+E\+RR}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+A\+N\+O\+N\+E\+RR}{APR_OS_START_CANONERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+A\+N\+O\+N\+E\+RR}\hypertarget{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{}\label{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}{APR\_OS\_START\_USERERR} \(\backslash\)
+                                 + (\hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{APR\_OS\_ERRSPACE\_SIZE} * 10))
+\end{DoxyCode}
+A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+A\+N\+O\+N\+E\+RR is where A\+PR versions of errno values are defined on systems which don\textquotesingle{}t have the corresponding errno. \index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+A\+I\+E\+RR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+A\+I\+E\+RR}}
+\index{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+A\+I\+E\+RR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+A\+I\+E\+RR}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+A\+I\+E\+RR}{APR_OS_START_EAIERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+A\+I\+E\+RR~({\bf A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+A\+N\+O\+N\+E\+RR} + {\bf A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE})}\hypertarget{group__apr__errno_ga2d04991cb57c67a896e22125a1f22b49}{}\label{group__apr__errno_ga2d04991cb57c67a896e22125a1f22b49}
+A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+A\+I\+E\+RR folds E\+A\+I\+\_\+ error codes from getaddrinfo() into apr\+\_\+status\+\_\+t values. \index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+OR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+OR}}
+\index{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+OR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+OR}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+OR}{APR_OS_START_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+OR~20000}\hypertarget{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{}\label{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}
+A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+OR is where the A\+PR specific error values start. \index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US}}
+\index{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US}{APR_OS_START_STATUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US~({\bf A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+OR} + {\bf A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE})}\hypertarget{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{}\label{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}
+A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US is where the A\+PR specific status codes start. \index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR}}
+\index{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR}{APR_OS_START_SYSERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR~({\bf A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+A\+I\+E\+RR} + {\bf A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE})}\hypertarget{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}{}\label{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}
+A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR folds platform-\/specific system error values into apr\+\_\+status\+\_\+t values. \index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+E\+RR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+E\+RR}}
+\index{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+E\+RR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+E\+RR}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+E\+RR}{APR_OS_START_USEERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+E\+RR~{\bf A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR}}\hypertarget{group__apr__errno_ga803b8badf8695bdfa4fbcf4d330371f0}{}\label{group__apr__errno_ga803b8badf8695bdfa4fbcf4d330371f0}
+A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+E\+RR is obsolete, defined for compatibility only. Use A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR instead. \index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR}}
+\index{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR@{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR}{APR_OS_START_USERERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR~({\bf A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US} + {\bf A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE})}\hypertarget{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}{}\label{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}
+A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR are reserved for applications that use A\+PR that layer their own error codes along with A\+PR\textquotesingle{}s. Note that the error immediately following this one is set ten times farther away than usual, so that users of apr have a lot of room in which to declare custom error codes.
+
+In general applications should try and create unique error codes. To try and assist in finding suitable ranges of numbers to use, the following ranges are known to be used by the listed applications. If your application defines error codes please advise the range of numbers it uses to \href{mailto:dev@apr.apache.org}{\tt dev@apr.\+apache.\+org} for inclusion in this list.
+
+Ranges shown are in relation to A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+S\+E\+R\+E\+RR
+
+Subversion -\/ Defined ranges, of less than 100, at intervals of 5000 starting at an offset of 5000, e.\+g. +5000 to 5100, +10000 to 10100
+
+Apache H\+T\+T\+PD -\/ +2000 to 2999 \index{Error Codes@{Error Codes}!apr\+\_\+set\+\_\+netos\+\_\+error@{apr\+\_\+set\+\_\+netos\+\_\+error}}
+\index{apr\+\_\+set\+\_\+netos\+\_\+error@{apr\+\_\+set\+\_\+netos\+\_\+error}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{apr\+\_\+set\+\_\+netos\+\_\+error}{apr_set_netos_error}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+set\+\_\+netos\+\_\+error(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(errno = (e))}\hypertarget{group__apr__errno_gaafc38481621653ece6f592f9c5a9a09b}{}\label{group__apr__errno_gaafc38481621653ece6f592f9c5a9a09b}
+Reset the last socket error, unfolded from an apr\+\_\+status\+\_\+t 
+\begin{DoxyParams}{Parameters}
+{\em e} & The socket error folded in a prior call to \hyperlink{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+O\+R()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This is a macro implementation; the statcode argument may be evaluated multiple times. If the statcode was not created by apr\+\_\+get\+\_\+os\+\_\+error or A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR, the results are undefined. This macro sets errno, or calls a W\+S\+A\+Set\+Last\+Error() style function, unfolding socketcode with A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyWarning}
+\index{Error Codes@{Error Codes}!apr\+\_\+set\+\_\+os\+\_\+error@{apr\+\_\+set\+\_\+os\+\_\+error}}
+\index{apr\+\_\+set\+\_\+os\+\_\+error@{apr\+\_\+set\+\_\+os\+\_\+error}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{apr\+\_\+set\+\_\+os\+\_\+error}{apr_set_os_error}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+set\+\_\+os\+\_\+error(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(errno = (e))}\hypertarget{group__apr__errno_gaea601f23bedeaca52fd1f5d705ec7543}{}\label{group__apr__errno_gaea601f23bedeaca52fd1f5d705ec7543}
+Reset the last platform error, unfolded from an apr\+\_\+status\+\_\+t, on some platforms 
+\begin{DoxyParams}{Parameters}
+{\em e} & The OS error folded in a prior call to \hyperlink{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+O\+R()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This is a macro implementation; the statcode argument may be evaluated multiple times. If the statcode was not created by apr\+\_\+get\+\_\+os\+\_\+error or A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR, the results are undefined. This macro sets errno, or calls a Set\+Last\+Error() style function, unfolding statcode with A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR. Some platforms (such as O\+S2) have no such mechanism, so this call may be unsupported. 
+\end{DoxyWarning}
+\index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS@{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS}}
+\index{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS@{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS}{APR_SUCCESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS~0}\hypertarget{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{}\label{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}
+no error. \index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR@{A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}}
+\index{A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR@{A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}{APR_TO_OS_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(e == 0 ? {\bf A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS} \+: e -\/ {\bf A\+P\+R\+\_\+\+O\+S\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+Y\+S\+E\+RR})}\hypertarget{group__apr__errno_ga2385cae04b04afbdcb65f1a45c4d8506}{}\label{group__apr__errno_ga2385cae04b04afbdcb65f1a45c4d8506}
+\begin{DoxyReturn}{Returns}
+os\+\_\+err\+\_\+type Fold an apr\+\_\+status\+\_\+t code back to the native platform defined error. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The apr\+\_\+status\+\_\+t folded platform os error code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+macro implementation; the statcode argument may be evaluated multiple times. If the statcode was not created by apr\+\_\+get\+\_\+os\+\_\+error or A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR, the results are undefined. 
+\end{DoxyWarning}
+\index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR@{A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}}
+\index{A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR@{A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR}{APR_TO_OS_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+T\+O\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(e)}\hypertarget{group__apr__errno_ga5b08e985b7a8c59c817abf99a16b758d}{}\label{group__apr__errno_ga5b08e985b7a8c59c817abf99a16b758d}
+\begin{DoxyReturn}{Returns}
+os\+\_\+err\+\_\+type Fold an apr\+\_\+status\+\_\+t code back to the native platform defined error. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The apr\+\_\+status\+\_\+t folded platform os error code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+macro implementation; the statcode argument may be evaluated multiple times. If the statcode was not created by apr\+\_\+get\+\_\+os\+\_\+error or A\+P\+R\+\_\+\+F\+R\+O\+M\+\_\+\+O\+S\+\_\+\+E\+R\+R\+OR, the results are undefined. 
+\end{DoxyWarning}
+\index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE@{A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}}
+\index{A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE@{A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}{APR_UTIL_ERRSPACE_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE~20000}\hypertarget{group__apr__errno_gaef5e79630739f24d1512d0d044c2bae7}{}\label{group__apr__errno_gaef5e79630739f24d1512d0d044c2bae7}
+A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE is the size of the space that is reserved for use within apr-\/util. This space is reserved above that used by A\+PR internally. \begin{DoxyNote}{Note}
+This number M\+U\+ST be smaller than A\+P\+R\+\_\+\+O\+S\+\_\+\+E\+R\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE by a large enough amount that A\+PR has sufficient room for its codes. 
+\end{DoxyNote}
+\index{Error Codes@{Error Codes}!A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US@{A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US}}
+\index{A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US@{A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US}{APR_UTIL_START_STATUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US}\hypertarget{group__apr__errno_gadf26297a72afa0ea224e7097fe59a1cd}{}\label{group__apr__errno_gadf26297a72afa0ea224e7097fe59a1cd}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{APR\_OS\_START\_STATUS} + \(\backslash\)
+                           (\hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{APR\_OS\_ERRSPACE\_SIZE} - 
+      \hyperlink{group__apr__errno_gaef5e79630739f24d1512d0d044c2bae7}{APR\_UTIL\_ERRSPACE\_SIZE}))
+\end{DoxyCode}
+A\+P\+R\+\_\+\+U\+T\+I\+L\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US is where A\+P\+R-\/\+Util starts defining its status codes. 
+
+\subsection{Typedef Documentation}
+\index{Error Codes@{Error Codes}!apr\+\_\+status\+\_\+t@{apr\+\_\+status\+\_\+t}}
+\index{apr\+\_\+status\+\_\+t@{apr\+\_\+status\+\_\+t}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{apr\+\_\+status\+\_\+t}{apr_status_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf apr\+\_\+status\+\_\+t}}\hypertarget{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{}\label{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}
+Type for specifying an error or status code. 
+
+\subsection{Function Documentation}
+\index{Error Codes@{Error Codes}!apr\+\_\+strerror@{apr\+\_\+strerror}}
+\index{apr\+\_\+strerror@{apr\+\_\+strerror}!Error Codes@{Error Codes}}
+\subsubsection[{\texorpdfstring{apr\+\_\+strerror(apr\+\_\+status\+\_\+t statcode, char $\ast$buf, apr\+\_\+size\+\_\+t bufsize)}{apr_strerror(apr_status_t statcode, char *buf, apr_size_t bufsize)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\+\_\+strerror (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+status\+\_\+t}}]{statcode, }
+\item[{char $\ast$}]{buf, }
+\item[{apr\+\_\+size\+\_\+t}]{bufsize}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__errno_gaf2edf92be162ab8fb1bbc6f22856a131}{}\label{group__apr__errno_gaf2edf92be162ab8fb1bbc6f22856a131}
+Return a human readable string describing the specified error. 
+\begin{DoxyParams}{Parameters}
+{\em statcode} & The error code to get a string for. \\
+\hline
+{\em buf} & A buffer to hold the error string. \\
+\hline
+{\em bufsize} & Size of the buffer to hold the string. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,195 @@
+\hypertarget{group__apr__allocator}{}\section{Internal Memory Allocation}
+\label{group__apr__allocator}\index{Internal Memory Allocation@{Internal Memory Allocation}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__allocator_gaf382851817012929f4e2458b43f4482c}{A\+P\+R\+\_\+\+M\+E\+M\+N\+O\+D\+E\+\_\+\+T\+\_\+\+S\+I\+ZE}~\hyperlink{group__apr__general_gab484e98426221f3212fcb67af0467381}{A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT}(sizeof(\hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t}))
+\item 
+\#define \hyperlink{group__apr__allocator_ga54f32b19d8dad59bc6364a7a6b8ebec9}{A\+P\+R\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+E\+\_\+\+U\+N\+L\+I\+M\+I\+T\+ED}~0
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} \hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t} \hyperlink{group__apr__allocator_ga3b6437036dfcdffbf87ad4677c818211}{apr\+\_\+memnode\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__allocator_gaf834f409a34b7f8656c045cff02fd953}{apr\+\_\+allocator\+\_\+create} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$$\ast$allocator)
+\item 
+void \hyperlink{group__apr__allocator_ga704529f6b26279ad1c48d5e8372d859c}{apr\+\_\+allocator\+\_\+destroy} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\item 
+\hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t} $\ast$ \hyperlink{group__apr__allocator_ga7452b0837c2148bd63109f89bbc0c3db}{apr\+\_\+allocator\+\_\+alloc} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, apr\+\_\+size\+\_\+t size)
+\item 
+void \hyperlink{group__apr__allocator_ga124e48339838213fd5e160a4125cb7e8}{apr\+\_\+allocator\+\_\+free} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, \hyperlink{structapr__memnode__t}{apr\+\_\+memnode\+\_\+t} $\ast$memnode)
+\item 
+void \hyperlink{group__apr__allocator_gadf38bbec37c29c24388e95b1c9acad28}{apr\+\_\+allocator\+\_\+owner\+\_\+set} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__allocator_ga3cfe48c8717de6495480ce1479d262f1}{apr\+\_\+allocator\+\_\+owner\+\_\+get} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\item 
+void \hyperlink{group__apr__allocator_ga1d45cb6dbe69ba25dee0ec5f4e031d60}{apr\+\_\+allocator\+\_\+max\+\_\+free\+\_\+set} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, apr\+\_\+size\+\_\+t size)
+\item 
+void \hyperlink{group__apr__allocator_gab803d74f56683004f7ec384ced210dd5}{apr\+\_\+allocator\+\_\+mutex\+\_\+set} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator, \hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$ \hyperlink{group__apr__allocator_ga38599aa9f1330846a2d2b25ec5c8d9c9}{apr\+\_\+allocator\+\_\+mutex\+\_\+get} (\hyperlink{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{apr\+\_\+allocator\+\_\+t} $\ast$allocator)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Internal Memory Allocation@{Internal Memory Allocation}!A\+P\+R\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+E\+\_\+\+U\+N\+L\+I\+M\+I\+T\+ED@{A\+P\+R\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+E\+\_\+\+U\+N\+L\+I\+M\+I\+T\+ED}}
+\index{A\+P\+R\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+E\+\_\+\+U\+N\+L\+I\+M\+I\+T\+ED@{A\+P\+R\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+E\+\_\+\+U\+N\+L\+I\+M\+I\+T\+ED}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+E\+\_\+\+U\+N\+L\+I\+M\+I\+T\+ED}{APR_ALLOCATOR_MAX_FREE_UNLIMITED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+E\+\_\+\+U\+N\+L\+I\+M\+I\+T\+ED~0}\hypertarget{group__apr__allocator_ga54f32b19d8dad59bc6364a7a6b8ebec9}{}\label{group__apr__allocator_ga54f32b19d8dad59bc6364a7a6b8ebec9}
+Symbolic constants \index{Internal Memory Allocation@{Internal Memory Allocation}!A\+P\+R\+\_\+\+M\+E\+M\+N\+O\+D\+E\+\_\+\+T\+\_\+\+S\+I\+ZE@{A\+P\+R\+\_\+\+M\+E\+M\+N\+O\+D\+E\+\_\+\+T\+\_\+\+S\+I\+ZE}}
+\index{A\+P\+R\+\_\+\+M\+E\+M\+N\+O\+D\+E\+\_\+\+T\+\_\+\+S\+I\+ZE@{A\+P\+R\+\_\+\+M\+E\+M\+N\+O\+D\+E\+\_\+\+T\+\_\+\+S\+I\+ZE}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{A\+P\+R\+\_\+\+M\+E\+M\+N\+O\+D\+E\+\_\+\+T\+\_\+\+S\+I\+ZE}{APR_MEMNODE_T_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+R\+\_\+\+M\+E\+M\+N\+O\+D\+E\+\_\+\+T\+\_\+\+S\+I\+ZE~{\bf A\+P\+R\+\_\+\+A\+L\+I\+G\+N\+\_\+\+D\+E\+F\+A\+U\+LT}(sizeof({\bf apr\+\_\+memnode\+\_\+t}))}\hypertarget{group__apr__allocator_gaf382851817012929f4e2458b43f4482c}{}\label{group__apr__allocator_gaf382851817012929f4e2458b43f4482c}
+The base size of a memory node -\/ aligned. 
+
+\subsection{Typedef Documentation}
+\index{Internal Memory Allocation@{Internal Memory Allocation}!apr\+\_\+allocator\+\_\+t@{apr\+\_\+allocator\+\_\+t}}
+\index{apr\+\_\+allocator\+\_\+t@{apr\+\_\+allocator\+\_\+t}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{apr\+\_\+allocator\+\_\+t}{apr_allocator_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+allocator\+\_\+t} {\bf apr\+\_\+allocator\+\_\+t}}\hypertarget{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}{}\label{group__apr__allocator_ga1ceabfd30fcfc455e47d052d2a24244b}
+the allocator structure \index{Internal Memory Allocation@{Internal Memory Allocation}!apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}}
+\index{apr\+\_\+memnode\+\_\+t@{apr\+\_\+memnode\+\_\+t}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{apr\+\_\+memnode\+\_\+t}{apr_memnode_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\+\_\+memnode\+\_\+t} {\bf apr\+\_\+memnode\+\_\+t}}\hypertarget{group__apr__allocator_ga3b6437036dfcdffbf87ad4677c818211}{}\label{group__apr__allocator_ga3b6437036dfcdffbf87ad4677c818211}
+the structure which holds information about the allocation 
+
+\subsection{Function Documentation}
+\index{Internal Memory Allocation@{Internal Memory Allocation}!apr\+\_\+allocator\+\_\+alloc@{apr\+\_\+allocator\+\_\+alloc}}
+\index{apr\+\_\+allocator\+\_\+alloc@{apr\+\_\+allocator\+\_\+alloc}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{apr\+\_\+allocator\+\_\+alloc(apr\+\_\+allocator\+\_\+t $\ast$allocator, apr\+\_\+size\+\_\+t size)}{apr_allocator_alloc(apr_allocator_t *allocator, apr_size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+memnode\+\_\+t}$\ast$ apr\+\_\+allocator\+\_\+alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator, }
+\item[{apr\+\_\+size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__allocator_ga7452b0837c2148bd63109f89bbc0c3db}{}\label{group__apr__allocator_ga7452b0837c2148bd63109f89bbc0c3db}
+Allocate a block of mem from the allocator 
+\begin{DoxyParams}{Parameters}
+{\em allocator} & The allocator to allocate from \\
+\hline
+{\em size} & The size of the mem to allocate (excluding the memnode structure) \\
+\hline
+\end{DoxyParams}
+\index{Internal Memory Allocation@{Internal Memory Allocation}!apr\+\_\+allocator\+\_\+create@{apr\+\_\+allocator\+\_\+create}}
+\index{apr\+\_\+allocator\+\_\+create@{apr\+\_\+allocator\+\_\+create}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{apr\+\_\+allocator\+\_\+create(apr\+\_\+allocator\+\_\+t $\ast$$\ast$allocator)}{apr_allocator_create(apr_allocator_t **allocator)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+allocator\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$$\ast$}]{allocator}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__allocator_gaf834f409a34b7f8656c045cff02fd953}{}\label{group__apr__allocator_gaf834f409a34b7f8656c045cff02fd953}
+Create a new allocator 
+\begin{DoxyParams}{Parameters}
+{\em allocator} & The allocator we have just created. \\
+\hline
+\end{DoxyParams}
+\index{Internal Memory Allocation@{Internal Memory Allocation}!apr\+\_\+allocator\+\_\+destroy@{apr\+\_\+allocator\+\_\+destroy}}
+\index{apr\+\_\+allocator\+\_\+destroy@{apr\+\_\+allocator\+\_\+destroy}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{apr\+\_\+allocator\+\_\+destroy(apr\+\_\+allocator\+\_\+t $\ast$allocator)}{apr_allocator_destroy(apr_allocator_t *allocator)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+allocator\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__allocator_ga704529f6b26279ad1c48d5e8372d859c}{}\label{group__apr__allocator_ga704529f6b26279ad1c48d5e8372d859c}
+Destroy an allocator 
+\begin{DoxyParams}{Parameters}
+{\em allocator} & The allocator to be destroyed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Any memnodes not given back to the allocator prior to destroying will {\itshape not} be free()d. 
+\end{DoxyRemark}
+\index{Internal Memory Allocation@{Internal Memory Allocation}!apr\+\_\+allocator\+\_\+free@{apr\+\_\+allocator\+\_\+free}}
+\index{apr\+\_\+allocator\+\_\+free@{apr\+\_\+allocator\+\_\+free}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{apr\+\_\+allocator\+\_\+free(apr\+\_\+allocator\+\_\+t $\ast$allocator, apr\+\_\+memnode\+\_\+t $\ast$memnode)}{apr_allocator_free(apr_allocator_t *allocator, apr_memnode_t *memnode)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+allocator\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator, }
+\item[{{\bf apr\+\_\+memnode\+\_\+t} $\ast$}]{memnode}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__allocator_ga124e48339838213fd5e160a4125cb7e8}{}\label{group__apr__allocator_ga124e48339838213fd5e160a4125cb7e8}
+Free a list of blocks of mem, giving them back to the allocator. The list is typically terminated by a memnode with its next field set to N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em allocator} & The allocator to give the mem back to \\
+\hline
+{\em memnode} & The memory node to return \\
+\hline
+\end{DoxyParams}
+\index{Internal Memory Allocation@{Internal Memory Allocation}!apr\+\_\+allocator\+\_\+max\+\_\+free\+\_\+set@{apr\+\_\+allocator\+\_\+max\+\_\+free\+\_\+set}}
+\index{apr\+\_\+allocator\+\_\+max\+\_\+free\+\_\+set@{apr\+\_\+allocator\+\_\+max\+\_\+free\+\_\+set}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{apr\+\_\+allocator\+\_\+max\+\_\+free\+\_\+set(apr\+\_\+allocator\+\_\+t $\ast$allocator, apr\+\_\+size\+\_\+t size)}{apr_allocator_max_free_set(apr_allocator_t *allocator, apr_size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+allocator\+\_\+max\+\_\+free\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator, }
+\item[{apr\+\_\+size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__allocator_ga1d45cb6dbe69ba25dee0ec5f4e031d60}{}\label{group__apr__allocator_ga1d45cb6dbe69ba25dee0ec5f4e031d60}
+Set the current threshold at which the allocator should start giving blocks back to the system. 
+\begin{DoxyParams}{Parameters}
+{\em allocator} & The allocator to set the threshold on \\
+\hline
+{\em size} & The threshold. 0 == unlimited. \\
+\hline
+\end{DoxyParams}
+\index{Internal Memory Allocation@{Internal Memory Allocation}!apr\+\_\+allocator\+\_\+mutex\+\_\+get@{apr\+\_\+allocator\+\_\+mutex\+\_\+get}}
+\index{apr\+\_\+allocator\+\_\+mutex\+\_\+get@{apr\+\_\+allocator\+\_\+mutex\+\_\+get}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{apr\+\_\+allocator\+\_\+mutex\+\_\+get(apr\+\_\+allocator\+\_\+t $\ast$allocator)}{apr_allocator_mutex_get(apr_allocator_t *allocator)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+thread\+\_\+mutex\+\_\+t}$\ast$ apr\+\_\+allocator\+\_\+mutex\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__allocator_ga38599aa9f1330846a2d2b25ec5c8d9c9}{}\label{group__apr__allocator_ga38599aa9f1330846a2d2b25ec5c8d9c9}
+Get the mutex currently set for the allocator 
+\begin{DoxyParams}{Parameters}
+{\em allocator} & The allocator \\
+\hline
+\end{DoxyParams}
+\index{Internal Memory Allocation@{Internal Memory Allocation}!apr\+\_\+allocator\+\_\+mutex\+\_\+set@{apr\+\_\+allocator\+\_\+mutex\+\_\+set}}
+\index{apr\+\_\+allocator\+\_\+mutex\+\_\+set@{apr\+\_\+allocator\+\_\+mutex\+\_\+set}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{apr\+\_\+allocator\+\_\+mutex\+\_\+set(apr\+\_\+allocator\+\_\+t $\ast$allocator, apr\+\_\+thread\+\_\+mutex\+\_\+t $\ast$mutex)}{apr_allocator_mutex_set(apr_allocator_t *allocator, apr_thread_mutex_t *mutex)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+allocator\+\_\+mutex\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator, }
+\item[{{\bf apr\+\_\+thread\+\_\+mutex\+\_\+t} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__allocator_gab803d74f56683004f7ec384ced210dd5}{}\label{group__apr__allocator_gab803d74f56683004f7ec384ced210dd5}
+Set a mutex for the allocator to use 
+\begin{DoxyParams}{Parameters}
+{\em allocator} & The allocator to set the mutex for \\
+\hline
+{\em mutex} & The mutex \\
+\hline
+\end{DoxyParams}
+\index{Internal Memory Allocation@{Internal Memory Allocation}!apr\+\_\+allocator\+\_\+owner\+\_\+get@{apr\+\_\+allocator\+\_\+owner\+\_\+get}}
+\index{apr\+\_\+allocator\+\_\+owner\+\_\+get@{apr\+\_\+allocator\+\_\+owner\+\_\+get}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{apr\+\_\+allocator\+\_\+owner\+\_\+get(apr\+\_\+allocator\+\_\+t $\ast$allocator)}{apr_allocator_owner_get(apr_allocator_t *allocator)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+pool\+\_\+t}$\ast$ apr\+\_\+allocator\+\_\+owner\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__allocator_ga3cfe48c8717de6495480ce1479d262f1}{}\label{group__apr__allocator_ga3cfe48c8717de6495480ce1479d262f1}
+Get the current owner of the allocator 
+\begin{DoxyParams}{Parameters}
+{\em allocator} & The allocator to get the owner from \\
+\hline
+\end{DoxyParams}
+\index{Internal Memory Allocation@{Internal Memory Allocation}!apr\+\_\+allocator\+\_\+owner\+\_\+set@{apr\+\_\+allocator\+\_\+owner\+\_\+set}}
+\index{apr\+\_\+allocator\+\_\+owner\+\_\+set@{apr\+\_\+allocator\+\_\+owner\+\_\+set}!Internal Memory Allocation@{Internal Memory Allocation}}
+\subsubsection[{\texorpdfstring{apr\+\_\+allocator\+\_\+owner\+\_\+set(apr\+\_\+allocator\+\_\+t $\ast$allocator, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_allocator_owner_set(apr_allocator_t *allocator, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}void apr\+\_\+allocator\+\_\+owner\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\+\_\+allocator\+\_\+t} $\ast$}]{allocator, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__allocator_gadf38bbec37c29c24388e95b1c9acad28}{}\label{group__apr__allocator_gadf38bbec37c29c24388e95b1c9acad28}
+Set the owner of the allocator 
+\begin{DoxyParams}{Parameters}
+{\em allocator} & The allocator to set the owner for \\
+\hline
+{\em pool} & The pool that is to own the allocator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Typically pool is the highest level pool using the allocator 
+\end{DoxyRemark}

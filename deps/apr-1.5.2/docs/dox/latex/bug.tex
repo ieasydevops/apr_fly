@@ -1,0 +1,38 @@
+
+\begin{DoxyRefList}
+\item[\label{bug__bug000001}%
+\hypertarget{bug__bug000001}{}%
+Global \hyperlink{group__apr__dso_gaedc8609c2bb76e5c43f2df2281a9d8b6}{apr\+\_\+dso\+\_\+load} (apr\+\_\+dso\+\_\+handle\+\_\+t $\ast$$\ast$res\+\_\+handle, const char $\ast$path, apr\+\_\+pool\+\_\+t $\ast$ctx)]We aught to provide an alternative to R\+T\+L\+D\+\_\+\+G\+L\+O\+B\+AL, which is the only supported method of loading D\+S\+Os today.  
+\item[\label{bug__bug000003}%
+\hypertarget{bug__bug000003}{}%
+Global \hyperlink{group__apr__file__io_gaae3b81342d239c58c351cf11190740ed}{apr\+\_\+file\+\_\+pipe\+\_\+create} (apr\+\_\+file\+\_\+t $\ast$$\ast$in, apr\+\_\+file\+\_\+t $\ast$$\ast$out, apr\+\_\+pool\+\_\+t $\ast$pool)]Some platforms cannot toggle between blocking and nonblocking, and when passing a pipe as a standard handle to an application which does not expect it, a non-\/blocking stream will fluxor the client app.  
+\item[\label{bug__bug000002}%
+\hypertarget{bug__bug000002}{}%
+Global \hyperlink{group__apr__filepath_gabb57ce7b23caf512d7f64b92a662ab3d}{A\+P\+R\+\_\+\+F\+I\+L\+E\+P\+A\+T\+H\+\_\+\+N\+O\+T\+A\+B\+O\+V\+E\+R\+O\+OT} ]in A\+PR 0.\+9 and 1.\+x, this flag\textquotesingle{}s behavior is undefined if the rootpath is N\+U\+LL or empty. In A\+PR 2.\+0 this should be changed to imply N\+O\+T\+A\+B\+S\+O\+L\+U\+TE if the rootpath is N\+U\+LL or empty.  
+\item[\label{bug__bug000010}%
+\hypertarget{bug__bug000010}{}%
+Global \hyperlink{group__apr__thread__proc_ga5a9d123afe81eaa97955fbe45704b662}{apr\+\_\+proc\+\_\+other\+\_\+child\+\_\+register} (\hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} $\ast$proc, void($\ast$maintenance)(int reason, void $\ast$, int status), void $\ast$data, apr\+\_\+file\+\_\+t $\ast$write\+\_\+fd, apr\+\_\+pool\+\_\+t $\ast$p)]write\+\_\+fd duplicates the proc-\/$>$out stream, it\textquotesingle{}s really redundant and should be replaced in the A\+PR 1.\+0 A\+PI with a bitflag of which proc-\/$>$in/out/err handles should be health checked. 
+
+no platform currently tests the pipes health.  
+\item[\label{bug__bug000011}%
+\hypertarget{bug__bug000011}{}%
+Global \hyperlink{structapr__proc__t_a72ed1c58c3f08ffa7202fa80e870cd54}{apr\+\_\+proc\+\_\+t\+:\+:invoked} ]This should either always or never be present in release builds -\/ since it breaks binary compatibility. We may enable it always in A\+PR 1.\+0 yet leave it undefined in most cases.  
+\item[\label{bug__bug000009}%
+\hypertarget{bug__bug000009}{}%
+Global \hyperlink{group__apr__thread__proc_ga506183074e8413c3ff597539e4768ea4}{apr\+\_\+proc\+\_\+wait\+\_\+all\+\_\+procs} (\hyperlink{structapr__proc__t}{apr\+\_\+proc\+\_\+t} $\ast$proc, int $\ast$exitcode, apr\+\_\+exit\+\_\+why\+\_\+e $\ast$exitwhy, apr\+\_\+wait\+\_\+how\+\_\+e waithow, apr\+\_\+pool\+\_\+t $\ast$p)]Passing proc as a $\ast$proc rather than $\ast$$\ast$proc was an odd choice for some platforms... this should be revisited in 1.\+0  
+\item[\label{bug__bug000008}%
+\hypertarget{bug__bug000008}{}%
+Global \hyperlink{group__apr__thread__proc_ga6fad364c6c820e37c0915435cfb3921f}{apr\+\_\+procattr\+\_\+child\+\_\+err\+\_\+set} (struct apr\+\_\+procattr\+\_\+t $\ast$attr, apr\+\_\+file\+\_\+t $\ast$child\+\_\+err, apr\+\_\+file\+\_\+t $\ast$parent\+\_\+err)]Note that calling this function with two N\+U\+LL files on some platforms creates an A\+P\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+CK pipe, but this behavior is neither portable nor is it supported. 
+\item[\label{bug__bug000006}%
+\hypertarget{bug__bug000006}{}%
+Global \hyperlink{group__apr__thread__proc_ga24f40119b1aa07dd45a681a44915cb1b}{apr\+\_\+procattr\+\_\+child\+\_\+in\+\_\+set} (struct apr\+\_\+procattr\+\_\+t $\ast$attr, apr\+\_\+file\+\_\+t $\ast$child\+\_\+in, apr\+\_\+file\+\_\+t $\ast$parent\+\_\+in)]Note that calling this function with two N\+U\+LL files on some platforms creates an A\+P\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+CK pipe, but this behavior is neither portable nor is it supported. 
+\item[\label{bug__bug000007}%
+\hypertarget{bug__bug000007}{}%
+Global \hyperlink{group__apr__thread__proc_gabb97e9a49021ab4452ae3f1a281c977f}{apr\+\_\+procattr\+\_\+child\+\_\+out\+\_\+set} (struct apr\+\_\+procattr\+\_\+t $\ast$attr, apr\+\_\+file\+\_\+t $\ast$child\+\_\+out, apr\+\_\+file\+\_\+t $\ast$parent\+\_\+out)]Note that calling this function with two N\+U\+LL files on some platforms creates an A\+P\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+CK pipe, but this behavior is neither portable nor is it supported. 
+\item[\label{bug__bug000004}%
+\hypertarget{bug__bug000004}{}%
+Global \hyperlink{group__apr__network__io_ga270b7c0835283fa2b85a05d295dd7ee5}{apr\+\_\+socket\+\_\+accept\+\_\+filter} (apr\+\_\+socket\+\_\+t $\ast$sock, char $\ast$name, char $\ast$args)]name and args should have been declared as const char $\ast$, as they are in A\+PR 2.\+0  
+\item[\label{bug__bug000005}%
+\hypertarget{bug__bug000005}{}%
+Global \hyperlink{group__apr__strings_ga1583688e0777398174f62e46a522ae8f}{apr\+\_\+strtoff} (apr\+\_\+off\+\_\+t $\ast$offset, const char $\ast$buf, char $\ast$$\ast$end, int base)]$\ast$end breaks type safety; where $\ast$buf is const, $\ast$end needs to be declared as const in A\+PR 2.\+0 
+\end{DoxyRefList}

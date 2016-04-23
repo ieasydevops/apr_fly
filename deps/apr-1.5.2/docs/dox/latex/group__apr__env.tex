@@ -1,0 +1,68 @@
+\hypertarget{group__apr__env}{}\section{Functions for manipulating the environment}
+\label{group__apr__env}\index{Functions for manipulating the environment@{Functions for manipulating the environment}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__env_gada7cd6ccada789a3738f8fc6334da809}{apr\+\_\+env\+\_\+get} (char $\ast$$\ast$value, const char $\ast$envvar, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__env_gae11f733a639393a35e82c795f4ecd470}{apr\+\_\+env\+\_\+set} (const char $\ast$envvar, const char $\ast$value, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__env_ga2bfac0686199b2fee97a7638df7cbfdc}{apr\+\_\+env\+\_\+delete} (const char $\ast$envvar, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Functions for manipulating the environment@{Functions for manipulating the environment}!apr\+\_\+env\+\_\+delete@{apr\+\_\+env\+\_\+delete}}
+\index{apr\+\_\+env\+\_\+delete@{apr\+\_\+env\+\_\+delete}!Functions for manipulating the environment@{Functions for manipulating the environment}}
+\subsubsection[{\texorpdfstring{apr\+\_\+env\+\_\+delete(const char $\ast$envvar, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_env_delete(const char *envvar, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+env\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{envvar, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__env_ga2bfac0686199b2fee97a7638df7cbfdc}{}\label{group__apr__env_ga2bfac0686199b2fee97a7638df7cbfdc}
+Delete a variable from the environment 
+\begin{DoxyParams}{Parameters}
+{\em envvar} & the name of the environment variable \\
+\hline
+{\em pool} & where to allocate temporary storage from \\
+\hline
+\end{DoxyParams}
+\index{Functions for manipulating the environment@{Functions for manipulating the environment}!apr\+\_\+env\+\_\+get@{apr\+\_\+env\+\_\+get}}
+\index{apr\+\_\+env\+\_\+get@{apr\+\_\+env\+\_\+get}!Functions for manipulating the environment@{Functions for manipulating the environment}}
+\subsubsection[{\texorpdfstring{apr\+\_\+env\+\_\+get(char $\ast$$\ast$value, const char $\ast$envvar, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_env_get(char **value, const char *envvar, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+env\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{value, }
+\item[{const char $\ast$}]{envvar, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__env_gada7cd6ccada789a3738f8fc6334da809}{}\label{group__apr__env_gada7cd6ccada789a3738f8fc6334da809}
+Get the value of an environment variable 
+\begin{DoxyParams}{Parameters}
+{\em value} & the returned value, allocated from {\itshape pool} \\
+\hline
+{\em envvar} & the name of the environment variable \\
+\hline
+{\em pool} & where to allocate {\itshape value} and any temporary storage from \\
+\hline
+\end{DoxyParams}
+\index{Functions for manipulating the environment@{Functions for manipulating the environment}!apr\+\_\+env\+\_\+set@{apr\+\_\+env\+\_\+set}}
+\index{apr\+\_\+env\+\_\+set@{apr\+\_\+env\+\_\+set}!Functions for manipulating the environment@{Functions for manipulating the environment}}
+\subsubsection[{\texorpdfstring{apr\+\_\+env\+\_\+set(const char $\ast$envvar, const char $\ast$value, apr\+\_\+pool\+\_\+t $\ast$pool)}{apr_env_set(const char *envvar, const char *value, apr_pool_t *pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\+\_\+status\+\_\+t} apr\+\_\+env\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{envvar, }
+\item[{const char $\ast$}]{value, }
+\item[{{\bf apr\+\_\+pool\+\_\+t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{group__apr__env_gae11f733a639393a35e82c795f4ecd470}{}\label{group__apr__env_gae11f733a639393a35e82c795f4ecd470}
+Set the value of an environment variable 
+\begin{DoxyParams}{Parameters}
+{\em envvar} & the name of the environment variable \\
+\hline
+{\em value} & the value to set \\
+\hline
+{\em pool} & where to allocate temporary storage from \\
+\hline
+\end{DoxyParams}

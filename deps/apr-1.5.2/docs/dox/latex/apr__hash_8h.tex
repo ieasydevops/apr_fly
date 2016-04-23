@@ -1,0 +1,68 @@
+\hypertarget{apr__hash_8h}{}\section{apr\+\_\+hash.\+h File Reference}
+\label{apr__hash_8h}\index{apr\+\_\+hash.\+h@{apr\+\_\+hash.\+h}}
+
+
+A\+PR Hash Tables.  
+
+
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__hash_ga3ba32541f2717b394000f87f38c7e12d}{A\+P\+R\+\_\+\+H\+A\+S\+H\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+R\+I\+NG}~(-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t}
+\item 
+typedef struct \hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} \hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t}
+\item 
+typedef unsigned int($\ast$ \hyperlink{group__apr__hash_ga0bf5622266af13a2489c907a101cb156}{apr\+\_\+hashfunc\+\_\+t}) (const char $\ast$key, apr\+\_\+ssize\+\_\+t $\ast$klen)
+\item 
+typedef int( \hyperlink{group__apr__hash_ga9352d7eed661ad06b7635314530a3227}{apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t}) (void $\ast$rec, const void $\ast$key, apr\+\_\+ssize\+\_\+t klen, const void $\ast$value)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{group__apr__hash_ga8baa6e9d9d6c2c496d2a0ff1a5c53abe}{apr\+\_\+hashfunc\+\_\+default} (const char $\ast$key, apr\+\_\+ssize\+\_\+t $\ast$klen)
+\item 
+\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga5f4b424d6761de4d32aa16ff6803bac9}{apr\+\_\+hash\+\_\+make} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga27f40acb206f1821a783ddcb71bc8971}{apr\+\_\+hash\+\_\+make\+\_\+custom} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool, \hyperlink{group__apr__hash_ga0bf5622266af13a2489c907a101cb156}{apr\+\_\+hashfunc\+\_\+t} hash\+\_\+func)
+\item 
+\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ \hyperlink{group__apr__hash_gafa0b1b9fb91b2249ee3bcb645d93e148}{apr\+\_\+hash\+\_\+copy} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$h)
+\item 
+void \hyperlink{group__apr__hash_ga456beb139bc548728b49c09c2f89b93c}{apr\+\_\+hash\+\_\+set} (\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht, const void $\ast$key, apr\+\_\+ssize\+\_\+t klen, const void $\ast$val)
+\item 
+void $\ast$ \hyperlink{group__apr__hash_ga05e526dad8afaebe14caea90d906d6ec}{apr\+\_\+hash\+\_\+get} (\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht, const void $\ast$key, apr\+\_\+ssize\+\_\+t klen)
+\item 
+\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga640005a4ba64a5db039b0b43a8ad4898}{apr\+\_\+hash\+\_\+first} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht)
+\item 
+\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga9d7b9198555659e9abac4e3028ccce00}{apr\+\_\+hash\+\_\+next} (\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$hi)
+\item 
+void \hyperlink{group__apr__hash_gad90e5b895397c2c535e32b3e44a75b3f}{apr\+\_\+hash\+\_\+this} (\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$hi, const void $\ast$$\ast$key, apr\+\_\+ssize\+\_\+t $\ast$klen, void $\ast$$\ast$val)
+\item 
+const void $\ast$ \hyperlink{group__apr__hash_ga835bd602131de7d40cbf8abd4e0f9f6c}{apr\+\_\+hash\+\_\+this\+\_\+key} (\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$hi)
+\item 
+apr\+\_\+ssize\+\_\+t \hyperlink{group__apr__hash_gae49a862095e9a3ca96603faa69493736}{apr\+\_\+hash\+\_\+this\+\_\+key\+\_\+len} (\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$hi)
+\item 
+void $\ast$ \hyperlink{group__apr__hash_gaebf56aa7585e6fa18b6ff9563c71914b}{apr\+\_\+hash\+\_\+this\+\_\+val} (\hyperlink{group__apr__hash_ga3b3d353989f6cea4535630634be147f7}{apr\+\_\+hash\+\_\+index\+\_\+t} $\ast$hi)
+\item 
+unsigned int \hyperlink{group__apr__hash_ga4e44efa9ef043c1bb8a4abc5edcfda2c}{apr\+\_\+hash\+\_\+count} (\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht)
+\item 
+void \hyperlink{group__apr__hash_ga06fb1b9ecff1a15ee41ff02db74264e4}{apr\+\_\+hash\+\_\+clear} (\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht)
+\item 
+\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga2f68646a64bad44efcbf3457af581fdb}{apr\+\_\+hash\+\_\+overlay} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$overlay, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$base)
+\item 
+\hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ \hyperlink{group__apr__hash_gad353e2c54964c243bd376572af4992ea}{apr\+\_\+hash\+\_\+merge} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$h1, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$h2, void $\ast$($\ast$merger)(\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p,                                                                                                                                                                                                           const void $\ast$key,                                                                                                                                                                                                           apr\+\_\+ssize\+\_\+t klen,                                                                                                                                                                                                           const void $\ast$h1\+\_\+val,                                                                                                                                                                                                           const void $\ast$h2\+\_\+val,                                                                                                                                                                                                           const void $\ast$data), const void $\ast$data)
+\item 
+int \hyperlink{group__apr__hash_ga3f3bac64e281d9e7eb9fed6101031394}{apr\+\_\+hash\+\_\+do} (\hyperlink{group__apr__hash_ga9352d7eed661ad06b7635314530a3227}{apr\+\_\+hash\+\_\+do\+\_\+callback\+\_\+fn\+\_\+t} $\ast$comp, void $\ast$rec, const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$ht)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$ \hyperlink{group__apr__hash_ga6c170fee4d679928d381cd61c559c105}{apr\+\_\+hash\+\_\+pool\+\_\+get} (const \hyperlink{group__apr__hash_ga72ec09b8bde6d874c36bd49df915fff6}{apr\+\_\+hash\+\_\+t} $\ast$thehash)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Hash Tables. 
+

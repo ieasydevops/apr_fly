@@ -1,0 +1,124 @@
+\hypertarget{apr__portable_8h}{}\section{apr\+\_\+portable.\+h File Reference}
+\label{apr__portable_8h}\index{apr\+\_\+portable.\+h@{apr\+\_\+portable.\+h}}
+
+
+A\+PR Portability Routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+thread\+\_\+proc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+file\+\_\+io.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+network\+\_\+io.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+errno.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+global\+\_\+mutex.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+proc\+\_\+mutex.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+time.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+dso.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+shm.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$dirent.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__os__proc__mutex__t}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}
+\item 
+struct \hyperlink{structapr__os__sock__info__t}{apr\+\_\+os\+\_\+sock\+\_\+info\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__portabile_gadd3a9818afc16248c3c30f22e19838dd}{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+t}~\hyperlink{structapr__os__proc__mutex__t}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}
+\item 
+\#define \hyperlink{group__apr__portabile_gae9be7821e8c021915c930fc83d6d4a73}{apr\+\_\+os\+\_\+global\+\_\+mutex\+\_\+get}~\hyperlink{group__apr__portabile_ga2003a3142f05675696268053b2fddbe1}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+get}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}{apr\+\_\+os\+\_\+file\+\_\+t}
+\item 
+typedef D\+IR \hyperlink{group__apr__portabile_gacb790646cfc3da1b43a5f7c4bfaa3937}{apr\+\_\+os\+\_\+dir\+\_\+t}
+\item 
+typedef int \hyperlink{group__apr__portabile_ga2965cd2e48cb6513bc0ba05aa6083ed7}{apr\+\_\+os\+\_\+sock\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__os__proc__mutex__t}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t} \hyperlink{group__apr__portabile_ga107413a26e947456cabfcab99b8a7ade}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t}
+\item 
+typedef pthread\+\_\+t \hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t}
+\item 
+typedef pthread\+\_\+key\+\_\+t \hyperlink{group__apr__portabile_ga0a228496d8a1a9b3be744ddb101a3e76}{apr\+\_\+os\+\_\+threadkey\+\_\+t}
+\item 
+typedef pid\+\_\+t \hyperlink{group__apr__portabile_ga2ce5962de629ee6528081813c6b60e2e}{apr\+\_\+os\+\_\+proc\+\_\+t}
+\item 
+typedef struct timeval \hyperlink{group__apr__portabile_ga6d27e476300cd1d3fda24e1ff0e358e1}{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t}
+\item 
+typedef struct tm \hyperlink{group__apr__portabile_ga0fa9349212690591b09a0cbea7b61bdd}{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t}
+\item 
+typedef void $\ast$ \hyperlink{group__apr__portabile_ga542684803ee8ab0abd69077697599ec0}{apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+t}
+\item 
+typedef void $\ast$ \hyperlink{group__apr__portabile_ga7af1085d6390fbd08d66482b8c17de51}{apr\+\_\+os\+\_\+shm\+\_\+t}
+\item 
+typedef struct \hyperlink{structapr__os__sock__info__t}{apr\+\_\+os\+\_\+sock\+\_\+info\+\_\+t} \hyperlink{group__apr__portabile_gaece2b8b41cbb949590896b47daaa9fd2}{apr\+\_\+os\+\_\+sock\+\_\+info\+\_\+t}
+\begin{DoxyCompactList}\small\item\em alias for local OS socket \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga1ff9a9a7313954fb6590f280d2c2e992}{apr\+\_\+os\+\_\+file\+\_\+get} (\hyperlink{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}{apr\+\_\+os\+\_\+file\+\_\+t} $\ast$thefile, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$file)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga99225bfab137069b9d5c5a72f863c577}{apr\+\_\+os\+\_\+dir\+\_\+get} (\hyperlink{group__apr__portabile_gacb790646cfc3da1b43a5f7c4bfaa3937}{apr\+\_\+os\+\_\+dir\+\_\+t} $\ast$$\ast$thedir, \hyperlink{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}{apr\+\_\+dir\+\_\+t} $\ast$dir)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga07ec79bbb5243596933cd2caf2d428df}{apr\+\_\+os\+\_\+sock\+\_\+get} (\hyperlink{group__apr__portabile_ga2965cd2e48cb6513bc0ba05aa6083ed7}{apr\+\_\+os\+\_\+sock\+\_\+t} $\ast$thesock, \hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$sock)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga2003a3142f05675696268053b2fddbe1}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+get} (\hyperlink{structapr__os__proc__mutex__t}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$ospmutex, \hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$pmutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga903df49f8cd2bb7298cb1612ff6394df}{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+get} (\hyperlink{group__apr__portabile_ga0fa9349212690591b09a0cbea7b61bdd}{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t} $\ast$$\ast$ostime, \hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$aprtime)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga406db611360a70360bec953cd92d2df7}{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+get} (\hyperlink{group__apr__portabile_ga6d27e476300cd1d3fda24e1ff0e358e1}{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t} $\ast$$\ast$ostime, \hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} $\ast$aprtime)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga80ebb75a574f97363455dbab05e289d6}{apr\+\_\+os\+\_\+shm\+\_\+get} (\hyperlink{group__apr__portabile_ga7af1085d6390fbd08d66482b8c17de51}{apr\+\_\+os\+\_\+shm\+\_\+t} $\ast$osshm, \hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$shm)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__os__thread_gadda5e99fc387491a2a9436bf6144bd49}{apr\+\_\+os\+\_\+thread\+\_\+get} (\hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t} $\ast$$\ast$thethd, \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$thd)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__os__thread_ga2fd6ec9d398c4f2564765866c3d31219}{apr\+\_\+os\+\_\+threadkey\+\_\+get} (\hyperlink{group__apr__portabile_ga0a228496d8a1a9b3be744ddb101a3e76}{apr\+\_\+os\+\_\+threadkey\+\_\+t} $\ast$thekey, \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t} $\ast$key)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__os__thread_ga7eda58df34fbc11cd251899e575a1b0f}{apr\+\_\+os\+\_\+thread\+\_\+put} (\hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\+\_\+thread\+\_\+t} $\ast$$\ast$thd, \hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t} $\ast$thethd, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__os__thread_ga386f6e3e205d422f623132bb50147133}{apr\+\_\+os\+\_\+threadkey\+\_\+put} (\hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\+\_\+threadkey\+\_\+t} $\ast$$\ast$key, \hyperlink{group__apr__portabile_ga0a228496d8a1a9b3be744ddb101a3e76}{apr\+\_\+os\+\_\+threadkey\+\_\+t} $\ast$thekey, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t} \hyperlink{group__apr__os__thread_ga669a17c3a41db20bbc41c06d0e8881b3}{apr\+\_\+os\+\_\+thread\+\_\+current} (void)
+\item 
+int \hyperlink{group__apr__os__thread_gac55d4bbc219435046872b1236feb9bfa}{apr\+\_\+os\+\_\+thread\+\_\+equal} (\hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t} tid1, \hyperlink{group__apr__portabile_ga4ccd9519af148ccf9cff850dd58f00b6}{apr\+\_\+os\+\_\+thread\+\_\+t} tid2)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga17a85a792b05506f293e7cf36f8754b7}{apr\+\_\+os\+\_\+file\+\_\+put} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$file, \hyperlink{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}{apr\+\_\+os\+\_\+file\+\_\+t} $\ast$thefile, apr\+\_\+int32\+\_\+t flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga8886290c57248bc4d6c1e4802cc377f0}{apr\+\_\+os\+\_\+pipe\+\_\+put} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$file, \hyperlink{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}{apr\+\_\+os\+\_\+file\+\_\+t} $\ast$thefile, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_gaa3b025a01b6e9b71e402abba74fe3b93}{apr\+\_\+os\+\_\+pipe\+\_\+put\+\_\+ex} (\hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\+\_\+file\+\_\+t} $\ast$$\ast$file, \hyperlink{group__apr__portabile_ga885491b889a4a719549650d3a370fd34}{apr\+\_\+os\+\_\+file\+\_\+t} $\ast$thefile, int register\+\_\+cleanup, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga5087057e23ff6b79ae31ef6e7cc7301e}{apr\+\_\+os\+\_\+dir\+\_\+put} (\hyperlink{group__apr__file__info_ga92ed8cf52cba2abb42cf74087aa74da8}{apr\+\_\+dir\+\_\+t} $\ast$$\ast$dir, \hyperlink{group__apr__portabile_gacb790646cfc3da1b43a5f7c4bfaa3937}{apr\+\_\+os\+\_\+dir\+\_\+t} $\ast$thedir, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga729bd6825dfadd814de2aa602462d838}{apr\+\_\+os\+\_\+sock\+\_\+put} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$$\ast$sock, \hyperlink{group__apr__portabile_ga2965cd2e48cb6513bc0ba05aa6083ed7}{apr\+\_\+os\+\_\+sock\+\_\+t} $\ast$thesock, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga5df9f6b1b9c07bfeca3685118760eefc}{apr\+\_\+os\+\_\+sock\+\_\+make} (\hyperlink{group__apr__network__io_ga49262b223e7434746e1f1737659aa2c3}{apr\+\_\+socket\+\_\+t} $\ast$$\ast$apr\+\_\+sock, \hyperlink{structapr__os__sock__info__t}{apr\+\_\+os\+\_\+sock\+\_\+info\+\_\+t} $\ast$os\+\_\+sock\+\_\+info, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga885f99da0c19912293b5b7bf9df21b02}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+put} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$$\ast$pmutex, \hyperlink{structapr__os__proc__mutex__t}{apr\+\_\+os\+\_\+proc\+\_\+mutex\+\_\+t} $\ast$ospmutex, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga8ba8b7036b84e260c1cf519c3247a7d4}{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+put} (\hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\+\_\+time\+\_\+t} $\ast$aprtime, \hyperlink{group__apr__portabile_ga6d27e476300cd1d3fda24e1ff0e358e1}{apr\+\_\+os\+\_\+imp\+\_\+time\+\_\+t} $\ast$$\ast$ostime, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_ga59486f31d5b591863ed83e67cc8106b1}{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+put} (\hyperlink{structapr__time__exp__t}{apr\+\_\+time\+\_\+exp\+\_\+t} $\ast$aprtime, \hyperlink{group__apr__portabile_ga0fa9349212690591b09a0cbea7b61bdd}{apr\+\_\+os\+\_\+exp\+\_\+time\+\_\+t} $\ast$$\ast$ostime, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__portabile_gaac2b48e4ea4ac8f959cd0e78ede6c5f2}{apr\+\_\+os\+\_\+shm\+\_\+put} (\hyperlink{group__apr__shm_ga79e8c16bdeaf7ade4ef0f935249e7c2f}{apr\+\_\+shm\+\_\+t} $\ast$$\ast$shm, \hyperlink{group__apr__portabile_ga7af1085d6390fbd08d66482b8c17de51}{apr\+\_\+os\+\_\+shm\+\_\+t} $\ast$osshm, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__os__dso_gac8852ec406fad593be38c0dfbb401633}{apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+put} (\hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$$\ast$dso, \hyperlink{group__apr__portabile_ga542684803ee8ab0abd69077697599ec0}{apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+t} thedso, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__os__dso_ga35f9c50b7e546d0c33985442a9c4aa6e}{apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+get} (\hyperlink{group__apr__portabile_ga542684803ee8ab0abd69077697599ec0}{apr\+\_\+os\+\_\+dso\+\_\+handle\+\_\+t} $\ast$dso, \hyperlink{group__apr__dso_ga85e7e28490d026aeed78bd78e9933472}{apr\+\_\+dso\+\_\+handle\+\_\+t} $\ast$aprdso)
+\item 
+const char $\ast$ \hyperlink{group__apr__portabile_ga6e21845a4a5f3b7dd107b2beea50c91e}{apr\+\_\+os\+\_\+default\+\_\+encoding} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\item 
+const char $\ast$ \hyperlink{group__apr__portabile_gaf4c49baaf6cb115c6c92e74e4a40fd46}{apr\+\_\+os\+\_\+locale\+\_\+encoding} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$pool)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Portability Routines. 
+

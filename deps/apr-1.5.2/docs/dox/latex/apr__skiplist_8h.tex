@@ -1,0 +1,67 @@
+\hypertarget{apr__skiplist_8h}{}\section{apr\+\_\+skiplist.\+h File Reference}
+\label{apr__skiplist_8h}\index{apr\+\_\+skiplist.\+h@{apr\+\_\+skiplist.\+h}}
+
+
+A\+PR skip list implementation.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+portable.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int($\ast$ \hyperlink{group__apr__skiplist_ga873aa114e692e48c6587277680ceba87}{apr\+\_\+skiplist\+\_\+compare}) (void $\ast$, void $\ast$)
+\item 
+typedef void($\ast$ \hyperlink{group__apr__skiplist_ga326fdccaf516e5296969fa03bbda3fca}{apr\+\_\+skiplist\+\_\+freefunc}) (void $\ast$)
+\item 
+typedef struct \hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} \hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist}
+\item 
+typedef struct \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\+\_\+skiplistnode} \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\+\_\+skiplistnode}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_ga42fd4de5a4239c988c3d57f88bd685d6}{apr\+\_\+skiplist\+\_\+alloc} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, size\+\_\+t size)
+\item 
+void \hyperlink{group__apr__skiplist_ga9e799684f45cc8a1b673cc99ca935f2b}{apr\+\_\+skiplist\+\_\+free} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, void $\ast$mem)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__skiplist_ga53f636612f9d82ef2886a85d33c704ed}{apr\+\_\+skiplist\+\_\+init} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$$\ast$sl, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+void \hyperlink{group__apr__skiplist_ga61bebe90df16a4ea8a6ab6c6b6792e4a}{apr\+\_\+skiplist\+\_\+set\+\_\+compare} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_ga873aa114e692e48c6587277680ceba87}{apr\+\_\+skiplist\+\_\+compare} X\+X\+X1, \hyperlink{group__apr__skiplist_ga873aa114e692e48c6587277680ceba87}{apr\+\_\+skiplist\+\_\+compare} X\+X\+X2)
+\item 
+void \hyperlink{group__apr__skiplist_ga7f9e8bd8d1900d64c82ca5c9113621a8}{apr\+\_\+skiplist\+\_\+add\+\_\+index} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_ga873aa114e692e48c6587277680ceba87}{apr\+\_\+skiplist\+\_\+compare} X\+X\+X1, \hyperlink{group__apr__skiplist_ga873aa114e692e48c6587277680ceba87}{apr\+\_\+skiplist\+\_\+compare} X\+X\+X2)
+\item 
+\hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\+\_\+skiplistnode} $\ast$ \hyperlink{group__apr__skiplist_ga2a4515bc1a4174fde279c2edc5dd2593}{apr\+\_\+skiplist\+\_\+getlist} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_gac1dc196aa51b1370cdc41e6258c36d7c}{apr\+\_\+skiplist\+\_\+find\+\_\+compare} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, void $\ast$data, \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\+\_\+skiplistnode} $\ast$$\ast$iter, \hyperlink{group__apr__skiplist_ga873aa114e692e48c6587277680ceba87}{apr\+\_\+skiplist\+\_\+compare} func)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_gab28a7376e3483ae1104f2665d9859b95}{apr\+\_\+skiplist\+\_\+find} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, void $\ast$data, \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\+\_\+skiplistnode} $\ast$$\ast$iter)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_gaca0e377b36847ed03c3a135f0f3f353e}{apr\+\_\+skiplist\+\_\+next} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\+\_\+skiplistnode} $\ast$$\ast$iter)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_ga02ff03a8282b561edf01b3291c154af4}{apr\+\_\+skiplist\+\_\+previous} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\+\_\+skiplistnode} $\ast$$\ast$iter)
+\item 
+\hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\+\_\+skiplistnode} $\ast$ \hyperlink{group__apr__skiplist_ga01b128d5160bc905f4b60a120ca10b2e}{apr\+\_\+skiplist\+\_\+insert\+\_\+compare} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, void $\ast$data, \hyperlink{group__apr__skiplist_ga873aa114e692e48c6587277680ceba87}{apr\+\_\+skiplist\+\_\+compare} comp)
+\item 
+\hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\+\_\+skiplistnode} $\ast$ \hyperlink{group__apr__skiplist_ga1aaaa029b9f166baf320bf43e6887b4d}{apr\+\_\+skiplist\+\_\+insert} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, void $\ast$data)
+\item 
+int \hyperlink{group__apr__skiplist_ga9770c39604e7491da4c67282758690c2}{apr\+\_\+skiplist\+\_\+remove\+\_\+compare} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, void $\ast$data, \hyperlink{group__apr__skiplist_ga326fdccaf516e5296969fa03bbda3fca}{apr\+\_\+skiplist\+\_\+freefunc} myfree, \hyperlink{group__apr__skiplist_ga873aa114e692e48c6587277680ceba87}{apr\+\_\+skiplist\+\_\+compare} comp)
+\item 
+int \hyperlink{group__apr__skiplist_ga682f5e7dfcc4359097b9a4b96d053eff}{apr\+\_\+skiplist\+\_\+remove} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, void $\ast$data, \hyperlink{group__apr__skiplist_ga326fdccaf516e5296969fa03bbda3fca}{apr\+\_\+skiplist\+\_\+freefunc} myfree)
+\item 
+void \hyperlink{group__apr__skiplist_ga67d3e8a4a817bf85f1999f41d9d4ec11}{apr\+\_\+skiplist\+\_\+remove\+\_\+all} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_ga326fdccaf516e5296969fa03bbda3fca}{apr\+\_\+skiplist\+\_\+freefunc} myfree)
+\item 
+void \hyperlink{group__apr__skiplist_ga6d24c06537535773ad3b4d18c6efefc3}{apr\+\_\+skiplist\+\_\+destroy} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_ga326fdccaf516e5296969fa03bbda3fca}{apr\+\_\+skiplist\+\_\+freefunc} myfree)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_ga237063a88253165f074c04ab9b0f17a3}{apr\+\_\+skiplist\+\_\+pop} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_ga326fdccaf516e5296969fa03bbda3fca}{apr\+\_\+skiplist\+\_\+freefunc} myfree)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_ga96068b644647e86139bd6fdb0fcfebf3}{apr\+\_\+skiplist\+\_\+peek} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl)
+\item 
+\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$ \hyperlink{group__apr__skiplist_gab54881447708cf725758860c88ba52a6}{apr\+\_\+skiplist\+\_\+merge} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl1, \hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\+\_\+skiplist} $\ast$sl2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR skip list implementation. 
+

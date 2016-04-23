@@ -1,0 +1,179 @@
+\hypertarget{group__apr__ctype}{}\section{ctype functions}
+\label{group__apr__ctype}\index{ctype functions@{ctype functions}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__ctype_ga4fa78e6e7272dae64731768a17a2e003}{apr\+\_\+isalnum}(c)~(isalnum(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga9ecd5b94a7816591afd68040b0624327}{apr\+\_\+isalpha}(c)~(isalpha(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_gacc8b4597be99c895ea042e8088ee94ab}{apr\+\_\+iscntrl}(c)~(iscntrl(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga8c453b1d66015b357c3d3a3ddb7d97d7}{apr\+\_\+isdigit}(c)~(isdigit(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_gad4fbfcf508e7771ca85e85e4ac9567c2}{apr\+\_\+isgraph}(c)~(isgraph(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_gaff5eeb2f6350095ce86cc2cd4b1d38ee}{apr\+\_\+islower}(c)~(islower(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_gae7cab1b39d2e0fc14f343ec14e12565a}{apr\+\_\+isascii}(c)~(((c) \& $\sim$0x7f)==0)
+\item 
+\#define \hyperlink{group__apr__ctype_ga20da56fc8bbedc9f8a40d20c1cc58bac}{apr\+\_\+isprint}(c)~(isprint(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga1db14e8d5f9891010c8bad08aa100674}{apr\+\_\+ispunct}(c)~(ispunct(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga23f4c7721923a0f0f444fd7fb196047a}{apr\+\_\+isspace}(c)~(isspace(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga362f53cc44aab662aaf04fa87e36035b}{apr\+\_\+isupper}(c)~(isupper(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga9d30f3c5d538c21c6d50565cda8654d0}{apr\+\_\+isxdigit}(c)~(isxdigit(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_gaa591f2a7eb578b1fb3ae9aeaab9eafaa}{apr\+\_\+tolower}(c)~(tolower(((unsigned char)(c))))
+\item 
+\#define \hyperlink{group__apr__ctype_ga83d2a3217282784d24897658ad0717b7}{apr\+\_\+toupper}(c)~(toupper(((unsigned char)(c))))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These macros allow correct support of 8-\/bit characters on systems which support 8-\/bit characters. Pretty dumb how the cast is required, but that\textquotesingle{}s legacy libc for ya. These new macros do not support E\+OF like the standard macros do. Tough. 
+
+\subsection{Macro Definition Documentation}
+\index{ctype functions@{ctype functions}!apr\+\_\+isalnum@{apr\+\_\+isalnum}}
+\index{apr\+\_\+isalnum@{apr\+\_\+isalnum}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+isalnum}{apr_isalnum}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+isalnum(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(isalnum(((unsigned char)(c))))}\hypertarget{group__apr__ctype_ga4fa78e6e7272dae64731768a17a2e003}{}\label{group__apr__ctype_ga4fa78e6e7272dae64731768a17a2e003}
+\begin{DoxySeeAlso}{See also}
+isalnum 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+isalpha@{apr\+\_\+isalpha}}
+\index{apr\+\_\+isalpha@{apr\+\_\+isalpha}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+isalpha}{apr_isalpha}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+isalpha(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(isalpha(((unsigned char)(c))))}\hypertarget{group__apr__ctype_ga9ecd5b94a7816591afd68040b0624327}{}\label{group__apr__ctype_ga9ecd5b94a7816591afd68040b0624327}
+\begin{DoxySeeAlso}{See also}
+isalpha 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+isascii@{apr\+\_\+isascii}}
+\index{apr\+\_\+isascii@{apr\+\_\+isascii}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+isascii}{apr_isascii}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+isascii(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(((c) \& $\sim$0x7f)==0)}\hypertarget{group__apr__ctype_gae7cab1b39d2e0fc14f343ec14e12565a}{}\label{group__apr__ctype_gae7cab1b39d2e0fc14f343ec14e12565a}
+\begin{DoxySeeAlso}{See also}
+isascii 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+iscntrl@{apr\+\_\+iscntrl}}
+\index{apr\+\_\+iscntrl@{apr\+\_\+iscntrl}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+iscntrl}{apr_iscntrl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+iscntrl(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(iscntrl(((unsigned char)(c))))}\hypertarget{group__apr__ctype_gacc8b4597be99c895ea042e8088ee94ab}{}\label{group__apr__ctype_gacc8b4597be99c895ea042e8088ee94ab}
+\begin{DoxySeeAlso}{See also}
+iscntrl 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+isdigit@{apr\+\_\+isdigit}}
+\index{apr\+\_\+isdigit@{apr\+\_\+isdigit}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+isdigit}{apr_isdigit}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+isdigit(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(isdigit(((unsigned char)(c))))}\hypertarget{group__apr__ctype_ga8c453b1d66015b357c3d3a3ddb7d97d7}{}\label{group__apr__ctype_ga8c453b1d66015b357c3d3a3ddb7d97d7}
+\begin{DoxySeeAlso}{See also}
+isdigit 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+isgraph@{apr\+\_\+isgraph}}
+\index{apr\+\_\+isgraph@{apr\+\_\+isgraph}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+isgraph}{apr_isgraph}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+isgraph(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(isgraph(((unsigned char)(c))))}\hypertarget{group__apr__ctype_gad4fbfcf508e7771ca85e85e4ac9567c2}{}\label{group__apr__ctype_gad4fbfcf508e7771ca85e85e4ac9567c2}
+\begin{DoxySeeAlso}{See also}
+isgraph 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+islower@{apr\+\_\+islower}}
+\index{apr\+\_\+islower@{apr\+\_\+islower}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+islower}{apr_islower}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+islower(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(islower(((unsigned char)(c))))}\hypertarget{group__apr__ctype_gaff5eeb2f6350095ce86cc2cd4b1d38ee}{}\label{group__apr__ctype_gaff5eeb2f6350095ce86cc2cd4b1d38ee}
+\begin{DoxySeeAlso}{See also}
+islower 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+isprint@{apr\+\_\+isprint}}
+\index{apr\+\_\+isprint@{apr\+\_\+isprint}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+isprint}{apr_isprint}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+isprint(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(isprint(((unsigned char)(c))))}\hypertarget{group__apr__ctype_ga20da56fc8bbedc9f8a40d20c1cc58bac}{}\label{group__apr__ctype_ga20da56fc8bbedc9f8a40d20c1cc58bac}
+\begin{DoxySeeAlso}{See also}
+isprint 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+ispunct@{apr\+\_\+ispunct}}
+\index{apr\+\_\+ispunct@{apr\+\_\+ispunct}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+ispunct}{apr_ispunct}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+ispunct(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(ispunct(((unsigned char)(c))))}\hypertarget{group__apr__ctype_ga1db14e8d5f9891010c8bad08aa100674}{}\label{group__apr__ctype_ga1db14e8d5f9891010c8bad08aa100674}
+\begin{DoxySeeAlso}{See also}
+ispunct 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+isspace@{apr\+\_\+isspace}}
+\index{apr\+\_\+isspace@{apr\+\_\+isspace}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+isspace}{apr_isspace}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+isspace(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(isspace(((unsigned char)(c))))}\hypertarget{group__apr__ctype_ga23f4c7721923a0f0f444fd7fb196047a}{}\label{group__apr__ctype_ga23f4c7721923a0f0f444fd7fb196047a}
+\begin{DoxySeeAlso}{See also}
+isspace 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+isupper@{apr\+\_\+isupper}}
+\index{apr\+\_\+isupper@{apr\+\_\+isupper}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+isupper}{apr_isupper}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+isupper(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(isupper(((unsigned char)(c))))}\hypertarget{group__apr__ctype_ga362f53cc44aab662aaf04fa87e36035b}{}\label{group__apr__ctype_ga362f53cc44aab662aaf04fa87e36035b}
+\begin{DoxySeeAlso}{See also}
+isupper 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+isxdigit@{apr\+\_\+isxdigit}}
+\index{apr\+\_\+isxdigit@{apr\+\_\+isxdigit}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+isxdigit}{apr_isxdigit}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+isxdigit(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(isxdigit(((unsigned char)(c))))}\hypertarget{group__apr__ctype_ga9d30f3c5d538c21c6d50565cda8654d0}{}\label{group__apr__ctype_ga9d30f3c5d538c21c6d50565cda8654d0}
+\begin{DoxySeeAlso}{See also}
+isxdigit 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+tolower@{apr\+\_\+tolower}}
+\index{apr\+\_\+tolower@{apr\+\_\+tolower}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+tolower}{apr_tolower}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+tolower(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(tolower(((unsigned char)(c))))}\hypertarget{group__apr__ctype_gaa591f2a7eb578b1fb3ae9aeaab9eafaa}{}\label{group__apr__ctype_gaa591f2a7eb578b1fb3ae9aeaab9eafaa}
+\begin{DoxySeeAlso}{See also}
+tolower 
+\end{DoxySeeAlso}
+\index{ctype functions@{ctype functions}!apr\+\_\+toupper@{apr\+\_\+toupper}}
+\index{apr\+\_\+toupper@{apr\+\_\+toupper}!ctype functions@{ctype functions}}
+\subsubsection[{\texorpdfstring{apr\+\_\+toupper}{apr_toupper}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\+\_\+toupper(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(toupper(((unsigned char)(c))))}\hypertarget{group__apr__ctype_ga83d2a3217282784d24897658ad0717b7}{}\label{group__apr__ctype_ga83d2a3217282784d24897658ad0717b7}
+\begin{DoxySeeAlso}{See also}
+toupper 
+\end{DoxySeeAlso}

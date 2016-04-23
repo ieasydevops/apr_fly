@@ -1,0 +1,39 @@
+\hypertarget{apr__atomic_8h}{}\section{apr\+\_\+atomic.\+h File Reference}
+\label{apr__atomic_8h}\index{apr\+\_\+atomic.\+h@{apr\+\_\+atomic.\+h}}
+
+
+A\+PR Atomic Operations.  
+
+
+{\ttfamily \#include \char`\"{}apr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\+\_\+pools.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t} \hyperlink{group__apr__atomic_gaa89b4022de39ca4d1c2ae6715e888e97}{apr\+\_\+atomic\+\_\+init} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t} $\ast$p)
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{group__apr__atomic_gafba4de90e113d26536cff48418689771}{apr\+\_\+atomic\+\_\+read32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem)
+\item 
+void \hyperlink{group__apr__atomic_gac689de9df18c093f66959227359328bb}{apr\+\_\+atomic\+\_\+set32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{group__apr__atomic_ga3ef16e13b679710fafd5196713e17433}{apr\+\_\+atomic\+\_\+add32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)
+\item 
+void \hyperlink{group__apr__atomic_ga4603396650e844bd987f01358ccb4df1}{apr\+\_\+atomic\+\_\+sub32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{group__apr__atomic_ga4af33da5aa6493ec321af14bedfc47a9}{apr\+\_\+atomic\+\_\+inc32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem)
+\item 
+int \hyperlink{group__apr__atomic_ga7a8d16335fdcd27f2baca90df35ad300}{apr\+\_\+atomic\+\_\+dec32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem)
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{group__apr__atomic_gae45c529f14f8489102382bd3fd4cce22}{apr\+\_\+atomic\+\_\+cas32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t with, apr\+\_\+uint32\+\_\+t cmp)
+\item 
+apr\+\_\+uint32\+\_\+t \hyperlink{group__apr__atomic_ga50850e462d65e0409d5a93a6b4ec26c6}{apr\+\_\+atomic\+\_\+xchg32} (volatile apr\+\_\+uint32\+\_\+t $\ast$mem, apr\+\_\+uint32\+\_\+t val)
+\item 
+void $\ast$ \hyperlink{group__apr__atomic_gafdd02b41cc39ade873daa2734597b0fa}{apr\+\_\+atomic\+\_\+casptr} (volatile void $\ast$$\ast$mem, void $\ast$with, const void $\ast$cmp)
+\item 
+void $\ast$ \hyperlink{group__apr__atomic_gaab4c1c5b8be70ded06dd31a1a4f65bf6}{apr\+\_\+atomic\+\_\+xchgptr} (volatile void $\ast$$\ast$mem, void $\ast$with)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR Atomic Operations. 
+
